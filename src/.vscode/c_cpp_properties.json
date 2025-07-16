@@ -1,0 +1,58 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/nuc/rm_2025/install/terrain_analysis/include/**",
+        "/home/nuc/rm_2025/install/small_gicp_relocalization/include/**",
+        "/home/nuc/rm_2025/install/sensor_scan_generation/include/**",
+        "/home/nuc/rm_2025/install/rmoss_cam/include/**",
+        "/home/nuc/rm_2025/install/rmoss_util/include/**",
+        "/home/nuc/rm_2025/install/rmoss_projectile_motion/include/**",
+        "/home/nuc/rm_2025/install/rmoss_gz_cam/include/**",
+        "/home/nuc/rm_2025/install/rmoss_gz_bridge/include/**",
+        "/home/nuc/rm_2025/install/rmoss_gz_base/include/**",
+        "/home/nuc/rm_2025/install/rmoss_base/include/**",
+        "/home/nuc/rm_2025/install/rmoss_interfaces/include/**",
+        "/home/nuc/rm_2025/install/pcd2pgm/include/**",
+        "/home/nuc/rm_2025/install/pb_teleop_twist_joy/include/**",
+        "/home/nuc/rm_2025/install/pb_omni_pid_pursuit_controller/include/**",
+        "/home/nuc/rm_2025/install/pb_nav2_plugins/include/**",
+        "/home/nuc/rm_2025/install/loam_interface/include/**",
+        "/home/nuc/rm_2025/install/livox_ros_driver2/include/**",
+        "/home/nuc/rm_2025/install/ign_sim_pointcloud_tool/include/**",
+        "/home/nuc/rm_2025/install/fake_vel_transform/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/nuc/rm_2025/src/pb2025_sentry_nav/fake_vel_transform/include/**",
+        "/home/nuc/rm_2025/src/pb2025_sentry_nav/ign_sim_pointcloud_tool/include/**",
+        "/home/nuc/rm_2025/src/pb2025_sentry_nav/loam_interface/include/**",
+        "/home/nuc/rm_2025/src/pb2025_sentry_nav/pb_nav2_plugins/include/**",
+        "/home/nuc/rm_2025/src/pb2025_sentry_nav/pb_omni_pid_pursuit_controller/include/**",
+        "/home/nuc/rm_2025/src/pb2025_sentry_nav/pb_teleop_twist_joy/include/**",
+        "/home/nuc/rm_2025/src/pb2025_sentry_nav/point_lio/include/**",
+        "/home/nuc/rm_2025/src/pb2025_sentry_nav/sensor_scan_generation/include/**",
+        "/home/nuc/rm_2025/src/pb2025_sentry_nav/small_gicp_relocalization/include/**",
+        "/home/nuc/rm_2025/src/pb2025_sentry_nav/terrain_analysis/include/**",
+        "/home/nuc/rm_2025/src/pcd2pgm/include/**",
+        "/home/nuc/rm_2025/src/rmoss_core/rmoss_base/include/**",
+        "/home/nuc/rm_2025/src/rmoss_core/rmoss_cam/include/**",
+        "/home/nuc/rm_2025/src/rmoss_core/rmoss_projectile_motion/include/**",
+        "/home/nuc/rm_2025/src/rmoss_core/rmoss_util/include/**",
+        "/home/nuc/rm_2025/src/rmoss_gazebo/rmoss_gz_base/include/**",
+        "/home/nuc/rm_2025/src/rmoss_gazebo/rmoss_gz_bridge/include/**",
+        "/home/nuc/rm_2025/src/rmoss_gazebo/rmoss_gz_cam/include/**",
+        "include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

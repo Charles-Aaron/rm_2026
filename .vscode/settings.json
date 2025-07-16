@@ -1,0 +1,21 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/nuc/rm_2025/build/sdformat_tools",
+        "/home/nuc/rm_2025/install/sdformat_tools/lib/python3.10/site-packages",
+        "/home/nuc/rm_2025/install/rmoss_interfaces/local/lib/python3.10/dist-packages",
+        "/home/nuc/rm_2025/install/livox_ros_driver2/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/nuc/rm_2025/build/sdformat_tools",
+        "/home/nuc/rm_2025/install/sdformat_tools/lib/python3.10/site-packages",
+        "/home/nuc/rm_2025/install/rmoss_interfaces/local/lib/python3.10/dist-packages",
+        "/home/nuc/rm_2025/install/livox_ros_driver2/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "C_Cpp.errorSquiggles": "disabled",
+    "cmake.sourceDirectory": "/home/nuc/rm_2025/src/pb2025_sentry_nav/small_gicp_relocalization",
+    "ros.distro": "humble"
+}
