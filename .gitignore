@@ -1,10 +1,3 @@
-src/pb2025_robot_description/
-src/pb2025_sentry_nav/
-src/rmoss_core/
-src/rmoss_gazebo/
-src/rmoss_gz_resources/
-src/rmoss_interfaces/
-src/sdformat_tools/
 build/
 install/
 log/
