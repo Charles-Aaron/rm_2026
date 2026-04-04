@@ -1,0 +1,73 @@
+# 机器人决策系统参数配置文件
+# 所有硬编码的阈值和参数都集中在这里管理
+
+# 血量相关阈值
+hp_thresholds:
+  critical: 100      # 危险血量阈值
+  low: 150           # 低血量阈值
+  medium: 200        # 中等血量阈值
+  recovery: 300      # 恢复血量阈值
+  max: 600           # 最大血量
+
+# 弹药相关阈值
+ammo_thresholds:
+  critical: 40       # 危险弹药阈值
+  low: 40          # 低弹药阈值
+  medium: 200        # 中等弹药阈值
+  recovery: 300      # 恢复弹药阈值
+  max: 500           # 最大弹药
+
+# 时间相关阈值
+time_thresholds:
+  endgame: 150       # 终局时间阈值(秒)
+  critical: 60       # 关键时间阈值(秒)
+  supply_cooldown: 10 # 补给冷却时间(秒)
+
+# 基地血量阈值
+base_thresholds:
+  low: 1500          # 基地低血量阈值
+  critical: 2500     # 基地危险血量阈值
+  rush_diff: 500     # 冲击基地血量差阈值
+
+# 敌我血量差阈值
+hp_diff_thresholds:
+  min: 50            # 最小血量差
+  medium: 60         # 中等血量差
+  max: 90            # 最大血量差
+  enemy_dead: -10000 # 敌人阵亡时的差值
+
+# 机器人状态检查参数
+robot_status_sub:
+  min_hp: 200        # 机器人状态检查最小血量 (与之前XML中的值保持一致)
+  min_bullets: 50    # 机器人状态检查最小弹药 (与之前XML中的值保持一致)
+  status_ok: true    # 机器人状态是否正常
+
+# 补给决策参数
+need_supply:
+  hp_critical: 100   # 补给决策危险血量
+  hp_low: 150        # 补给决策低血量
+  hp_medium: 180     # 补给决策中等血量
+  diff_small: 50     # 小血量差
+  diff_medium: 60    # 中等血量差
+  diff_large: 90     # 大血量差
+
+# 增益点守卫参数
+rush_enemy_buff:
+  duration: 60       # 守卫持续时间(秒)
+  pose: "1; -0.5; 0; 0; 0; 0; 1"  # 增益点坐标
+
+# 导航参数
+send_goal_action:
+  server_timeout: 5  # 导航服务器超时时间(秒)
+  action_name: "navigate_to_pose"  # 导航动作名称
+
+# 日志参数
+logging:
+  info_interval: 1000   # 信息日志间隔(毫秒)
+  warn_interval: 2000   # 警告日志间隔(毫秒)
+  debug_interval: 500   # 调试日志间隔(毫秒)
+
+# 决策频率
+decision:
+  frequency: 40      # 决策频率(Hz)
+  cycle_time: 25     # 决策周期时间(毫秒) 

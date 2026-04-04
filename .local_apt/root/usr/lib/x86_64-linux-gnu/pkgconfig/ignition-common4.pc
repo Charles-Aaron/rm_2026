@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/common4
+
+Name: Ignition common
+Description: A set of common classes for robot applications
+Version: 4.7.0
+Requires: ignition-cmake2 >= 1.1 uuid
+Requires.private: 
+Libs: -L${libdir} -lignition-common4 
+Libs.private: -ldl
+CFlags: -I${includedir} -std=c++17

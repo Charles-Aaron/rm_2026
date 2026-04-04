@@ -1,0 +1,59 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/opt/ros/humble/include/**",
+                "/home/nuc/Livox-SDK2/include/**",
+                "/home/nuc/pb_rmsimulation/src/rm_localization/FAST_LIO/include/**",
+                "/home/nuc/pb_rmsimulation/src/rm_localization/icp_registration/include/**",
+                "/home/nuc/pb_rmsimulation/src/rm_localization/point_lio/include/**",
+                "/home/nuc/pb_rmsimulation/src/rm_navigation/costmap_converter/costmap_converter/include/**",
+                "/home/nuc/pb_rmsimulation/src/rm_navigation/fake_vel_transform/include/**",
+                "/home/nuc/pb_rmsimulation/src/rm_navigation/teb_local_planner/teb_local_planner/include/**",
+                "/home/nuc/pb_rmsimulation/src/rm_perception/imu_complementary_filter/include/**",
+                "/home/nuc/pb_rmsimulation/src/rm_perception/linefit_ground_segementation_ros2/linefit_ground_segmentation/include/**",
+                "/home/nuc/pb_rmsimulation/src/rm_perception/pointcloud_to_laserscan/include/**",
+                "/home/nuc/pb_rmsimulation/src/rm_simulation/livox_laser_simulation_RO2/include/**",
+                "/home/nuc/pb_rmsimulation/src/stm_ros/include/**",
+                "/home/nuc/sentry/src/ROS-Behavior-Tree/behavior_tree_core/include/**",
+                "/home/nuc/sentry/src/ROS-Behavior-Tree/behavior_tree_leaves/include/**",
+                "/home/nuc/sentry/src/fdilink_ahrs/include/**",
+                "/home/nuc/sentry/src/lakibeam1/include/**",
+                "/home/nuc/sentry/src/mult_lidars/include/**",
+                "/home/nuc/sentry/src/navigation/amcl/include/**",
+                "/home/nuc/sentry/src/navigation/base_local_planner/include/**",
+                "/home/nuc/sentry/src/navigation/better_astar_global_planner-main/include/**",
+                "/home/nuc/sentry/src/navigation/carrot_planner/include/**",
+                "/home/nuc/sentry/src/navigation/clear_costmap_recovery/include/**",
+                "/home/nuc/sentry/src/navigation/costmap_2d/include/**",
+                "/home/nuc/sentry/src/navigation/dwa_local_planner/include/**",
+                "/home/nuc/sentry/src/navigation/global_planner/include/**",
+                "/home/nuc/sentry/src/navigation/map_server/include/**",
+                "/home/nuc/sentry/src/navigation/move_base/include/**",
+                "/home/nuc/sentry/src/navigation/move_slow_and_clear/include/**",
+                "/home/nuc/sentry/src/navigation/nav_core/include/**",
+                "/home/nuc/sentry/src/navigation/navfn/include/**",
+                "/home/nuc/sentry/src/navigation/rotate_recovery/include/**",
+                "/home/nuc/sentry/src/navigation/teb_local_planner/include/**",
+                "/home/nuc/sentry/src/navigation/voxel_grid/include/**",
+                "/home/nuc/sentry/src/pid_follow/include/**",
+                "/home/nuc/sentry/src/stm_ros/include/**",
+                "/home/nuc/sentry/src/urg_node/include/**",
+                "/home/nuc/src/rm_auto_aim/armor_detector/include/**",
+                "/home/nuc/src/rm_auto_aim/armor_tracker/include/**",
+                "/home/nuc/src/rm_serial_driver/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

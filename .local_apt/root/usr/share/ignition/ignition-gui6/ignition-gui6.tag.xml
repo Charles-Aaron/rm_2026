@@ -1,0 +1,2954 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.9.1">
+  <compound kind="file">
+    <name>gz/gui/Application.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2Application_8hh.html</filename>
+    <includes id="gz_2gui_2qt_8h" name="gz/gui/qt.h" local="yes" imported="no">gz/gui/qt.h</includes>
+    <class kind="class">ignition::gui::Application</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::gui</namespace>
+    <namespace>tinyxml2</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>WindowType</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a2b57d3bd86eab52d0e2d1a5237681d6f</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="a2b57d3bd86eab52d0e2d1a5237681d6fa85f398d67a07272eb1723b85e8f16abd">kMainWindow</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="a2b57d3bd86eab52d0e2d1a5237681d6fad8986cfc5fe1051ca1d317ce03b5fb83">kDialog</enumvalue>
+    </member>
+    <member kind="function">
+      <type>Application *</type>
+      <name>App</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a9351e27ed9185c32d72c4cb4f181a983</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/Application.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2Application_8hh.html</filename>
+    <includes id="gz_2gui_2Application_8hh" name="gz/gui/Application.hh" local="no" imported="no">gz/gui/Application.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>config.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>config_8hh.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/Conversions.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2Conversions_8hh.html</filename>
+    <includes id="gz_2gui_2qt_8h" name="gz/gui/qt.h" local="yes" imported="no">gz/gui/qt.h</includes>
+    <namespace>ignition</namespace>
+    <namespace>ignition::common</namespace>
+    <namespace>ignition::gui</namespace>
+    <member kind="function">
+      <type>QColor</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>affc50dc0910877af1af95eeb4f65f354</anchor>
+      <arglist>(const math::Color &amp;_color)</arglist>
+    </member>
+    <member kind="function">
+      <type>QPointF</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a244e207316fa0af1508f246ce5f7fd07</anchor>
+      <arglist>(const math::Vector2d &amp;_pt)</arglist>
+    </member>
+    <member kind="function">
+      <type>QVector3D</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a176162b10f4badb76dea4d1687132d5b</anchor>
+      <arglist>(const math::Vector3d &amp;_vec)</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Color</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a3103be7e448aeeef01aa1507a7d4deea</anchor>
+      <arglist>(const QColor &amp;_color)</arglist>
+    </member>
+    <member kind="function">
+      <type>common::KeyEvent</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a2106cfc5593990975f7ec1301a4c86bc</anchor>
+      <arglist>(const QKeyEvent &amp;_e)</arglist>
+    </member>
+    <member kind="function">
+      <type>common::MouseEvent</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>aba825a20a9e22881d9e06f0deb1e67b2</anchor>
+      <arglist>(const QMouseEvent &amp;_e)</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector2d</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a40f6711a52a3feb304aa97db08a342ae</anchor>
+      <arglist>(const QPointF &amp;_pt)</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a9e47069531c6c87ad029fc333e98f20c</anchor>
+      <arglist>(const QVector3D &amp;_vec)</arglist>
+    </member>
+    <member kind="function">
+      <type>common::MouseEvent</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ac7de9ad074bafd3ea9d89de0fb3ee56c</anchor>
+      <arglist>(const QWheelEvent &amp;_e)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/Conversions.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2Conversions_8hh.html</filename>
+    <includes id="gz_2gui_2Conversions_8hh" name="gz/gui/Conversions.hh" local="no" imported="no">gz/gui/Conversions.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/Dialog.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2Dialog_8hh.html</filename>
+    <includes id="gz_2gui_2qt_8h" name="gz/gui/qt.h" local="yes" imported="no">gz/gui/qt.h</includes>
+    <class kind="class">ignition::gui::Dialog</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/Dialog.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2Dialog_8hh.html</filename>
+    <includes id="gz_2gui_2Dialog_8hh" name="gz/gui/Dialog.hh" local="no" imported="no">gz/gui/Dialog.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/DragDropModel.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2DragDropModel_8hh.html</filename>
+    <includes id="gz_2gui_2qt_8h" name="gz/gui/qt.h" local="yes" imported="no">gz/gui/qt.h</includes>
+    <class kind="class">ignition::gui::DragDropModel</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/DragDropModel.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2DragDropModel_8hh.html</filename>
+    <includes id="gz_2gui_2DragDropModel_8hh" name="gz/gui/DragDropModel.hh" local="no" imported="no">gz/gui/DragDropModel.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/Enums.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2Enums_8hh.html</filename>
+    <includes id="gz_2gui_2qt_8h" name="gz/gui/qt.h" local="yes" imported="no">gz/gui/qt.h</includes>
+    <namespace>ignition</namespace>
+    <namespace>ignition::gui</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>DataRole</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab44f6190d587a192750b35c4f9587085</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DISPLAY_NAME</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab44f6190d587a192750b35c4f9587085a90145e5608958a8dbfca469d216af9e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>URI_QUERY</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab44f6190d587a192750b35c4f9587085a8b1d2381db0868b5cfc75de54297eb74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TYPE</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab44f6190d587a192750b35c4f9587085ab47ea8bb955afd0adc0ef98517dd6084</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TO_EXPAND</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab44f6190d587a192750b35c4f9587085a6e1f66128a0f2a0e718a711fac55e989</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FileType</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a2c794c5c13ab4dd7e65bad031dbe41c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CSVFile</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a2c794c5c13ab4dd7e65bad031dbe41c3a020ff63c6c54e7ad3a37c505fa490311</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PDFFile</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a2c794c5c13ab4dd7e65bad031dbe41c3a41a0990bbfa2d6e296b5d1b8e7aa8e59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>NumberType</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ae33bf5f4db440a147780b796497d1ef5</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ae33bf5f4db440a147780b796497d1ef5ab50339a10e1de285ac99d4c3990b8693">NONE</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ae33bf5f4db440a147780b796497d1ef5afd3e4ece78a7d422280d5ed379482229">DOUBLE</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ae33bf5f4db440a147780b796497d1ef5a53f93baa3057821107c750323892fa92">INT</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ae33bf5f4db440a147780b796497d1ef5a3351504090a741e69da641a42e00da80">UINT</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>StringType</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ad4d73ceef61b090c73e1c22493af0bd7</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ad4d73ceef61b090c73e1c22493af0bd7ab50339a10e1de285ac99d4c3990b8693">NONE</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ad4d73ceef61b090c73e1c22493af0bd7a17b8ef2c330f1430e00c9de5469fc7e7">LINE</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ad4d73ceef61b090c73e1c22493af0bd7aae7d3557f5e0b4e9cca075db3dfa7e9d">PLAIN_TEXT</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/Enums.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2Enums_8hh.html</filename>
+    <includes id="gz_2gui_2Enums_8hh" name="gz/gui/Enums.hh" local="no" imported="no">gz/gui/Enums.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>Export.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gui.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/</path>
+    <filename>gui_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/GuiEvents.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2GuiEvents_8hh.html</filename>
+    <class kind="class">ignition::gui::events::BlockOrbit</class>
+    <class kind="class">ignition::gui::events::DragOnScene</class>
+    <class kind="class">ignition::gui::events::DropdownMenuEnabled</class>
+    <class kind="class">ignition::gui::events::DropOnScene</class>
+    <class kind="class">ignition::gui::events::HoverOnScene</class>
+    <class kind="class">ignition::gui::events::HoverToScene</class>
+    <class kind="class">ignition::gui::events::KeyPressOnScene</class>
+    <class kind="class">ignition::gui::events::KeyReleaseOnScene</class>
+    <class kind="class">ignition::gui::events::LeftClickOnScene</class>
+    <class kind="class">ignition::gui::events::LeftClickToScene</class>
+    <class kind="class">ignition::gui::events::MousePressOnScene</class>
+    <class kind="class">ignition::gui::events::PreRender</class>
+    <class kind="class">ignition::gui::events::Render</class>
+    <class kind="class">ignition::gui::events::RightClickOnScene</class>
+    <class kind="class">ignition::gui::events::RightClickToScene</class>
+    <class kind="class">ignition::gui::events::ScrollOnScene</class>
+    <class kind="class">ignition::gui::events::SnapIntervals</class>
+    <class kind="class">ignition::gui::events::SpawnCloneFromName</class>
+    <class kind="class">ignition::gui::events::SpawnFromDescription</class>
+    <class kind="class">ignition::gui::events::SpawnFromPath</class>
+    <class kind="class">ignition::gui::events::WorldControl</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::gui</namespace>
+    <namespace>ignition::gui::events</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/GuiEvents.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2GuiEvents_8hh.html</filename>
+    <includes id="gz_2gui_2GuiEvents_8hh" name="gz/gui/GuiEvents.hh" local="no" imported="no">gz/gui/GuiEvents.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/gz.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2gz_8hh.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>cmdConfig</name>
+      <anchorfile>gz_2gui_2gz_8hh.html</anchorfile>
+      <anchor>a9b80226bede7b39b46c85ab9605bc6ed</anchor>
+      <arglist>(const char *_config)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cmdEmptyWindow</name>
+      <anchorfile>gz_2gui_2gz_8hh.html</anchorfile>
+      <anchor>aac021f62bfd14065d25fd6a0e6da33b6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cmdPluginList</name>
+      <anchorfile>gz_2gui_2gz_8hh.html</anchorfile>
+      <anchor>a1a285a33e81e3583b6689c1a9352d2fe</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cmdSetStyleFromFile</name>
+      <anchorfile>gz_2gui_2gz_8hh.html</anchorfile>
+      <anchor>a09ea799331923008d286750d58518cc5</anchor>
+      <arglist>(const char *_filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cmdStandalone</name>
+      <anchorfile>gz_2gui_2gz_8hh.html</anchorfile>
+      <anchor>ac095f4f00a71b72f9aa2e6a461922dcf</anchor>
+      <arglist>(const char *_filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>ignitionVersion</name>
+      <anchorfile>gz_2gui_2gz_8hh.html</anchorfile>
+      <anchor>a305697c88bf38842159863c95ed6934d</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/gz.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2gz_8hh.html</filename>
+    <includes id="gz_2gui_2gz_8hh" name="gz/gui/gz.hh" local="no" imported="no">gz/gui/gz.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/Helpers.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2Helpers_8hh.html</filename>
+    <includes id="gz_2gui_2Enums_8hh" name="gz/gui/Enums.hh" local="yes" imported="no">gz/gui/Enums.hh</includes>
+    <namespace>ignition</namespace>
+    <namespace>ignition::gui</namespace>
+    <member kind="function">
+      <type>T</type>
+      <name>findFirstByProperty</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a7f6e3a4a59e5402c7385eee47915f54d</anchor>
+      <arglist>(const QList&lt; T &gt; _list, const char *_key, QVariant _value)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>humanReadable</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ad038e1b30e2dfe1ff68d7da6d8ae847c</anchor>
+      <arglist>(const std::string &amp;_key)</arglist>
+    </member>
+    <member kind="function">
+      <type>const QString</type>
+      <name>qmlQrcImportPath</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a3fc3138fba64d116ab4da181127ba8e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rangeFromKey</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a360b21d27ab2dfbca411208dc4b9b983</anchor>
+      <arglist>(const std::string &amp;_key, double &amp;_min, double &amp;_max)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>renderEngineName</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>acdb79b7eb13e49dc172984b29252b981</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>StringType</type>
+      <name>stringTypeFromKey</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab9d5e67be666108a3cf7655ef036b6f6</anchor>
+      <arglist>(const std::string &amp;_key)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>uniqueFilePath</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a5be44173af2a99f79d37efc129b06a05</anchor>
+      <arglist>(const std::string &amp;_pathAndName, const std::string &amp;_extension)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>unitFromKey</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a53cf85864d21648d7e2c5a54f75fb294</anchor>
+      <arglist>(const std::string &amp;_key, const std::string &amp;_type=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>QStringList</type>
+      <name>worldNames</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a16c452c451b1405a336472b2ed6a9c01</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/Helpers.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2Helpers_8hh.html</filename>
+    <includes id="gz_2gui_2Helpers_8hh" name="gz/gui/Helpers.hh" local="no" imported="no">gz/gui/Helpers.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>ign.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ign_8hh.html</filename>
+    <includes id="gz_2gui_2gz_8hh" name="gz/gui/gz.hh" local="no" imported="no">gz/gui/gz.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/MainWindow.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2MainWindow_8hh.html</filename>
+    <includes id="gz_2gui_2qt_8h" name="gz/gui/qt.h" local="yes" imported="no">gz/gui/qt.h</includes>
+    <class kind="class">ignition::gui::MainWindow</class>
+    <class kind="struct">ignition::gui::WindowConfig</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::gui</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>ExitAction</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>acd3ef6d06ed653a4a86176bb2918980e</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="acd3ef6d06ed653a4a86176bb2918980ea29711fce468833e5b5735725146ff4f2">CLOSE_GUI</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="acd3ef6d06ed653a4a86176bb2918980ea168abf7ec3c50ef6c475c47a274ced29">SHUTDOWN_SERVER</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/MainWindow.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2MainWindow_8hh.html</filename>
+    <includes id="gz_2gui_2MainWindow_8hh" name="gz/gui/MainWindow.hh" local="no" imported="no">gz/gui/MainWindow.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/PlottingInterface.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2PlottingInterface_8hh.html</filename>
+    <class kind="class">ignition::gui::PlotData</class>
+    <class kind="class">ignition::gui::PlottingInterface</class>
+    <class kind="class">ignition::gui::Topic</class>
+    <class kind="class">ignition::gui::Transport</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/PlottingInterface.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2PlottingInterface_8hh.html</filename>
+    <includes id="gz_2gui_2PlottingInterface_8hh" name="gz/gui/PlottingInterface.hh" local="no" imported="no">gz/gui/PlottingInterface.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/Plugin.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2Plugin_8hh.html</filename>
+    <includes id="gz_2gui_2qt_8h" name="gz/gui/qt.h" local="yes" imported="no">gz/gui/qt.h</includes>
+    <class kind="class">ignition::gui::Plugin</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/Plugin.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2Plugin_8hh.html</filename>
+    <includes id="gz_2gui_2Plugin_8hh" name="gz/gui/Plugin.hh" local="no" imported="no">gz/gui/Plugin.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/qt.h</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2qt_8h.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/qt.h</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2qt_8h.html</filename>
+    <includes id="gz_2gui_2qt_8h" name="gz/gui/qt.h" local="no" imported="no">gz/gui/qt.h</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/gui/SearchModel.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/gz/gui/</path>
+    <filename>gz_2gui_2SearchModel_8hh.html</filename>
+    <includes id="gz_2gui_2qt_8h" name="gz/gui/qt.h" local="yes" imported="no">gz/gui/qt.h</includes>
+    <class kind="class">ignition::gui::SearchModel</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/gui/SearchModel.hh</name>
+    <path>/home/jenkins/workspace/ign-gui6-debbuilder/build/ignition-gui-6.8.0/include/ignition/gui/</path>
+    <filename>ignition_2gui_2SearchModel_8hh.html</filename>
+    <includes id="gz_2gui_2SearchModel_8hh" name="gz/gui/SearchModel.hh" local="no" imported="no">gz/gui/SearchModel.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/gui/config.hh</includes>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::Application</name>
+    <filename>classignition_1_1gui_1_1Application.html</filename>
+    <base>QApplication</base>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnPluginClose</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a02e964d931ff0197852a4574e5cd3c82</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>PluginAdded</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a0cb68b2fbf2e98a04e9b723a5847e53a</anchor>
+      <arglist>(const QString &amp;_objectName)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Application</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a72f20cf4ddd6d6bc3d3542ae3a69f886</anchor>
+      <arglist>(int &amp;_argc, char **_argv, const WindowType _type=WindowType::kMainWindow)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Application</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>add76bdcd4a9a0b7b27c3dacadf5a66fe</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>AddPluginPath</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a0439a3b47417035644211e54ad2ebab4</anchor>
+      <arglist>(const std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>CreateMainWindow</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>adb0a5d5fb506e1f7fe5569e21135690f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>DefaultConfigPath</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a550805f7af04b84fc9ebd109fe250297</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QQmlApplicationEngine *</type>
+      <name>Engine</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a50b544bc54fa42b2fad3ef9e9b28a0bf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>LoadConfig</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a9bcca11f0018a1fb97007f7817a10b75</anchor>
+      <arglist>(const std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>LoadDefaultConfig</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a3025dfd6ca12c76d2d4ac5172a8cc186</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>LoadPlugin</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a4ebd8a4ae0daf23b52d41b4cd7378cd2</anchor>
+      <arglist>(const std::string &amp;_filename, const tinyxml2::XMLElement *_pluginElem=nullptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; Plugin &gt;</type>
+      <name>PluginByName</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a3b76fece552a47f614868d0b99b7ff0b</anchor>
+      <arglist>(const std::string &amp;_pluginName) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::pair&lt; std::string, std::vector&lt; std::string &gt; &gt; &gt;</type>
+      <name>PluginList</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>af626d0007818358a7381fdc3f96a278a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>RemovePlugin</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a65c9015a65f316010adc603a86529086</anchor>
+      <arglist>(const std::string &amp;_pluginName)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDefaultConfigPath</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>a43ca2d4ee016e4ce083a2af03dbaea3b</anchor>
+      <arglist>(const std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPluginPathEnv</name>
+      <anchorfile>classignition_1_1gui_1_1Application.html</anchorfile>
+      <anchor>ad7a2917fc44d0390e03768f460c5ef7d</anchor>
+      <arglist>(const std::string &amp;_env)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::BlockOrbit</name>
+    <filename>classignition_1_1gui_1_1events_1_1BlockOrbit.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>BlockOrbit</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1BlockOrbit.html</anchorfile>
+      <anchor>a87fad697ce12cfef3298fb537e3916f4</anchor>
+      <arglist>(const bool &amp;_block)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Block</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1BlockOrbit.html</anchorfile>
+      <anchor>aea0f490c2f8fc502f9065debd827edda</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1BlockOrbit.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::Dialog</name>
+    <filename>classignition_1_1gui_1_1Dialog.html</filename>
+    <base>QObject</base>
+    <member kind="function">
+      <type></type>
+      <name>Dialog</name>
+      <anchorfile>classignition_1_1gui_1_1Dialog.html</anchorfile>
+      <anchor>a893649c76b6e54d6a392d5e6c260a016</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Dialog</name>
+      <anchorfile>classignition_1_1gui_1_1Dialog.html</anchorfile>
+      <anchor>a656bf5bf83d73b108733b72a3282c958</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QQuickWindow *</type>
+      <name>QuickWindow</name>
+      <anchorfile>classignition_1_1gui_1_1Dialog.html</anchorfile>
+      <anchor>aca0c5dd75d40731e7478c226cf52aa9e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>ReadConfigAttribute</name>
+      <anchorfile>classignition_1_1gui_1_1Dialog.html</anchorfile>
+      <anchor>ab13142a159221b50a1404f0280a7a794</anchor>
+      <arglist>(const std::string &amp;_path, const std::string &amp;_attribute) const</arglist>
+    </member>
+    <member kind="function">
+      <type>QQuickItem *</type>
+      <name>RootItem</name>
+      <anchorfile>classignition_1_1gui_1_1Dialog.html</anchorfile>
+      <anchor>ad4277fd342f30180617fafffabc9ebd6</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDefaultConfig</name>
+      <anchorfile>classignition_1_1gui_1_1Dialog.html</anchorfile>
+      <anchor>a007795a44dac416478c4ecd3cc11dc71</anchor>
+      <arglist>(const std::string &amp;_config)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>UpdateConfigAttribute</name>
+      <anchorfile>classignition_1_1gui_1_1Dialog.html</anchorfile>
+      <anchor>aea13714cf052de5f4e60239a1f656b97</anchor>
+      <arglist>(const std::string &amp;_path, const std::string &amp;_attribute, const bool _value) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::DragDropModel</name>
+    <filename>classignition_1_1gui_1_1DragDropModel.html</filename>
+    <base>QStandardItemModel</base>
+    <member kind="function">
+      <type>QMimeData *</type>
+      <name>mimeData</name>
+      <anchorfile>classignition_1_1gui_1_1DragDropModel.html</anchorfile>
+      <anchor>aeea5fde7756df27558e5a6229ce6e7e7</anchor>
+      <arglist>(const QModelIndexList &amp;_indexes) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::DragOnScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1DragOnScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>DragOnScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1DragOnScene.html</anchorfile>
+      <anchor>a40bf1c15054abd0d09614b584fa6f3a2</anchor>
+      <arglist>(const common::MouseEvent &amp;_mouse)</arglist>
+    </member>
+    <member kind="function">
+      <type>common::MouseEvent</type>
+      <name>Mouse</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1DragOnScene.html</anchorfile>
+      <anchor>a0b77129d50237b14d33d03e5b87a2fc3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1DragOnScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::DropdownMenuEnabled</name>
+    <filename>classignition_1_1gui_1_1events_1_1DropdownMenuEnabled.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>DropdownMenuEnabled</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1DropdownMenuEnabled.html</anchorfile>
+      <anchor>a0243f1e3b32128d6a3ffb8e166e0f89a</anchor>
+      <arglist>(bool _menuEnabled)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>MenuEnabled</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1DropdownMenuEnabled.html</anchorfile>
+      <anchor>a13f4c9b68045a8ab036949179a7400d4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1DropdownMenuEnabled.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::DropOnScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1DropOnScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>DropOnScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1DropOnScene.html</anchorfile>
+      <anchor>a5e357451c96a663c68752bc519eb7bc0</anchor>
+      <arglist>(const std::string &amp;_dropText, const math::Vector2i &amp;_dropMouse)</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>DropText</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1DropOnScene.html</anchorfile>
+      <anchor>a162b5608b1a2d5209b058ef08f4547a3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const math::Vector2i &amp;</type>
+      <name>Mouse</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1DropOnScene.html</anchorfile>
+      <anchor>a609f7d6c8978ee76032a05e910574fdd</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1DropOnScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::HoverOnScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1HoverOnScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>HoverOnScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1HoverOnScene.html</anchorfile>
+      <anchor>a3b8ec240c274e2fde1a058ff52cf1fbf</anchor>
+      <arglist>(const common::MouseEvent &amp;_mouse)</arglist>
+    </member>
+    <member kind="function">
+      <type>common::MouseEvent</type>
+      <name>Mouse</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1HoverOnScene.html</anchorfile>
+      <anchor>a0b77129d50237b14d33d03e5b87a2fc3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1HoverOnScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::HoverToScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1HoverToScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>HoverToScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1HoverToScene.html</anchorfile>
+      <anchor>a5da8a7c903368c0206e654ef3c49a688</anchor>
+      <arglist>(const math::Vector3d &amp;_point)</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>Point</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1HoverToScene.html</anchorfile>
+      <anchor>afb68c702d7e5048bd04fa7b31cb6f4d0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1HoverToScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::KeyPressOnScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1KeyPressOnScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>KeyPressOnScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1KeyPressOnScene.html</anchorfile>
+      <anchor>a960c33f9713095f753764340de2f0f0f</anchor>
+      <arglist>(const common::KeyEvent &amp;_key)</arglist>
+    </member>
+    <member kind="function">
+      <type>common::KeyEvent</type>
+      <name>Key</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1KeyPressOnScene.html</anchorfile>
+      <anchor>a1cdc4fdd755ea09df07cb1efb8d1e802</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1KeyPressOnScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::KeyReleaseOnScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1KeyReleaseOnScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>KeyReleaseOnScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1KeyReleaseOnScene.html</anchorfile>
+      <anchor>a5f81850065986c0bd040cb30d6db436e</anchor>
+      <arglist>(const common::KeyEvent &amp;_key)</arglist>
+    </member>
+    <member kind="function">
+      <type>common::KeyEvent</type>
+      <name>Key</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1KeyReleaseOnScene.html</anchorfile>
+      <anchor>a1cdc4fdd755ea09df07cb1efb8d1e802</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1KeyReleaseOnScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::LeftClickOnScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1LeftClickOnScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>LeftClickOnScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1LeftClickOnScene.html</anchorfile>
+      <anchor>ab5e5a5e6bd9c97aaa66c32a447538fd1</anchor>
+      <arglist>(const common::MouseEvent &amp;_mouse)</arglist>
+    </member>
+    <member kind="function">
+      <type>const common::MouseEvent &amp;</type>
+      <name>Mouse</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1LeftClickOnScene.html</anchorfile>
+      <anchor>a09b01f58457cf43519d05ecdc24b40f8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1LeftClickOnScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::LeftClickToScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1LeftClickToScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>LeftClickToScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1LeftClickToScene.html</anchorfile>
+      <anchor>a6a1724ef1c80eba888f67acfcac76a04</anchor>
+      <arglist>(const math::Vector3d &amp;_point)</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>Point</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1LeftClickToScene.html</anchorfile>
+      <anchor>afb68c702d7e5048bd04fa7b31cb6f4d0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1LeftClickToScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::MainWindow</name>
+    <filename>classignition_1_1gui_1_1MainWindow.html</filename>
+    <base>QObject</base>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnAddPlugin</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ae4645ccd73519fcd437d49ff1315e1db</anchor>
+      <arglist>(QString _plugin)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnLoadConfig</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a6ddc9d7e2ce3844b4d82b2287433a19a</anchor>
+      <arglist>(const QString &amp;_path)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnSaveConfig</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ac5ff3063d93464ef00bcf3bdf98175de</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnSaveConfigAs</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a1f95ff12e743bd242c5f52e78ce7b9b3</anchor>
+      <arglist>(const QString &amp;_path)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnStopServer</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>afa0f2f0ca841aedc3b6a1c15d2fbc745</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>configChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a0fd98a672b230336e732f123bccce0ec</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>DefaultExitActionChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a072a3958fdb067e148c71d36c4d38c85</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>DialogOnExitTextChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a027f42d2a9e6de8054e3d22a715f5036</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ExitDialogCloseGuiTextChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ad92c9e9e15c82a96a497365245fc0411</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ExitDialogShowCloseGuiChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a9bd6ab1b520f4882a2895bdb508edfd3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ExitDialogShowShutdownChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a86757a37c94513e02ccf71c6a631c2ed</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ExitDialogShutdownTextChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>aeab4f01d034f5ae90b26865764d73b73</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>MaterialAccentChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>af4088ac043bc994ba6025730d0595b28</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>MaterialPrimaryChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a2e979bde10586aa380be2805f54a07cb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>MaterialThemeChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a1f4066acc49b2102b88d6e912bfee8da</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>notify</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a4fb76a7e8b4fa3415eb6c161708bfa82</anchor>
+      <arglist>(const QString &amp;_message)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>notifyWithDuration</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a7b07d319af7e29c3556c8cf2558cbfbc</anchor>
+      <arglist>(const QString &amp;_message, int _duration)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>PluginCountChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a31e7cb6a864d62cb9158493f7bb1f671</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>PluginToolBarColorDarkChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>acf567bd97e4b91d9cd71e7befdf15e93</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>PluginToolBarColorLightChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>aff0e291ee29a98d5220c5427813078be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>PluginToolBarTextColorDarkChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ab5fb2e5c1ffa9d1adeb4e872fe7151af</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>PluginToolBarTextColorLightChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ac894b45260102ce930d6cddce5cbf83f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ShowDefaultDrawerOptsChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a58370e251c585c4201ae6640f1e41f1a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ShowDialogOnExitChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a48f25853d37f87817b0bd28861159b14</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ShowDrawerChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ac097c4e29c304dc7f66eac6b59dc067e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ShowPluginMenuChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a2ee12b5535f009054e96dd4e47265214</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ToolBarColorDarkChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a8f09af92c35abdc1149b45fcda220606</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ToolBarColorLightChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a191298b8f8e8c660f7b509bba9e570b8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ToolBarTextColorDarkChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ad44dab313bb290e2a86c5722d634d2f5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ToolBarTextColorLightChanged</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a5e8047be6fb3be368625e9ca025de155</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MainWindow</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>aeb676574b78bda84d687fdcfd65d84a6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~MainWindow</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a60b995a8752a98e9063e49809818b19c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ApplyConfig</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a46cb5b0923828c383a857ee92c781c35</anchor>
+      <arglist>(const WindowConfig &amp;_config)</arglist>
+    </member>
+    <member kind="function">
+      <type>WindowConfig</type>
+      <name>CurrentWindowConfig</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a974c2660964331b0f442b9dd72082bbc</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE ExitAction</type>
+      <name>DefaultExitAction</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>adfc545739be0aed2585b5e7b4c71030b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>DialogOnExitText</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a635de28000503a9fa9d9012773061c2f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>ExitDialogCloseGuiText</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>afcaff950ba4871e7a2591436700370ea</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE bool</type>
+      <name>ExitDialogShowCloseGui</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a95332817f357b1424dcf373672ff9100</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE bool</type>
+      <name>ExitDialogShowShutdown</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a1b8193b3f608990eb7e3c3f28625b456</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>ExitDialogShutdownText</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a00f410d090b00667c688d59c0c870f08</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>MaterialAccent</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a8fa0b13d2143efbafadbe4fff76ab478</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>MaterialPrimary</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ae4c083938107300054ec9859ea8d1e99</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>MaterialTheme</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a9a7c0f25b31a646dbebf18df6f5f1d66</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE int</type>
+      <name>PluginCount</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>aa6a272f7416c8908a57232dc2a8e1475</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QStringList</type>
+      <name>PluginListModel</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a9245dbca486458577a50eff8329583a8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>PluginToolBarColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a8d04dfa702c5c889dd374d6e9e9b72f5</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>PluginToolBarColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ad05d24ac99d4f58dae1383331cd8e150</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>PluginToolBarTextColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>aba9d4b1ea7040fc8e748bb2b4c181dc3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>PluginToolBarTextColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>adaf78cb50948e66034b15ef548d87e7c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>QQuickWindow *</type>
+      <name>QuickWindow</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>aca0c5dd75d40731e7478c226cf52aa9e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SaveConfig</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a7c79af3da728529268f057f68dda4fd7</anchor>
+      <arglist>(const std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE std::string</type>
+      <name>ServerControlService</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a02d203b8d82b3437a03a4a434b0f0605</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetDefaultExitAction</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a13701c6cf5b0d61583067962026ab0af</anchor>
+      <arglist>(enum ExitAction _defaultExitAction)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetDialogOnExitText</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a3b6b7c6228f940ad0ecf1256f3984957</anchor>
+      <arglist>(const QString &amp;_dialogOnExitText)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetExitDialogCloseGuiText</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a1a3b018ee5d6e26b0470c51be800f130</anchor>
+      <arglist>(const QString &amp;_exitDialogCloseGuiText)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetExitDialogShowCloseGui</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ac9fd28ff6673cfc08f081c85c8316004</anchor>
+      <arglist>(bool _exitDialogShowCloseGui)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetExitDialogShowShutdown</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a217016150825d6664003bf62e7466af5</anchor>
+      <arglist>(bool _exitDialogShowShutdown)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetExitDialogShutdownText</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a255124fab03a392c7bf8cd5a1b3a05f1</anchor>
+      <arglist>(const QString &amp;_exitDialogShutdownText)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetMaterialAccent</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a30adf39da6899861dada391d45d770e1</anchor>
+      <arglist>(const QString &amp;_materialAccent)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetMaterialPrimary</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a1dd7dbea7d88a2eb0377d13599a66be9</anchor>
+      <arglist>(const QString &amp;_materialPrimary)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetMaterialTheme</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a69d5e143c8370f5336475756a31b076d</anchor>
+      <arglist>(const QString &amp;_materialTheme)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetPluginCount</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a17fb7514032b777c29932d3029230f67</anchor>
+      <arglist>(const int _pluginCount)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetPluginToolBarColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a1e1d4b9779644eeba15c14fa31afd214</anchor>
+      <arglist>(const QString &amp;_pluginPluginToolBarColorDark)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetPluginToolBarColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a94eea28d9b33faf5d5241e4249cf73e3</anchor>
+      <arglist>(const QString &amp;_pluginPluginToolBarColorLight)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetPluginToolBarTextColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a5f14e1cc44d82eca06da7594e83e140a</anchor>
+      <arglist>(const QString &amp;_pluginPluginToolBarTextColorDark)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetPluginToolBarTextColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a2278de34fde2da3ed0cd3b6276d5bb30</anchor>
+      <arglist>(const QString &amp;_pluginPluginToolBarTextColorLight)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRenderEngine</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a934980925c06e768de534a39e37d0839</anchor>
+      <arglist>(const std::string &amp;_renderEngine)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetServerControlService</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ac7233be1778de997394cb03daec9e1be</anchor>
+      <arglist>(const std::string &amp;_service)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetShowDefaultDrawerOpts</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a896482ac8bc0561b646225feb93c433d</anchor>
+      <arglist>(const bool _showDefaultDrawerOpts)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetShowDialogOnExit</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>afe14e577aae8375a1535f1842adbf637</anchor>
+      <arglist>(bool _showDialogOnExit)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetShowDrawer</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a1e777ff532819f6d526c1adee6302b60</anchor>
+      <arglist>(const bool _showDrawer)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetShowPluginMenu</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>addc5fa8e85fdf3330c14c39de5e10f0b</anchor>
+      <arglist>(const bool _showPluginMenu)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetToolBarColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>afdd0808d0a6740702768be88c40b55e1</anchor>
+      <arglist>(const QString &amp;_toolBarColorDark)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetToolBarColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a1d720260fb6c5881ed3a4380b5c2fffd</anchor>
+      <arglist>(const QString &amp;_toolBarColorLight)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetToolBarTextColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a6573839270236fe5746ff9a167ccc211</anchor>
+      <arglist>(const QString &amp;_toolBarTextColorDark)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE void</type>
+      <name>SetToolBarTextColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a51aef3dd5f2a04442377529240075fbf</anchor>
+      <arglist>(const QString &amp;_toolBarTextColorLight)</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE bool</type>
+      <name>ShowDefaultDrawerOpts</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a333733967b60a6d60f12babc4877af90</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE bool</type>
+      <name>ShowDialogOnExit</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a0981e87361a40380e038906ff93db5c0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE bool</type>
+      <name>ShowDrawer</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a68572ea4222ab92ecda08b1a28e2ee9b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE bool</type>
+      <name>ShowPluginMenu</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a3ad8f6b310aa623f0686df0c708ea920</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>ToolBarColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a98457e81f7f44fad2b78bb6cd4f061b3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>ToolBarColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a31951832159286601ee2dbea402045b1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>ToolBarTextColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a38cb83f8c85eba123b9474e15e873875</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Q_INVOKABLE QString</type>
+      <name>ToolBarTextColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ae23ff0e2f6ffbf8848a12c4353f99cef</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="property">
+      <type>ExitAction</type>
+      <name>defaultExitAction</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a31623828b536c59d2c6b5149961c060b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>dialogOnExitText</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>af94d4958dcde2b216f33ca9e68c19e9b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>exitDialogCloseGuiText</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a5f7734c9ff0548d44d818723adf502b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>bool</type>
+      <name>exitDialogShowCloseGui</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ad289b17ce29940e3d62b42565114e172</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>bool</type>
+      <name>exitDialogShowShutdown</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ad5c1efacb3becdc581c4fc8a55f4b42c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>exitDialogShutdownText</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a6d411e99b2704a3cf29f1c4ef926df75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>materialAccent</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ae5db0ca859689e37ef6672be840d7235</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>materialPrimary</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>af0683fd2853d4e8e593edeaaaae2af8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>materialTheme</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a4621794b3ea2837f1adceeba5d7c0f42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>int</type>
+      <name>pluginCount</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ac87205aa4af9f6102166828436505dae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>pluginToolBarColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ad7f073936b2b255f34be9a18a9556ad8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>pluginToolBarColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>acb024e2f03405fc7d665260b6a66045b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>pluginToolBarTextColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a370b1cbfbca2b04462481f21ec7a6477</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>pluginToolBarTextColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a9c54f90a1030084e2cceeb84d9c193f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>bool</type>
+      <name>showDefaultDrawerOpts</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a3f2e68eaf76daeacbefd42a1b22d8038</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>bool</type>
+      <name>showDialogOnExit</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>aa45bc661fb50e5ee11426c8042110ea8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>bool</type>
+      <name>showDrawer</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a57a8a18778e679e34e885f89d9e0b415</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>bool</type>
+      <name>showPluginMenu</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ab7296f970d924545e3ed033427356040</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>toolBarColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a4c1a8629fc70bbfdf97eb4be18bc1a03</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>toolBarColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>abcb26d0c71066a9e8656e0ea9a67598d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>toolBarTextColorDark</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>ae8a1daf8ef7843a788e976ea804c22e8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>QString</type>
+      <name>toolBarTextColorLight</name>
+      <anchorfile>classignition_1_1gui_1_1MainWindow.html</anchorfile>
+      <anchor>a5689b38fd538d4ad0eaa1d61d3e3e427</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::MousePressOnScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1MousePressOnScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>MousePressOnScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1MousePressOnScene.html</anchorfile>
+      <anchor>a7e0f107feb9efcd1b5aae1050279478f</anchor>
+      <arglist>(const common::MouseEvent &amp;_mouse)</arglist>
+    </member>
+    <member kind="function">
+      <type>const common::MouseEvent &amp;</type>
+      <name>Mouse</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1MousePressOnScene.html</anchorfile>
+      <anchor>a09b01f58457cf43519d05ecdc24b40f8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1MousePressOnScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::PlotData</name>
+    <filename>classignition_1_1gui_1_1PlotData.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>PlotData</name>
+      <anchorfile>classignition_1_1gui_1_1PlotData.html</anchorfile>
+      <anchor>a5c3ecdb446d5385605dcdc952c886fdb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~PlotData</name>
+      <anchorfile>classignition_1_1gui_1_1PlotData.html</anchorfile>
+      <anchor>a46b2356e3ac0232f9a2cd48f51bc321d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>AddChart</name>
+      <anchorfile>classignition_1_1gui_1_1PlotData.html</anchorfile>
+      <anchor>ad3a61f0e6db9eee261a32b64747c1a47</anchor>
+      <arglist>(int _chart)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>ChartCount</name>
+      <anchorfile>classignition_1_1gui_1_1PlotData.html</anchorfile>
+      <anchor>aadc9c2b0e4c376d4a9deac1d4beda509</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::set&lt; int &gt; &amp;</type>
+      <name>Charts</name>
+      <anchorfile>classignition_1_1gui_1_1PlotData.html</anchorfile>
+      <anchor>ae3d079a10f41502e341e95fac767f6fe</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>RemoveChart</name>
+      <anchorfile>classignition_1_1gui_1_1PlotData.html</anchorfile>
+      <anchor>a0764c648ab8c3d33de73886f9ced4f44</anchor>
+      <arglist>(int _chart)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTime</name>
+      <anchorfile>classignition_1_1gui_1_1PlotData.html</anchorfile>
+      <anchor>a0360b6fd0405d7564dbfdbec17e4fd28</anchor>
+      <arglist>(const double _time)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetValue</name>
+      <anchorfile>classignition_1_1gui_1_1PlotData.html</anchorfile>
+      <anchor>a7b933b6089d4c218386c8d1c715355f0</anchor>
+      <arglist>(const double _value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Time</name>
+      <anchorfile>classignition_1_1gui_1_1PlotData.html</anchorfile>
+      <anchor>a7ebf4042bed5aeb2c4e272964f82d43e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Value</name>
+      <anchorfile>classignition_1_1gui_1_1PlotData.html</anchorfile>
+      <anchor>a8554e97d98d05016f16300cedf2be9f6</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::PlottingInterface</name>
+    <filename>classignition_1_1gui_1_1PlottingInterface.html</filename>
+    <base>QObject</base>
+    <member kind="slot">
+      <type>bool</type>
+      <name>exportCSV</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>aac4d50c246729f5980807236f86b1b7a</anchor>
+      <arglist>(QString _path, int _chart, QMap&lt; QString, QVariant &gt; _serieses)</arglist>
+    </member>
+    <member kind="slot">
+      <type>std::string</type>
+      <name>FilePath</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>a457cb7586c465b2625b1b7a95553f292</anchor>
+      <arglist>(QString _path, std::string _name, std::string _extention)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>onComponentSubscribe</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>a4972da122465183dcdc3231845f10593</anchor>
+      <arglist>(QString _entity, QString _typeId, QString _type, QString _attribute, int _chart)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>onComponentUnSubscribe</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>a99d3aae7a7c1bdb647393ff6e7812931</anchor>
+      <arglist>(QString _entity, QString _typeId, QString _attribute, int _chart)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>onPlot</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>a048b8c85596d9a3949203c25327c3427</anchor>
+      <arglist>(int _chart, QString _fieldID, double _x, double _y)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>subscribe</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>adfe6e920c74dfec8c678c168870204af</anchor>
+      <arglist>(int _chart, QString _fieldPath, QString _topic)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>unsubscribe</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>a37df2159110baa1678ba8c5e3717337f</anchor>
+      <arglist>(int _chart, QString _fieldPath, QString _topic)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>UpdateTime</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>a6d397c158cbbc465065495f5ceab28f6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>std::string</type>
+      <name>ComponentName</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>a41f30c5f854ead5dcee4d031809757cc</anchor>
+      <arglist>(uint64_t _typeId)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ComponentSubscribe</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>a68e67a07fb70e4f8c158ac95795fa3bc</anchor>
+      <arglist>(uint64_t _entity, uint64_t _typeId, const std::string &amp;_type, const std::string &amp;_attribute, int _chart)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ComponentUnSubscribe</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>a12f5f36b4abc3e7945a1aa5540e4d297</anchor>
+      <arglist>(uint64_t _entity, uint64_t _typeId, const std::string &amp;_attribute, int _chart)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>plot</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>afbd9c2fc588eacc760394c05e4198959</anchor>
+      <arglist>(int _chart, QString _fieldID, double _x, double _y)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PlottingInterface</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>a0d7ed92b0c5bb67b9a41373ade53054c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~PlottingInterface</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>aa0a1f95f06556a6fdaad5ad723953cf3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InitTimer</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>aded9b0ef5cb7a143d739c80442978a1d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>Timeout</name>
+      <anchorfile>classignition_1_1gui_1_1PlottingInterface.html</anchorfile>
+      <anchor>afe6070322c7613f5fad189a1bf25b1e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::Plugin</name>
+    <filename>classignition_1_1gui_1_1Plugin.html</filename>
+    <base>QObject</base>
+    <member kind="function">
+      <type></type>
+      <name>Plugin</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>ac6f2688af203e5a5aa47ec9cea5fb6f2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Plugin</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>a96cbafa7a127c08d0b97e147f129f5a7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QQuickItem *</type>
+      <name>CardItem</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>a4ad649987484b5cdcc9baa1035345b80</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>ConfigStr</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>a791b774c262f5271550350ec5030f87d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QQmlContext *</type>
+      <name>Context</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>ad7247e719bcbb3b0e6dddc9634be428b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>DeleteLaterRequested</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>ad79a5143eec0a6ba2cf3ee12faee756a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>a142b784416e4120fa87ed291444b51f8</anchor>
+      <arglist>(const tinyxml2::XMLElement *_pluginElem)</arglist>
+    </member>
+    <member kind="function">
+      <type>QQuickItem *</type>
+      <name>PluginItem</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>a65c332fe76352d317b2b37424547a3eb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>PostParentChanges</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>a84eba809004bf81581e941836506e257</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>Title</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>a9745e7179bc7bd45af687a6ec578ba55</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DeleteLater</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>acf148f507cd3f4efe843cee455a679b9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>LoadConfig</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>a23b77569f666353a9794d926b949a179</anchor>
+      <arglist>(const tinyxml2::XMLElement *_pluginElem)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>configStr</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>a145dfdf9e6c54da937349deb4ff88efe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>title</name>
+      <anchorfile>classignition_1_1gui_1_1Plugin.html</anchorfile>
+      <anchor>ac30fed21fe991cc8475ce543929f8b72</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::PreRender</name>
+    <filename>classignition_1_1gui_1_1events_1_1PreRender.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>PreRender</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1PreRender.html</anchorfile>
+      <anchor>a9d54df37078ca2dd90e630fa1a5c00db</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1PreRender.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::Render</name>
+    <filename>classignition_1_1gui_1_1events_1_1Render.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>Render</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1Render.html</anchorfile>
+      <anchor>a1a6915de89093bc6383d7c1f18ab81e2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1Render.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::RightClickOnScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1RightClickOnScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>RightClickOnScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1RightClickOnScene.html</anchorfile>
+      <anchor>aa1f750f4a7ee5d22c717774ee5bd392d</anchor>
+      <arglist>(const common::MouseEvent &amp;_mouse)</arglist>
+    </member>
+    <member kind="function">
+      <type>const common::MouseEvent &amp;</type>
+      <name>Mouse</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1RightClickOnScene.html</anchorfile>
+      <anchor>a09b01f58457cf43519d05ecdc24b40f8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1RightClickOnScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::RightClickToScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1RightClickToScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>RightClickToScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1RightClickToScene.html</anchorfile>
+      <anchor>ac0eb966c96ddf621b966c4d812c467cf</anchor>
+      <arglist>(const math::Vector3d &amp;_point)</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>Point</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1RightClickToScene.html</anchorfile>
+      <anchor>afb68c702d7e5048bd04fa7b31cb6f4d0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1RightClickToScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::ScrollOnScene</name>
+    <filename>classignition_1_1gui_1_1events_1_1ScrollOnScene.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>ScrollOnScene</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1ScrollOnScene.html</anchorfile>
+      <anchor>a3fded3b089a0a1392706dfd820c3f716</anchor>
+      <arglist>(const common::MouseEvent &amp;_mouse)</arglist>
+    </member>
+    <member kind="function">
+      <type>const common::MouseEvent &amp;</type>
+      <name>Mouse</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1ScrollOnScene.html</anchorfile>
+      <anchor>a09b01f58457cf43519d05ecdc24b40f8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1ScrollOnScene.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::SearchModel</name>
+    <filename>classignition_1_1gui_1_1SearchModel.html</filename>
+    <base>QSortFilterProxyModel</base>
+    <member kind="function">
+      <type>bool</type>
+      <name>filterAcceptsRow</name>
+      <anchorfile>classignition_1_1gui_1_1SearchModel.html</anchorfile>
+      <anchor>ae438cd02579b3d6add36f90f019076b8</anchor>
+      <arglist>(const int _srcRow, const QModelIndex &amp;_srcParent) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>FilterAcceptsRowItself</name>
+      <anchorfile>classignition_1_1gui_1_1SearchModel.html</anchorfile>
+      <anchor>a869523f31504b5d8a42d8c541dfaf93f</anchor>
+      <arglist>(const int _srcRow, const QModelIndex &amp;_srcParent, const QString &amp;_word) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasAcceptedChildren</name>
+      <anchorfile>classignition_1_1gui_1_1SearchModel.html</anchorfile>
+      <anchor>af19f11f476384421f92b8f7551ed0f95</anchor>
+      <arglist>(const int _srcRow, const QModelIndex &amp;_srcParent) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasChildAcceptsItself</name>
+      <anchorfile>classignition_1_1gui_1_1SearchModel.html</anchorfile>
+      <anchor>a6464944a20b3571febf86edbfb12eb6d</anchor>
+      <arglist>(const QModelIndex &amp;_srcParent, const QString &amp;_word) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSearch</name>
+      <anchorfile>classignition_1_1gui_1_1SearchModel.html</anchorfile>
+      <anchor>a6f50f5dd8862e9b079b168c14a3593a7</anchor>
+      <arglist>(const QString &amp;_search)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>search</name>
+      <anchorfile>classignition_1_1gui_1_1SearchModel.html</anchorfile>
+      <anchor>a6a4263591439683a8d892c723da31b06</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::SnapIntervals</name>
+    <filename>classignition_1_1gui_1_1events_1_1SnapIntervals.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>SnapIntervals</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SnapIntervals.html</anchorfile>
+      <anchor>a4d85c3683ec50a7298afadcc0d8198b4</anchor>
+      <arglist>(const math::Vector3d &amp;_xyz, const math::Vector3d &amp;_rpy, const math::Vector3d &amp;_scale)</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>Position</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SnapIntervals.html</anchorfile>
+      <anchor>ae69fdc09fa90a4b3ee974bab465ecc41</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>Rotation</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SnapIntervals.html</anchorfile>
+      <anchor>a3506fa85523e71e4245eed84cf3bd9fb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>Scale</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SnapIntervals.html</anchorfile>
+      <anchor>a898e754024593d951a56fbf25286ae99</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SnapIntervals.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::SpawnCloneFromName</name>
+    <filename>classignition_1_1gui_1_1events_1_1SpawnCloneFromName.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>SpawnCloneFromName</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SpawnCloneFromName.html</anchorfile>
+      <anchor>a96b21bb5f63e88b1aea84179e3c34f07</anchor>
+      <arglist>(const std::string &amp;_name)</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>Name</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SpawnCloneFromName.html</anchorfile>
+      <anchor>a191cd9b1ba3e3c01a558a1f6c02a4429</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SpawnCloneFromName.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::SpawnFromDescription</name>
+    <filename>classignition_1_1gui_1_1events_1_1SpawnFromDescription.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>SpawnFromDescription</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SpawnFromDescription.html</anchorfile>
+      <anchor>a5cd7b4cc35eddf495861377ae251fdea</anchor>
+      <arglist>(const std::string &amp;_description)</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>Description</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SpawnFromDescription.html</anchorfile>
+      <anchor>a13d7c676738e5d82e1f54e495c7b45b4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SpawnFromDescription.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::SpawnFromPath</name>
+    <filename>classignition_1_1gui_1_1events_1_1SpawnFromPath.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>SpawnFromPath</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SpawnFromPath.html</anchorfile>
+      <anchor>a2ff8c91af3b9b1b361a488785317c3bb</anchor>
+      <arglist>(const std::string &amp;_filePath)</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>FilePath</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SpawnFromPath.html</anchorfile>
+      <anchor>aa41510b17e504078e1581598ad2cd279</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1SpawnFromPath.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::Topic</name>
+    <filename>classignition_1_1gui_1_1Topic.html</filename>
+    <base>QObject</base>
+    <member kind="signal">
+      <type>void</type>
+      <name>plot</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>afbd9c2fc588eacc760394c05e4198959</anchor>
+      <arglist>(int _chart, QString _fieldID, double _x, double _y)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Topic</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>a1c044e8c7be0f4c944920469908ad773</anchor>
+      <arglist>(const std::string &amp;_name)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Topic</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>afde963e9f3f63765899bea65f4df4088</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Callback</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>a5230c0d73e279d1d6679072864820466</anchor>
+      <arglist>(const google::protobuf::Message &amp;_msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>FieldCount</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>ae2462bea0c439af0ded8c021c35f53a8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::map&lt; std::string, PlotData * &gt; &amp;</type>
+      <name>Fields</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>aef0bd312450d433266be2192db0946cb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasHeader</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>a4fd9e8d5842606c14a4a763405282e03</anchor>
+      <arglist>(const google::protobuf::Message &amp;_msg, double &amp;_headerTime)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string &amp;</type>
+      <name>Name</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>a179a039f835207a28151d386f954173c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Register</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>a95aecf15da212ecbe7fa9b1c0adfabb6</anchor>
+      <arglist>(const std::string &amp;_fieldPath, int _chart)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPlottingTimeRef</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>a2b858bf1ee97bdc309a66ffa26e16065</anchor>
+      <arglist>(const std::shared_ptr&lt; double &gt; &amp;_time)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UnRegister</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>a6c76ca66398d933e6839dace0e68f9b9</anchor>
+      <arglist>(const std::string &amp;_fieldPath, int _chart)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classignition_1_1gui_1_1Topic.html</anchorfile>
+      <anchor>a539b3d50c0c3c7ddeacbc391312cb3bf</anchor>
+      <arglist>(const std::string &amp;_field)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::Transport</name>
+    <filename>classignition_1_1gui_1_1Transport.html</filename>
+    <base>QObject</base>
+    <member kind="slot">
+      <type>void</type>
+      <name>onPlot</name>
+      <anchorfile>classignition_1_1gui_1_1Transport.html</anchorfile>
+      <anchor>a048b8c85596d9a3949203c25327c3427</anchor>
+      <arglist>(int _chart, QString _fieldID, double _x, double _y)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>UnsubscribeOutdatedTopics</name>
+      <anchorfile>classignition_1_1gui_1_1Transport.html</anchorfile>
+      <anchor>a33a83b35c393d4da0568d57a2f0e656c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>plot</name>
+      <anchorfile>classignition_1_1gui_1_1Transport.html</anchorfile>
+      <anchor>afbd9c2fc588eacc760394c05e4198959</anchor>
+      <arglist>(int _chart, QString _fieldID, double _x, double _y)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Transport</name>
+      <anchorfile>classignition_1_1gui_1_1Transport.html</anchorfile>
+      <anchor>aec2b5b0924fbeef202f39f48db758825</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Transport</name>
+      <anchorfile>classignition_1_1gui_1_1Transport.html</anchorfile>
+      <anchor>a45ce3cc028d13c85af20709887d116e5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Subscribe</name>
+      <anchorfile>classignition_1_1gui_1_1Transport.html</anchorfile>
+      <anchor>a0bee2b51b0d8ca407e2088835ff0909c</anchor>
+      <arglist>(const std::string &amp;_topic, const std::string &amp;_fieldPath, int _chart, const std::shared_ptr&lt; double &gt; &amp;_time)</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::map&lt; std::string, Topic * &gt; &amp;</type>
+      <name>Topics</name>
+      <anchorfile>classignition_1_1gui_1_1Transport.html</anchorfile>
+      <anchor>a4208d1a253d3b674f26aaafc4ef5a476</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Unsubscribe</name>
+      <anchorfile>classignition_1_1gui_1_1Transport.html</anchorfile>
+      <anchor>a64cc4f388a4668d9e5be581914383c08</anchor>
+      <arglist>(const std::string &amp;_topic, const std::string &amp;_fieldPath, int _chart)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ignition::gui::WindowConfig</name>
+    <filename>structignition_1_1gui_1_1WindowConfig.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsIgnoring</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a4b1d98cd422914741c4a665830c4335b</anchor>
+      <arglist>(const std::string &amp;_prop) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>MergeFromXML</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a941f02f699ba00bce74a2f8db0e21954</anchor>
+      <arglist>(const std::string &amp;_xml)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>XMLString</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>afe90daf362652bbd6879766a924cdf4f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>height</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>ad12fc34ce789bce6c8a05d8a17138534</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::set&lt; std::string &gt;</type>
+      <name>ignoredProps</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>acd31a144ec5032ea80de8544ad03e0a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>materialAccent</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>ad9e8ee9c843e81eec6013368a176020f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>materialPrimary</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a4186506462512aa88c7004fc37ca5b5f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>materialTheme</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a392be8d2e38c03c5d0856a763fb6f928</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>plugins</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a8f81328c9505fa50a9499da7e3d3bd00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>pluginsFromPaths</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>aea863380aaf2fdb48f4634b2aaea531a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>pluginToolBarColorDark</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a33806c0d6defa8125c57936428141ba7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>pluginToolBarColorLight</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a49f162c70159abe2800291a3d5da8060</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>pluginToolBarTextColorDark</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>af43e07b390273d3325e0d9a19d66d3bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>pluginToolBarTextColorLight</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>ad0bf02a5910967ef0f581f2728c2f6c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>posX</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>ab34f89ef94db9dd6d3a04425dd6d9c9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>posY</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a65ab2de052c17234c8a1db3fd3b868a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>showDefaultDrawerOpts</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a3f2e68eaf76daeacbefd42a1b22d8038</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>showDrawer</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a57a8a18778e679e34e885f89d9e0b415</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>showPluginMenu</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>ab7296f970d924545e3ed033427356040</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>showPlugins</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a4db2e0e80db9b8aca1a4755881fbb2c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QByteArray</type>
+      <name>state</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a80cee4fe72efed2033d63451ad74d149</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>toolBarColorDark</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>af299e622ca3c1c30673189981f29596f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>toolBarColorLight</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a4faf12394e5951a790dad3e21f36a5a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>toolBarTextColorDark</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a28de7d0c6dfe7a0b0bc41553e546b9d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>toolBarTextColorLight</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a19c437b129d316bced79fe2b6ff4b570</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>width</name>
+      <anchorfile>structignition_1_1gui_1_1WindowConfig.html</anchorfile>
+      <anchor>a2474a5474cbff19523a51eb1de01cda4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::gui::events::WorldControl</name>
+    <filename>classignition_1_1gui_1_1events_1_1WorldControl.html</filename>
+    <base>QEvent</base>
+    <member kind="function">
+      <type></type>
+      <name>WorldControl</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1WorldControl.html</anchorfile>
+      <anchor>a78ff5665bf657d0174d854f01315b30e</anchor>
+      <arglist>(const msgs::WorldControl &amp;_worldControl)</arglist>
+    </member>
+    <member kind="function">
+      <type>const msgs::WorldControl &amp;</type>
+      <name>WorldControlInfo</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1WorldControl.html</anchorfile>
+      <anchor>a986daf49206972b7f42eb7239d882705</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const QEvent::Type</type>
+      <name>kType</name>
+      <anchorfile>classignition_1_1gui_1_1events_1_1WorldControl.html</anchorfile>
+      <anchor>a1b64b9bdffdb91c3b28a1a78b300aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ignition</name>
+    <filename>namespaceignition.html</filename>
+    <namespace>ignition::common</namespace>
+    <namespace>ignition::gui</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>ignition::common</name>
+    <filename>namespaceignition_1_1common.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>ignition::gui</name>
+    <filename>namespaceignition_1_1gui.html</filename>
+    <namespace>ignition::gui::events</namespace>
+    <class kind="class">ignition::gui::Application</class>
+    <class kind="class">ignition::gui::Dialog</class>
+    <class kind="class">ignition::gui::DragDropModel</class>
+    <class kind="class">ignition::gui::MainWindow</class>
+    <class kind="class">ignition::gui::PlotData</class>
+    <class kind="class">ignition::gui::PlottingInterface</class>
+    <class kind="class">ignition::gui::Plugin</class>
+    <class kind="class">ignition::gui::SearchModel</class>
+    <class kind="class">ignition::gui::Topic</class>
+    <class kind="class">ignition::gui::Transport</class>
+    <class kind="struct">ignition::gui::WindowConfig</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>DataRole</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab44f6190d587a192750b35c4f9587085</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DISPLAY_NAME</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab44f6190d587a192750b35c4f9587085a90145e5608958a8dbfca469d216af9e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>URI_QUERY</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab44f6190d587a192750b35c4f9587085a8b1d2381db0868b5cfc75de54297eb74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TYPE</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab44f6190d587a192750b35c4f9587085ab47ea8bb955afd0adc0ef98517dd6084</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TO_EXPAND</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab44f6190d587a192750b35c4f9587085a6e1f66128a0f2a0e718a711fac55e989</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ExitAction</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>acd3ef6d06ed653a4a86176bb2918980e</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="acd3ef6d06ed653a4a86176bb2918980ea29711fce468833e5b5735725146ff4f2">CLOSE_GUI</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="acd3ef6d06ed653a4a86176bb2918980ea168abf7ec3c50ef6c475c47a274ced29">SHUTDOWN_SERVER</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FileType</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a2c794c5c13ab4dd7e65bad031dbe41c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CSVFile</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a2c794c5c13ab4dd7e65bad031dbe41c3a020ff63c6c54e7ad3a37c505fa490311</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PDFFile</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a2c794c5c13ab4dd7e65bad031dbe41c3a41a0990bbfa2d6e296b5d1b8e7aa8e59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>NumberType</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ae33bf5f4db440a147780b796497d1ef5</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ae33bf5f4db440a147780b796497d1ef5ab50339a10e1de285ac99d4c3990b8693">NONE</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ae33bf5f4db440a147780b796497d1ef5afd3e4ece78a7d422280d5ed379482229">DOUBLE</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ae33bf5f4db440a147780b796497d1ef5a53f93baa3057821107c750323892fa92">INT</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ae33bf5f4db440a147780b796497d1ef5a3351504090a741e69da641a42e00da80">UINT</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>StringType</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ad4d73ceef61b090c73e1c22493af0bd7</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ad4d73ceef61b090c73e1c22493af0bd7ab50339a10e1de285ac99d4c3990b8693">NONE</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ad4d73ceef61b090c73e1c22493af0bd7a17b8ef2c330f1430e00c9de5469fc7e7">LINE</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="ad4d73ceef61b090c73e1c22493af0bd7aae7d3557f5e0b4e9cca075db3dfa7e9d">PLAIN_TEXT</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>WindowType</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a2b57d3bd86eab52d0e2d1a5237681d6f</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="a2b57d3bd86eab52d0e2d1a5237681d6fa85f398d67a07272eb1723b85e8f16abd">kMainWindow</enumvalue>
+      <enumvalue file="namespaceignition_1_1gui.html" anchor="a2b57d3bd86eab52d0e2d1a5237681d6fad8986cfc5fe1051ca1d317ce03b5fb83">kDialog</enumvalue>
+    </member>
+    <member kind="function">
+      <type>Application *</type>
+      <name>App</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a9351e27ed9185c32d72c4cb4f181a983</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QColor</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>affc50dc0910877af1af95eeb4f65f354</anchor>
+      <arglist>(const math::Color &amp;_color)</arglist>
+    </member>
+    <member kind="function">
+      <type>QPointF</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a244e207316fa0af1508f246ce5f7fd07</anchor>
+      <arglist>(const math::Vector2d &amp;_pt)</arglist>
+    </member>
+    <member kind="function">
+      <type>QVector3D</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a176162b10f4badb76dea4d1687132d5b</anchor>
+      <arglist>(const math::Vector3d &amp;_vec)</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Color</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a3103be7e448aeeef01aa1507a7d4deea</anchor>
+      <arglist>(const QColor &amp;_color)</arglist>
+    </member>
+    <member kind="function">
+      <type>common::KeyEvent</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a2106cfc5593990975f7ec1301a4c86bc</anchor>
+      <arglist>(const QKeyEvent &amp;_e)</arglist>
+    </member>
+    <member kind="function">
+      <type>common::MouseEvent</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>aba825a20a9e22881d9e06f0deb1e67b2</anchor>
+      <arglist>(const QMouseEvent &amp;_e)</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector2d</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a40f6711a52a3feb304aa97db08a342ae</anchor>
+      <arglist>(const QPointF &amp;_pt)</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a9e47069531c6c87ad029fc333e98f20c</anchor>
+      <arglist>(const QVector3D &amp;_vec)</arglist>
+    </member>
+    <member kind="function">
+      <type>common::MouseEvent</type>
+      <name>convert</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ac7de9ad074bafd3ea9d89de0fb3ee56c</anchor>
+      <arglist>(const QWheelEvent &amp;_e)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>findFirstByProperty</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a7f6e3a4a59e5402c7385eee47915f54d</anchor>
+      <arglist>(const QList&lt; T &gt; _list, const char *_key, QVariant _value)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>humanReadable</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ad038e1b30e2dfe1ff68d7da6d8ae847c</anchor>
+      <arglist>(const std::string &amp;_key)</arglist>
+    </member>
+    <member kind="function">
+      <type>const QString</type>
+      <name>qmlQrcImportPath</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a3fc3138fba64d116ab4da181127ba8e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rangeFromKey</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a360b21d27ab2dfbca411208dc4b9b983</anchor>
+      <arglist>(const std::string &amp;_key, double &amp;_min, double &amp;_max)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>renderEngineName</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>acdb79b7eb13e49dc172984b29252b981</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>StringType</type>
+      <name>stringTypeFromKey</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>ab9d5e67be666108a3cf7655ef036b6f6</anchor>
+      <arglist>(const std::string &amp;_key)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>uniqueFilePath</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a5be44173af2a99f79d37efc129b06a05</anchor>
+      <arglist>(const std::string &amp;_pathAndName, const std::string &amp;_extension)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>unitFromKey</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a53cf85864d21648d7e2c5a54f75fb294</anchor>
+      <arglist>(const std::string &amp;_key, const std::string &amp;_type=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>QStringList</type>
+      <name>worldNames</name>
+      <anchorfile>namespaceignition_1_1gui.html</anchorfile>
+      <anchor>a16c452c451b1405a336472b2ed6a9c01</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ignition::gui::events</name>
+    <filename>namespaceignition_1_1gui_1_1events.html</filename>
+    <class kind="class">ignition::gui::events::BlockOrbit</class>
+    <class kind="class">ignition::gui::events::DragOnScene</class>
+    <class kind="class">ignition::gui::events::DropdownMenuEnabled</class>
+    <class kind="class">ignition::gui::events::DropOnScene</class>
+    <class kind="class">ignition::gui::events::HoverOnScene</class>
+    <class kind="class">ignition::gui::events::HoverToScene</class>
+    <class kind="class">ignition::gui::events::KeyPressOnScene</class>
+    <class kind="class">ignition::gui::events::KeyReleaseOnScene</class>
+    <class kind="class">ignition::gui::events::LeftClickOnScene</class>
+    <class kind="class">ignition::gui::events::LeftClickToScene</class>
+    <class kind="class">ignition::gui::events::MousePressOnScene</class>
+    <class kind="class">ignition::gui::events::PreRender</class>
+    <class kind="class">ignition::gui::events::Render</class>
+    <class kind="class">ignition::gui::events::RightClickOnScene</class>
+    <class kind="class">ignition::gui::events::RightClickToScene</class>
+    <class kind="class">ignition::gui::events::ScrollOnScene</class>
+    <class kind="class">ignition::gui::events::SnapIntervals</class>
+    <class kind="class">ignition::gui::events::SpawnCloneFromName</class>
+    <class kind="class">ignition::gui::events::SpawnFromDescription</class>
+    <class kind="class">ignition::gui::events::SpawnFromPath</class>
+    <class kind="class">ignition::gui::events::WorldControl</class>
+  </compound>
+  <compound kind="namespace">
+    <name>std</name>
+    <filename>namespacestd.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>tinyxml2</name>
+    <filename>namespacetinyxml2.html</filename>
+  </compound>
+</tagfile>

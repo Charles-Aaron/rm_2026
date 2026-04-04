@@ -1,0 +1,248 @@
+#!/usr/bin/ruby
+
+# Copyright (C) 2017 Open Source Robotics Foundation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# We use 'dl' for Ruby <= 1.9.x and 'fiddle' for Ruby >= 2.0.x
+if RUBY_VERSION.split('.')[0] < '2'
+  require 'dl'
+  require 'dl/import'
+  include DL
+else
+  require 'fiddle'
+  require 'fiddle/import'
+  include Fiddle
+end
+
+require 'optparse'
+
+# Constants.
+LIBRARY_NAME = '../../../lib/x86_64-linux-gnu/libsdformat12.so.12.7.2'
+LIBRARY_VERSION = '12.7.2'
+COMMON_OPTIONS =
+               "  -h [ --help ]                     Print this help message.\n"\
+               "  --force-version <VERSION>         Use a specific library version.\n"\
+               '  --versions                        Show the available versions.'
+COMMANDS = {  'sdf' =>
+                       "Utilities for SDF files.\n\n"\
+                       "  ign sdf [options]\n\n"\
+                       "Options:\n\n"\
+                       "  -k [ --check ] arg                Check if an SDFormat file is valid.\n" +
+                       "  -d [ --describe ] [SPEC VERSION]  Print the aggregated SDFormat spec description. Default version (1.9).\n" +
+                       "  -g [ --graph ] <pose, frame> arg  Print the PoseRelativeTo or FrameAttachedTo graph. (WARNING: This is for advanced\n" +
+                       "                                    use only and the output may change without any promise of stability)\n" +
+                       "  -p [ --print ] arg                Print converted arg.\n" +
+                       "      -i [ --preserve-includes ]    Preserve included tags when printing converted arg (does not preserve merge-includes).\n" +
+                       "      --degrees                     Pose rotation angles are printed in degrees.\n" +
+                       "      --snap-to-degrees arg         Snap pose rotation angles to this specified interval in degrees. This value must be\n" +
+                       "                                    larger than 0, less than or equal to 360, and larger than the defined snap tolerance.\n" +
+                       "      --snap-tolerance arg          Used in conjunction with --snap-to-degrees, specifies the tolerance at which snapping\n" +
+                       "                                    occurs. This value must be larger than 0, less than 360, and less than the defined\n" +
+                       "                                    degrees value to snap to. If unspecified, its default value is 0.01.\n" +
+                       "  --inertial-stats  arg             Prints moment of inertia, centre of mass, and total mass from a model sdf file.\n" +
+                       COMMON_OPTIONS
+            }
+
+#
+# Class for the SDF command line tools.
+#
+class Cmd
+
+  #
+  # Return a structure describing the options.
+  #
+  def parse(args)
+    options = {}
+    options['degrees'] = 0
+    options['snap_tolerance'] = 0.01
+
+    usage = COMMANDS[args[0]]
+
+    # Read the command line arguments.
+    opt_parser = OptionParser.new do |opts|
+      opts.banner = usage
+
+      opts.on('-h', '--help", "Print this help message') do
+        puts usage
+        exit(0)
+      end
+
+      opts.on('-k arg', '--check arg', String,
+              'Check if an SDFormat file is valid.') do |arg|
+        options['check'] = arg
+      end
+      opts.on('--inertial-stats arg', String,
+              'Prints moment of inertia, centre of mass, and total mass from a model sdf file.') do |arg|
+        options['inertial_stats'] = arg
+      end
+      opts.on('-d', '--describe [VERSION]', 'Print the aggregated SDFormat spec description. Default version (1.9)') do |v|
+        options['describe'] = v
+      end
+      opts.on('-p', '--print', 'Print converted arg') do
+        options['print'] = 1
+      end
+      opts.on('-i', '--preserve-includes', 'Preserve included tags when printing converted arg (does not preserve merge-includes)') do
+        options['preserve_includes'] = 1
+      end
+      opts.on('--degrees', 'Printed pose rotations are will be in degrees') do |degrees|
+        options['degrees'] = 1
+      end
+      opts.on('--snap-to-degrees arg', Integer,
+              'Printed rotations are snapped to specified degree intervals') do |arg|
+        if arg == 0 || arg > 360
+          puts "Degree interval to snap to must be more than 0, and less than or equal to 360."
+          exit(-1)
+        end
+        options['snap_to_degrees'] = arg
+      end
+      opts.on('--snap-tolerance arg', Float,
+              'Printed rotations are snapped if they are within this specified tolerance') do |arg|
+        if arg < 0 || arg > 360
+          puts "Rotation snapping tolerance must be more than 0, and less than 360."
+          exit(-1)
+        end
+        options['snap_tolerance'] = arg
+      end
+      opts.on('-g arg', '--graph type', String,
+              'Print PoseRelativeTo or FrameAttachedTo graph') do |graph_type|
+        options['graph'] = {:type => graph_type}
+      end
+    end
+    begin
+      opt_parser.parse!(args)
+    rescue
+      puts usage
+      exit(-1)
+    end
+
+    # Check that there is at least one command and there is a plugin that knows
+    # how to handle it.
+    if ARGV.empty? || !COMMANDS.key?(ARGV[0]) ||
+       options.empty?
+      puts usage
+      exit(-1)
+    end
+
+    options['command'] = ARGV[0]
+
+    if options['preserve_includes'] and not options['print']
+      puts usage
+      exit(-1)
+    end
+
+    if options['print']
+      filename = args.pop
+      if filename
+        options['print'] = filename
+      else
+        puts usage
+        exit(-1)
+      end
+    end
+
+    options
+  end
+
+  #
+  # Execute the command
+  #
+  def execute(args)
+    options = parse(args)
+
+    # Debugging:
+    # puts 'Parsed:'
+    # puts options
+
+    # Read the plugin that handles the command.
+    if LIBRARY_NAME[0] == '/'
+      # If the first character is a slash, we'll assume that we've been given an
+      # absolute path to the library. This is only used during test mode.
+      plugin = LIBRARY_NAME
+    else
+      # We're assuming that the library path is relative to the current
+      # location of this script.
+      plugin = File.expand_path(File.join(File.dirname(__FILE__), LIBRARY_NAME))
+    end
+    conf_version = LIBRARY_VERSION
+
+    begin
+      Importer.dlload plugin
+    rescue DLError
+      puts "Library error: [#{plugin}] not found."
+      exit(-1)
+    end
+
+    # Read the library version.
+    Importer.extern 'char* ignitionVersion()'
+    begin
+      plugin_version = Importer.ignitionVersion.to_s
+    rescue DLError
+      puts "Library error: Problem running 'ignitionVersion()' from #{plugin}."
+      exit(-1)
+    end
+
+    # Sanity check: Verify that the version of the yaml file matches the version
+    # of the library that we are using.
+    unless plugin_version.eql? conf_version
+      puts "Error: Version mismatch. Your configuration file version is
+            [#{conf_version}] but #{plugin} version is [#{plugin_version}]."
+      exit(-1)
+    end
+
+    begin
+      case options['command']
+      when 'sdf'
+        if options.key?('check')
+          Importer.extern 'int cmdCheck(const char *)'
+          exit(Importer.cmdCheck(File.expand_path(options['check'])))
+        elsif options.key?('inertial_stats')
+          Importer.extern 'int cmdInertialStats(const char *)'
+          exit(Importer.cmdInertialStats(options['inertial_stats']))
+        elsif options.key?('describe')
+          Importer.extern 'int cmdDescribe(const char *)'
+          exit(Importer.cmdDescribe(options['describe']))
+        elsif options.key?('print')
+          snap_to_degrees = 0
+          if options['preserve_includes']
+            Importer.extern 'int cmdPrintPreserveIncludes(const char *)'
+            exit(Importer.cmdPrintPreserveIncludes(File.expand_path(options['print'])))
+          elsif options.key?('snap_to_degrees')
+            if options['snap_to_degrees'] < options['snap_tolerance']
+              puts "Rotation snapping tolerance must be larger than the snapping tolerance."
+              exit(-1)
+            end
+            snap_to_degrees = options['snap_to_degrees']
+          end
+          Importer.extern 'int cmdPrint(const char *, int in_degrees, int snap_to_degrees, float snap_tolerance)'
+          exit(Importer.cmdPrint(File.expand_path(options['print']),
+                                 options['degrees'],
+                                 snap_to_degrees,
+                                 options['snap_tolerance']))
+        elsif options.key?('graph')
+          Importer.extern 'int cmdGraph(const char *, const char *)'
+          exit(Importer.cmdGraph(options['graph'][:type], File.expand_path(ARGV[1])))
+        else
+          puts 'Command error: I do not have an implementation '\
+               'for this command.'
+        end
+      else
+        puts 'Command error: I do not have an implementation for '\
+             "command [ign #{options['command']}]."
+      end
+    rescue
+      puts "Library error: Problem running [#{options['command']}]() "\
+           "from #{plugin}."
+    end
+  end
+end

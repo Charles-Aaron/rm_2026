@@ -1,0 +1,13 @@
+int16 start_flag   
+int16 tower_flag
+int16 protect_flag
+int16 supply_flag
+int16 fort_flag
+int16 random_flag
+int16 operator_control
+float32 map_x
+float32 map_y
+int16 enemy_flag
+int16 home_flag
+float32 enemy_distance
+float32 enemy_angle

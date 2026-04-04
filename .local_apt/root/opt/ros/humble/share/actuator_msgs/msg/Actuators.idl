@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from actuator_msgs/msg/Actuators.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module actuator_msgs {
+  module msg {
+    struct Actuators {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "This message defines lowest level commands to be sent to the actuator(s)." "\n"
+        "Position of the actuators in [rad] for angular actuators" "\n"
+        "and [m] for linear actuators.")
+      sequence<double> position;
+
+      @verbatim (language="comment", text=
+        "Velocities of the actuators in [rad/s] for angular actuators" "\n"
+        "and [m/s] for linear actuators.")
+      sequence<double> velocity;
+
+      @verbatim (language="comment", text=
+        "Everything that does not fit the above," "\n"
+        "normalized between.")
+      @unit (value="-1 ... 1")
+      sequence<double> normalized;
+    };
+  };
+};

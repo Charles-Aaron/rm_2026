@@ -1,0 +1,8 @@
+--- # Subcommands available inside sdformat.
+format: 1.0.0
+library_name: sdformat
+library_version: 12.7.2
+library_path: /usr/lib/ruby/ignition/cmdsdformat12
+commands:
+    - sdf   : Utilities for SDF files.
+---

@@ -1,0 +1,43 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <ReactiveSequence>
+      <!-- 0. 等待电控发起"比赛开始"信号 (start_status = 4) -->
+      <Condition ID="GameStatusSub" name="CheckGameStart" start_status="4"/>
+
+      <!--  主决策逻辑 -->
+      <ReactiveFallback>
+        <!-- 优先级1: 前往操作手要求位置-->
+         <Action ID="Operator" name="Pursue Operator"/>
+
+        <!-- 优先级2: 补给逻辑：需要补给 -> 前往补给点 -->
+
+        <!-- 优先级3: 前往雷达标定敌方位置-->
+        <!-- <Action ID="Enemy" name="Pursue Enemy"/> -->
+
+        <!-- 优先级4: 攻击slope（需状态OK+敌方存活） -->
+        
+      
+        
+        
+        <!-- 优先级7: 半场协防-->
+          <!-- <Sequence name="patrol">
+            <Condition ID="RobotStatusSub" is_status_ok="{status_ok}"/>
+            <Action ID="RandomPatrolPose" name="choose_patrol"
+                   pose1="4.2;1.98;0;0;0;0;1"
+                   pose2="0.363;1.55;0;0;0;0;1"
+                   pose3="6.14;-4.26;0;0;0;0;1"
+                   goal_pose="{patrol_goal}"/>
+            <Action ID="SendGoalAction" name="goto_patrol"
+                   goal_pose="{patrol_goal}"
+                   action_name="navigate_to_pose"/>
+          </Sequence> -->
+        
+        
+        <!-- 优先级8: 保底回基地 -->
+        <Action ID="SendGoalAction" name="go_home"
+               goal_pose="4.52; -0.35; 0; 0; 0; 0; 1"
+               action_name="navigate_to_pose"/>
+      </ReactiveFallback>
+    </ReactiveSequence>
+  </BehaviorTree>
+</root>

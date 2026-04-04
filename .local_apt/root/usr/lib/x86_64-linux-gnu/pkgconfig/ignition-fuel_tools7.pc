@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/fuel_tools7
+
+Name: Ignition fuel_tools
+Description: A set of fuel_tools classes for robot applications
+Version: 7.3.0
+Requires: ignition-cmake2 >= 1.1 
+Requires.private: tinyxml2 libcurl >=  jsoncpp yaml-0.1 libzip ignition-common4 ignition-math6 ignition-msgs8
+Libs: -L${libdir} -lignition-fuel_tools7 
+Libs.private: 
+CFlags: -I${includedir} -std=c++17

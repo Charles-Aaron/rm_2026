@@ -1,0 +1,4072 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.9.1">
+  <compound kind="file">
+    <name>gz/sensors/AirPressureSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2AirPressureSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2Sensor_8hh" name="gz/sensors/Sensor.hh" local="yes" imported="no">gz/sensors/Sensor.hh</includes>
+    <class kind="class">ignition::sensors::AirPressureSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/AirPressureSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2AirPressureSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2AirPressureSensor_8hh" name="gz/sensors/AirPressureSensor.hh" local="no" imported="no">gz/sensors/AirPressureSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/AltimeterSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2AltimeterSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2Sensor_8hh" name="gz/sensors/Sensor.hh" local="yes" imported="no">gz/sensors/Sensor.hh</includes>
+    <class kind="class">ignition::sensors::AltimeterSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/AltimeterSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2AltimeterSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2AltimeterSensor_8hh" name="gz/sensors/AltimeterSensor.hh" local="no" imported="no">gz/sensors/AltimeterSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/BoundingBoxCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2BoundingBoxCameraSensor_8hh.html</filename>
+    <includes id="ignition_2sensors_2CameraSensor_8hh" name="ignition/sensors/CameraSensor.hh" local="yes" imported="no">ignition/sensors/CameraSensor.hh</includes>
+    <includes id="boundingbox__camera_2Export_8hh" name="boundingbox_camera/Export.hh" local="yes" imported="no">ignition/sensors/boundingbox_camera/Export.hh</includes>
+    <class kind="class">ignition::sensors::BoundingBoxCameraSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/BoundingBoxCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2BoundingBoxCameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2BoundingBoxCameraSensor_8hh" name="gz/sensors/BoundingBoxCameraSensor.hh" local="no" imported="no">gz/sensors/BoundingBoxCameraSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/BrownDistortionModel.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2BrownDistortionModel_8hh.html</filename>
+    <includes id="ignition_2sensors_2Distortion_8hh" name="ignition/sensors/Distortion.hh" local="yes" imported="no">ignition/sensors/Distortion.hh</includes>
+    <includes id="Export_8hh" name="Export.hh" local="yes" imported="no">ignition/sensors/Export.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="yes" imported="no">ignition/sensors/config.hh</includes>
+    <class kind="class">ignition::sensors::BrownDistortionModel</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/BrownDistortionModel.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2BrownDistortionModel_8hh.html</filename>
+    <includes id="gz_2sensors_2BrownDistortionModel_8hh" name="gz/sensors/BrownDistortionModel.hh" local="no" imported="no">gz/sensors/BrownDistortionModel.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/CameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2CameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2RenderingSensor_8hh" name="gz/sensors/RenderingSensor.hh" local="yes" imported="no">gz/sensors/RenderingSensor.hh</includes>
+    <class kind="class">ignition::sensors::CameraSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/CameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2CameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2CameraSensor_8hh" name="gz/sensors/CameraSensor.hh" local="no" imported="no">gz/sensors/CameraSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>config.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>config_8hh.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/DepthCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2DepthCameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2CameraSensor_8hh" name="gz/sensors/CameraSensor.hh" local="yes" imported="no">gz/sensors/CameraSensor.hh</includes>
+    <includes id="gz_2sensors_2Sensor_8hh" name="gz/sensors/Sensor.hh" local="yes" imported="no">gz/sensors/Sensor.hh</includes>
+    <class kind="class">ignition::sensors::DepthCameraSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/DepthCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2DepthCameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2DepthCameraSensor_8hh" name="gz/sensors/DepthCameraSensor.hh" local="no" imported="no">gz/sensors/DepthCameraSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/Distortion.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2Distortion_8hh.html</filename>
+    <includes id="Export_8hh" name="Export.hh" local="no" imported="no">ignition/sensors/Export.hh</includes>
+    <includes id="ignition_2sensors_2SensorTypes_8hh" name="ignition/sensors/SensorTypes.hh" local="no" imported="no">ignition/sensors/SensorTypes.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+    <class kind="class">ignition::sensors::Distortion</class>
+    <class kind="class">ignition::sensors::DistortionFactory</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>DistortionType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a2b15c2f99adeee955f8fc291dab163a6</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a2b15c2f99adeee955f8fc291dab163a6ab50339a10e1de285ac99d4c3990b8693">NONE</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a2b15c2f99adeee955f8fc291dab163a6a72baef04098f035e8a320b03ad197818">CUSTOM</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a2b15c2f99adeee955f8fc291dab163a6a493cacf6f6a2ae4798b319b8b9ba9488">BROWN</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/Distortion.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2Distortion_8hh.html</filename>
+    <includes id="gz_2sensors_2Distortion_8hh" name="gz/sensors/Distortion.hh" local="no" imported="no">gz/sensors/Distortion.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>air_pressure/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/air_pressure/</path>
+    <filename>air__pressure_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>altimeter/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/altimeter/</path>
+    <filename>altimeter_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>boundingbox_camera/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/boundingbox_camera/</path>
+    <filename>boundingbox__camera_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>camera/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/camera/</path>
+    <filename>camera_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>depth_camera/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/depth_camera/</path>
+    <filename>depth__camera_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>force_torque/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/force_torque/</path>
+    <filename>force__torque_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gpu_lidar/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/gpu_lidar/</path>
+    <filename>gpu__lidar_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>imu/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/imu/</path>
+    <filename>imu_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>lidar/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/lidar/</path>
+    <filename>lidar_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>logical_camera/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/logical_camera/</path>
+    <filename>logical__camera_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>magnetometer/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/magnetometer/</path>
+    <filename>magnetometer_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>navsat/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/navsat/</path>
+    <filename>navsat_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>rendering/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/rendering/</path>
+    <filename>rendering_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>rgbd_camera/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/rgbd_camera/</path>
+    <filename>rgbd__camera_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>segmentation_camera/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/segmentation_camera/</path>
+    <filename>segmentation__camera_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>thermal_camera/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/thermal_camera/</path>
+    <filename>thermal__camera_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/ForceTorqueSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2ForceTorqueSensor_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+    <includes id="force__torque_2Export_8hh" name="force_torque/Export.hh" local="no" imported="no">ignition/sensors/force_torque/Export.hh</includes>
+    <includes id="ignition_2sensors_2Sensor_8hh" name="ignition/sensors/Sensor.hh" local="yes" imported="no">ignition/sensors/Sensor.hh</includes>
+    <class kind="class">ignition::sensors::ForceTorqueSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/ForceTorqueSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2ForceTorqueSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2ForceTorqueSensor_8hh" name="gz/sensors/ForceTorqueSensor.hh" local="no" imported="no">gz/sensors/ForceTorqueSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/GaussianNoiseModel.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2GaussianNoiseModel_8hh.html</filename>
+    <includes id="gz_2sensors_2Noise_8hh" name="gz/sensors/Noise.hh" local="yes" imported="no">gz/sensors/Noise.hh</includes>
+    <class kind="class">ignition::sensors::GaussianNoiseModel</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/GaussianNoiseModel.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2GaussianNoiseModel_8hh.html</filename>
+    <includes id="gz_2sensors_2GaussianNoiseModel_8hh" name="gz/sensors/GaussianNoiseModel.hh" local="no" imported="no">gz/sensors/GaussianNoiseModel.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/GpuLidarSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2GpuLidarSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2RenderingEvents_8hh" name="gz/sensors/RenderingEvents.hh" local="yes" imported="no">gz/sensors/RenderingEvents.hh</includes>
+    <includes id="gz_2sensors_2Lidar_8hh" name="gz/sensors/Lidar.hh" local="yes" imported="no">gz/sensors/Lidar.hh</includes>
+    <class kind="class">ignition::sensors::GpuLidarSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/GpuLidarSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2GpuLidarSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2GpuLidarSensor_8hh" name="gz/sensors/GpuLidarSensor.hh" local="no" imported="no">gz/sensors/GpuLidarSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/ImageBrownDistortionModel.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2ImageBrownDistortionModel_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="yes" imported="no">ignition/sensors/config.hh</includes>
+    <includes id="ignition_2sensors_2BrownDistortionModel_8hh" name="ignition/sensors/BrownDistortionModel.hh" local="yes" imported="no">ignition/sensors/BrownDistortionModel.hh</includes>
+    <includes id="rendering_2Export_8hh" name="rendering/Export.hh" local="yes" imported="no">ignition/sensors/rendering/Export.hh</includes>
+    <class kind="class">ignition::sensors::ImageBrownDistortionModel</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/ImageBrownDistortionModel.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2ImageBrownDistortionModel_8hh.html</filename>
+    <includes id="gz_2sensors_2ImageBrownDistortionModel_8hh" name="gz/sensors/ImageBrownDistortionModel.hh" local="no" imported="no">gz/sensors/ImageBrownDistortionModel.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/ImageDistortion.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2ImageDistortion_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="yes" imported="no">ignition/sensors/config.hh</includes>
+    <includes id="ignition_2sensors_2SensorTypes_8hh" name="ignition/sensors/SensorTypes.hh" local="yes" imported="no">ignition/sensors/SensorTypes.hh</includes>
+    <includes id="rendering_2Export_8hh" name="rendering/Export.hh" local="yes" imported="no">ignition/sensors/rendering/Export.hh</includes>
+    <class kind="class">ignition::sensors::ImageDistortionFactory</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/ImageDistortion.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2ImageDistortion_8hh.html</filename>
+    <includes id="gz_2sensors_2ImageDistortion_8hh" name="gz/sensors/ImageDistortion.hh" local="no" imported="no">gz/sensors/ImageDistortion.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/ImageGaussianNoiseModel.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2ImageGaussianNoiseModel_8hh.html</filename>
+    <includes id="gz_2sensors_2GaussianNoiseModel_8hh" name="gz/sensors/GaussianNoiseModel.hh" local="yes" imported="no">gz/sensors/GaussianNoiseModel.hh</includes>
+    <class kind="class">ignition::sensors::ImageGaussianNoiseModel</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/ImageGaussianNoiseModel.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2ImageGaussianNoiseModel_8hh.html</filename>
+    <includes id="gz_2sensors_2ImageGaussianNoiseModel_8hh" name="gz/sensors/ImageGaussianNoiseModel.hh" local="no" imported="no">gz/sensors/ImageGaussianNoiseModel.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/ImageNoise.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2ImageNoise_8hh.html</filename>
+    <includes id="gz_2sensors_2SensorTypes_8hh" name="gz/sensors/SensorTypes.hh" local="yes" imported="no">gz/sensors/SensorTypes.hh</includes>
+    <class kind="class">ignition::sensors::ImageNoiseFactory</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/ImageNoise.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2ImageNoise_8hh.html</filename>
+    <includes id="gz_2sensors_2ImageNoise_8hh" name="gz/sensors/ImageNoise.hh" local="no" imported="no">gz/sensors/ImageNoise.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/ImuSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2ImuSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2Sensor_8hh" name="gz/sensors/Sensor.hh" local="yes" imported="no">gz/sensors/Sensor.hh</includes>
+    <class kind="class">ignition::sensors::ImuSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>WorldFrameEnumType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>abc6c9f3e9422b6507a48db9c2b87b281</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="abc6c9f3e9422b6507a48db9c2b87b281ab50339a10e1de285ac99d4c3990b8693">NONE</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="abc6c9f3e9422b6507a48db9c2b87b281a392b810f865591aa5ec210e849ae769f">ENU</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="abc6c9f3e9422b6507a48db9c2b87b281acd3459b28418fa8fa75ffaba4f3e7c74">NED</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="abc6c9f3e9422b6507a48db9c2b87b281ab16a2c9cffa5d43693ee79869ea85470">NWU</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="abc6c9f3e9422b6507a48db9c2b87b281a72baef04098f035e8a320b03ad197818">CUSTOM</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/ImuSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2ImuSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2ImuSensor_8hh" name="gz/sensors/ImuSensor.hh" local="no" imported="no">gz/sensors/ImuSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/Lidar.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2Lidar_8hh.html</filename>
+    <includes id="gz_2sensors_2RenderingSensor_8hh" name="gz/sensors/RenderingSensor.hh" local="yes" imported="no">gz/sensors/RenderingSensor.hh</includes>
+    <class kind="class">ignition::sensors::Lidar</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/Lidar.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2Lidar_8hh.html</filename>
+    <includes id="gz_2sensors_2Lidar_8hh" name="gz/sensors/Lidar.hh" local="no" imported="no">gz/sensors/Lidar.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/LogicalCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2LogicalCameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2Sensor_8hh" name="gz/sensors/Sensor.hh" local="yes" imported="no">gz/sensors/Sensor.hh</includes>
+    <class kind="class">ignition::sensors::LogicalCameraSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/LogicalCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2LogicalCameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2LogicalCameraSensor_8hh" name="gz/sensors/LogicalCameraSensor.hh" local="no" imported="no">gz/sensors/LogicalCameraSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/MagnetometerSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2MagnetometerSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2Sensor_8hh" name="gz/sensors/Sensor.hh" local="yes" imported="no">gz/sensors/Sensor.hh</includes>
+    <class kind="class">ignition::sensors::MagnetometerSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/MagnetometerSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2MagnetometerSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2MagnetometerSensor_8hh" name="gz/sensors/MagnetometerSensor.hh" local="no" imported="no">gz/sensors/MagnetometerSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/Manager.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2Manager_8hh.html</filename>
+    <includes id="gz_2sensors_2Sensor_8hh" name="gz/sensors/Sensor.hh" local="no" imported="no">gz/sensors/Sensor.hh</includes>
+    <includes id="gz_2sensors_2SensorFactory_8hh" name="gz/sensors/SensorFactory.hh" local="no" imported="no">gz/sensors/SensorFactory.hh</includes>
+    <class kind="class">ignition::sensors::Manager</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/Manager.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2Manager_8hh.html</filename>
+    <includes id="gz_2sensors_2Manager_8hh" name="gz/sensors/Manager.hh" local="no" imported="no">gz/sensors/Manager.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/NavSatSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2NavSatSensor_8hh.html</filename>
+    <includes id="ignition_2sensors_2Sensor_8hh" name="ignition/sensors/Sensor.hh" local="yes" imported="no">ignition/sensors/Sensor.hh</includes>
+    <class kind="class">ignition::sensors::NavSatSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/NavSatSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2NavSatSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2NavSatSensor_8hh" name="gz/sensors/NavSatSensor.hh" local="no" imported="no">gz/sensors/NavSatSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/Noise.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2Noise_8hh.html</filename>
+    <includes id="gz_2sensors_2SensorTypes_8hh" name="gz/sensors/SensorTypes.hh" local="no" imported="no">gz/sensors/SensorTypes.hh</includes>
+    <class kind="class">ignition::sensors::Noise</class>
+    <class kind="class">ignition::sensors::NoiseFactory</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>NoiseType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a69077ed51f0173dc7309246140daed49</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a69077ed51f0173dc7309246140daed49ab50339a10e1de285ac99d4c3990b8693">NONE</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a69077ed51f0173dc7309246140daed49a72baef04098f035e8a320b03ad197818">CUSTOM</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a69077ed51f0173dc7309246140daed49a0fceff26ae86a047835cafbb6cadb1b9">GAUSSIAN</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/Noise.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2Noise_8hh.html</filename>
+    <includes id="gz_2sensors_2Noise_8hh" name="gz/sensors/Noise.hh" local="no" imported="no">gz/sensors/Noise.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/RenderingEvents.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2RenderingEvents_8hh.html</filename>
+    <class kind="class">ignition::sensors::RenderingEvents</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/RenderingEvents.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2RenderingEvents_8hh.html</filename>
+    <includes id="gz_2sensors_2RenderingEvents_8hh" name="gz/sensors/RenderingEvents.hh" local="no" imported="no">gz/sensors/RenderingEvents.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/RenderingSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2RenderingSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2Sensor_8hh" name="gz/sensors/Sensor.hh" local="yes" imported="no">gz/sensors/Sensor.hh</includes>
+    <class kind="class">ignition::sensors::RenderingSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/RenderingSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2RenderingSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2RenderingSensor_8hh" name="gz/sensors/RenderingSensor.hh" local="no" imported="no">gz/sensors/RenderingSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/RgbdCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2RgbdCameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2CameraSensor_8hh" name="gz/sensors/CameraSensor.hh" local="yes" imported="no">gz/sensors/CameraSensor.hh</includes>
+    <class kind="class">ignition::sensors::RgbdCameraSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/RgbdCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2RgbdCameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2RgbdCameraSensor_8hh" name="gz/sensors/RgbdCameraSensor.hh" local="no" imported="no">gz/sensors/RgbdCameraSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/SegmentationCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2SegmentationCameraSensor_8hh.html</filename>
+    <includes id="ignition_2sensors_2CameraSensor_8hh" name="ignition/sensors/CameraSensor.hh" local="yes" imported="no">ignition/sensors/CameraSensor.hh</includes>
+    <includes id="Export_8hh" name="Export.hh" local="yes" imported="no">ignition/sensors/Export.hh</includes>
+    <includes id="ignition_2sensors_2Sensor_8hh" name="ignition/sensors/Sensor.hh" local="yes" imported="no">ignition/sensors/Sensor.hh</includes>
+    <includes id="segmentation__camera_2Export_8hh" name="segmentation_camera/Export.hh" local="yes" imported="no">ignition/sensors/segmentation_camera/Export.hh</includes>
+    <class kind="class">ignition::sensors::SegmentationCameraSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/SegmentationCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2SegmentationCameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2SegmentationCameraSensor_8hh" name="gz/sensors/SegmentationCameraSensor.hh" local="no" imported="no">gz/sensors/SegmentationCameraSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/Sensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2Sensor_8hh.html</filename>
+    <class kind="class">ignition::sensors::Sensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+    <member kind="typedef">
+      <type>std::size_t</type>
+      <name>SensorId</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a5d3d7bdf5e9ab8eb6ec4ff739e949c5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const SensorId</type>
+      <name>NO_SENSOR</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a727f2c6751765536f5c5e33d60e23c15</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/Sensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2Sensor_8hh.html</filename>
+    <includes id="gz_2sensors_2Sensor_8hh" name="gz/sensors/Sensor.hh" local="no" imported="no">gz/sensors/Sensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/SensorFactory.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2SensorFactory_8hh.html</filename>
+    <includes id="gz_2sensors_2Sensor_8hh" name="gz/sensors/Sensor.hh" local="yes" imported="no">gz/sensors/Sensor.hh</includes>
+    <class kind="class">ignition::sensors::SensorFactory</class>
+    <class kind="class">ignition::sensors::SensorPlugin</class>
+    <class kind="class">ignition::sensors::SensorTypePlugin</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/SensorFactory.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2SensorFactory_8hh.html</filename>
+    <includes id="gz_2sensors_2SensorFactory_8hh" name="gz/sensors/SensorFactory.hh" local="no" imported="no">gz/sensors/SensorFactory.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>sensors.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/</path>
+    <filename>sensors_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/SensorTypes.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2SensorTypes_8hh.html</filename>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; BrownDistortionModel &gt;</type>
+      <name>BrownDistortionModelPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>aee9c599876fb2c58492fa1c55b27375c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; CameraSensorPtr &gt;</type>
+      <name>CameraSensor_V</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a639453905a0c5aa57df5511d53bd738f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; CameraSensor &gt;</type>
+      <name>CameraSensorPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a6cd413c2a9d2c3df41b19ea1df30fe62</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; Distortion &gt;</type>
+      <name>DistortionPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>acfa9e25f3663af812ed46aa05ec2d036</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; GaussianNoiseModel &gt;</type>
+      <name>GaussianNoiseModelPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>af1380938299ea8126f6ee38b0db00da3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; GpuLidarSensorPtr &gt;</type>
+      <name>GpuLidarSensor_V</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>af15d345c752b20c0d4e77278fb282280</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; GpuLidarSensor &gt;</type>
+      <name>GpuLidarSensorPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a32f23a74793d1f41164d31c71cc78757</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; ImageBrownDistortionModel &gt;</type>
+      <name>ImageBrownDistortionModelPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a33d7b6269b2575d1eefbee8c6b183484</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; ImageGaussianNoiseModel &gt;</type>
+      <name>ImageGaussianNoiseModelPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a7afbfe4c7cd055f45d1a0f9f1817bc2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; Noise &gt;</type>
+      <name>NoisePtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a63589b4b647df1e01e9f2e5e30c95be1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; SensorPtr &gt;</type>
+      <name>Sensor_V</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a66da648162724b25656778f254aa9719</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; Sensor &gt;</type>
+      <name>SensorPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a773bd094c55731a750632ddf187649b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SensorCategory</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a166beb8385a31979c4f08a85aabdd1da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IMAGE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a166beb8385a31979c4f08a85aabdd1daa3501d25cdde2b141c20edb67965fb692</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>RAY</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a166beb8385a31979c4f08a85aabdd1daae9cf68856c8eb96d8738c14880278f69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OTHER</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a166beb8385a31979c4f08a85aabdd1daadbf1dee1b8cd7ea3c82661943c7b74f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CATEGORY_COUNT</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a166beb8385a31979c4f08a85aabdd1daa81d14d18e71020c25437804e85985ad4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SensorDistortionType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b0e70be0fc939ca152b4d27ac7c305</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SENSOR_DISTORTION_TYPE_BEGIN</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b0e70be0fc939ca152b4d27ac7c305a572d34526a4e1370e0bf186d13c58295</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NO_DISTORTION</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b0e70be0fc939ca152b4d27ac7c305a01f401f985e2679b0632ed475ffde57e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CAMERA_DISTORTION</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b0e70be0fc939ca152b4d27ac7c305a2abc11afbe50516a8d7fad4bcdddb1b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SENSOR_DISTORTION_TYPE_END</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b0e70be0fc939ca152b4d27ac7c305a217fae07e14bc10362b39aad7903b941</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SensorNoiseType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SENSOR_NOISE_TYPE_BEGIN</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433ad6a6012518db0a8683f01511731afd36</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NO_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433aa6ff955d795ba9392a65ec95b63241a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CAMERA_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433ac6d5df2f1fe78621e4bed2fb1c597c5b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MAGNETOMETER_X_NOISE_TESLA</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a4b6e86feac676649aac31d2892523e7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MAGNETOMETER_Y_NOISE_TESLA</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433aa6b478a338aeca6058e73dd80b127be5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MAGNETOMETER_Z_NOISE_TESLA</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a58f362145b15d8b121256d0ed684ff0e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALTIMETER_VERTICAL_POSITION_NOISE_METERS</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433aabedfd8a0adb06b6d8a167a8004f672b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALTIMETER_VERTICAL_VELOCITY_NOISE_METERS_PER_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433af8363a1e7832333ba5c0e7bea5d8398f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>AIR_PRESSURE_NOISE_PASCALS</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a5fc0e389ed05a595c170ca901adcaf19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ACCELEROMETER_X_NOISE_M_S_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433ab5bf946b25f34061d04ba923e5ed32dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ACCELEROMETER_Y_NOISE_M_S_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a977f1142b9464890db6b0114bac8c5dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ACCELEROMETER_Z_NOISE_M_S_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a62ca8dce8c91291e4368ad684af0b6b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GYROSCOPE_X_NOISE_RAD_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a530751eac4de84ef7618e62aac740317</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GYROSCOPE_Y_NOISE_RAD_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433aadcca5ebebbb8b35def33014fb3e2304</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GYROSCOPE_Z_NOISE_RAD_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a6b64a4f78a10b5376f477ff779b55d0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LIDAR_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433aaa81e228da5d31579a781436b696bfa5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FORCE_X_NOISE_N</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a491facb9137f8f2c53d57011cbf561ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FORCE_Y_NOISE_N</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a1dd42f39929608020ae3cc0e38ce56da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FORCE_Z_NOISE_N</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a641a7e8ba1df09d8d4818b9e77995599</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TORQUE_X_NOISE_N_M</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433ae614c20ed82d65de7861f2cf22bec79c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TORQUE_Y_NOISE_N_M</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433abb45cdc7c07b720b19210bede062238a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TORQUE_Z_NOISE_N_M</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a135ac7ad2db8c566011e9bc1ed5907ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NAVSAT_HORIZONTAL_POSITION_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a33b0c6ee54d352380c3e7b0169a6430a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NAVSAT_VERTICAL_POSITION_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433afb6b36a2a7297ac34fd4935a235fd0a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NAVSAT_HORIZONTAL_VELOCITY_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a67fc0836b34c75aedc1a194469e9a0d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NAVSAT_VERTICAL_VELOCITY_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a44ca3c558b42856c86df699e0e9e7759</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SENSOR_NOISE_TYPE_END</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a3531cb6c48435b3a1fe4525ecdb42154</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/SensorTypes.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2SensorTypes_8hh.html</filename>
+    <includes id="gz_2sensors_2SensorTypes_8hh" name="gz/sensors/SensorTypes.hh" local="no" imported="no">gz/sensors/SensorTypes.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/ThermalCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2ThermalCameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2CameraSensor_8hh" name="gz/sensors/CameraSensor.hh" local="yes" imported="no">gz/sensors/CameraSensor.hh</includes>
+    <includes id="gz_2sensors_2Sensor_8hh" name="gz/sensors/Sensor.hh" local="yes" imported="no">gz/sensors/Sensor.hh</includes>
+    <class kind="class">ignition::sensors::ThermalCameraSensor</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/ThermalCameraSensor.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2ThermalCameraSensor_8hh.html</filename>
+    <includes id="gz_2sensors_2ThermalCameraSensor_8hh" name="gz/sensors/ThermalCameraSensor.hh" local="no" imported="no">gz/sensors/ThermalCameraSensor.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/sensors/Util.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/gz/sensors/</path>
+    <filename>gz_2sensors_2Util_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="yes" imported="no">ignition/sensors/config.hh</includes>
+    <includes id="Export_8hh" name="Export.hh" local="yes" imported="no">ignition/sensors/Export.hh</includes>
+    <namespace>ignition</namespace>
+    <namespace>ignition::sensors</namespace>
+    <member kind="function">
+      <type>std::string</type>
+      <name>customType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a795c58e1bf8ca8eb0cd7f00012adc1fa</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>customType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b780b3fcd69eb9f8fa209c520a5e22</anchor>
+      <arglist>(sdf::ElementPtr _sdf)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/sensors/Util.hh</name>
+    <path>/home/jenkins/workspace/ign-sensors6-debbuilder/build/ignition-sensors-6.8.0/include/ignition/sensors/</path>
+    <filename>ignition_2sensors_2Util_8hh.html</filename>
+    <includes id="gz_2sensors_2Util_8hh" name="gz/sensors/Util.hh" local="no" imported="no">gz/sensors/Util.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/sensors/config.hh</includes>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::AirPressureSensor</name>
+    <filename>classignition_1_1sensors_1_1AirPressureSensor.html</filename>
+    <base>ignition::sensors::Sensor</base>
+    <member kind="function">
+      <type></type>
+      <name>AirPressureSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1AirPressureSensor.html</anchorfile>
+      <anchor>abab76b37d5be2854611b0aab1c1789bd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~AirPressureSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1AirPressureSensor.html</anchorfile>
+      <anchor>a71d905a9f435f4990e8e793092882bda</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1AirPressureSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1AirPressureSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1AirPressureSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1AirPressureSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>ReferenceAltitude</name>
+      <anchorfile>classignition_1_1sensors_1_1AirPressureSensor.html</anchorfile>
+      <anchor>ac0120e6f12c18ecc70065e036d6eb495</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetReferenceAltitude</name>
+      <anchorfile>classignition_1_1sensors_1_1AirPressureSensor.html</anchorfile>
+      <anchor>acba3f13502660bf05c49ef02ce6b4761</anchor>
+      <arglist>(double _reference)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1AirPressureSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::AltimeterSensor</name>
+    <filename>classignition_1_1sensors_1_1AltimeterSensor.html</filename>
+    <base>ignition::sensors::Sensor</base>
+    <member kind="function">
+      <type></type>
+      <name>AltimeterSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>a4408eda3dc840422cb66ab4340ba2385</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~AltimeterSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>a2d9c4e8d3879a729f183e092f089a11c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPosition</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>a7ea72e47a2f3282c62c15afd78b90ef6</anchor>
+      <arglist>(double _pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetVerticalReference</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>aa97a8d1c3aed8001bea6ce61b83c0eae</anchor>
+      <arglist>(double _reference)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetVerticalVelocity</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>aa7c61431d0b3f806e550c4870a32acfa</anchor>
+      <arglist>(double _vel)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>VerticalPosition</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>a9fd4f51be7ca9ac49ee9d66551ee87e0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>VerticalReference</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>ad03bc674a12f37d27447364ce7f3b5d4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>VerticalVelocity</name>
+      <anchorfile>classignition_1_1sensors_1_1AltimeterSensor.html</anchorfile>
+      <anchor>ab36fc929715e3ec86945ee7203efd847</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::BoundingBoxCameraSensor</name>
+    <filename>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</filename>
+    <base>ignition::sensors::CameraSensor</base>
+    <member kind="function">
+      <type></type>
+      <name>BoundingBoxCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>a137676c4be09bf842354692c6a8ea0fd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~BoundingBoxCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>a8d0a45a7ba9eb27bb5b204b66f7e43b8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual rendering::BoundingBoxCameraPtr</type>
+      <name>BoundingBoxCamera</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>ac24cff864d62f993db8f0db5841a0334</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageHeight</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>a8572a01d8449c666af42e405ea6113a6</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageWidth</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>af176ca0560fac9a3d90bb874fc069776</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>OnNewBoundingBoxes</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>a5b78bcc393ce619909f1e43076ccce5d</anchor>
+      <arglist>(const std::vector&lt; rendering::BoundingBox &gt; &amp;_boxes)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetScene</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>a3c009821d67e7c524f8b23a57add8927</anchor>
+      <arglist>(ignition::rendering::ScenePtr _scene) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1BoundingBoxCameraSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::BrownDistortionModel</name>
+    <filename>classignition_1_1sensors_1_1BrownDistortionModel.html</filename>
+    <base>ignition::sensors::Distortion</base>
+    <member kind="function">
+      <type></type>
+      <name>BrownDistortionModel</name>
+      <anchorfile>classignition_1_1sensors_1_1BrownDistortionModel.html</anchorfile>
+      <anchor>a9400f8ac53d6e0f8f666f592f9f213cf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~BrownDistortionModel</name>
+      <anchorfile>classignition_1_1sensors_1_1BrownDistortionModel.html</anchorfile>
+      <anchor>a4e9ff20b48b6c30d66320b53ccb89327</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector2d</type>
+      <name>Center</name>
+      <anchorfile>classignition_1_1sensors_1_1BrownDistortionModel.html</anchorfile>
+      <anchor>ae5126a0035d60491ae9826caa4510404</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>K1</name>
+      <anchorfile>classignition_1_1sensors_1_1BrownDistortionModel.html</anchorfile>
+      <anchor>ad1b5a84c0129145cdd37d84dc1611cf6</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>K2</name>
+      <anchorfile>classignition_1_1sensors_1_1BrownDistortionModel.html</anchorfile>
+      <anchor>a79622cc9b0bd5c5646e7c6ecc33b4e6e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>K3</name>
+      <anchorfile>classignition_1_1sensors_1_1BrownDistortionModel.html</anchorfile>
+      <anchor>aea7fe655e87993c72720b2a574440484</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1BrownDistortionModel.html</anchorfile>
+      <anchor>a3c14d3b82de387f97c355cff13e821fc</anchor>
+      <arglist>(const sdf::Camera &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>P1</name>
+      <anchorfile>classignition_1_1sensors_1_1BrownDistortionModel.html</anchorfile>
+      <anchor>aa8908b66f2e219ae5972f5dd517ef54a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>P2</name>
+      <anchorfile>classignition_1_1sensors_1_1BrownDistortionModel.html</anchorfile>
+      <anchor>aee9895a10047f3d4b2a095b3c5567e7c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Print</name>
+      <anchorfile>classignition_1_1sensors_1_1BrownDistortionModel.html</anchorfile>
+      <anchor>aa670af78d9c937e9bd458e69afb921cf</anchor>
+      <arglist>(std::ostream &amp;_out) const override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::CameraSensor</name>
+    <filename>classignition_1_1sensors_1_1CameraSensor.html</filename>
+    <base>ignition::sensors::RenderingSensor</base>
+    <member kind="function">
+      <type></type>
+      <name>CameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a361a01bd64453991a769e2929fad2073</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a5a5b1ed28185aaed648135bf83da6f4c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Baseline</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a3a97c539a67b7110f665c4fe19d68b8f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>gz::common::ConnectionPtr</type>
+      <name>ConnectImageCallback</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a974cd9974b2a3664b0c13d06b0c84dbe</anchor>
+      <arglist>(std::function&lt; void(const gz::msgs::Image &amp;)&gt; _callback)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasImageConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a95355f825345bbb5598d222b3576214a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasInfoConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a047abb2d32e85f4642bcd3328c90f2a8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageHeight</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a13c1da3bf7fed98ad758333c05cdaf12</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageWidth</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a30a5e32cd360df01128e59973c091c0e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>InfoTopic</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a16e3f8045583bc60d56778cf558ee36a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>rendering::CameraPtr</type>
+      <name>RenderingCamera</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a7fea373ed396ce05a6ed9afad1075a94</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetBaseline</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>aff360e75147ee901ee1b75c2bc994d4c</anchor>
+      <arglist>(double _baseline)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetScene</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a0440b8eb9942100460edc64b406118d3</anchor>
+      <arglist>(gz::rendering::ScenePtr _scene) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>AdvertiseInfo</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>aa12cfe657359ee5576c043998ee3633e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>AdvertiseInfo</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a76f6aa814df2af96c2401805bdd6da82</anchor>
+      <arglist>(const std::string &amp;_topic)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>PopulateInfo</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a4a9b5b9bcc42bd675e94e260cd26c5a0</anchor>
+      <arglist>(const sdf::Camera *_cameraSdf)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>PublishInfo</name>
+      <anchorfile>classignition_1_1sensors_1_1CameraSensor.html</anchorfile>
+      <anchor>a04e2d62755aa062839d6c7265f59fa8b</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::DepthCameraSensor</name>
+    <filename>classignition_1_1sensors_1_1DepthCameraSensor.html</filename>
+    <base>ignition::sensors::CameraSensor</base>
+    <member kind="function">
+      <type></type>
+      <name>DepthCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a106b96c47af92c6e456677daec5e4aff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~DepthCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a13aea2319bebfa2a9e41eb8768d4f46b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>gz::common::ConnectionPtr</type>
+      <name>ConnectImageCallback</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a974cd9974b2a3664b0c13d06b0c84dbe</anchor>
+      <arglist>(std::function&lt; void(const gz::msgs::Image &amp;)&gt; _callback)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual rendering::DepthCameraPtr</type>
+      <name>DepthCamera</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>af7e0095b271d666439a075224e1c0a36</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>FarClip</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a07c142174dbec0feba1023924b279fd5</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasDepthConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a6170544638c3a40bd374e9a3b7d21a27</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasPointConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>ae461b99cfb3810d859d6a2ab87519859</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageHeight</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a8572a01d8449c666af42e405ea6113a6</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageWidth</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>af176ca0560fac9a3d90bb874fc069776</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>NearClip</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a7c39b2a8827faf9685b9fd1aee59e3b8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>OnNewDepthFrame</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a964a06a504e776a30980243336831b1f</anchor>
+      <arglist>(const float *_scan, unsigned int _width, unsigned int _height, unsigned int, const std::string &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>OnNewRgbPointCloud</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>aaa5b37171139a1b87cf956980c02e936</anchor>
+      <arglist>(const float *_data, unsigned int _width, unsigned int _height, unsigned int, const std::string &amp;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetScene</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a0440b8eb9942100460edc64b406118d3</anchor>
+      <arglist>(gz::rendering::ScenePtr _scene) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1DepthCameraSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::Distortion</name>
+    <filename>classignition_1_1sensors_1_1Distortion.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Distortion</name>
+      <anchorfile>classignition_1_1sensors_1_1Distortion.html</anchorfile>
+      <anchor>ad07cc580a4f1fad4b5dfdae567cff17a</anchor>
+      <arglist>(DistortionType _type)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Distortion</name>
+      <anchorfile>classignition_1_1sensors_1_1Distortion.html</anchorfile>
+      <anchor>a56b3fdbd12d46075a0d148e5b6c78eb8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1Distortion.html</anchorfile>
+      <anchor>a911d9c416da36078304a254eec2722e2</anchor>
+      <arglist>(const sdf::Camera &amp;_sdf)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Print</name>
+      <anchorfile>classignition_1_1sensors_1_1Distortion.html</anchorfile>
+      <anchor>ae334f58c66057c8c676621b409659cb6</anchor>
+      <arglist>(std::ostream &amp;_out) const</arglist>
+    </member>
+    <member kind="function">
+      <type>DistortionType</type>
+      <name>Type</name>
+      <anchorfile>classignition_1_1sensors_1_1Distortion.html</anchorfile>
+      <anchor>a7e0b943c13c5ba3cb3ee4642c31efa43</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::DistortionFactory</name>
+    <filename>classignition_1_1sensors_1_1DistortionFactory.html</filename>
+    <member kind="function" static="yes">
+      <type>static DistortionPtr</type>
+      <name>NewDistortionModel</name>
+      <anchorfile>classignition_1_1sensors_1_1DistortionFactory.html</anchorfile>
+      <anchor>a10380f3042a76f38df2b5250e2a13a99</anchor>
+      <arglist>(const sdf::Camera &amp;_sdf, const std::string &amp;_sensorType=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static DistortionPtr</type>
+      <name>NewDistortionModel</name>
+      <anchorfile>classignition_1_1sensors_1_1DistortionFactory.html</anchorfile>
+      <anchor>a356f1f3c83c053e6cc628a97f0e03fe8</anchor>
+      <arglist>(sdf::ElementPtr _sdf, const std::string &amp;_sensorType=&quot;&quot;)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::ForceTorqueSensor</name>
+    <filename>classignition_1_1sensors_1_1ForceTorqueSensor.html</filename>
+    <base>ignition::sensors::Sensor</base>
+    <member kind="function">
+      <type></type>
+      <name>ForceTorqueSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>aaa00e5c4d86c0e6519c43b6a497c7cc9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ForceTorqueSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>a47d6288f9d34142a9f4efb9e7826e8e5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>Force</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>a8e3543118e5f89d6ff160bb8811e3da8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Quaterniond</type>
+      <name>RotationChildInSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>a46276d928dd258bc9b590325d0eb31c4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Quaterniond</type>
+      <name>RotationParentInSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>a946fe4025fd54090d111efcffa62f77d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetForce</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>a2247d4250c045c907f831b55a8268cf2</anchor>
+      <arglist>(const math::Vector3d &amp;_force)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRotationChildInSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>a7e75934ca7b55f9a3364450b026e3272</anchor>
+      <arglist>(const math::Quaterniond &amp;_rotChildInSensor)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRotationParentInSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>aa11382e17675076af7eecf339e5853e3</anchor>
+      <arglist>(const math::Quaterniond &amp;_rotParentInSensor)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTorque</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>ac47fad5b15a4f9febffeae6b562897ff</anchor>
+      <arglist>(const math::Vector3d &amp;_torque)</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>Torque</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>ab7b41f19ab9f7a57e35a34e24d534a2c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1ForceTorqueSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::GaussianNoiseModel</name>
+    <filename>classignition_1_1sensors_1_1GaussianNoiseModel.html</filename>
+    <base>ignition::sensors::Noise</base>
+    <member kind="function">
+      <type></type>
+      <name>GaussianNoiseModel</name>
+      <anchorfile>classignition_1_1sensors_1_1GaussianNoiseModel.html</anchorfile>
+      <anchor>a7aad4b5490ec41e2a1ff625b955c1f09</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~GaussianNoiseModel</name>
+      <anchorfile>classignition_1_1sensors_1_1GaussianNoiseModel.html</anchorfile>
+      <anchor>a7f3e9a9341bf971c197a390ec5eb1f3a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>ApplyImpl</name>
+      <anchorfile>classignition_1_1sensors_1_1GaussianNoiseModel.html</anchorfile>
+      <anchor>a89713408c5ba8bc394868220a208b9f0</anchor>
+      <arglist>(double _in, double _dt) override</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Bias</name>
+      <anchorfile>classignition_1_1sensors_1_1GaussianNoiseModel.html</anchorfile>
+      <anchor>aeb87ebafb9a8dc94428307316f46b33d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1GaussianNoiseModel.html</anchorfile>
+      <anchor>a3ca951b0e5dcd9055eb7553f5167513f</anchor>
+      <arglist>(const sdf::Noise &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Mean</name>
+      <anchorfile>classignition_1_1sensors_1_1GaussianNoiseModel.html</anchorfile>
+      <anchor>ab201fbc06e6c2aaaa75cf1be856b4e02</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Print</name>
+      <anchorfile>classignition_1_1sensors_1_1GaussianNoiseModel.html</anchorfile>
+      <anchor>aa670af78d9c937e9bd458e69afb921cf</anchor>
+      <arglist>(std::ostream &amp;_out) const override</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>StdDev</name>
+      <anchorfile>classignition_1_1sensors_1_1GaussianNoiseModel.html</anchorfile>
+      <anchor>a47b18f747dc7f14bf447e199422569d7</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::GpuLidarSensor</name>
+    <filename>classignition_1_1sensors_1_1GpuLidarSensor.html</filename>
+    <base>ignition::sensors::Lidar</base>
+    <member kind="function">
+      <type></type>
+      <name>GpuLidarSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>a775efc65c81789ced341a4bf277a3351</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~GpuLidarSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>aacabdfd7381d3ad1b9c77caa8dd1820a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual gz::common::ConnectionPtr</type>
+      <name>ConnectNewLidarFrame</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>a26c77fdcdfa576f30e632b6782e6ebd3</anchor>
+      <arglist>(std::function&lt; void(const float *_scan, unsigned int _width, unsigned int _heighti, unsigned int _channels, const std::string &amp;)&gt; _subscriber) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateLidar</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>a81147abe4a32e27ac148d9060326137f</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>gz::rendering::GpuRaysPtr</type>
+      <name>GpuRays</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>af9d7521f4482c904cf4c4dd17696238b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>gz::math::Angle</type>
+      <name>HFOV</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>a06078949f529573c322e53bfae65f56d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsHorizontal</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>ac3a82365ff0cf63aab31ac55233826dd</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>RayCountRatio</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>a730e9ce2a1f3f6866cd6e20b992ab8a4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>RemoveGpuRays</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>a68c83a6c32dc06b2e29f381c284a869f</anchor>
+      <arglist>(gz::rendering::ScenePtr _scene)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetScene</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>a28f2aeb198a8bd6f5e8e120fa51313c7</anchor>
+      <arglist>(gz::rendering::ScenePtr _scene) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+    <member kind="function">
+      <type>gz::math::Angle</type>
+      <name>VFOV</name>
+      <anchorfile>classignition_1_1sensors_1_1GpuLidarSensor.html</anchorfile>
+      <anchor>a3f4c6fba23824cbda6a92a2e2715957a</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::ImageBrownDistortionModel</name>
+    <filename>classignition_1_1sensors_1_1ImageBrownDistortionModel.html</filename>
+    <base>ignition::sensors::BrownDistortionModel</base>
+    <member kind="function">
+      <type></type>
+      <name>ImageBrownDistortionModel</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageBrownDistortionModel.html</anchorfile>
+      <anchor>a635dcfb9cc6af54bf7c861341bd7a799</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ImageBrownDistortionModel</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageBrownDistortionModel.html</anchorfile>
+      <anchor>a380ca82849faf7bee918227c5ddb411d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageBrownDistortionModel.html</anchorfile>
+      <anchor>a3c14d3b82de387f97c355cff13e821fc</anchor>
+      <arglist>(const sdf::Camera &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Print</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageBrownDistortionModel.html</anchorfile>
+      <anchor>aa670af78d9c937e9bd458e69afb921cf</anchor>
+      <arglist>(std::ostream &amp;_out) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCamera</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageBrownDistortionModel.html</anchorfile>
+      <anchor>a9981e98ced77beb4e38dc2b0e90815f7</anchor>
+      <arglist>(rendering::CameraPtr _camera)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::ImageDistortionFactory</name>
+    <filename>classignition_1_1sensors_1_1ImageDistortionFactory.html</filename>
+    <member kind="function" static="yes">
+      <type>static DistortionPtr</type>
+      <name>NewDistortionModel</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageDistortionFactory.html</anchorfile>
+      <anchor>a10380f3042a76f38df2b5250e2a13a99</anchor>
+      <arglist>(const sdf::Camera &amp;_sdf, const std::string &amp;_sensorType=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static DistortionPtr</type>
+      <name>NewDistortionModel</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageDistortionFactory.html</anchorfile>
+      <anchor>a356f1f3c83c053e6cc628a97f0e03fe8</anchor>
+      <arglist>(sdf::ElementPtr _sdf, const std::string &amp;_sensorType=&quot;&quot;)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::ImageGaussianNoiseModel</name>
+    <filename>classignition_1_1sensors_1_1ImageGaussianNoiseModel.html</filename>
+    <base>ignition::sensors::GaussianNoiseModel</base>
+    <member kind="function">
+      <type></type>
+      <name>ImageGaussianNoiseModel</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageGaussianNoiseModel.html</anchorfile>
+      <anchor>ab79f9f29cd14a50a08d1460c6afcc76f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ImageGaussianNoiseModel</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageGaussianNoiseModel.html</anchorfile>
+      <anchor>a389e9b5e09127d2ec5ab0e11ee7440f4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageGaussianNoiseModel.html</anchorfile>
+      <anchor>a3ca951b0e5dcd9055eb7553f5167513f</anchor>
+      <arglist>(const sdf::Noise &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Print</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageGaussianNoiseModel.html</anchorfile>
+      <anchor>aa670af78d9c937e9bd458e69afb921cf</anchor>
+      <arglist>(std::ostream &amp;_out) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCamera</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageGaussianNoiseModel.html</anchorfile>
+      <anchor>a9981e98ced77beb4e38dc2b0e90815f7</anchor>
+      <arglist>(rendering::CameraPtr _camera)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::ImageNoiseFactory</name>
+    <filename>classignition_1_1sensors_1_1ImageNoiseFactory.html</filename>
+    <member kind="function" static="yes">
+      <type>static NoisePtr</type>
+      <name>NewNoiseModel</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageNoiseFactory.html</anchorfile>
+      <anchor>a9a8db653bae16940c8e3db17d8224294</anchor>
+      <arglist>(const sdf::Noise &amp;_sdf, const std::string &amp;_sensorType=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static NoisePtr</type>
+      <name>NewNoiseModel</name>
+      <anchorfile>classignition_1_1sensors_1_1ImageNoiseFactory.html</anchorfile>
+      <anchor>afe18b3c2b7bc82c2c547854379664b67</anchor>
+      <arglist>(sdf::ElementPtr _sdf, const std::string &amp;_sensorType=&quot;&quot;)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::ImuSensor</name>
+    <filename>classignition_1_1sensors_1_1ImuSensor.html</filename>
+    <base>ignition::sensors::Sensor</base>
+    <member kind="function">
+      <type></type>
+      <name>ImuSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a66de38dd6ad3c996646f66e13311ffe6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ImuSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a1f5a733443da5b46db5bf9bc9cbf8494</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>AngularVelocity</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a68735bbb9ff78e870db052f851a08f30</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>Gravity</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>afac58edf82e4a44ed9f0935b9fb591f5</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>LinearAcceleration</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a12e197a3a07e6bddc1e7f859f739a390</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Quaterniond</type>
+      <name>Orientation</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a9ab887460fac50f02e5c329d663aa349</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>OrientationEnabled</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a15f934b1239e30d4291a6c0380c56e57</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Quaterniond</type>
+      <name>OrientationReference</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>ace94697135a1b467492487ed4d89ddca</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAngularVelocity</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>aa24bcc493c3710f650dbc5d33b7050d4</anchor>
+      <arglist>(const math::Vector3d &amp;_angularVel)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetGravity</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a5d9d69d42b9ac58daccee8a8a84e8e8b</anchor>
+      <arglist>(const math::Vector3d &amp;_gravity)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetLinearAcceleration</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a83a045d2b45824be44e2becaf6e4b7bd</anchor>
+      <arglist>(const math::Vector3d &amp;_linearAcc)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetOrientationEnabled</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a244a15c02a061da60b8917a9810b7eda</anchor>
+      <arglist>(bool _enabled)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetOrientationReference</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a70227df75ba18673c3dd0047302a9ec2</anchor>
+      <arglist>(const math::Quaterniond &amp;_orient)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWorldFrameOrientation</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>aa13ef88aea076b420fd36d71dffd4b98</anchor>
+      <arglist>(const math::Quaterniond &amp;_rot, WorldFrameEnumType _relativeTo)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWorldPose</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>aa0afd01a17eda27e4d157064893c459e</anchor>
+      <arglist>(const math::Pose3d _pose)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Pose3d</type>
+      <name>WorldPose</name>
+      <anchorfile>classignition_1_1sensors_1_1ImuSensor.html</anchorfile>
+      <anchor>aa6916d61d620f625e52357f4bfbe0bc6</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::Lidar</name>
+    <filename>classignition_1_1sensors_1_1Lidar.html</filename>
+    <base>ignition::sensors::RenderingSensor</base>
+    <member kind="function">
+      <type></type>
+      <name>Lidar</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a18f88de7b8beed38b56ef35dcf1cadb1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Lidar</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a60a92c2040f4cde8ca9f77b39bf88672</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>gz::math::Angle</type>
+      <name>AngleMax</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a515e7ffda4d9c67d1cc15c8fd446cd37</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>gz::math::Angle</type>
+      <name>AngleMin</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>aee34c954b7cbcd548119487b2552c72a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>AngleResolution</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a9241541a4bcefcb8d08be8892073beac</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ApplyNoise</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a6c681a0dfa9cba299f75d251820b9a71</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual gz::common::ConnectionPtr</type>
+      <name>ConnectNewLidarFrame</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a86fe16eeb6d5cd0658169ea1b8da2037</anchor>
+      <arglist>(std::function&lt; void(const float *_scan, unsigned int _width, unsigned int _heighti, unsigned int _channels, const std::string &amp;)&gt; _subscriber)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateLidar</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>aa052ef23a7700b224206139e0dd3476a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>Fiducial</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>abed01d1a0668250aa93d568f22278631</anchor>
+      <arglist>(const unsigned int _index) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>HorzFOV</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a0ca4fd473b0163110febcebeff135110</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsActive</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a7ddad08b7f876149aad9272d8473e9bb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsHorizontal</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>ac3a82365ff0cf63aab31ac55233826dd</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>PublishLidarScan</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a6bbc38873fac4bc5bd18940c35a724e7</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Range</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a01b401e48db2ca82c4c0945ba17b9181</anchor>
+      <arglist>(const int _index) const</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>RangeCount</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a7189c00c414a5d95d70c6aaefe600c32</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>RangeCountRatio</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a4e5591c2393f8eabbd0a4fa0430bdf39</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>RangeMax</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a0ed4227cbea4828251779db9b7ff4baf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>RangeMin</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a52212f6facb94eb145abc19149314191</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>RangeResolution</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a653546d87b6e7cab78926b46ebccee1d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Ranges</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a7cc9d7d73e5da6d62d4ccbf3e8b6e791</anchor>
+      <arglist>(std::vector&lt; double &gt; &amp;_ranges) const</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>RayCount</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>ade38077dccc4b674c0d16d598291da44</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>RayCountRatio</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a730e9ce2a1f3f6866cd6e20b992ab8a4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Retro</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>aa3e4fbd4b392d5847f1b64a3063e831b</anchor>
+      <arglist>(const int _index) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAngleMax</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a27a3a3a40e10b6ab6a10831335bdec88</anchor>
+      <arglist>(const double _angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAngleMin</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>aa6e9217f1534c8a0309ab6c396af5123</anchor>
+      <arglist>(const double _angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetParent</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a8ab50a03daa942e1d68ab1929c39fa3e</anchor>
+      <arglist>(const std::string &amp;_parent) override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetVerticalAngleMax</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a588730ac245a59eb0c73d580bbdcf007</anchor>
+      <arglist>(const double _angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetVerticalAngleMin</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>ac1688e687dd8a78e1bee9a2113b36f0d</anchor>
+      <arglist>(const double _angle)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>VertFOV</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a12b973426eda49c51752526d898271d7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>gz::math::Angle</type>
+      <name>VerticalAngleMax</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a135b512a34fcebc30c649bd9116b2c33</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>gz::math::Angle</type>
+      <name>VerticalAngleMin</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a587cf67d248afd26a8ff971f88e10fef</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>VerticalAngleResolution</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a10e7815ad3c301ceeb6c64c798ec45eb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>VerticalRangeCount</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>afd777c7a155ccb0f58f529693b7d93c4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>VerticalRayCount</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a4839e349189709067f69a78aa831993d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>VisibilityMask</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>ada57b6c34208ef68071d9ba4976c5936</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>initialized</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>aedeffc7d23da25d52b9a50045189fe2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float *</type>
+      <name>laserBuffer</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a541161c291665b3f5271c31366114ecc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::mutex</type>
+      <name>lidarMutex</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>aca2b50b4d50c5aa34f20ea9615e984b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Fini</name>
+      <anchorfile>classignition_1_1sensors_1_1Lidar.html</anchorfile>
+      <anchor>a2cab2318072218e46466d00af0345fed</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::LogicalCameraSensor</name>
+    <filename>classignition_1_1sensors_1_1LogicalCameraSensor.html</filename>
+    <base>ignition::sensors::Sensor</base>
+    <member kind="function">
+      <type></type>
+      <name>LogicalCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>af29e76ca84be9326779a070e74ec0af4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LogicalCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>ab4f3fb46ed9924bd91e51a34781716fe</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>AspectRatio</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>a3bdc2ccc73727b65d2bf99a0898cddde</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Far</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>ae13f0786421b516e3d8fe6c936249eb1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>gz::math::Angle</type>
+      <name>HorizontalFOV</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>a6dc874c4de899cd5f72bc2591c8ca94a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>msgs::LogicalCameraImage</type>
+      <name>Image</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>a1880deec31a3999d7d786d79c96bbcf0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Near</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>a5e7d6587083f056b3514a08c4c173e18</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetModelPoses</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>ac573eebcd53cb97bda1ba5a54dd7d094</anchor>
+      <arglist>(std::map&lt; std::string, math::Pose3d &gt; &amp;&amp;_models)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1LogicalCameraSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::MagnetometerSensor</name>
+    <filename>classignition_1_1sensors_1_1MagnetometerSensor.html</filename>
+    <base>ignition::sensors::Sensor</base>
+    <member kind="function">
+      <type></type>
+      <name>MagnetometerSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>a81bffea4bb5fdbd0479d75e0b24bf08c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~MagnetometerSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>aeb16df7598d631c540c964a86eafa1b7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>MagneticField</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>a943e8fe982b7b6992a58bd0d92077ccc</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWorldMagneticField</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>a56d87177d31a354a74efb658b06d6250</anchor>
+      <arglist>(const math::Vector3d &amp;_field)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWorldPose</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>aa0afd01a17eda27e4d157064893c459e</anchor>
+      <arglist>(const math::Pose3d _pose)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Vector3d</type>
+      <name>WorldMagneticField</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>ada2d261f4dac0ed82ddd84c86952c4ba</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>math::Pose3d</type>
+      <name>WorldPose</name>
+      <anchorfile>classignition_1_1sensors_1_1MagnetometerSensor.html</anchorfile>
+      <anchor>aa6916d61d620f625e52357f4bfbe0bc6</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::Manager</name>
+    <filename>classignition_1_1sensors_1_1Manager.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Manager</name>
+      <anchorfile>classignition_1_1sensors_1_1Manager.html</anchorfile>
+      <anchor>a8fae1352a98517c1ecb0a6e7396e3f06</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Manager</name>
+      <anchorfile>classignition_1_1sensors_1_1Manager.html</anchorfile>
+      <anchor>a2d267823748603d5577dc7809c0a2056</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>AddPluginPaths</name>
+      <anchorfile>classignition_1_1sensors_1_1Manager.html</anchorfile>
+      <anchor>a5fd82ead8b3038508aa768335078c25d</anchor>
+      <arglist>(const std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>SensorId</type>
+      <name>AddSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1Manager.html</anchorfile>
+      <anchor>a1ca8cfff0e9cd8dcb6e1d133a2b74881</anchor>
+      <arglist>(std::unique_ptr&lt; Sensor &gt; _sensor)</arglist>
+    </member>
+    <member kind="function">
+      <type>SensorId</type>
+      <name>CreateSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1Manager.html</anchorfile>
+      <anchor>a2f34b69f7fedbe102039573d4a74e103</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf)</arglist>
+    </member>
+    <member kind="function">
+      <type>SensorId</type>
+      <name>CreateSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1Manager.html</anchorfile>
+      <anchor>a878df6edb756ef52fd692cf7907172fd</anchor>
+      <arglist>(sdf::ElementPtr _sdf)</arglist>
+    </member>
+    <member kind="function">
+      <type>SensorType *</type>
+      <name>CreateSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1Manager.html</anchorfile>
+      <anchor>a9b048a757604f30fa687b0779a6b275a</anchor>
+      <arglist>(SdfType _sdf)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1Manager.html</anchorfile>
+      <anchor>ad19abaacb073bdef7940926f64b2aace</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Remove</name>
+      <anchorfile>classignition_1_1sensors_1_1Manager.html</anchorfile>
+      <anchor>a00a3040202bec506eee6aa11fa255d4b</anchor>
+      <arglist>(const SensorId _id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>RunOnce</name>
+      <anchorfile>classignition_1_1sensors_1_1Manager.html</anchorfile>
+      <anchor>a10688584f06a9a68eab21faa1e1739f1</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_time, bool _force=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>Sensor *</type>
+      <name>Sensor</name>
+      <anchorfile>classignition_1_1sensors_1_1Manager.html</anchorfile>
+      <anchor>a309987c0183531a9ac58566a56693e0f</anchor>
+      <arglist>(SensorId _id)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::NavSatSensor</name>
+    <filename>classignition_1_1sensors_1_1NavSatSensor.html</filename>
+    <base>ignition::sensors::Sensor</base>
+    <member kind="function">
+      <type></type>
+      <name>NavSatSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>a3409430f89acd5c8900ad37d48ab6dce</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~NavSatSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>adc494257bae0ea346f2ca7fe0b577a59</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Altitude</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>a769d9bed4626a36ad571144a3d5b4100</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>const math::Angle &amp;</type>
+      <name>Latitude</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>aec3815f2227425ff2c953e546c4fd183</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>const math::Angle &amp;</type>
+      <name>Longitude</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>a07425a17b0d1940de5b16c1359dc9302</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAltitude</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>a1c75d7271146c7493d1d553fac77872e</anchor>
+      <arglist>(double _altitude)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetLatitude</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>aa1c95b92a75c79f32dbe697fabcec924</anchor>
+      <arglist>(const math::Angle &amp;_latitude)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetLongitude</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>ac0469e330d0960730fb2e3d45a6542db</anchor>
+      <arglist>(const math::Angle &amp;_longitude)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPosition</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>abf9561f11168a5be6dbfaddad8d3dd8d</anchor>
+      <arglist>(const math::Angle &amp;_latitude, const math::Angle &amp;_longitude, double _altitude=0.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetVelocity</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>a263f26007f5c793e2520706cdce41139</anchor>
+      <arglist>(const math::Vector3d &amp;_vel)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+    <member kind="function">
+      <type>const math::Vector3d &amp;</type>
+      <name>Velocity</name>
+      <anchorfile>classignition_1_1sensors_1_1NavSatSensor.html</anchorfile>
+      <anchor>aeec4173712afccffa45903017f8988ce</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::Noise</name>
+    <filename>classignition_1_1sensors_1_1Noise.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Noise</name>
+      <anchorfile>classignition_1_1sensors_1_1Noise.html</anchorfile>
+      <anchor>a54019625a441263323e6799292d37120</anchor>
+      <arglist>(NoiseType _type)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Noise</name>
+      <anchorfile>classignition_1_1sensors_1_1Noise.html</anchorfile>
+      <anchor>a8c80c692fb5f8dba504a3d491bef5324</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Apply</name>
+      <anchorfile>classignition_1_1sensors_1_1Noise.html</anchorfile>
+      <anchor>ae08acee5017b0aaa9935911d09b18ca9</anchor>
+      <arglist>(double _in, double _dt=0.0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>ApplyImpl</name>
+      <anchorfile>classignition_1_1sensors_1_1Noise.html</anchorfile>
+      <anchor>aaf52c067992c39f7c800b99f5c5ff60e</anchor>
+      <arglist>(double _in, double _dt)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1Noise.html</anchorfile>
+      <anchor>aacfbf0b8d1bac75358683736bf67e5a4</anchor>
+      <arglist>(const sdf::Noise &amp;_sdf)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Print</name>
+      <anchorfile>classignition_1_1sensors_1_1Noise.html</anchorfile>
+      <anchor>ae334f58c66057c8c676621b409659cb6</anchor>
+      <arglist>(std::ostream &amp;_out) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCustomNoiseCallback</name>
+      <anchorfile>classignition_1_1sensors_1_1Noise.html</anchorfile>
+      <anchor>ad2ecca91be5c4c234f05ac9963544549</anchor>
+      <arglist>(std::function&lt; double(double, double)&gt; _cb)</arglist>
+    </member>
+    <member kind="function">
+      <type>NoiseType</type>
+      <name>Type</name>
+      <anchorfile>classignition_1_1sensors_1_1Noise.html</anchorfile>
+      <anchor>a93e582223199977bf64b9ed192e74671</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::NoiseFactory</name>
+    <filename>classignition_1_1sensors_1_1NoiseFactory.html</filename>
+    <member kind="function" static="yes">
+      <type>static NoisePtr</type>
+      <name>NewNoiseModel</name>
+      <anchorfile>classignition_1_1sensors_1_1NoiseFactory.html</anchorfile>
+      <anchor>a9a8db653bae16940c8e3db17d8224294</anchor>
+      <arglist>(const sdf::Noise &amp;_sdf, const std::string &amp;_sensorType=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static NoisePtr</type>
+      <name>NewNoiseModel</name>
+      <anchorfile>classignition_1_1sensors_1_1NoiseFactory.html</anchorfile>
+      <anchor>afe18b3c2b7bc82c2c547854379664b67</anchor>
+      <arglist>(sdf::ElementPtr _sdf, const std::string &amp;_sensorType=&quot;&quot;)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::RenderingEvents</name>
+    <filename>classignition_1_1sensors_1_1RenderingEvents.html</filename>
+    <member kind="function" static="yes">
+      <type>static gz::common::ConnectionPtr</type>
+      <name>ConnectSceneChangeCallback</name>
+      <anchorfile>classignition_1_1sensors_1_1RenderingEvents.html</anchorfile>
+      <anchor>ac415cf963c2918811339574950a6fa7c</anchor>
+      <arglist>(std::function&lt; void(const gz::rendering::ScenePtr &amp;)&gt; _callback)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static gz::common::EventT&lt; void(const gz::rendering::ScenePtr &amp;)&gt;</type>
+      <name>sceneEvent</name>
+      <anchorfile>classignition_1_1sensors_1_1RenderingEvents.html</anchorfile>
+      <anchor>a6f2bfad2aae9c11fad6a3ce4894d6d77</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::RenderingSensor</name>
+    <filename>classignition_1_1sensors_1_1RenderingSensor.html</filename>
+    <base>ignition::sensors::Sensor</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~RenderingSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1RenderingSensor.html</anchorfile>
+      <anchor>a98eb858730b2efc92d634baf7d768220</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ManualSceneUpdate</name>
+      <anchorfile>classignition_1_1sensors_1_1RenderingSensor.html</anchorfile>
+      <anchor>a2eff0c3e01db59d0aaec4b6922b15c8d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Render</name>
+      <anchorfile>classignition_1_1sensors_1_1RenderingSensor.html</anchorfile>
+      <anchor>a436830dff9fbce05c931c5a6d8d5366d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>rendering::ScenePtr</type>
+      <name>Scene</name>
+      <anchorfile>classignition_1_1sensors_1_1RenderingSensor.html</anchorfile>
+      <anchor>a9850bb1face80847a0e136df734635c5</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetManualSceneUpdate</name>
+      <anchorfile>classignition_1_1sensors_1_1RenderingSensor.html</anchorfile>
+      <anchor>aa8acd165a254ceb2173a851cda75dff8</anchor>
+      <arglist>(bool _manual)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetScene</name>
+      <anchorfile>classignition_1_1sensors_1_1RenderingSensor.html</anchorfile>
+      <anchor>a7b767888a96a44a374a110ff0951edc3</anchor>
+      <arglist>(rendering::ScenePtr _scene)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>RenderingSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1RenderingSensor.html</anchorfile>
+      <anchor>ae9b1705e5faf31305e493bc24753faf6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>AddSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1RenderingSensor.html</anchorfile>
+      <anchor>a3dd16a8f742c059304aec8c34399dd4f</anchor>
+      <arglist>(rendering::SensorPtr _sensor)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::RgbdCameraSensor</name>
+    <filename>classignition_1_1sensors_1_1RgbdCameraSensor.html</filename>
+    <base>ignition::sensors::CameraSensor</base>
+    <member kind="function">
+      <type></type>
+      <name>RgbdCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>a17ba048a4311f72605c8ec4c2e2029ef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~RgbdCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>afd6578b1cb358561fea728861ef60a56</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasColorConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>a0d9b8f078433d62e3715986bc7fb16a3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasDepthConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>a6170544638c3a40bd374e9a3b7d21a27</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasPointConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>ae461b99cfb3810d859d6a2ab87519859</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageHeight</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>a8572a01d8449c666af42e405ea6113a6</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageWidth</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>af176ca0560fac9a3d90bb874fc069776</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetScene</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>a0440b8eb9942100460edc64b406118d3</anchor>
+      <arglist>(gz::rendering::ScenePtr _scene) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1RgbdCameraSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::SegmentationCameraSensor</name>
+    <filename>classignition_1_1sensors_1_1SegmentationCameraSensor.html</filename>
+    <base>ignition::sensors::CameraSensor</base>
+    <member kind="function">
+      <type></type>
+      <name>SegmentationCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>aa9e7c5f40ebd8380eaf26a4e6593743e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~SegmentationCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>adbdeca1f20d55ce7822508d8f3e8fb1d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ignition::common::ConnectionPtr</type>
+      <name>ConnectImageCallback</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>a66d304e8a703586917bfbe689e81af8d</anchor>
+      <arglist>(std::function&lt; void(const ignition::msgs::Image &amp;)&gt; _callback)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageHeight</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>a8572a01d8449c666af42e405ea6113a6</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageWidth</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>af176ca0560fac9a3d90bb874fc069776</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>OnNewSegmentationFrame</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>a3f25c83f6ffad2047cd053aa21615a28</anchor>
+      <arglist>(const uint8_t *_data, unsigned int _width, unsigned int _height, unsigned int _channels, const std::string &amp;_format)</arglist>
+    </member>
+    <member kind="function">
+      <type>rendering::SegmentationCameraPtr</type>
+      <name>SegmentationCamera</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>ab5c4eaecc2670788098427eaed30275f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetScene</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>a3c009821d67e7c524f8b23a57add8927</anchor>
+      <arglist>(ignition::rendering::ScenePtr _scene) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1SegmentationCameraSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::Sensor</name>
+    <filename>classignition_1_1sensors_1_1Sensor.html</filename>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Sensor</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a4554bb2bc7e88656ce88b99f3308dfe7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>AddSequence</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a81ce59fcf081eb3cd5981c49d67f680f</anchor>
+      <arglist>(gz::msgs::Header *_msg, const std::string &amp;_seqKey=&quot;default&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>EnableMetrics</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>aed85064af1c431fab72fe3faf881f214</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>FrameId</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>aa6de0c8187073607087f6251cb2538d7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>SensorId</type>
+      <name>Id</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a8cc83bd1c354f18e949d251ed0b067a4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>af30ae0c337296553cbbd213d7c8ac9aa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsActive</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>ab5505aed5c05749ab3f37822c58ded04</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>ab52ad4f903fafe546eb0ed6cb62a09b5</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>aa20d0aff399c73ee4b7e6e91c738a7b1</anchor>
+      <arglist>(sdf::ElementPtr _sdf)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>Name</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a41087c5f2f732f7a2f336b45b952f199</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::chrono::steady_clock::duration</type>
+      <name>NextDataUpdateTime</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>aa02273a0d8b7d8817a2e8f6b77df5b3f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>Parent</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a445f033fdd1f90a8fe6b06fc9b00086c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>gz::math::Pose3d</type>
+      <name>Pose</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>ad369e05eb6f0f44667e501fe9458e5ff</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>PublishMetrics</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a07f7230261ea1dd368ceb3f66b02c7d1</anchor>
+      <arglist>(const std::chrono::duration&lt; double &gt; &amp;_now)</arglist>
+    </member>
+    <member kind="function">
+      <type>sdf::ElementPtr</type>
+      <name>SDF</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>ab18d9aec16ab9aa8c1683d7e98016d93</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetActive</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a3172f15c4f5860e8c276b394f75bae1d</anchor>
+      <arglist>(bool _active)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetEnableMetrics</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a8d1000c90af1cea6c2da6297c957f6f7</anchor>
+      <arglist>(bool _enableMetrics)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetFrameId</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>ab791251e798ca6bae5412e4394ac98fa</anchor>
+      <arglist>(const std::string &amp;_frameId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetParent</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a2e6826b29ac13354b78441496a9dbc25</anchor>
+      <arglist>(const std::string &amp;_parent)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPose</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>ad146ac8bb411f5a6a935af8f6b47905e</anchor>
+      <arglist>(const gz::math::Pose3d &amp;_pose)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetTopic</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a3883a29cad77785041548f83fdc0c210</anchor>
+      <arglist>(const std::string &amp;_topic)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetUpdateRate</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>ab690e2f1eb0abc5714d5b46728484138</anchor>
+      <arglist>(const double _hz)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>Topic</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a5e3332cce0c9ea00854bb271846bfec4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a21798903652fcaee78ce432a9bafd177</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now)=0</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a8a4df9479d2f095bc5695229ddecb79e</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now, const bool _force)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>UpdateRate</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>a1751ff2fd79ad0aee84ae7a7bbf69e22</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Sensor</name>
+      <anchorfile>classignition_1_1sensors_1_1Sensor.html</anchorfile>
+      <anchor>aa25ad2c070d91a1d2d85c9ec38a76f90</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::SensorFactory</name>
+    <filename>classignition_1_1sensors_1_1SensorFactory.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>SensorFactory</name>
+      <anchorfile>classignition_1_1sensors_1_1SensorFactory.html</anchorfile>
+      <anchor>a0c0207f139c06a003ffdaa1b4f1e23d1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~SensorFactory</name>
+      <anchorfile>classignition_1_1sensors_1_1SensorFactory.html</anchorfile>
+      <anchor>a7baf0e0da158688f2d41c2cafea6467e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>AddPluginPaths</name>
+      <anchorfile>classignition_1_1sensors_1_1SensorFactory.html</anchorfile>
+      <anchor>a5fd82ead8b3038508aa768335078c25d</anchor>
+      <arglist>(const std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::unique_ptr&lt; SensorType &gt;</type>
+      <name>CreateSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1SensorFactory.html</anchorfile>
+      <anchor>a17226844f4fc28ef16730828e4678204</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::unique_ptr&lt; Sensor &gt;</type>
+      <name>CreateSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1SensorFactory.html</anchorfile>
+      <anchor>af9f605158b22e99e213ec140ca2d0248</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::unique_ptr&lt; SensorType &gt;</type>
+      <name>CreateSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1SensorFactory.html</anchorfile>
+      <anchor>a77706e038dc5b5120f69a4e1613eed79</anchor>
+      <arglist>(sdf::ElementPtr _sdf)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::unique_ptr&lt; Sensor &gt;</type>
+      <name>CreateSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1SensorFactory.html</anchorfile>
+      <anchor>af468654bec8d55c25b0da741b9122982</anchor>
+      <arglist>(sdf::ElementPtr _sdf)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::SensorPlugin</name>
+    <filename>classignition_1_1sensors_1_1SensorPlugin.html</filename>
+    <member kind="function" virtualness="pure">
+      <type>virtual Sensor *</type>
+      <name>New</name>
+      <anchorfile>classignition_1_1sensors_1_1SensorPlugin.html</anchorfile>
+      <anchor>a58174499f2b142c493beddec6ac099f0</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::SensorTypePlugin</name>
+    <filename>classignition_1_1sensors_1_1SensorTypePlugin.html</filename>
+    <templarg></templarg>
+    <base>ignition::sensors::SensorPlugin</base>
+    <member kind="function">
+      <type>SensorType *</type>
+      <name>New</name>
+      <anchorfile>classignition_1_1sensors_1_1SensorTypePlugin.html</anchorfile>
+      <anchor>a073f3819f855c4838adf479623d44c5d</anchor>
+      <arglist>() override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::sensors::ThermalCameraSensor</name>
+    <filename>classignition_1_1sensors_1_1ThermalCameraSensor.html</filename>
+    <base>ignition::sensors::CameraSensor</base>
+    <member kind="function">
+      <type></type>
+      <name>ThermalCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a913e24db25c0afd0bd7a9321878dcc5f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ThermalCameraSensor</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a8272751ce0eec3b9d4b945db4e284aff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>common::ConnectionPtr</type>
+      <name>ConnectImageCallback</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a26e544441335d88391c2d271f41e293d</anchor>
+      <arglist>(std::function&lt; void(const msgs::Image &amp;)&gt; _callback)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasConnections</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>ada60decf1fdda4f45af52b443cee5bcf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageHeight</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a8572a01d8449c666af42e405ea6113a6</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual unsigned int</type>
+      <name>ImageWidth</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>af176ca0560fac9a3d90bb874fc069776</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Init</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>ad7b46efda189539d906c23edd5598227</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a7fe9e5df2c22e12088dec7880642ff1e</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Load</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a76b4e06b24521be337ec9717e94eae03</anchor>
+      <arglist>(sdf::ElementPtr _sdf) override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>OnNewThermalFrame</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>ac1b9e0af6e35a2a97925ca658abe0e20</anchor>
+      <arglist>(const uint16_t *_scan, unsigned int _width, unsigned int _height, unsigned int _channels, const std::string &amp;_format)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetAmbientTemperature</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a684c13f6a6362a79b3c1da1e4c5dcad6</anchor>
+      <arglist>(float _ambient)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetAmbientTemperatureRange</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a9ed40c03f502bdaf26a88f4e511ae4bb</anchor>
+      <arglist>(float _range)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLinearResolution</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a92798ff30fcde12012bc953390d059ca</anchor>
+      <arglist>(float _resolution)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetMaxTemperature</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>ac1a8fc82ed9a3fb151b0db54396fed9e</anchor>
+      <arglist>(float _max)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetMinTemperature</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>ae42ec59fc6b7fae0f36d448abadd4caf</anchor>
+      <arglist>(float _min)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetScene</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a0440b8eb9942100460edc64b406118d3</anchor>
+      <arglist>(gz::rendering::ScenePtr _scene) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual rendering::ThermalCameraPtr</type>
+      <name>ThermalCamera</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a984af122cbf54be5e721600f35c58c19</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Update</name>
+      <anchorfile>classignition_1_1sensors_1_1ThermalCameraSensor.html</anchorfile>
+      <anchor>a99d7a6b63780715a293f98976309c1f3</anchor>
+      <arglist>(const std::chrono::steady_clock::duration &amp;_now) override</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ignition</name>
+    <filename>namespaceignition.html</filename>
+    <namespace>ignition::sensors</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>ignition::sensors</name>
+    <filename>namespaceignition_1_1sensors.html</filename>
+    <class kind="class">ignition::sensors::AirPressureSensor</class>
+    <class kind="class">ignition::sensors::AltimeterSensor</class>
+    <class kind="class">ignition::sensors::BoundingBoxCameraSensor</class>
+    <class kind="class">ignition::sensors::BrownDistortionModel</class>
+    <class kind="class">ignition::sensors::CameraSensor</class>
+    <class kind="class">ignition::sensors::DepthCameraSensor</class>
+    <class kind="class">ignition::sensors::Distortion</class>
+    <class kind="class">ignition::sensors::DistortionFactory</class>
+    <class kind="class">ignition::sensors::ForceTorqueSensor</class>
+    <class kind="class">ignition::sensors::GaussianNoiseModel</class>
+    <class kind="class">ignition::sensors::GpuLidarSensor</class>
+    <class kind="class">ignition::sensors::ImageBrownDistortionModel</class>
+    <class kind="class">ignition::sensors::ImageDistortionFactory</class>
+    <class kind="class">ignition::sensors::ImageGaussianNoiseModel</class>
+    <class kind="class">ignition::sensors::ImageNoiseFactory</class>
+    <class kind="class">ignition::sensors::ImuSensor</class>
+    <class kind="class">ignition::sensors::Lidar</class>
+    <class kind="class">ignition::sensors::LogicalCameraSensor</class>
+    <class kind="class">ignition::sensors::MagnetometerSensor</class>
+    <class kind="class">ignition::sensors::Manager</class>
+    <class kind="class">ignition::sensors::NavSatSensor</class>
+    <class kind="class">ignition::sensors::Noise</class>
+    <class kind="class">ignition::sensors::NoiseFactory</class>
+    <class kind="class">ignition::sensors::RenderingEvents</class>
+    <class kind="class">ignition::sensors::RenderingSensor</class>
+    <class kind="class">ignition::sensors::RgbdCameraSensor</class>
+    <class kind="class">ignition::sensors::SegmentationCameraSensor</class>
+    <class kind="class">ignition::sensors::Sensor</class>
+    <class kind="class">ignition::sensors::SensorFactory</class>
+    <class kind="class">ignition::sensors::SensorPlugin</class>
+    <class kind="class">ignition::sensors::SensorTypePlugin</class>
+    <class kind="class">ignition::sensors::ThermalCameraSensor</class>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; BrownDistortionModel &gt;</type>
+      <name>BrownDistortionModelPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>aee9c599876fb2c58492fa1c55b27375c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; CameraSensorPtr &gt;</type>
+      <name>CameraSensor_V</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a639453905a0c5aa57df5511d53bd738f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; CameraSensor &gt;</type>
+      <name>CameraSensorPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a6cd413c2a9d2c3df41b19ea1df30fe62</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; Distortion &gt;</type>
+      <name>DistortionPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>acfa9e25f3663af812ed46aa05ec2d036</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; GaussianNoiseModel &gt;</type>
+      <name>GaussianNoiseModelPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>af1380938299ea8126f6ee38b0db00da3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; GpuLidarSensorPtr &gt;</type>
+      <name>GpuLidarSensor_V</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>af15d345c752b20c0d4e77278fb282280</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; GpuLidarSensor &gt;</type>
+      <name>GpuLidarSensorPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a32f23a74793d1f41164d31c71cc78757</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; ImageBrownDistortionModel &gt;</type>
+      <name>ImageBrownDistortionModelPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a33d7b6269b2575d1eefbee8c6b183484</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; ImageGaussianNoiseModel &gt;</type>
+      <name>ImageGaussianNoiseModelPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a7afbfe4c7cd055f45d1a0f9f1817bc2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; Noise &gt;</type>
+      <name>NoisePtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a63589b4b647df1e01e9f2e5e30c95be1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; SensorPtr &gt;</type>
+      <name>Sensor_V</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a66da648162724b25656778f254aa9719</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::size_t</type>
+      <name>SensorId</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a5d3d7bdf5e9ab8eb6ec4ff739e949c5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; Sensor &gt;</type>
+      <name>SensorPtr</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a773bd094c55731a750632ddf187649b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>DistortionType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a2b15c2f99adeee955f8fc291dab163a6</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a2b15c2f99adeee955f8fc291dab163a6ab50339a10e1de285ac99d4c3990b8693">NONE</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a2b15c2f99adeee955f8fc291dab163a6a72baef04098f035e8a320b03ad197818">CUSTOM</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a2b15c2f99adeee955f8fc291dab163a6a493cacf6f6a2ae4798b319b8b9ba9488">BROWN</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>NoiseType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a69077ed51f0173dc7309246140daed49</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a69077ed51f0173dc7309246140daed49ab50339a10e1de285ac99d4c3990b8693">NONE</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a69077ed51f0173dc7309246140daed49a72baef04098f035e8a320b03ad197818">CUSTOM</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="a69077ed51f0173dc7309246140daed49a0fceff26ae86a047835cafbb6cadb1b9">GAUSSIAN</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SensorCategory</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a166beb8385a31979c4f08a85aabdd1da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IMAGE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a166beb8385a31979c4f08a85aabdd1daa3501d25cdde2b141c20edb67965fb692</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>RAY</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a166beb8385a31979c4f08a85aabdd1daae9cf68856c8eb96d8738c14880278f69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OTHER</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a166beb8385a31979c4f08a85aabdd1daadbf1dee1b8cd7ea3c82661943c7b74f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CATEGORY_COUNT</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a166beb8385a31979c4f08a85aabdd1daa81d14d18e71020c25437804e85985ad4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SensorDistortionType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b0e70be0fc939ca152b4d27ac7c305</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SENSOR_DISTORTION_TYPE_BEGIN</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b0e70be0fc939ca152b4d27ac7c305a572d34526a4e1370e0bf186d13c58295</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NO_DISTORTION</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b0e70be0fc939ca152b4d27ac7c305a01f401f985e2679b0632ed475ffde57e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CAMERA_DISTORTION</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b0e70be0fc939ca152b4d27ac7c305a2abc11afbe50516a8d7fad4bcdddb1b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SENSOR_DISTORTION_TYPE_END</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b0e70be0fc939ca152b4d27ac7c305a217fae07e14bc10362b39aad7903b941</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SensorNoiseType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SENSOR_NOISE_TYPE_BEGIN</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433ad6a6012518db0a8683f01511731afd36</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NO_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433aa6ff955d795ba9392a65ec95b63241a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CAMERA_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433ac6d5df2f1fe78621e4bed2fb1c597c5b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MAGNETOMETER_X_NOISE_TESLA</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a4b6e86feac676649aac31d2892523e7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MAGNETOMETER_Y_NOISE_TESLA</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433aa6b478a338aeca6058e73dd80b127be5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MAGNETOMETER_Z_NOISE_TESLA</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a58f362145b15d8b121256d0ed684ff0e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALTIMETER_VERTICAL_POSITION_NOISE_METERS</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433aabedfd8a0adb06b6d8a167a8004f672b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALTIMETER_VERTICAL_VELOCITY_NOISE_METERS_PER_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433af8363a1e7832333ba5c0e7bea5d8398f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>AIR_PRESSURE_NOISE_PASCALS</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a5fc0e389ed05a595c170ca901adcaf19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ACCELEROMETER_X_NOISE_M_S_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433ab5bf946b25f34061d04ba923e5ed32dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ACCELEROMETER_Y_NOISE_M_S_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a977f1142b9464890db6b0114bac8c5dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ACCELEROMETER_Z_NOISE_M_S_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a62ca8dce8c91291e4368ad684af0b6b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GYROSCOPE_X_NOISE_RAD_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a530751eac4de84ef7618e62aac740317</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GYROSCOPE_Y_NOISE_RAD_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433aadcca5ebebbb8b35def33014fb3e2304</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GYROSCOPE_Z_NOISE_RAD_S</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a6b64a4f78a10b5376f477ff779b55d0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LIDAR_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433aaa81e228da5d31579a781436b696bfa5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FORCE_X_NOISE_N</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a491facb9137f8f2c53d57011cbf561ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FORCE_Y_NOISE_N</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a1dd42f39929608020ae3cc0e38ce56da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FORCE_Z_NOISE_N</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a641a7e8ba1df09d8d4818b9e77995599</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TORQUE_X_NOISE_N_M</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433ae614c20ed82d65de7861f2cf22bec79c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TORQUE_Y_NOISE_N_M</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433abb45cdc7c07b720b19210bede062238a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TORQUE_Z_NOISE_N_M</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a135ac7ad2db8c566011e9bc1ed5907ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NAVSAT_HORIZONTAL_POSITION_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a33b0c6ee54d352380c3e7b0169a6430a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NAVSAT_VERTICAL_POSITION_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433afb6b36a2a7297ac34fd4935a235fd0a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NAVSAT_HORIZONTAL_VELOCITY_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a67fc0836b34c75aedc1a194469e9a0d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NAVSAT_VERTICAL_VELOCITY_NOISE</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a44ca3c558b42856c86df699e0e9e7759</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SENSOR_NOISE_TYPE_END</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a8569effcecad158424f2c50f24e93433a3531cb6c48435b3a1fe4525ecdb42154</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>WorldFrameEnumType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>abc6c9f3e9422b6507a48db9c2b87b281</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="abc6c9f3e9422b6507a48db9c2b87b281ab50339a10e1de285ac99d4c3990b8693">NONE</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="abc6c9f3e9422b6507a48db9c2b87b281a392b810f865591aa5ec210e849ae769f">ENU</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="abc6c9f3e9422b6507a48db9c2b87b281acd3459b28418fa8fa75ffaba4f3e7c74">NED</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="abc6c9f3e9422b6507a48db9c2b87b281ab16a2c9cffa5d43693ee79869ea85470">NWU</enumvalue>
+      <enumvalue file="namespaceignition_1_1sensors.html" anchor="abc6c9f3e9422b6507a48db9c2b87b281a72baef04098f035e8a320b03ad197818">CUSTOM</enumvalue>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>customType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a795c58e1bf8ca8eb0cd7f00012adc1fa</anchor>
+      <arglist>(const sdf::Sensor &amp;_sdf)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>customType</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>ab6b780b3fcd69eb9f8fa209c520a5e22</anchor>
+      <arglist>(sdf::ElementPtr _sdf)</arglist>
+    </member>
+    <member kind="variable">
+      <type>const SensorId</type>
+      <name>NO_SENSOR</name>
+      <anchorfile>namespaceignition_1_1sensors.html</anchorfile>
+      <anchor>a727f2c6751765536f5c5e33d60e23c15</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>std</name>
+    <filename>namespacestd.html</filename>
+  </compound>
+</tagfile>

@@ -1,0 +1,15 @@
+prefix=/usr
+exec_prefix=${prefix}
+bindir=${exec_prefix}/bin
+libdir=${exec_prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include
+
+zipcmp=${exec_prefix}/bin/zipcmp
+
+Name: libzip
+Description: library for handling zip archives
+Version: 1.7.3
+Libs:  -L${libdir} -lzip
+Libs.private:  -lbz2 -lssl -lcrypto -lz
+Cflags: -I${includedir}
+

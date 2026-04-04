@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/physics5
+
+Name: Ignition physics heightmap
+Description: A set of physics heightmap classes for robot applications
+Version: ignition-cmake2 >= 1.1 5.3.2
+Requires: ignition-common4 ignition-physics5 = 5.3.2
+Requires.private: 
+Libs: -L${libdir}  
+Libs.private: 
+CFLags: -I${includedir} 

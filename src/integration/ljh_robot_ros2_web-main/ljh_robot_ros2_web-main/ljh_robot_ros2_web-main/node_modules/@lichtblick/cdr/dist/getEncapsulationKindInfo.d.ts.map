@@ -1,0 +1,1 @@
+{"version":3,"file":"getEncapsulationKindInfo.d.ts","sourceRoot":"","sources":["../src/getEncapsulationKindInfo.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,iBAAiB,EAAE,MAAM,qBAAqB,CAAC;AAIxD;;;;;;;;;;;;;;;;;;GAkBG;AAEH;;;;GAIG;AACH,eAAO,MAAM,wBAAwB,SAC7B,iBAAiB;YAEf,OAAO;kBACD,OAAO;yBACA,OAAO;sBACV,OAAO;CAqC1B,CAAC"}

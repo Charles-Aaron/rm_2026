@@ -1,0 +1,54 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ros_gz_interfaces/msg/WorldStatistics.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+#include "ros_gz_interfaces/msg/LogPlaybackStatistics.idl"
+#include "std_msgs/msg/Header.idl"
+
+module ros_gz_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "optional header data")
+    struct WorldStatistics {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Current simulation time")
+      builtin_interfaces::msg::Time sim_time;
+
+      @verbatim (language="comment", text=
+        "Total time spent paused")
+      builtin_interfaces::msg::Time pause_time;
+
+      @verbatim (language="comment", text=
+        "Current real time")
+      builtin_interfaces::msg::Time real_time;
+
+      @verbatim (language="comment", text=
+        "Whether currently paused")
+      boolean paused;
+
+      @verbatim (language="comment", text=
+        "Current iteration count")
+      uint64 iterations;
+
+      @verbatim (language="comment", text=
+        "Total number of models in the world")
+      int32 model_count;
+
+      @verbatim (language="comment", text=
+        "Statistics for log playback")
+      ros_gz_interfaces::msg::LogPlaybackStatistics log_playback_statistics;
+
+      @verbatim (language="comment", text=
+        "This factor expresses how much real time elapses with each step" "\n"
+        "of simulation time.")
+      double real_time_factor;
+
+      @verbatim (language="comment", text=
+        "Iteration step size. It's zero when paused.")
+      builtin_interfaces::msg::Time step_size;
+    };
+  };
+};

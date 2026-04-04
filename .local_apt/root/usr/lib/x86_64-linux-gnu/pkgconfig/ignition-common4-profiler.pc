@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/common4
+
+Name: Ignition common profiler
+Description: A set of common profiler classes for robot applications
+Version: ignition-cmake2 >= 1.1 4.7.0
+Requires: ignition-common4 = 4.7.0
+Requires.private: 
+Libs: -L${libdir} -lignition-common4-profiler 
+Libs.private: 
+CFLags: -I${includedir} 

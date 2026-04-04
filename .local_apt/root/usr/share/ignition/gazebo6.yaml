@@ -1,0 +1,8 @@
+--- # Subcommands available inside ignition gazebo
+format: 1.0.0
+library_name: ignition-gazebo-ign
+library_version: 6.16.0
+library_path: /usr/lib/ruby/ignition/cmdgazebo6
+commands:
+    - gazebo : Run and manage Gazebo.
+---

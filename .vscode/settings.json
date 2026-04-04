@@ -17,5 +17,6 @@
     ],
     "C_Cpp.errorSquiggles": "disabled",
     "cmake.sourceDirectory": "/home/nuc/rm_2025/src/pb2025_sentry_nav/small_gicp_relocalization",
-    "ros.distro": "humble"
+    "ros.distro": "humble",
+    "remote.autoForwardPortsFallback": 0
 }

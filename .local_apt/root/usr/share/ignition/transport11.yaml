@@ -1,0 +1,9 @@
+--- # Subcommands available inside gazebo-transport.
+format: 1.0.0
+library_name: ignition-transport
+library_version: 11.4.1
+library_path: /usr/lib/ruby/gz/cmdtransport11
+commands:
+    - topic   : Print information about topics.
+    - service : Print information about services.
+---

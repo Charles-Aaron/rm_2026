@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/physics5
+
+Name: Ignition physics
+Description: A set of physics classes for robot applications
+Version: 5.3.2
+Requires: ignition-cmake2 >= 1.1 ignition-math6 ignition-plugin1 ignition-utils1 eigen3
+Requires.private: 
+Libs: -L${libdir} -lignition-physics5 
+Libs.private: 
+CFlags: -I${includedir} -std=c++17

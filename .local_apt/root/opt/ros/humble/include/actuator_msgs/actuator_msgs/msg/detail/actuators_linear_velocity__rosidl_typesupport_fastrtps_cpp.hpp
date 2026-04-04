@@ -1,0 +1,80 @@
+// generated from rosidl_typesupport_fastrtps_cpp/resource/idl__rosidl_typesupport_fastrtps_cpp.hpp.em
+// with input from actuator_msgs:msg/ActuatorsLinearVelocity.idl
+// generated code does not contain a copyright notice
+
+#ifndef ACTUATOR_MSGS__MSG__DETAIL__ACTUATORS_LINEAR_VELOCITY__ROSIDL_TYPESUPPORT_FASTRTPS_CPP_HPP_
+#define ACTUATOR_MSGS__MSG__DETAIL__ACTUATORS_LINEAR_VELOCITY__ROSIDL_TYPESUPPORT_FASTRTPS_CPP_HPP_
+
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "actuator_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h"
+#include "actuator_msgs/msg/detail/actuators_linear_velocity__struct.hpp"
+
+#ifndef _WIN32
+# pragma GCC diagnostic push
+# pragma GCC diagnostic ignored "-Wunused-parameter"
+# ifdef __clang__
+#  pragma clang diagnostic ignored "-Wdeprecated-register"
+#  pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
+# endif
+#endif
+#ifndef _WIN32
+# pragma GCC diagnostic pop
+#endif
+
+#include "fastcdr/Cdr.h"
+
+namespace actuator_msgs
+{
+
+namespace msg
+{
+
+namespace typesupport_fastrtps_cpp
+{
+
+bool
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_actuator_msgs
+cdr_serialize(
+  const actuator_msgs::msg::ActuatorsLinearVelocity & ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+bool
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_actuator_msgs
+cdr_deserialize(
+  eprosima::fastcdr::Cdr & cdr,
+  actuator_msgs::msg::ActuatorsLinearVelocity & ros_message);
+
+size_t
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_actuator_msgs
+get_serialized_size(
+  const actuator_msgs::msg::ActuatorsLinearVelocity & ros_message,
+  size_t current_alignment);
+
+size_t
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_actuator_msgs
+max_serialized_size_ActuatorsLinearVelocity(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+}  // namespace typesupport_fastrtps_cpp
+
+}  // namespace msg
+
+}  // namespace actuator_msgs
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_actuator_msgs
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cpp, actuator_msgs, msg, ActuatorsLinearVelocity)();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // ACTUATOR_MSGS__MSG__DETAIL__ACTUATORS_LINEAR_VELOCITY__ROSIDL_TYPESUPPORT_FASTRTPS_CPP_HPP_

@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/math6
+
+Name: Ignition math eigen3
+Description: A set of math eigen3 classes for robot applications
+Version: ignition-cmake2 >= 1.1 6.15.1
+Requires: eigen3 ignition-math6 = 6.15.1
+Requires.private: 
+Libs: -L${libdir}  
+Libs.private: 
+CFLags: -I${includedir} 

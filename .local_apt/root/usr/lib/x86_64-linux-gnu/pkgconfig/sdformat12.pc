@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/sdformat12
+
+Name: Ignition sdformat
+Description: A set of sdformat classes for robot applications
+Version: 12.7.2
+Requires: ignition-cmake2 >= 1.1 tinyxml2 ignition-math6 ignition-utils1
+Requires.private: 
+Libs: -L${libdir} -lsdformat12 
+Libs.private: 
+CFlags: -I${includedir} -std=c++17

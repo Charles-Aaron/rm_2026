@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from actuator_msgs/msg/ActuatorsLinearVelocity.msg
+// generated code does not contain a copyright notice
+
+
+module actuator_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "This message defines lowest level commands to be sent" "\n"
+      "to the actuator(s) for linear velocity.")
+    struct ActuatorsLinearVelocity {
+      @verbatim (language="comment", text=
+        "Velocity of the actuators in")
+      @unit (value="m/s")
+      sequence<double> velocity;
+    };
+  };
+};

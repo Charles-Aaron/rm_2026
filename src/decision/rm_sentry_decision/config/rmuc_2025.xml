@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <!-- SequenceStar: 前序成功节点不会在后续tick被反复重跑，避免到点后重复触发导航/释放导致零速干预 -->
+    <SequenceStar name="competition_simple_strategy">
+      <!-- 0) 等待比赛开始信号：game_progress == 4 -->
+      <Condition ID="GameStatusSub" start_status="4"/>
+
+      <!-- 1) 开局阶段也保持“低血补给最高优先级” -->
+      <ReactiveFallback name="init_or_supply_first">
+        <SequenceStar name="supply_cycle_before_init">
+          <Condition ID="SelfHpBelow" threshold="110" require_armed="false"/>
+
+          <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+          <RetryUntilSuccessful num_attempts="1000000">
+            <Action ID="SendThroughGoalsAction" name="return_to_supply_before_init"
+                   through_pose="4.5; -5.3; 0; 0; 0; -0.194; 0.981"
+                   through_pose_2="0.59; -5.3; 0; 0; 0; -0.194; 0.981"
+                   final_pose="0.0; 0.0; 0; 0; 0; 0; 1"
+                   action_name="navigate_through_poses"/>
+          </RetryUntilSuccessful>
+
+          <RetryUntilSuccessful num_attempts="1000000">
+            <Condition ID="SelfHpAtLeast" threshold="400"/>
+          </RetryUntilSuccessful>
+
+          <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+          <RetryUntilSuccessful num_attempts="1000000">
+            <Action ID="SendThroughGoalsAction" name="goto_first_point_after_supply_before_init"
+                   through_pose="0.59; -5.15; 0; 0; 0; -0.194; 0.981"
+                   through_pose_2="4.35; -5.15; 0; 0; 0; -0.194; 0.981"
+                   final_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                   release_nav_on_close="true"
+                   release_distance="0.60"
+                   action_name="navigate_through_poses"/>
+          </RetryUntilSuccessful>
+        </SequenceStar>
+
+        <SequenceStar name="goto_first_point_init_once">
+          <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+          <RetryUntilSuccessful num_attempts="1000000">
+            <Action ID="SendThroughGoalsAction" name="goto_first_point_init"
+                   through_pose="0.59; -5.15; 0; 0; 0; -0.194; 0.981"
+                   through_pose_2="4.35; -5.15; 0; 0; 0; -0.194; 0.981"
+                   final_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                   release_nav_on_close="true"
+                   release_distance="0.60"
+                   action_name="navigate_through_poses"/>
+          </RetryUntilSuccessful>
+        </SequenceStar>
+      </ReactiveFallback>
+
+      <!-- 2) 循环：低血补给优先；若被顶出第一点则自动回位 -->
+      <Repeat num_cycles="1000000">
+        <ReactiveFallback name="maintain_first_point_or_supply">
+          <!-- 优先级1：低血直接补给 -->
+          <SequenceStar name="supply_cycle">
+            <Condition ID="SelfHpBelow" threshold="110" require_armed="false"/>
+
+            <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+            <RetryUntilSuccessful num_attempts="1000000">
+              <Action ID="SendThroughGoalsAction" name="return_to_supply"
+                     through_pose="4.5; -5.3; 0; 0; 0; -0.194; 0.981"
+                     through_pose_2="0.59; -5.3; 0; 0; 0; -0.194; 0.981"
+                     final_pose="0.0; 0.0; 0; 0; 0; 0; 1"
+                     action_name="navigate_through_poses"/>
+            </RetryUntilSuccessful>
+
+            <RetryUntilSuccessful num_attempts="1000000">
+              <Condition ID="SelfHpAtLeast" threshold="400"/>
+            </RetryUntilSuccessful>
+
+            <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+            <RetryUntilSuccessful num_attempts="1000000">
+              <Action ID="SendThroughGoalsAction" name="goto_first_point_after_supply"
+                     through_pose="0.59; -5.15; 0; 0; 0; -0.194; 0.981"
+                     through_pose_2="4.5; -5.15; 0; 0; 0; -0.194; 0.981"
+                     final_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                     release_nav_on_close="true"
+                     release_distance="0.60"
+                     action_name="navigate_through_poses"/>
+            </RetryUntilSuccessful>
+          </SequenceStar>
+
+          <!-- 优先级2：被物理推出第一点时，自动回位 -->
+          <SequenceStar name="recover_first_point_if_pushed">
+            <Condition ID="IsOutsidePoseRadius"
+                       target_pose="5.35; -3.25; 0; 0; 0; 0; 1"
+                       radius="0.90"/>
+            <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+            <RetryUntilSuccessful num_attempts="1000000">
+              <Action ID="SendThroughGoalsAction" name="goto_first_point_recover_if_pushed"
+                     through_pose="4.5; -5.3; 0; 0; 0; -0.194; 0.981"
+                     through_pose_2="5.35; -3.25; 0; 0; 0; 0; 1"
+                     final_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                     release_nav_on_close="true"
+                     release_distance="0.45"
+                     action_name="navigate_through_poses"/>
+            </RetryUntilSuccessful>
+          </SequenceStar>
+
+          <!-- 优先级3：在第一点半径内，循环保持成功 -->
+          <Inverter>
+            <Condition ID="IsOutsidePoseRadius"
+                       target_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                       radius="0.90"/>
+          </Inverter>
+        </ReactiveFallback>
+      </Repeat>
+    </SequenceStar>
+  </BehaviorTree>
+</root>

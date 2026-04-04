@@ -1,0 +1,96 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+      <ReactiveSequence>
+        <!-- 0. 等待电控发起"比赛开始"信号 (start_status = 4) -->
+        <Condition ID="GameStatusSub" name="CheckGameStart" start_status="4"/>
+
+        <!--  主决策逻辑 -->
+        <ReactiveFallback>
+          <!-- 优先级1: 前往操作手要求位置-->
+           <Action ID="Operator" name="Pursue Operator"/>
+
+          <!-- 优先级2: 智能补给 -->
+          <ReactiveSequence name="smart_supply">
+            <Condition ID="NeedSupply"/>
+            <Action ID="SelectSupplyPoint"
+                       outpost_pose="8.42; -3.39; 0; 0; 0; 0; 1"
+                       base_pose="-0.624; -5.26; 0; 0; 0; 0; 1"
+                       goal_pose="{smart_supply_goal}"/>
+            <Action ID="SendGoalAction" name="goto_smart_supply"
+                   goal_pose="{smart_supply_goal}"
+                   action_name="navigate_to_pose"/>
+          </ReactiveSequence>
+
+          <!-- 优先级3: 姿态转换示例 -->
+          <ReactiveSequence name="pose_demo">
+            <!-- 检查是否可以切换到进攻姿态 -->
+            <Condition ID="CanSwitchPoseCondition" name="CheckAttackPose" target_pose="进攻姿态"/>
+            <!-- 执行姿态切换到进攻姿态 -->
+            <Action ID="SwitchPoseAction" name="SwitchToAttack" target_pose="进攻姿态"/>
+          </ReactiveSequence>
+
+          <!-- 优先级4: 前往雷达标定敌方位置-->
+          <Action ID="Enemy" name="Pursue Enemy"/>
+
+          <!-- 优先级5: 攻击前哨站（需状态OK+敌方存活） -->
+          <ReactiveSequence name="attack_outpost">
+            <Condition ID="OutpostAttack"/>
+            <Condition ID="RobotStatusSub" is_status_ok="{status_ok}"/>
+            <Action ID="SendGoalAction" name="goto_outpost" 
+                   goal_pose="11.6; 3.46; 0; 0; 0; 0; 1" 
+                   action_name="navigate_to_pose"/>
+          </ReactiveSequence>
+          
+           <!-- 优先级6: 检测己方输出机完全阵亡，前往并蹲守基地增益点 -->
+          <ReactiveSequence name="fortress_buff">
+            <Condition ID="AlliesDown"/>
+            <Action ID="SendGoalAction" name="goto_fortress_buff"
+                   goal_pose="2.64; -0.223; 0; 0; 0; 0; 1"
+                   action_name="navigate_to_pose"/>
+            <Action ID="GuardFortress" name="guard_buff"/>
+          </ReactiveSequence>
+
+                     <!-- 优先级7: 巡逻保护点 -->
+          <ReactiveSequence name="protect_hero">
+            <Condition ID="HeroProtectAttack" 
+                       early_attack_goal="13; -1.98; 0; 0; 0; 0; 1"
+                       patrol_goal="11.6; 3.46; 0; 0; 0; 0; 1"
+                       assist_goal="8.65; 4.84; 0; 0; 0; 0; 1"
+                       goal_pose="{hero_goal}"/>
+            <Condition ID="RobotStatusSub" is_status_ok="{status_ok}"/>
+            <Action ID="SendGoalAction" name="goto_hero_protection"
+                   goal_pose="{hero_goal}"
+                   action_name="navigate_to_pose"/>
+          </ReactiveSequence>
+          
+          <!-- 优先级8: 姿态效果下降检查示例 -->
+          <ReactiveSequence name="pose_effect_check">
+            <!-- 检查当前姿态效果是否下降 -->
+            <Condition ID="GetCurrentPoseCondition" current_pose="{current_pose}"/>
+            <Condition ID="IsPoseEffectReducedCondition" pose="{current_pose}"/>
+            <!-- 如果效果下降，切换到其他姿态 -->
+            <Action ID="SwitchPoseAction" name="SwitchToMovement" target_pose="移动姿态"/>
+          </ReactiveSequence>
+          
+          <!-- 优先级9: 半场协防-->
+            <Sequence name="patrol">
+              <Condition ID="RobotStatusSub" is_status_ok="{status_ok}"/>
+              <Action ID="RandomPatrolPose" name="choose_patrol"
+                     pose1="4.2;1.98;0;0;0;0;1"
+                     pose2="0.363;1.55;0;0;0;0;1"
+                     pose3="6.14;-4.26;0;0;0;0;1"
+                     goal_pose="{patrol_goal}"/>
+              <Action ID="SendGoalAction" name="goto_patrol"
+                     goal_pose="{patrol_goal}"
+                     action_name="navigate_to_pose"/>
+            </Sequence>
+          
+          
+          <!-- 优先级10: 保底回基地 -->
+          <Action ID="SendGoalAction" name="go_home"
+                 goal_pose="-0.821; 0; 0; 0; 0; 0; 1"
+                 action_name="navigate_to_pose"/>
+        </ReactiveFallback>
+      </ReactiveSequence>
+    </BehaviorTree>
+  </root>

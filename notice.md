@@ -48,7 +48,7 @@ use_robot_state_pub:=True
 
 
 #1.实车建图导航操作流程:
-#1.在rm_2025工作空间下打开终端,输入指令:
+#1.在rm_2026工作空间下打开终端,输入指令:
 source ./install/setup.bash
 
 ros2 launch pb2025_nav_bringup rm_sentry_reality_launch.py \
@@ -62,18 +62,11 @@ slam:True代表开启的是建图模式
 建图完成后，直接crtl+c退出建图，pcd图将自动保存在pointlio文件中,pcd图的名称为：scans
 
 
-#2.在pcd2pgm工作空间下启动下面指令,将pcd图转为pgm图:
-source ./install/setup.bash
-ros2 launch pcd2pgm pcd2pgm_launch.py
+#2.本仓库已移除 pcd2pgm 相关包。
+#如仍需将 pcd 转为 pgm，请在仓库外部工具链中完成，再将生成好的地图导入当前导航流程。
 
-输入后可以可以看到建图效果
-再将生成的二维pgm进行保存:
-ros2 run nav2_map_server map_saver_cli -f scans
-二维pgm和pcd图名称一致，都为scans
-#注：这条指令在哪个文件目录下启动就保存在哪个文件下，ros2 launch pcd2pgm pcd2pgm_launch.py指令必须在2维pgm保存完后才能crtl+c结束
-
-将建立好的pgm和pcd图复制到rm_2025/src/pb2025_sentry_nav/pb_nav2_bringup中的pcd和map文件中去
-最后重新构建整个工作空间，在rm_2025中输入下面指令：
+将建立好的pgm和pcd图复制到rm_2026/src/navigation/pb2025_sentry_nav/pb_nav2_bringup中的pcd和map文件中去
+最后重新构建整个工作空间，在rm_2026中输入下面指令：
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=release
 #注：构建成功后，一定要将小车放回建图时的启动原点
 
@@ -90,5 +83,3 @@ source ./install/setup.bash
 
 ros2 run ros2_stm communication
 显示串口打开成功则可以开始在rviz中指定导航点
-
-

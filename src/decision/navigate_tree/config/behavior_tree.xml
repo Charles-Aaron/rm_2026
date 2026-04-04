@@ -1,0 +1,41 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Fallback name="guard">
+        <condition_start name="condition_start" />
+        <Fallback name="guard1">
+            <!-- <Sequence name="attack6">
+                <condition_home name="condition_home" />
+                <action_home name="action_home" />
+            </Sequence>
+            <Sequence name="attack1">
+                <condition_protect name="condition_protect" />
+                <action_start35 name="action_start35" />
+            </Sequence> -->
+            <!-- <Sequence name="attack2">
+                <condition_operator name="condition_operator" />
+                <action_operator name="action_operator" />
+            </Sequence> -->
+            <!-- <Sequence name="attack3">
+                <condition_enemy name="condition_enemy" />
+                <action_follow name="action_follow" />
+            </Sequence> -->
+            <!-- <Sequence name="attack4">
+                <condition_blosupeng name="condition_blosupeng" />
+                <action_blosupeng name="action_blosupeng" />
+            </Sequence> -->
+            <Sequence name="attack5">
+                <condition_tower name="condition_tower" />
+                <action_tower name="action_tower" />
+            </Sequence>
+            <!-- <Sequence name="attack7">
+                <condition_fort name="condition_fort" />
+                <action_fort name="action_fort" />
+            </Sequence>
+            <Sequence name="attack8">
+                <condition_free name="condition_free" />
+                <action_free name="action_free" />
+            </Sequence> -->
+        </Fallback>
+    </Fallback>
+</BehaviorTree>
+</root>

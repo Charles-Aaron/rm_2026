@@ -1,0 +1,8 @@
+--- # Subcommands available inside ignition fuel
+format: 1.0.0
+library_name: ignition-fuel_tools
+library_version: 7.3.0
+library_path: /usr/lib/ruby/ignition/cmdfuel7
+commands:
+    - fuel : Manage simulation resources.
+---

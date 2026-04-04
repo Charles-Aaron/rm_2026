@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/rendering6
+
+Name: Ignition rendering ogre2
+Description: A set of rendering ogre2 classes for robot applications
+Version: ignition-cmake2 >= 1.1 6.6.3
+Requires: gl ignition-rendering6 = 6.6.3
+Requires.private: 
+Libs: -L${libdir} -lignition-rendering6-ogre2 
+Libs.private: 
+CFLags: -I${includedir} 

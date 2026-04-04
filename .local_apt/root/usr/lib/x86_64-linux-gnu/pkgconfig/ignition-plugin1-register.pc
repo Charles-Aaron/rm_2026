@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/plugin1
+
+Name: Ignition plugin register
+Description: A set of plugin register classes for robot applications
+Version: ignition-cmake2 >= 1.1 1.4.0
+Requires: ignition-plugin1 = 1.4.0
+Requires.private: 
+Libs: -L${libdir}  
+Libs.private: 
+CFLags: -I${includedir} 

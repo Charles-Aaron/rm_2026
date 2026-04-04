@@ -1,0 +1,4 @@
+# This packages provides no headers or libraries, so those fields are omitted
+Name: Ignition tools
+Description: A set of tools classes for robot applications
+Version: 1.5.0

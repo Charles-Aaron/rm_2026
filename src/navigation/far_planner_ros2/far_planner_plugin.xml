@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<library path="far_planner_plugin">
+  <class name="far_planner_ros2::FARPlannerGlobalPlanner" 
+         type="far_planner_ros2::FARPlannerGlobalPlanner" 
+         base_class_type="nav2_core::GlobalPlanner">
+    <description>FAR Planner - Fast Attemptable Route Planner for Nav2</description>
+  </class>
+</library>

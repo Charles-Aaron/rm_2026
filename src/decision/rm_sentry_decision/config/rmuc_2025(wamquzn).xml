@@ -1,0 +1,117 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+      <ReactiveSequence>
+        <!-- 0. 等待电控发起"比赛开始"信号 (start_status = 4) -->
+        <Condition ID="GameStatusSub" name="CheckGameStart" start_status="4"/>
+
+        <!--  主决策逻辑 -->
+        <Fallback>
+          <!-- 优先级1: 攻击前哨站（需状态OK+敌方存活） -->
+          <ReactiveSequence name="attack_outpost">
+            <Condition ID="OutpostAttack"/>
+            <Condition ID="RobotStatusSub"  is_status_ok="{status_ok}"/>
+            <Action ID="SwitchPoseAction" name="set_attack_pose" target_pose="进攻姿态"/>
+            <Action ID="SendGoalAction" name="goto_outpost" 
+                   goal_pose="10; 2; 0; 0; 0; 0; 1" 
+                   action_name="/navigate_to_pose"/>
+          </ReactiveSequence>
+          
+          <!-- 优先级2: 英雄保护点 -->
+          <ReactiveSequence name="protect_hero">
+            <Condition ID="HeroProtectAttack" 
+                       early_attack_goal="0; 0.5; 0; 0; 0; 0; 1"
+                       patrol_goal="0; 0.5; 0; 0; 0; 0; 1"
+                       assist_goal="0; 0.5; 0; 0; 0; 0; 1"
+                       goal_pose="{hero_goal}"/>
+            <Condition ID="RobotStatusSub"  is_status_ok="{status_ok}"/>
+            <Action ID="SwitchPoseAction" name="set_defense_pose" target_pose="防御姿态"/>
+            <Action ID="SendGoalAction" name="goto_hero_protection"
+                   goal_pose="{hero_goal}"
+                   action_name="/navigate_to_pose"/>
+          </ReactiveSequence>
+          
+          <!-- 优先级3: 攻击敌方基地（在前哨站=0 且敌方基地>0 时触发） -->
+          <!--
+          <ReactiveSequence name="attack_base">
+            <Condition ID="BaseAttack"/>
+            <Action ID="SwitchPoseAction" name="set_attack_pose" target_pose="进攻姿态"/>
+            <Action ID="SendGoalAction" name="goto_enemy_base"
+                   goal_pose="-4; 8; 0; 0; 0; 0; 1"
+                   action_name="/navigate_to_pose"/>
+          </ReactiveSequence>
+          -->
+          
+          <!-- 优先级4: 补给逻辑：需要补给 -> 前往补给点，补给够了则继续下面分支 -->
+          <ReactiveSequence name="smart_supply">
+            <Action ID="SelectSupplyPoint"
+                       outpost_pose="2; 4; 0; 0; 0; 0; 1"
+                       base_pose="-2; 0; 0; 0; 0; 0; 1"
+                       goal_pose="{smart_supply_goal}"/>
+            <Action ID="SendGoalAction" name="goto_smart_supply"
+                   goal_pose="{smart_supply_goal}"
+                   action_name="/navigate_to_pose"/>
+          </ReactiveSequence>
+          
+          <!-- 优先级5: 终局补给与冲/保家逻辑 -->
+          <ReactiveSequence name="endgame_strategy">
+            <Action ID="SendGoalAction" name="endgame_supply" goal_pose="1; 3; 0; 0; 0; 0; 1" action_name="/navigate_to_pose"/>
+            <Condition ID="RecoveredEnough"/>
+            <Fallback name="attack_or_defend">
+              <Action ID="SendGoalAction" name="defend_home_base" goal_pose="-5; 1; 0; 0; 0; 0; 1" action_name="/navigate_to_pose"/>
+            </Fallback>
+          </ReactiveSequence>
+          
+          <!-- 优先级6: 策略选择 - 冲击敌方堡垒增益点 vs 己方半场巡逻 -->
+          <Fallback name="strategy_choice">
+            <!-- 优先级6.1: 冲击敌方堡垒增益点（需要满足条件） -->
+            <ReactiveSequence name="rush_enemy_buff">
+              <Condition ID="RobotStatusSub"  is_status_ok="{rush_ok}"/>
+              <Action ID="SwitchPoseAction" name="set_attack_pose" target_pose="进攻姿态"/>
+              <Action ID="SendGoalAction" name="goto_enemy_buff"
+                     goal_pose="{buff_goal}"
+                     action_name="/navigate_to_pose"/>
+            </ReactiveSequence>
+            
+            <!-- 优先级6.2: 己方半场巡逻（当不满足冲击条件时） -->
+            <Sequence name="patrol">
+              <Condition ID="RobotStatusSub"   is_status_ok="{status_ok}"/>
+              <Action ID="SwitchPoseAction" name="set_movement_pose" target_pose="移动姿态"/>
+              <Action ID="RandomPatrolPose" name="choose_patrol"
+                     pose1="2;2;0;0;0;0;1"
+                     pose2="3;1;0;0;0;0;1"
+                     pose3="1;3;0;0;0;0;1"
+                     goal_pose="{patrol_goal}"/>
+              <Action ID="SendGoalAction" name="goto_patrol"
+                     goal_pose="{patrol_goal}"
+                     action_name="/navigate_to_pose"/>
+            </Sequence>
+          </Fallback>
+          
+          <!-- 优先级7: 检测己方输出机完全阵亡，前往并蹲守基地增益点 -->
+          <ReactiveSequence name="fortress_buff">
+            <Condition ID="AlliesDown"/>
+            <Action ID="SwitchPoseAction" name="set_defense_pose" target_pose="防御姿态"/>
+            <Action ID="SendGoalAction" name="goto_fortress_buff"
+                   goal_pose="1; -0.5; 0; 0; 0; 0; 1"
+                   action_name="/navigate_to_pose"/>
+            <Action ID="GuardFortress" name="guard_buff" />
+          </ReactiveSequence>
+          
+          <!-- 优先级8: 保底回基地 -->
+          <ReactiveSequence name="go_home">
+            <Action ID="SwitchPoseAction" name="set_defense_pose" target_pose="防御姿态"/>
+            <Action ID="SendGoalAction" name="go_home"
+                   goal_pose="-1; 2; 0; 0; 0; 0; 1"
+                   action_name="/navigate_to_pose"/>
+          </ReactiveSequence>
+
+          <!-- 最后才执行初始移动；只会在所有分支都 FAIL 时触发一次 -->
+          <ReactiveSequence name="initial_move">
+            <Action ID="SwitchPoseAction" name="set_movement_pose" target_pose="移动姿态"/>
+            <Action ID="SendGoalAction" name="initial_move"
+                   goal_pose="0.5; 1; 0; 0; 0; 0; 1"/>
+          </ReactiveSequence>
+        </Fallback>
+      </ReactiveSequence>
+    </BehaviorTree>
+  </root>

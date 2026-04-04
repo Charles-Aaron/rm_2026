@@ -1,0 +1,72 @@
+# FAR Planner Nav2 集成配置
+# 与现有Nav2系统集成的配置模板
+
+planner_server:
+  ros__parameters:
+    use_sim_time: false
+    expected_planner_frequency: 10.0
+    planner_plugins: ["GridBased", "FARBased"]
+    
+    # Nav2 原有 SmacPlannerHybrid 配置
+    GridBased:
+      plugin: "nav2_smac_planner/SmacPlannerHybrid"
+      tolerance: 0.5
+      allow_unknown: true
+      downsample_costmap: false
+      downsampling_factor: 1
+      max_iterations: 1000000
+      max_on_approach_iterations: 1000
+      max_planning_time: 3.5
+      cost_travel_multiplier: 2.0
+      motion_model_for_search: "DUBIN"
+      angle_quantization_bins: 64
+      analytic_expansion_ratio: 3.5
+      analytic_expansion_max_length: 3.0
+      minimum_turning_radius: 0.05
+      retrospective_penalty: 0.025
+      reverse_penalty: 1.0
+      change_penalty: 0.0
+      non_straight_penalty: 1.20
+      cost_penalty: 2.0
+      rotation_penalty: 5.0
+      lookup_table_size: 20.0
+      cache_obstacle_heuristic: True
+      allow_reverse_expansion: False
+      smooth_path: True
+      smoother:
+        max_iterations: 1000
+        w_smooth: 0.3
+        w_data: 0.2
+        tolerance: 1.0e-10
+        do_refinement: true
+
+    # FAR Planner 配置
+    FARBased:
+      plugin: "far_planner_ros2::FARPlannerGlobalPlanner"
+      enabled: true
+      max_planning_time: 0.5
+      max_search_time: 0.1
+      robot_radius: 0.2
+      visibility_range: 10.0
+      obstacle_threshold: 0.5
+      allow_unknown: true
+      planning_mode: 1
+      
+      # 触发条件
+      trigger_conditions:
+        dynamic_obstacle_detected: true
+        planning_time_exceeded: 0.5
+        path_collision: true
+        
+      # 话题重映射
+      pointcloud_topic: "/red_standard_robot1/terrain_map"
+      robot_pose_topic: "/red_standard_robot1/odom"
+      output_path_topic: "/red_standard_robot1/plan"
+
+# 切换策略配置
+switch_strategy:
+  mode: "priority"                   # priority/backup/parallel
+  fallback_to_primary: true
+  verification_required: true
+  primary_planner: "GridBased"
+  secondary_planner: "FARBased"

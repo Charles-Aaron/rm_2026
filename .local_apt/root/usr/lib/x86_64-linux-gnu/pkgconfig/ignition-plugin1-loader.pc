@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/plugin1
+
+Name: Ignition plugin loader
+Description: A set of plugin loader classes for robot applications
+Version: ignition-cmake2 >= 1.1 1.4.0
+Requires: ignition-plugin1 = 1.4.0
+Requires.private: 
+Libs: -L${libdir} -lignition-plugin1-loader 
+Libs.private: -ldl
+CFLags: -I${includedir} 

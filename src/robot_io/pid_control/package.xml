@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>pid_control</name>
+  <version>0.0.1</version>
+  <description>ROS 2 package for PID control and path following.</description>
+  <maintainer email="nuc@example.com">nuc</maintainer>
+  <license>MIT</license>
+
+  <!-- Build tool dependencies -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <!-- Build dependencies -->
+  <build_depend>rclcpp</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>tf2</build_depend>
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>tf2_geometry_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>eigen</build_depend>
+  <build_depend>custom_messages</build_depend>
+  <build_depend>cubic_spline_ros</build_depend>
+  <build_depend>utility</build_depend>
+  <build_depend>python3</build_depend>
+
+  <!-- Exec dependencies -->
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>tf2</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>eigen</exec_depend>
+  <exec_depend>custom_messages</exec_depend>
+  <exec_depend>cubic_spline_ros</exec_depend>
+  <exec_depend>utility</exec_depend>
+  <exec_depend>python3</exec_depend>
+
+  <!-- Test dependencies -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_cmake</test_depend>
+  <test_depend>ament_lint_cpp</test_depend>
+  <test_depend>ament_lint_python</test_depend>
+
+  <!-- Exported build type -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

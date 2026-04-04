@@ -1,0 +1,22 @@
+game_progress: 3
+stage_remain_time: 295
+team_color: false
+bullet_allowance_17mm: 450
+current_hp: 175
+red_1_robot_hp: 100
+red_2_robot_hp: 100
+red_3_robot_hp: 100
+red_4_robot_hp: 100
+red_outpost_hp: 0
+red_base_hp: 1500
+blue_1_robot_hp: 100
+blue_2_robot_hp: 100
+blue_3_robot_hp: 100
+blue_4_robot_hp: 100
+blue_outpost_hp: 0
+blue_base_hp: 1500
+enemy_x: 0.0
+enemy_y: 0.0
+operator_x: 5.0
+operator_y: 3.0
+

@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from actuator_msgs/msg/ActuatorsVelocity.msg
+// generated code does not contain a copyright notice
+
+#include "actuator_msgs/msg/ActuatorsAngularVelocity.idl"
+#include "actuator_msgs/msg/ActuatorsLinearVelocity.idl"
+#include "std_msgs/msg/Header.idl"
+
+module actuator_msgs {
+  module msg {
+    struct ActuatorsVelocity {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "This message defines lowest level commands to be sent" "\n"
+        "to the actuator(s) for velocity." "\n"
+        "Velocity of the actuators in")
+      @unit (value="rad/s")
+      actuator_msgs::msg::ActuatorsAngularVelocity angular;
+
+      @verbatim (language="comment", text=
+        "Velocity of the actuators in")
+      @unit (value="m/s")
+      actuator_msgs::msg::ActuatorsLinearVelocity linear;
+    };
+  };
+};

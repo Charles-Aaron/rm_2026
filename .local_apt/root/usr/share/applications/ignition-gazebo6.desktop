@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Igniton Gazebo 6
+Comment=3D Robot Simulator
+Exec=/usr/bin/ign gazebo --force-version 6
+Icon=ignition-gazebo6
+Categories=Education;Science;Robotics;Development;
+StartupNotify=true

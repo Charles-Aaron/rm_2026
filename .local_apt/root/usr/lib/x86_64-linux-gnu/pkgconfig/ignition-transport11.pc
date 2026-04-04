@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/transport11
+
+Name: Ignition transport
+Description: A set of transport classes for robot applications
+Version: 11.4.1
+Requires: ignition-cmake2 >= 1.1 protobuf >=  uuid ignition-utils1 ignition-msgs8
+Requires.private: libzmq >= 4
+Libs: -L${libdir} -lignition-transport11 
+Libs.private: 
+CFlags: -I${includedir} -std=c++17

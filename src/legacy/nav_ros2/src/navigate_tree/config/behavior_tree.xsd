@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="root">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="BehaviorTree">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Fallback">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="condition_start">
+                                            <xs:complexType>
+                                                <xs:attribute name="name" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Fallback">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="patrol">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="name" use="required" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="name" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="name" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ID" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="main_tree_to_execute" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

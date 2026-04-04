@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/rendering6
+
+Name: Ignition rendering
+Description: A set of rendering classes for robot applications
+Version: 6.6.3
+Requires: ignition-cmake2 >= 1.1 ignition-math6 ignition-common4 ignition-plugin1
+Requires.private: 
+Libs: -L${libdir} -lignition-rendering6 
+Libs.private: 
+CFlags: -I${includedir} -std=c++17

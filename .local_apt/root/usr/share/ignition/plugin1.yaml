@@ -1,0 +1,8 @@
+--- # Subcommands available inside ignition-plugin.
+format: 1.0.0
+library_name: ignition-plugin
+library_version: 1.4.0
+library_path: /usr/lib/ruby/ignition/cmdplugin1
+commands:
+    - plugin  : Print information about plugins.
+---

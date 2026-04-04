@@ -1,0 +1,8 @@
+--- # Subcommands available inside ignition-gui.
+format: 1.0.0
+library_name: ignition-gui
+library_version: 6.8.0
+library_path: /usr/lib/ruby/ignition/cmdgui6
+commands:
+    - gui   : Launch graphical interfaces.
+---

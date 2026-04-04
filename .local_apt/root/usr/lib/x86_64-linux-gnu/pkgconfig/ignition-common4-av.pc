@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/common4
+
+Name: Ignition common av
+Description: A set of common av classes for robot applications
+Version: ignition-cmake2 >= 1.1 4.7.0
+Requires: libswscale libavdevice >= 56.4.100 libavformat libavcodec libavutil ignition-common4 = 4.7.0
+Requires.private: 
+Libs: -L${libdir} -lignition-common4-av 
+Libs.private: 
+CFLags: -I${includedir} 

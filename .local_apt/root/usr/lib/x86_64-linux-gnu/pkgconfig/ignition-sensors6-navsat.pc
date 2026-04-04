@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/sensors6
+
+Name: Ignition sensors navsat
+Description: A set of sensors navsat classes for robot applications
+Version: ignition-cmake2 >= 1.1 6.8.0
+Requires: ignition-sensors6 = 6.8.0
+Requires.private: 
+Libs: -L${libdir} -lignition-sensors6-navsat 
+Libs.private: 
+CFLags: -I${includedir} 

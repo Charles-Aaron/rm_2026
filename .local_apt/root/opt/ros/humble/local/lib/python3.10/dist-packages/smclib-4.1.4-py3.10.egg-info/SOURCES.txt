@@ -1,0 +1,7 @@
+setup.py
+smclib/__init__.py
+smclib/statemap.py
+smclib.egg-info/PKG-INFO
+smclib.egg-info/SOURCES.txt
+smclib.egg-info/dependency_links.txt
+smclib.egg-info/top_level.txt

@@ -1,0 +1,11 @@
+prefix=${pcfiledir}/../../
+includedir=${prefix}/include/ignition/cmake2
+
+Name: Ignition cmake
+Description: Build system package for the ignition libraries
+Version: 2.10.0
+Requires:
+Requires.private:
+Libs:
+Libs.private:
+CFlags: -I${includedir} 

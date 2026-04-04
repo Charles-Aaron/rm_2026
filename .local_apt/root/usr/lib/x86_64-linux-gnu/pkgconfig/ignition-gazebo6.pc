@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/gazebo6
+
+Name: Ignition gazebo
+Description: A set of gazebo classes for robot applications
+Version: 6.16.0
+Requires: ignition-cmake2 >= 1.1 sdformat12 ignition-plugin1 ignition-transport11 ignition-msgs8 ignition-common4 ignition-fuel_tools7 ignition-gui6 Qt5Core Qt5Quick Qt5QuickControls2 ignition-physics5 ignition-sensors6 ignition-rendering6 ignition-math6 ignition-tools ignition-utils1 protobuf >= 
+Requires.private: 
+Libs: -L${libdir} -lignition-gazebo6 
+Libs.private: 
+CFlags: -I${includedir} -std=c++17

@@ -1,0 +1,8 @@
+--- # Subcommands available inside ignition-transport.
+format: 1.0.0
+library_name: ignition-msgs
+library_version: 8.7.0
+library_path: /usr/lib/ruby/ignition/cmdmsgs8
+commands:
+    - msg   : Print information about messages.
+---

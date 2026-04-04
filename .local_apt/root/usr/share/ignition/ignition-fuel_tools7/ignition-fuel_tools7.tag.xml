@@ -1,0 +1,2011 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.9.1">
+  <compound kind="file">
+    <name>gz/fuel_tools/ClientConfig.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2ClientConfig_8hh.html</filename>
+    <class kind="class">ignition::fuel_tools::ClientConfig</class>
+    <class kind="class">ignition::fuel_tools::ServerConfig</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/ClientConfig.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2ClientConfig_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2ClientConfig_8hh" name="gz/fuel_tools/ClientConfig.hh" local="no" imported="no">gz/fuel_tools/ClientConfig.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/CollectionIdentifier.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2CollectionIdentifier_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Helpers_8hh" name="gz/fuel_tools/Helpers.hh" local="yes" imported="no">gz/fuel_tools/Helpers.hh</includes>
+    <class kind="class">ignition::fuel_tools::CollectionIdentifier</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/CollectionIdentifier.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2CollectionIdentifier_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2CollectionIdentifier_8hh" name="gz/fuel_tools/CollectionIdentifier.hh" local="no" imported="no">gz/fuel_tools/CollectionIdentifier.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>config.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>config_8hh.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>Export.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>fuel_tools.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/</path>
+    <filename>fuel__tools_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/FuelClient.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2FuelClient_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Helpers_8hh" name="gz/fuel_tools/Helpers.hh" local="yes" imported="no">gz/fuel_tools/Helpers.hh</includes>
+    <includes id="gz_2fuel__tools_2ModelIter_8hh" name="gz/fuel_tools/ModelIter.hh" local="yes" imported="no">gz/fuel_tools/ModelIter.hh</includes>
+    <includes id="gz_2fuel__tools_2RestClient_8hh" name="gz/fuel_tools/RestClient.hh" local="yes" imported="no">gz/fuel_tools/RestClient.hh</includes>
+    <includes id="gz_2fuel__tools_2Result_8hh" name="gz/fuel_tools/Result.hh" local="yes" imported="no">gz/fuel_tools/Result.hh</includes>
+    <includes id="gz_2fuel__tools_2WorldIter_8hh" name="gz/fuel_tools/WorldIter.hh" local="yes" imported="no">gz/fuel_tools/WorldIter.hh</includes>
+    <class kind="class">ignition::fuel_tools::FuelClient</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/FuelClient.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2FuelClient_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2FuelClient_8hh" name="gz/fuel_tools/FuelClient.hh" local="no" imported="no">gz/fuel_tools/FuelClient.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/Helpers.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2Helpers_8hh.html</filename>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>ign_sprintf</name>
+      <anchorfile>gz_2fuel__tools_2Helpers_8hh.html</anchorfile>
+      <anchor>adbf979846ef8d1474d0978f3c6789943</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>ign_strcat</name>
+      <anchorfile>gz_2fuel__tools_2Helpers_8hh.html</anchorfile>
+      <anchor>a3084d8ec1efeaa7c48c88c7d3962c953</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>ign_strcpy</name>
+      <anchorfile>gz_2fuel__tools_2Helpers_8hh.html</anchorfile>
+      <anchor>ab73170bf416a1f333d46e069b6aeeda4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>ign_strdup</name>
+      <anchorfile>gz_2fuel__tools_2Helpers_8hh.html</anchorfile>
+      <anchor>a3b1807b20bba2aa8080c92286858d67f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>uriToPath</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>a670406b112a549fa793352681db71e09</anchor>
+      <arglist>(const common::URI &amp;_uri)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/Helpers.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2Helpers_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Helpers_8hh" name="gz/fuel_tools/Helpers.hh" local="no" imported="no">gz/fuel_tools/Helpers.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/Interface.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2Interface_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2FuelClient_8hh" name="gz/fuel_tools/FuelClient.hh" local="yes" imported="no">gz/fuel_tools/FuelClient.hh</includes>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+    <member kind="function">
+      <type>std::string</type>
+      <name>fetchResource</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>addb59a6db4f883871ea15e29c16326df</anchor>
+      <arglist>(const std::string &amp;_uri)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>fetchResourceWithClient</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>ab0dea5f736af0e73737e208d03de6457</anchor>
+      <arglist>(const std::string &amp;_uri, FuelClient &amp;_client)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>sdfFromPath</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>a841fbb76b92bd01365167a85576688e0</anchor>
+      <arglist>(const std::string &amp;_path)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/Interface.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2Interface_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Interface_8hh" name="gz/fuel_tools/Interface.hh" local="no" imported="no">gz/fuel_tools/Interface.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/JSONParser.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2JSONParser_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2ModelIdentifier_8hh" name="gz/fuel_tools/ModelIdentifier.hh" local="yes" imported="no">gz/fuel_tools/ModelIdentifier.hh</includes>
+    <includes id="gz_2fuel__tools_2ModelIter_8hh" name="gz/fuel_tools/ModelIter.hh" local="yes" imported="no">gz/fuel_tools/ModelIter.hh</includes>
+    <includes id="gz_2fuel__tools_2WorldIdentifier_8hh" name="gz/fuel_tools/WorldIdentifier.hh" local="yes" imported="no">gz/fuel_tools/WorldIdentifier.hh</includes>
+    <includes id="gz_2fuel__tools_2WorldIter_8hh" name="gz/fuel_tools/WorldIter.hh" local="yes" imported="no">gz/fuel_tools/WorldIter.hh</includes>
+    <class kind="class">ignition::fuel_tools::JSONParser</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+    <namespace>Json</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/JSONParser.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2JSONParser_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2JSONParser_8hh" name="gz/fuel_tools/JSONParser.hh" local="no" imported="no">gz/fuel_tools/JSONParser.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/LocalCache.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2LocalCache_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Helpers_8hh" name="gz/fuel_tools/Helpers.hh" local="yes" imported="no">gz/fuel_tools/Helpers.hh</includes>
+    <includes id="gz_2fuel__tools_2Model_8hh" name="gz/fuel_tools/Model.hh" local="yes" imported="no">gz/fuel_tools/Model.hh</includes>
+    <includes id="gz_2fuel__tools_2ModelIter_8hh" name="gz/fuel_tools/ModelIter.hh" local="yes" imported="no">gz/fuel_tools/ModelIter.hh</includes>
+    <includes id="gz_2fuel__tools_2WorldIter_8hh" name="gz/fuel_tools/WorldIter.hh" local="yes" imported="no">gz/fuel_tools/WorldIter.hh</includes>
+    <class kind="class">ignition::fuel_tools::LocalCache</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/LocalCache.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2LocalCache_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2LocalCache_8hh" name="gz/fuel_tools/LocalCache.hh" local="no" imported="no">gz/fuel_tools/LocalCache.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/Model.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2Model_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Helpers_8hh" name="gz/fuel_tools/Helpers.hh" local="yes" imported="no">gz/fuel_tools/Helpers.hh</includes>
+    <includes id="gz_2fuel__tools_2Result_8hh" name="gz/fuel_tools/Result.hh" local="yes" imported="no">gz/fuel_tools/Result.hh</includes>
+    <includes id="gz_2fuel__tools_2ModelIdentifier_8hh" name="gz/fuel_tools/ModelIdentifier.hh" local="yes" imported="no">gz/fuel_tools/ModelIdentifier.hh</includes>
+    <class kind="class">ignition::fuel_tools::Model</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/Model.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2Model_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Model_8hh" name="gz/fuel_tools/Model.hh" local="no" imported="no">gz/fuel_tools/Model.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/ModelIdentifier.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2ModelIdentifier_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Helpers_8hh" name="gz/fuel_tools/Helpers.hh" local="yes" imported="no">gz/fuel_tools/Helpers.hh</includes>
+    <class kind="class">ignition::fuel_tools::ModelIdentifier</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/ModelIdentifier.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2ModelIdentifier_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2ModelIdentifier_8hh" name="gz/fuel_tools/ModelIdentifier.hh" local="no" imported="no">gz/fuel_tools/ModelIdentifier.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/ModelIter.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2ModelIter_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Helpers_8hh" name="gz/fuel_tools/Helpers.hh" local="yes" imported="no">gz/fuel_tools/Helpers.hh</includes>
+    <includes id="gz_2fuel__tools_2Model_8hh" name="gz/fuel_tools/Model.hh" local="yes" imported="no">gz/fuel_tools/Model.hh</includes>
+    <class kind="class">ignition::fuel_tools::ModelIter</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/ModelIter.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2ModelIter_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2ModelIter_8hh" name="gz/fuel_tools/ModelIter.hh" local="no" imported="no">gz/fuel_tools/ModelIter.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/RestClient.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2RestClient_8hh.html</filename>
+    <class kind="class">ignition::fuel_tools::Rest</class>
+    <class kind="struct">ignition::fuel_tools::RestResponse</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>HttpMethod</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>a4353a75834bb35c4acd80b51434eef59</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a7528035a93ee69cedb1dbddb2f0bfcc8">GET</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59aa02439ec229d8be0e74b0c1602392310">POST</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a32f68a60cef40faedbc6af20298c1a1e">DELETE</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a3e75383a5992a6d15fb81e872e46e256">PUT</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a63bc9a3997d66d835d9f3ec29451407d">PATCH</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a6b459325f352532b2be414f17bbf4f34">POST_FORM</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a1b4efafb1420d271d2c27173c27041f6">PATCH_FORM</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/RestClient.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2RestClient_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2RestClient_8hh" name="gz/fuel_tools/RestClient.hh" local="no" imported="no">gz/fuel_tools/RestClient.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/Result.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2Result_8hh.html</filename>
+    <class kind="class">ignition::fuel_tools::Result</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>ResultType</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>aa71b5fc2a82d29a91db3a734ff892a49</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a32f68a60cef40faedbc6af20298c1a1e">DELETE</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49afafacbf9ad3ef535bcc144ff93ccbf93">DELETE_NOT_FOUND</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a3ec8857bdce32a62dc358d891495cd2c">DELETE_ERROR</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a1b5dc1b50bc6e304f044da1fdffe2578">FETCH</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49abfbbc08860013f92fe41fa10a0b603cc">FETCH_ALREADY_EXISTS</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a1b5b5722100bf49fb687508dce3c5044">FETCH_NOT_FOUND</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49abd3d03ece254e1b40b7e0ea0dea1214e">FETCH_ERROR</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a8dff5f89b87ebf91a1ecc1dbed3a6fbb">UPLOAD</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49afaa9e2f9506496721c2148229ee24a5d">UPLOAD_ALREADY_EXISTS</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49ae1d1d0b381a01156f5807ecce6fc17cc">UPLOAD_ERROR</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49af02940ab1521fd11d5ab939946692b55">PATCH_ERROR</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a63bc9a3997d66d835d9f3ec29451407d">PATCH</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/Result.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2Result_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Result_8hh" name="gz/fuel_tools/Result.hh" local="no" imported="no">gz/fuel_tools/Result.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/WorldIdentifier.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2WorldIdentifier_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Helpers_8hh" name="gz/fuel_tools/Helpers.hh" local="yes" imported="no">gz/fuel_tools/Helpers.hh</includes>
+    <class kind="class">ignition::fuel_tools::WorldIdentifier</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/WorldIdentifier.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2WorldIdentifier_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2WorldIdentifier_8hh" name="gz/fuel_tools/WorldIdentifier.hh" local="no" imported="no">gz/fuel_tools/WorldIdentifier.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/WorldIter.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2WorldIter_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Helpers_8hh" name="gz/fuel_tools/Helpers.hh" local="yes" imported="no">gz/fuel_tools/Helpers.hh</includes>
+    <class kind="class">ignition::fuel_tools::WorldIter</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/WorldIter.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2WorldIter_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2WorldIter_8hh" name="gz/fuel_tools/WorldIter.hh" local="no" imported="no">gz/fuel_tools/WorldIter.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/fuel_tools/Zip.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/gz/fuel_tools/</path>
+    <filename>gz_2fuel__tools_2Zip_8hh.html</filename>
+    <class kind="class">ignition::fuel_tools::Zip</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::fuel_tools</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/fuel_tools/Zip.hh</name>
+    <path>/home/jenkins/workspace/ign-fuel-tools7-debbuilder/build/ignition-fuel_tools-7.3.0/include/ignition/fuel_tools/</path>
+    <filename>ignition_2fuel__tools_2Zip_8hh.html</filename>
+    <includes id="gz_2fuel__tools_2Zip_8hh" name="gz/fuel_tools/Zip.hh" local="no" imported="no">gz/fuel_tools/Zip.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/fuel_tools/config.hh</includes>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::ClientConfig</name>
+    <filename>classignition_1_1fuel__tools_1_1ClientConfig.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ClientConfig</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>ab08b1f7f58bc6a557677dba87d72f5c5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ClientConfig</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>a8b963591bdabee918f697b8c79c75a9d</anchor>
+      <arglist>(const ClientConfig &amp;_copy)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ClientConfig</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>a4c8d05e0372e05a6d254d70929c58007</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>AddServer</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>a505387066b907080ef846753618189ca</anchor>
+      <arglist>(const ServerConfig &amp;_srv)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>AsString</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>a52acf542cf71bb02ed9a6012fbb8b4d2</anchor>
+      <arglist>(const std::string &amp;_prefix=&quot;&quot;) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>CacheLocation</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>a5a8da4bc6960f40e25b6585d80c4b9a5</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Clear</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>aa71d36872f416feaa853788a7a7a7ef8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>ConfigPath</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>a02bb251a0532521d9f0f24d1b4ebbd88</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>LoadConfig</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>a726da92781ca53699ba3d4f89cc589e8</anchor>
+      <arglist>(const std::string &amp;_file)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; ServerConfig &gt; &amp;</type>
+      <name>MutableServers</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>a7e4756e54421ca51d9c0d81622924f8d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ClientConfig &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>adab9cb7637fb638fbb31ca580b5c26cb</anchor>
+      <arglist>(const ClientConfig &amp;_copy)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; ServerConfig &gt;</type>
+      <name>Servers</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>a88a5b27c5ed243d7022054af75f5da16</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetCacheLocation</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>a4429c204854cf2d471c1593d55bbe2ab</anchor>
+      <arglist>(const std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetUserAgent</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>a9291158dd84dafd24adda2a1e3152086</anchor>
+      <arglist>(const std::string &amp;_agent)</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>UserAgent</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ClientConfig.html</anchorfile>
+      <anchor>aad4e75109de1d10eb50fb102a068211e</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::CollectionIdentifier</name>
+    <filename>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CollectionIdentifier</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a8a692a84f3ba1e7d4ff047a0639ccbed</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CollectionIdentifier</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>ae629204197134b6b96ae5642c2ad5b7e</anchor>
+      <arglist>(const CollectionIdentifier &amp;_orig)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CollectionIdentifier</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a5099a871b1ea4b1d60d7d951ae9681ef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>AsPrettyString</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a01779fc6b9f8475b2bd7f08b31820e4d</anchor>
+      <arglist>(const std::string &amp;_prefix=&quot;&quot;) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>AsString</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a52acf542cf71bb02ed9a6012fbb8b4d2</anchor>
+      <arglist>(const std::string &amp;_prefix=&quot;&quot;) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>Name</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a41087c5f2f732f7a2f336b45b952f199</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>CollectionIdentifier &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a9c4a6f240ad4975bedbb7e617f42fdef</anchor>
+      <arglist>(const CollectionIdentifier &amp;_orig)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a9200ad6f73909aba59a59f5b197fa400</anchor>
+      <arglist>(const CollectionIdentifier &amp;_rhs) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>Owner</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a9d6cef0db86d43332f54ad57797dff2b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ServerConfig &amp;</type>
+      <name>Server</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a5adcb71ac398317e7f814f2fe9bc75cf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetName</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a4669356928fded49710d86bf1df96af0</anchor>
+      <arglist>(const std::string &amp;_name)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetOwner</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a4dc263d204f8301de538e42b9537e02b</anchor>
+      <arglist>(const std::string &amp;_name)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetServer</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>ab4ecbd9b3248df89febe5768bcb7df05</anchor>
+      <arglist>(const ServerConfig &amp;_server)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>UniqueName</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1CollectionIdentifier.html</anchorfile>
+      <anchor>a5555252ba4d85c2710ba3cf41d334f34</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::FuelClient</name>
+    <filename>classignition_1_1fuel__tools_1_1FuelClient.html</filename>
+    <member kind="typedef">
+      <type>std::tuple&lt; ModelIdentifier, Result &gt;</type>
+      <name>ModelResult</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>aca3d2456aaf3c989b7906fb5035c0163</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>FuelClient</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ac8b2dfc11070eb44d96bbb7451be5801</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>FuelClient</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>afbd8ff595000e50a2e432d396dfb5bdb</anchor>
+      <arglist>(const ClientConfig &amp;_config, const Rest &amp;_rest, LocalCache *_cache)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>FuelClient</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>abb9774425457e6a6909fa3e77cb1526b</anchor>
+      <arglist>(const ClientConfig &amp;_config, const Rest &amp;_rest=Rest())</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~FuelClient</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>abf6916d7e7a71c7096feb6f86efdeee6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>CachedModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a51d8134d84336b9262476c5f67d5efad</anchor>
+      <arglist>(const common::URI &amp;_modelUrl)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>CachedModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ae36f97f360bddb8b25b4557018882eff</anchor>
+      <arglist>(const common::URI &amp;_modelUrl, std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>CachedModelFile</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ae65517fab98740bc11ccd511dbfb925c</anchor>
+      <arglist>(const common::URI &amp;_fileUrl, std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>CachedWorld</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ae8345a09d30d5cd3a0f52f6023a4bd5a</anchor>
+      <arglist>(const common::URI &amp;_worldUrl)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>CachedWorld</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a01196f37da22256be9f87b80233a9a42</anchor>
+      <arglist>(const common::URI &amp;_worldUrl, std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>CachedWorldFile</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ad5268a4179819c457ff59b5402774aa0</anchor>
+      <arglist>(const common::URI &amp;_fileUrl, std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>ClientConfig &amp;</type>
+      <name>Config</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>af18383f37509c9effcdb27e3af6ecd5b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>DeleteModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>aad059f344bd48821a175e58319387d4a</anchor>
+      <arglist>(const ModelIdentifier &amp;_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>DeleteUrl</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a509fd6f142cc323f2e9a06b4123f1b17</anchor>
+      <arglist>(const gz::common::URI &amp;_uri, const std::vector&lt; std::string &gt; &amp;_headers)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>DownloadModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>acd121d1c7a2c35bc9f05e887a2983ece</anchor>
+      <arglist>(const common::URI &amp;_modelUrl, std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>DownloadModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ac5eb58301d9b298e42e47951ca570c68</anchor>
+      <arglist>(const ModelIdentifier &amp;_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>DownloadModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a29ff9d6e3a99212ca594e9b29a6ee229</anchor>
+      <arglist>(const ModelIdentifier &amp;_id, const std::vector&lt; std::string &gt; &amp;_headers)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>DownloadModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a86f4a1aae60ea46c0c4391dda56d97d8</anchor>
+      <arglist>(const ModelIdentifier &amp;_id, const std::vector&lt; std::string &gt; &amp;_headers, std::vector&lt; ModelIdentifier &gt; &amp;_dependencies)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; ModelResult &gt;</type>
+      <name>DownloadModels</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a75232a2e359c0b0d56a7cc1c0cdcb63f</anchor>
+      <arglist>(const std::vector&lt; ModelIdentifier &gt; &amp;_ids, size_t _jobs=2)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>DownloadWorld</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a35eea0e78104230901133701460f175b</anchor>
+      <arglist>(const common::URI &amp;_worldUrl, std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>DownloadWorld</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ad76249b4c2b9debed79fe363d87fa1ec</anchor>
+      <arglist>(WorldIdentifier &amp;_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>DownloadWorld</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a232ab457bb2dfa94f481f070d9086f26</anchor>
+      <arglist>(WorldIdentifier &amp;_id, const std::vector&lt; std::string &gt; &amp;_headers)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>DownloadWorlds</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a5159fb199b487048912c706f227f2063</anchor>
+      <arglist>(const std::vector&lt; WorldIdentifier &gt; &amp;_ids, size_t _jobs=2)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>ModelDependencies</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ad7c2b5c5b199e8a6b5c79a255e766eae</anchor>
+      <arglist>(const ModelIdentifier &amp;_id, std::vector&lt; ModelIdentifier &gt; &amp;_dependencies)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>ModelDependencies</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>aa87da14bbfc21204a104f1ace2fc2735</anchor>
+      <arglist>(const std::vector&lt; ModelIdentifier &gt; &amp;_id, std::vector&lt; ModelIdentifier &gt; &amp;_dependencies)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>ModelDetails</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>accbd6618a54b4e6d023db6d10de8aa22</anchor>
+      <arglist>(const ModelIdentifier &amp;_id, ModelIdentifier &amp;_model) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>ModelDetails</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a69cdd99c736f7d9683ff705e8de80b85</anchor>
+      <arglist>(const ModelIdentifier &amp;_id, ModelIdentifier &amp;_model, const std::vector&lt; std::string &gt; &amp;_headers) const</arglist>
+    </member>
+    <member kind="function">
+      <type>ModelIter</type>
+      <name>Models</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ab81dfd869329395c4b7b4c6e991b7508</anchor>
+      <arglist>(const CollectionIdentifier &amp;_id) const</arglist>
+    </member>
+    <member kind="function">
+      <type>ModelIter</type>
+      <name>Models</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ae88f1356c3eb93a3d6a6547e39fe5fb6</anchor>
+      <arglist>(const ModelIdentifier &amp;_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>ModelIter</type>
+      <name>Models</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a7aed4471fb5635dab0a786f7e35275be</anchor>
+      <arglist>(const ModelIdentifier &amp;_id) const</arglist>
+    </member>
+    <member kind="function">
+      <type>ModelIter</type>
+      <name>Models</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a7be1e5a3f9f12f716ffdb2ac2e6ad1c1</anchor>
+      <arglist>(const ModelIdentifier &amp;_id, bool _checkCache)</arglist>
+    </member>
+    <member kind="function">
+      <type>ModelIter</type>
+      <name>Models</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a2b52a8b17815a4d4515e4e0c1b699a29</anchor>
+      <arglist>(const ModelIdentifier &amp;_id, bool _checkCache) const</arglist>
+    </member>
+    <member kind="function">
+      <type>ModelIter</type>
+      <name>Models</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a0df00bd01df2f36028a0a50d21a5c9ba</anchor>
+      <arglist>(const ServerConfig &amp;_server)</arglist>
+    </member>
+    <member kind="function">
+      <type>ModelIter</type>
+      <name>Models</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a3ffb1865549d20bdb6ea3c8eb7fc9f3f</anchor>
+      <arglist>(const ServerConfig &amp;_server) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ParseCollectionUrl</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ae54c6d05f905d98187301a793fb332fd</anchor>
+      <arglist>(const common::URI &amp;_url, CollectionIdentifier &amp;_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ParseModelFileUrl</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a643b43b4e925b80c36b1e46580ce74d8</anchor>
+      <arglist>(const common::URI &amp;_modelFileUrl, ModelIdentifier &amp;_id, std::string &amp;_filePath)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ParseModelUrl</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ae732320241dec782016990323a417d92</anchor>
+      <arglist>(const common::URI &amp;_modelUrl, ModelIdentifier &amp;_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ParseWorldFileUrl</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a588e93bf4627984acd2bce8a1d192521</anchor>
+      <arglist>(const common::URI &amp;_worldFileUrl, WorldIdentifier &amp;_id, std::string &amp;_filePath)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ParseWorldUrl</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>acf4b7165b2a0a5a4e8e9a39f2552ae5f</anchor>
+      <arglist>(const common::URI &amp;_worldUrl, WorldIdentifier &amp;_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>PatchModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a4869c5742c1410e31348795a5daac1f5</anchor>
+      <arglist>(const ModelIdentifier &amp;_model, const std::vector&lt; std::string &gt; &amp;_headers)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>PatchModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a66c8fa5bb4f356af77109dad2fe2edf0</anchor>
+      <arglist>(const ModelIdentifier &amp;_model, const std::vector&lt; std::string &gt; &amp;_headers, const std::string &amp;_pathToModelDir)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>PopulateLicenses</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a12814576ab83695713bc97effb7b8b3c</anchor>
+      <arglist>(const ServerConfig &amp;_server)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>UpdateModels</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a7d37c5a852284fea0c2139c28aa79c0c</anchor>
+      <arglist>(const std::vector&lt; std::string &gt; &amp;_headers)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>UpdateWorlds</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a3817133c6177707d292ad0afeff4cf6c</anchor>
+      <arglist>(const std::vector&lt; std::string &gt; &amp;_headers)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>UploadModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a0e3cfd10d05e6dc449dfd5fdb654b7ea</anchor>
+      <arglist>(const std::string &amp;_pathToModelDir, const ModelIdentifier &amp;_id, const std::vector&lt; std::string &gt; &amp;_headers, bool _private, const std::string &amp;_owner)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>UploadModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>af9f2deb4aeaf4d300a307fd1b7c88a93</anchor>
+      <arglist>(const std::string &amp;_pathToModelDir, const ModelIdentifier &amp;_id, const std::vector&lt; std::string &gt; &amp;_headers, bool _private=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>WorldDetails</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a810cbe2caef20330e1f1e4f5ccf81eef</anchor>
+      <arglist>(const WorldIdentifier &amp;_id, WorldIdentifier &amp;_world) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>WorldDetails</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a10469a269539c449633736d11062ed0e</anchor>
+      <arglist>(const WorldIdentifier &amp;_id, WorldIdentifier &amp;_world, const std::vector&lt; std::string &gt; &amp;_headers) const</arglist>
+    </member>
+    <member kind="function">
+      <type>WorldIter</type>
+      <name>Worlds</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ac74ee3d8275d22131529acfe5c0c1867</anchor>
+      <arglist>(const CollectionIdentifier &amp;_id) const</arglist>
+    </member>
+    <member kind="function">
+      <type>WorldIter</type>
+      <name>Worlds</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>ae5cb0aa4f3aa3fc3abe9ae9c23fe62bf</anchor>
+      <arglist>(const ServerConfig &amp;_server) const</arglist>
+    </member>
+    <member kind="function">
+      <type>WorldIter</type>
+      <name>Worlds</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1FuelClient.html</anchorfile>
+      <anchor>a1e05225368e0af4b5d43613db6558e6e</anchor>
+      <arglist>(const WorldIdentifier &amp;_id) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::JSONParser</name>
+    <filename>classignition_1_1fuel__tools_1_1JSONParser.html</filename>
+    <member kind="function" static="yes">
+      <type>static std::string</type>
+      <name>BuildModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1JSONParser.html</anchorfile>
+      <anchor>a4212a6e7a05c0586a6f13aac604633b6</anchor>
+      <arglist>(ModelIter _modelIt)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::string</type>
+      <name>BuildWorld</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1JSONParser.html</anchorfile>
+      <anchor>abc124a50ee655eafa3caf1c296920524</anchor>
+      <arglist>(WorldIter _worldIt)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>ParseLicenses</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1JSONParser.html</anchorfile>
+      <anchor>aadf26e5dc6f2c8948959758c95d698a9</anchor>
+      <arglist>(const std::string &amp;_json, std::map&lt; std::string, unsigned int &gt; &amp;_licenses)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ModelIdentifier</type>
+      <name>ParseModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1JSONParser.html</anchorfile>
+      <anchor>acea7e7cbaa0022724f0aad887e072e01</anchor>
+      <arglist>(const std::string &amp;_json, const ServerConfig &amp;_server)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::vector&lt; ModelIdentifier &gt;</type>
+      <name>ParseModels</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1JSONParser.html</anchorfile>
+      <anchor>a620b5d01324fa130037d1565ca96496a</anchor>
+      <arglist>(const std::string &amp;_json, const ServerConfig &amp;_server)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static WorldIdentifier</type>
+      <name>ParseWorld</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1JSONParser.html</anchorfile>
+      <anchor>a2c97f673dfdc17b71b6e168f65dd3668</anchor>
+      <arglist>(const std::string &amp;_json, const ServerConfig &amp;_server)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::vector&lt; WorldIdentifier &gt;</type>
+      <name>ParseWorlds</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1JSONParser.html</anchorfile>
+      <anchor>ae733e6b32a1216561b675957d3fb944c</anchor>
+      <arglist>(const std::string &amp;_json, const ServerConfig &amp;_server)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::LocalCache</name>
+    <filename>classignition_1_1fuel__tools_1_1LocalCache.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>LocalCache</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1LocalCache.html</anchorfile>
+      <anchor>a59f7375d4489e67f78b5e80005eab0cd</anchor>
+      <arglist>(const ClientConfig *_config)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LocalCache</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1LocalCache.html</anchorfile>
+      <anchor>a10c963bd6591543b391582ccbe9ee388</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ModelIter</type>
+      <name>AllModels</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1LocalCache.html</anchorfile>
+      <anchor>a196398ad1a9499e7875bbb59f33cfd06</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual WorldIter</type>
+      <name>AllWorlds</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1LocalCache.html</anchorfile>
+      <anchor>a89a169823af0c6e698666c1d79798ee7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Model</type>
+      <name>MatchingModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1LocalCache.html</anchorfile>
+      <anchor>a0a75edbfc3e0b2524922f6e8b876a2ec</anchor>
+      <arglist>(const ModelIdentifier &amp;_id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ModelIter</type>
+      <name>MatchingModels</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1LocalCache.html</anchorfile>
+      <anchor>a459ab9bd219186a24ccbf0ca277bd56d</anchor>
+      <arglist>(const ModelIdentifier &amp;_id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>MatchingWorld</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1LocalCache.html</anchorfile>
+      <anchor>a7a568afad68d96e0665a1983855f2211</anchor>
+      <arglist>(WorldIdentifier &amp;_id) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual WorldIter</type>
+      <name>MatchingWorlds</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1LocalCache.html</anchorfile>
+      <anchor>aafce10cfc043e51ea306d9bb5fe2adc7</anchor>
+      <arglist>(const WorldIdentifier &amp;_id) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SaveModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1LocalCache.html</anchorfile>
+      <anchor>a2bb9c532b34ff24a2ff75d624186282f</anchor>
+      <arglist>(const ModelIdentifier &amp;_id, const std::string &amp;_data, const bool _overwrite)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SaveWorld</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1LocalCache.html</anchorfile>
+      <anchor>a425e366419a8794b2994634f9cd517dc</anchor>
+      <arglist>(WorldIdentifier &amp;_id, const std::string &amp;_data, const bool _overwrite)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::Model</name>
+    <filename>classignition_1_1fuel__tools_1_1Model.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Model</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Model.html</anchorfile>
+      <anchor>a30c57abda5ed227c85b50007cee876db</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Model</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Model.html</anchorfile>
+      <anchor>a8e77d58a164b914ae73b92259ce46316</anchor>
+      <arglist>(const Model &amp;_orig)=default</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>Fetch</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Model.html</anchorfile>
+      <anchor>acc6f178559cb649ed0064fccfa2e24db</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ModelIdentifier</type>
+      <name>Identification</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Model.html</anchorfile>
+      <anchor>ae05fdf957f98506a138d759dc8f773b9</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Model.html</anchorfile>
+      <anchor>a9b3baad8c612d81b96e46f84d7e97580</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Model.html</anchorfile>
+      <anchor>a67b76affb3b5d35fa419ac234144038b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>PathToModel</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Model.html</anchorfile>
+      <anchor>a92cd347e72bf3cbe3708132f4f386f62</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Model</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Model.html</anchorfile>
+      <anchor>af66f453e9678fbd2ba8b67663d841bd4</anchor>
+      <arglist>(std::shared_ptr&lt; ModelPrivate &gt; _dptr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::ModelIdentifier</name>
+    <filename>classignition_1_1fuel__tools_1_1ModelIdentifier.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ModelIdentifier</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a31441de3bdab3ef679b29f0d06c5914c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ModelIdentifier</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>aa509c7dffd68284d1d84948e8a06dd02</anchor>
+      <arglist>(const ModelIdentifier &amp;_orig)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ModelIdentifier</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a64953b4aa57a6475d68ff8f077e8d58a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>AsPrettyString</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a01779fc6b9f8475b2bd7f08b31820e4d</anchor>
+      <arglist>(const std::string &amp;_prefix=&quot;&quot;) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>AsString</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a52acf542cf71bb02ed9a6012fbb8b4d2</anchor>
+      <arglist>(const std::string &amp;_prefix=&quot;&quot;) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>Description</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a1bc9dac7345cd0bfc6903017335a9123</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>DownloadCount</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>aac4ac052791b79f2609e31299e431b22</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>FileSize</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>af6abd1369b768aa35ca296b79e6070ad</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>LicenseImageUrl</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a6f89e378e4e600a16db19e2accce0063</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>LicenseName</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>aa2bec9ccdd831dc0aeee4d2d8edb4204</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>LicenseUrl</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>ac05f525f29f14520d8fb958273bedbb6</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>LikeCount</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a323a93e8fb8e17acd7fc87130c0c1d09</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::time_t</type>
+      <name>ModifyDate</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a81d8013ff8b36bf616051e7aed49d50f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>Name</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a41087c5f2f732f7a2f336b45b952f199</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a1bf1951967b549131ee08fbc220ff700</anchor>
+      <arglist>(const ModelIdentifier &amp;_rhs) const</arglist>
+    </member>
+    <member kind="function">
+      <type>ModelIdentifier &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>ac479f26dd496b72e72c13f3cac38f781</anchor>
+      <arglist>(const ModelIdentifier &amp;_orig)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>acc20aadc50d08bd201b53a8559da8ada</anchor>
+      <arglist>(const ModelIdentifier &amp;_rhs) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>Owner</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a9d6cef0db86d43332f54ad57797dff2b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Private</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a25312b03d17ca7bf4efdefb5b430ab7e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ServerConfig &amp;</type>
+      <name>Server</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a5adcb71ac398317e7f814f2fe9bc75cf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetDescription</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a7aed542e3ccca069f2d998cacf4ce602</anchor>
+      <arglist>(const std::string &amp;_desc)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetDownloadCount</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>accbeaa63cc4c79fc7d36aad73dc46769</anchor>
+      <arglist>(const uint32_t _downloads)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetFileSize</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>ab5531116a11a39f3b6d12023d07ed39e</anchor>
+      <arglist>(const unsigned int _filesize)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetLicenseImageUrl</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a1c0d115461c497d06ae30d712bc88357</anchor>
+      <arglist>(const std::string &amp;_url)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetLicenseName</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>ace1d197690d5bb3b5b2717824b4eb574</anchor>
+      <arglist>(const std::string &amp;_name)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetLicenseUrl</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a61d9cbb63cfa8c214cd5fae7b434c5e3</anchor>
+      <arglist>(const std::string &amp;_url)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetLikeCount</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>aa4769700b1b8c6a11ac254e8eb85893f</anchor>
+      <arglist>(const uint32_t _likes)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetModifyDate</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>aab9f409940816d1a87dbcc393c096060</anchor>
+      <arglist>(const std::time_t &amp;_date)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetName</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a4669356928fded49710d86bf1df96af0</anchor>
+      <arglist>(const std::string &amp;_name)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetOwner</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a4dc263d204f8301de538e42b9537e02b</anchor>
+      <arglist>(const std::string &amp;_name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPrivate</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a8caa87b2970de7580d7e817efd4bafe7</anchor>
+      <arglist>(bool _private) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetServer</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>ab4ecbd9b3248df89febe5768bcb7df05</anchor>
+      <arglist>(const ServerConfig &amp;_server)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetTags</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a643b5631101d1cb4e2ad77124564ac91</anchor>
+      <arglist>(const std::vector&lt; std::string &gt; &amp;_tags)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetUploadDate</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a9f7cfb00916aa4c855d9bd4e58d89a94</anchor>
+      <arglist>(const std::time_t &amp;_date)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetVersion</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>ad14cae45897784a55848052264d2b496</anchor>
+      <arglist>(const unsigned int _version)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetVersionStr</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a50a25b20f642848805aa31d5481668e3</anchor>
+      <arglist>(const std::string &amp;_version)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>Tags</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>ad4342500839931305132f29dac761607</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>UniqueName</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a5555252ba4d85c2710ba3cf41d334f34</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::time_t</type>
+      <name>UploadDate</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a95d3b473101a44b3422961f298009e05</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>Version</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a8adff3e9ef43957d0d04fbd9496517d4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>VersionStr</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIdentifier.html</anchorfile>
+      <anchor>a852197572cb58749ac7f4d435deeb3cd</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::ModelIter</name>
+    <filename>classignition_1_1fuel__tools_1_1ModelIter.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ModelIter</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIter.html</anchorfile>
+      <anchor>a25f25e1682933fdc3ae401872de6404a</anchor>
+      <arglist>(ModelIter &amp;&amp;_old)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ModelIter</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIter.html</anchorfile>
+      <anchor>a4429d4f13a0d91d5ef62a456ea9ad7df</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIter.html</anchorfile>
+      <anchor>a9b3baad8c612d81b96e46f84d7e97580</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIter.html</anchorfile>
+      <anchor>a67b76affb3b5d35fa419ac234144038b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Model &amp;</type>
+      <name>operator*</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIter.html</anchorfile>
+      <anchor>a7db2ccd3b15b12a8515a1aab3bcc4e74</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ModelIter &amp;</type>
+      <name>operator++</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIter.html</anchorfile>
+      <anchor>a35a2033819629e18cb8d931a1fe09e5d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Model *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIter.html</anchorfile>
+      <anchor>a2953dcc853305f5bdebf3252cc11ca42</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>ModelIter</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ModelIter.html</anchorfile>
+      <anchor>ade873f2dda269c3908fb3e33375012c6</anchor>
+      <arglist>(std::unique_ptr&lt; ModelIterPrivate &gt; _dptr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::Rest</name>
+    <filename>classignition_1_1fuel__tools_1_1Rest.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Rest</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Rest.html</anchorfile>
+      <anchor>a2d4ec953d4713837f27b52cfb57e3eb7</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual RestResponse</type>
+      <name>Request</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Rest.html</anchorfile>
+      <anchor>aea9122cee43118bd8ce5c5bdd6fc1ab8</anchor>
+      <arglist>(const HttpMethod _method, const std::string &amp;_url, const std::string &amp;_version, const std::string &amp;_path, const std::vector&lt; std::string &gt; &amp;_queryStrings, const std::vector&lt; std::string &gt; &amp;_headers, const std::string &amp;_data, const std::multimap&lt; std::string, std::string &gt; &amp;_form=std::multimap&lt; std::string, std::string &gt;()) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetUserAgent</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Rest.html</anchorfile>
+      <anchor>a9291158dd84dafd24adda2a1e3152086</anchor>
+      <arglist>(const std::string &amp;_agent)</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>UserAgent</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Rest.html</anchorfile>
+      <anchor>aad4e75109de1d10eb50fb102a068211e</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ignition::fuel_tools::RestResponse</name>
+    <filename>structignition_1_1fuel__tools_1_1RestResponse.html</filename>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>data</name>
+      <anchorfile>structignition_1_1fuel__tools_1_1RestResponse.html</anchorfile>
+      <anchor>a8a036d3167ef9d3099cafcac54e25c72</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::map&lt; std::string, std::string &gt;</type>
+      <name>headers</name>
+      <anchorfile>structignition_1_1fuel__tools_1_1RestResponse.html</anchorfile>
+      <anchor>a1488cd7da514b69cb0f4f66f2d6bc567</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>statusCode</name>
+      <anchorfile>structignition_1_1fuel__tools_1_1RestResponse.html</anchorfile>
+      <anchor>a9c9877be1b826fab3b40ec4e74beda4e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::Result</name>
+    <filename>classignition_1_1fuel__tools_1_1Result.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Result</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Result.html</anchorfile>
+      <anchor>a6f00c89a8bbfd566f848740f9e563604</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Result</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Result.html</anchorfile>
+      <anchor>a6e4ec3c8572bc18fb1cda3f678608acc</anchor>
+      <arglist>(const Result &amp;_result)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Result</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Result.html</anchorfile>
+      <anchor>a4706e55bc61c70ba2460357f64a15b44</anchor>
+      <arglist>(const ResultType _type)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Result</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Result.html</anchorfile>
+      <anchor>a7bbfb4ab3f03bfd9645b690a0d4a23c2</anchor>
+      <arglist>(Result &amp;&amp;_result) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Result</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Result.html</anchorfile>
+      <anchor>a89829f5acd45739786576ea9132f862f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>operator bool</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Result.html</anchorfile>
+      <anchor>a3ce7e47cf8e3878fd76ca188c623c197</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Result &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Result.html</anchorfile>
+      <anchor>a5ed38ceaa12e62809088998ec0da17fb</anchor>
+      <arglist>(const Result &amp;_result)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Result.html</anchorfile>
+      <anchor>a259a99c7d12ef624dd8917c280b3b9ef</anchor>
+      <arglist>(Result &amp;&amp;_result) noexcept</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>ReadableResult</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Result.html</anchorfile>
+      <anchor>adea6c22d2a8cdfc335ab37e61b2ab118</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ResultType</type>
+      <name>Type</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Result.html</anchorfile>
+      <anchor>ae2f6d9ff32febfeb9f9df52d04bd1bb2</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::ServerConfig</name>
+    <filename>classignition_1_1fuel__tools_1_1ServerConfig.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ServerConfig</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>a7afc8da7fbd491b8e3d2503acdb29d97</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ServerConfig</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>a10aff4337dab5adcb39617e962114412</anchor>
+      <arglist>(const ServerConfig &amp;_orig)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ServerConfig</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>a2de8f38f789f3e3f373a8aa1d9d2d140</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>ApiKey</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>a4e2b7733f69b309c07f8e278dbd37371</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>AsPrettyString</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>a01779fc6b9f8475b2bd7f08b31820e4d</anchor>
+      <arglist>(const std::string &amp;_prefix=&quot;&quot;) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>AsString</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>a52acf542cf71bb02ed9a6012fbb8b4d2</anchor>
+      <arglist>(const std::string &amp;_prefix=&quot;&quot;) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Clear</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>aa71d36872f416feaa853788a7a7a7ef8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ServerConfig &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>aad2c06f416e4aea1f7489acdabc96f59</anchor>
+      <arglist>(const ServerConfig &amp;_orig)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetApiKey</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>a9218c1903c407b06e785f2ee97bfedd0</anchor>
+      <arglist>(const std::string &amp;_key)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetUrl</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>a5d2542682da17247c9fbb6a20a4ef280</anchor>
+      <arglist>(const common::URI &amp;_url)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetVersion</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>a542b54a0b51d166dbb43869fa83c3d25</anchor>
+      <arglist>(const std::string &amp;_version)</arglist>
+    </member>
+    <member kind="function">
+      <type>common::URI</type>
+      <name>Url</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>a0822a4379b439b89e9f1a14633b88269</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>Version</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1ServerConfig.html</anchorfile>
+      <anchor>a9e17ffd627f9f24ac4ef54143dc33124</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::WorldIdentifier</name>
+    <filename>classignition_1_1fuel__tools_1_1WorldIdentifier.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>WorldIdentifier</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a840d81355cd4fea80ebde0b5528c86bb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WorldIdentifier</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>af93b6c7e12ffb467c87151c9be259774</anchor>
+      <arglist>(const WorldIdentifier &amp;_orig)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~WorldIdentifier</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a0c1b9897d893aa49c836198267cd1600</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>AsPrettyString</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a01779fc6b9f8475b2bd7f08b31820e4d</anchor>
+      <arglist>(const std::string &amp;_prefix=&quot;&quot;) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>AsString</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a52acf542cf71bb02ed9a6012fbb8b4d2</anchor>
+      <arglist>(const std::string &amp;_prefix=&quot;&quot;) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>LocalPath</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>ad2c108488ccd986bce380d5c44dd0835</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>Name</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a41087c5f2f732f7a2f336b45b952f199</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>WorldIdentifier &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a4b7ba8b3b5a0ee585b94ab4abf4011b5</anchor>
+      <arglist>(const WorldIdentifier &amp;_orig)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a1ddec0150bc688c25ca144623bb21dcf</anchor>
+      <arglist>(const WorldIdentifier &amp;_rhs) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>Owner</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a9d6cef0db86d43332f54ad57797dff2b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ServerConfig &amp;</type>
+      <name>Server</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a5adcb71ac398317e7f814f2fe9bc75cf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetLocalPath</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a18a976043872a6ec3b806c074fdd6a99</anchor>
+      <arglist>(const std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetName</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a4669356928fded49710d86bf1df96af0</anchor>
+      <arglist>(const std::string &amp;_name)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetOwner</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a4dc263d204f8301de538e42b9537e02b</anchor>
+      <arglist>(const std::string &amp;_name)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetServer</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>ab4ecbd9b3248df89febe5768bcb7df05</anchor>
+      <arglist>(const ServerConfig &amp;_server)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetVersion</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>ad14cae45897784a55848052264d2b496</anchor>
+      <arglist>(const unsigned int _version)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetVersionStr</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a50a25b20f642848805aa31d5481668e3</anchor>
+      <arglist>(const std::string &amp;_version)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>UniqueName</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a5555252ba4d85c2710ba3cf41d334f34</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>Version</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a8adff3e9ef43957d0d04fbd9496517d4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>VersionStr</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIdentifier.html</anchorfile>
+      <anchor>a852197572cb58749ac7f4d435deeb3cd</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::WorldIter</name>
+    <filename>classignition_1_1fuel__tools_1_1WorldIter.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>WorldIter</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIter.html</anchorfile>
+      <anchor>a3202513e58cb5a0339a555a0478f6af6</anchor>
+      <arglist>(WorldIter &amp;&amp;_old)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~WorldIter</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIter.html</anchorfile>
+      <anchor>ac47832caf44dd687fed360eb78c9d7de</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIter.html</anchorfile>
+      <anchor>a67b76affb3b5d35fa419ac234144038b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator WorldIdentifier</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIter.html</anchorfile>
+      <anchor>a7530d16d7f386f747ef55c947d076145</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>WorldIdentifier &amp;</type>
+      <name>operator*</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIter.html</anchorfile>
+      <anchor>ab6276fee4c277494f6f796a5d66509bd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>WorldIter &amp;</type>
+      <name>operator++</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIter.html</anchorfile>
+      <anchor>ab9cc43fbd0a57ba9122c8867b62178de</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>WorldIdentifier *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIter.html</anchorfile>
+      <anchor>a3cbab8690f68d065d09d9817a4c85ae7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>WorldIter</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1WorldIter.html</anchorfile>
+      <anchor>aebbc74835d258fc872b69bc6b69837ea</anchor>
+      <arglist>(std::unique_ptr&lt; WorldIterPrivate &gt; _dptr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::fuel_tools::Zip</name>
+    <filename>classignition_1_1fuel__tools_1_1Zip.html</filename>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>Compress</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Zip.html</anchorfile>
+      <anchor>a581f9232035fdccadae8918640e22f5a</anchor>
+      <arglist>(const std::string &amp;_src, const std::string &amp;_dst)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>Extract</name>
+      <anchorfile>classignition_1_1fuel__tools_1_1Zip.html</anchorfile>
+      <anchor>ab56aed76a1581f908d9212853fb17b4f</anchor>
+      <arglist>(const std::string &amp;_src, const std::string &amp;_dst)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ignition</name>
+    <filename>namespaceignition.html</filename>
+    <namespace>ignition::fuel_tools</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>ignition::fuel_tools</name>
+    <filename>namespaceignition_1_1fuel__tools.html</filename>
+    <class kind="class">ignition::fuel_tools::ClientConfig</class>
+    <class kind="class">ignition::fuel_tools::CollectionIdentifier</class>
+    <class kind="class">ignition::fuel_tools::FuelClient</class>
+    <class kind="class">ignition::fuel_tools::JSONParser</class>
+    <class kind="class">ignition::fuel_tools::LocalCache</class>
+    <class kind="class">ignition::fuel_tools::Model</class>
+    <class kind="class">ignition::fuel_tools::ModelIdentifier</class>
+    <class kind="class">ignition::fuel_tools::ModelIter</class>
+    <class kind="class">ignition::fuel_tools::Rest</class>
+    <class kind="struct">ignition::fuel_tools::RestResponse</class>
+    <class kind="class">ignition::fuel_tools::Result</class>
+    <class kind="class">ignition::fuel_tools::ServerConfig</class>
+    <class kind="class">ignition::fuel_tools::WorldIdentifier</class>
+    <class kind="class">ignition::fuel_tools::WorldIter</class>
+    <class kind="class">ignition::fuel_tools::Zip</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>HttpMethod</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>a4353a75834bb35c4acd80b51434eef59</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a7528035a93ee69cedb1dbddb2f0bfcc8">GET</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59aa02439ec229d8be0e74b0c1602392310">POST</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a32f68a60cef40faedbc6af20298c1a1e">DELETE</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a3e75383a5992a6d15fb81e872e46e256">PUT</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a63bc9a3997d66d835d9f3ec29451407d">PATCH</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a6b459325f352532b2be414f17bbf4f34">POST_FORM</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="a4353a75834bb35c4acd80b51434eef59a1b4efafb1420d271d2c27173c27041f6">PATCH_FORM</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ResultType</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>aa71b5fc2a82d29a91db3a734ff892a49</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a32f68a60cef40faedbc6af20298c1a1e">DELETE</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49afafacbf9ad3ef535bcc144ff93ccbf93">DELETE_NOT_FOUND</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a3ec8857bdce32a62dc358d891495cd2c">DELETE_ERROR</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a1b5dc1b50bc6e304f044da1fdffe2578">FETCH</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49abfbbc08860013f92fe41fa10a0b603cc">FETCH_ALREADY_EXISTS</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a1b5b5722100bf49fb687508dce3c5044">FETCH_NOT_FOUND</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49abd3d03ece254e1b40b7e0ea0dea1214e">FETCH_ERROR</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a8dff5f89b87ebf91a1ecc1dbed3a6fbb">UPLOAD</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49afaa9e2f9506496721c2148229ee24a5d">UPLOAD_ALREADY_EXISTS</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49ae1d1d0b381a01156f5807ecce6fc17cc">UPLOAD_ERROR</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49af02940ab1521fd11d5ab939946692b55">PATCH_ERROR</enumvalue>
+      <enumvalue file="namespaceignition_1_1fuel__tools.html" anchor="aa71b5fc2a82d29a91db3a734ff892a49a63bc9a3997d66d835d9f3ec29451407d">PATCH</enumvalue>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>fetchResource</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>addb59a6db4f883871ea15e29c16326df</anchor>
+      <arglist>(const std::string &amp;_uri)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>fetchResourceWithClient</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>ab0dea5f736af0e73737e208d03de6457</anchor>
+      <arglist>(const std::string &amp;_uri, FuelClient &amp;_client)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>sdfFromPath</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>a841fbb76b92bd01365167a85576688e0</anchor>
+      <arglist>(const std::string &amp;_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>uriToPath</name>
+      <anchorfile>namespaceignition_1_1fuel__tools.html</anchorfile>
+      <anchor>a670406b112a549fa793352681db71e09</anchor>
+      <arglist>(const common::URI &amp;_uri)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>Json</name>
+    <filename>namespaceJson.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>std</name>
+    <filename>namespacestd.html</filename>
+  </compound>
+</tagfile>

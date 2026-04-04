@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/msgs8
+
+Name: Ignition msgs
+Description: A set of msgs classes for robot applications
+Version: 8.7.0
+Requires: ignition-cmake2 >= 1.1 protobuf >= 3 ignition-math6
+Requires.private: tinyxml2
+Libs: -L${libdir} -lignition-msgs8 
+Libs.private: 
+CFlags: -I${includedir} -std=c++17

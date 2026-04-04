@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../../
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/ignition/transport11
+
+Name: Ignition transport log
+Description: A set of transport log classes for robot applications
+Version: ignition-cmake2 >= 1.1 11.4.1
+Requires: ignition-transport11 = 11.4.1
+Requires.private: sqlite3 >= 3.7.13
+Libs: -L${libdir} -lignition-transport11-log 
+Libs.private: 
+CFLags: -I${includedir} 

@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/nuc/nav_ros2/install/customize_messages/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/nuc/nav_ros2/src/customize_messages/include/**",
+        "/home/nuc/nav_ros2/src/pid_control/include/**",
+        "/home/nuc/nav_ros2/src/pid_follow/include/**",
+        "/home/nuc/nav_ros2/src/pointcloud2_deal/include/**",
+        "/home/nuc/nav_ros2/src/ros2_stm/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

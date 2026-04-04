@@ -1,0 +1,1202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.9.1">
+  <compound kind="file">
+    <name>config.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/plugin/</path>
+    <filename>config_8hh.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/EnablePluginFromThis.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/gz/plugin/</path>
+    <filename>gz_2plugin_2EnablePluginFromThis_8hh.html</filename>
+    <includes id="gz_2plugin_2PluginPtr_8hh" name="gz/plugin/PluginPtr.hh" local="no" imported="no">gz/plugin/PluginPtr.hh</includes>
+    <class kind="class">ignition::plugin::EnablePluginFromThis</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::plugin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/EnablePluginFromThis.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2EnablePluginFromThis_8hh.html</filename>
+    <includes id="gz_2plugin_2EnablePluginFromThis_8hh" name="gz/plugin/EnablePluginFromThis.hh" local="no" imported="no">gz/plugin/EnablePluginFromThis.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>core/include/ignition/plugin/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/plugin/</path>
+    <filename>core_2include_2ignition_2plugin_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>loader/include/ignition/plugin/loader/Export.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/loader/include/ignition/plugin/loader/</path>
+    <filename>loader_2include_2ignition_2plugin_2loader_2Export_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/Factory.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/gz/plugin/</path>
+    <filename>gz_2plugin_2Factory_8hh.html</filename>
+    <includes id="gz_2plugin_2EnablePluginFromThis_8hh" name="gz/plugin/EnablePluginFromThis.hh" local="no" imported="no">gz/plugin/EnablePluginFromThis.hh</includes>
+    <class kind="class">ignition::plugin::Factory</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::plugin</namespace>
+    <member kind="typedef">
+      <type>std::unique_ptr&lt; Interface, ProductDeleter&lt; Interface &gt; &gt;</type>
+      <name>ProductPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>af2953d9d9b79271662f93df151945f52</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CleanupLostProducts</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a3266756c3d3b0938c97c8ec237652378</anchor>
+      <arglist>(const std::chrono::nanoseconds &amp;_safetyWait=std::chrono::nanoseconds(5))</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>LostProductCount</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a5ae6fe4fd45f9503b41612cff719b959</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/Factory.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2Factory_8hh.html</filename>
+    <includes id="gz_2plugin_2Factory_8hh" name="gz/plugin/Factory.hh" local="no" imported="no">gz/plugin/Factory.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/Info.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/gz/plugin/</path>
+    <filename>gz_2plugin_2Info_8hh.html</filename>
+    <class kind="struct">ignition::plugin::v1::Info</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::plugin</namespace>
+    <namespace>ignition::plugin::v1</namespace>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; const Info &gt;</type>
+      <name>ConstInfoPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>ab31a3fb90680b0a2ff48363847f68ac0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::unordered_map&lt; std::string, Info &gt;</type>
+      <name>InfoMap</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a694e3f7a5775c792604a66742903cc21</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const int</type>
+      <name>INFO_API_VERSION</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a3e73dcc1ed3030650a0bf9a45f2ff442</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/Info.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2Info_8hh.html</filename>
+    <includes id="gz_2plugin_2Info_8hh" name="gz/plugin/Info.hh" local="no" imported="no">gz/plugin/Info.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/Loader.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/loader/include/gz/plugin/</path>
+    <filename>gz_2plugin_2Loader_8hh.html</filename>
+    <includes id="gz_2plugin_2PluginPtr_8hh" name="gz/plugin/PluginPtr.hh" local="no" imported="no">gz/plugin/PluginPtr.hh</includes>
+    <class kind="class">ignition::plugin::Loader</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::plugin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/Loader.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/loader/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2Loader_8hh.html</filename>
+    <includes id="gz_2plugin_2Loader_8hh" name="gz/plugin/Loader.hh" local="no" imported="no">gz/plugin/Loader.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/Plugin.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/gz/plugin/</path>
+    <filename>gz_2plugin_2Plugin_8hh.html</filename>
+    <includes id="gz_2plugin_2Info_8hh" name="gz/plugin/Info.hh" local="no" imported="no">gz/plugin/Info.hh</includes>
+    <class kind="class">ignition::plugin::Plugin</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::plugin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/Plugin.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2Plugin_8hh.html</filename>
+    <includes id="gz_2plugin_2Plugin_8hh" name="gz/plugin/Plugin.hh" local="no" imported="no">gz/plugin/Plugin.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>plugin.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/</path>
+    <filename>plugin_8hh.html</filename>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/PluginPtr.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/gz/plugin/</path>
+    <filename>gz_2plugin_2PluginPtr_8hh.html</filename>
+    <includes id="gz_2plugin_2Plugin_8hh" name="gz/plugin/Plugin.hh" local="no" imported="no">gz/plugin/Plugin.hh</includes>
+    <class kind="class">ignition::plugin::TemplatePluginPtr</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::plugin</namespace>
+    <member kind="typedef">
+      <type>TemplatePluginPtr&lt; const Plugin &gt;</type>
+      <name>ConstPluginPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a5c78259418ddd2272e02aeb49811b4d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TemplatePluginPtr&lt; Plugin &gt;</type>
+      <name>PluginPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a6bbdc54110be7821705e387b9312816c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/PluginPtr.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2PluginPtr_8hh.html</filename>
+    <includes id="gz_2plugin_2PluginPtr_8hh" name="gz/plugin/PluginPtr.hh" local="no" imported="no">gz/plugin/PluginPtr.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/Register.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/register/include/gz/plugin/</path>
+    <filename>gz_2plugin_2Register_8hh.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>IGNITION_ADD_FACTORY</name>
+      <anchorfile>gz_2plugin_2Register_8hh.html</anchorfile>
+      <anchor>a3017e4b1ccf8757d8714939ec3f3de16</anchor>
+      <arglist>(ProductType, FactoryType)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>IGNITION_ADD_FACTORY_ALIAS</name>
+      <anchorfile>gz_2plugin_2Register_8hh.html</anchorfile>
+      <anchor>a9fd635988eabc738c48a05bfcece560e</anchor>
+      <arglist>(ProductType, FactoryType,...)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>IGNITION_ADD_PLUGIN</name>
+      <anchorfile>gz_2plugin_2Register_8hh.html</anchorfile>
+      <anchor>abcee184a421558b5599b4bdd075bf61b</anchor>
+      <arglist>(PluginClass,...)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>IGNITION_ADD_PLUGIN_ALIAS</name>
+      <anchorfile>gz_2plugin_2Register_8hh.html</anchorfile>
+      <anchor>a1eabf3749f038a9224fb1ec16e090087</anchor>
+      <arglist>(PluginClass,...)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/Register.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/register/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2Register_8hh.html</filename>
+    <includes id="gz_2plugin_2Register_8hh" name="gz/plugin/Register.hh" local="no" imported="no">gz/plugin/Register.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/RegisterMore.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/register/include/gz/plugin/</path>
+    <filename>gz_2plugin_2RegisterMore_8hh.html</filename>
+    <includes id="gz_2plugin_2Register_8hh" name="gz/plugin/Register.hh" local="no" imported="no">gz/plugin/Register.hh</includes>
+    <member kind="define">
+      <type>#define</type>
+      <name>IGN_PLUGIN_REGISTER_MORE_TRANS_UNITS</name>
+      <anchorfile>gz_2plugin_2RegisterMore_8hh.html</anchorfile>
+      <anchor>ad73a37ebd3243370668c0b397bc2bdcb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/RegisterMore.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/register/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2RegisterMore_8hh.html</filename>
+    <includes id="gz_2plugin_2RegisterMore_8hh" name="gz/plugin/RegisterMore.hh" local="no" imported="no">gz/plugin/RegisterMore.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/SpecializedPlugin.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/gz/plugin/</path>
+    <filename>gz_2plugin_2SpecializedPlugin_8hh.html</filename>
+    <includes id="gz_2plugin_2Plugin_8hh" name="gz/plugin/Plugin.hh" local="yes" imported="no">gz/plugin/Plugin.hh</includes>
+    <class kind="class">ignition::plugin::SpecializedPlugin&lt; SpecInterface &gt;</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::plugin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/SpecializedPlugin.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2SpecializedPlugin_8hh.html</filename>
+    <includes id="gz_2plugin_2SpecializedPlugin_8hh" name="gz/plugin/SpecializedPlugin.hh" local="no" imported="no">gz/plugin/SpecializedPlugin.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/SpecializedPluginPtr.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/gz/plugin/</path>
+    <filename>gz_2plugin_2SpecializedPluginPtr_8hh.html</filename>
+    <includes id="gz_2plugin_2PluginPtr_8hh" name="gz/plugin/PluginPtr.hh" local="yes" imported="no">gz/plugin/PluginPtr.hh</includes>
+    <includes id="gz_2plugin_2SpecializedPlugin_8hh" name="gz/plugin/SpecializedPlugin.hh" local="yes" imported="no">gz/plugin/SpecializedPlugin.hh</includes>
+    <namespace>ignition</namespace>
+    <namespace>ignition::plugin</namespace>
+    <member kind="typedef">
+      <type>TemplatePluginPtr&lt; const SpecializedPlugin&lt; SpecInterfaces... &gt; &gt;</type>
+      <name>ConstSpecializedPluginPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>ad99dd9977a712a35a1c3c1e569dacb2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TemplatePluginPtr&lt; SpecializedPlugin&lt; SpecInterfaces... &gt; &gt;</type>
+      <name>SpecializedPluginPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a71ecee778dbdcaee4977cedd7341ef55</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/SpecializedPluginPtr.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2SpecializedPluginPtr_8hh.html</filename>
+    <includes id="gz_2plugin_2SpecializedPluginPtr_8hh" name="gz/plugin/SpecializedPluginPtr.hh" local="no" imported="no">gz/plugin/SpecializedPluginPtr.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/utility.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/gz/plugin/</path>
+    <filename>gz_2plugin_2utility_8hh.html</filename>
+    <namespace>ignition</namespace>
+    <namespace>ignition::plugin</namespace>
+    <member kind="typedef">
+      <type>detail::ConstCompatible&lt; To, From &gt;</type>
+      <name>ConstCompatible</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a3882c12f75ef6a08376e49eb26677033</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>DemangleSymbol</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>ab1a05c01f466e2f7e558b8371d4ccbf2</anchor>
+      <arglist>(const std::string &amp;_symbol)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/utility.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2utility_8hh.html</filename>
+    <includes id="gz_2plugin_2utility_8hh" name="gz/plugin/utility.hh" local="no" imported="no">gz/plugin/utility.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gz/plugin/WeakPluginPtr.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/gz/plugin/</path>
+    <filename>gz_2plugin_2WeakPluginPtr_8hh.html</filename>
+    <includes id="gz_2plugin_2PluginPtr_8hh" name="gz/plugin/PluginPtr.hh" local="no" imported="no">gz/plugin/PluginPtr.hh</includes>
+    <class kind="class">ignition::plugin::WeakPluginPtr</class>
+    <namespace>ignition</namespace>
+    <namespace>ignition::plugin</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignition/plugin/WeakPluginPtr.hh</name>
+    <path>/home/jenkins/workspace/ign-plugin-debbuilder/build/ignition-plugin-1.4.0/core/include/ignition/plugin/</path>
+    <filename>ignition_2plugin_2WeakPluginPtr_8hh.html</filename>
+    <includes id="gz_2plugin_2WeakPluginPtr_8hh" name="gz/plugin/WeakPluginPtr.hh" local="no" imported="no">gz/plugin/WeakPluginPtr.hh</includes>
+    <includes id="config_8hh" name="config.hh" local="no" imported="no">ignition/plugin/config.hh</includes>
+  </compound>
+  <compound kind="class">
+    <name>ignition::plugin::EnablePluginFromThis</name>
+    <filename>classignition_1_1plugin_1_1EnablePluginFromThis.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>EnablePluginFromThis</name>
+      <anchorfile>classignition_1_1plugin_1_1EnablePluginFromThis.html</anchorfile>
+      <anchor>a85a34e8486a745c938bdbfa288ef094c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~EnablePluginFromThis</name>
+      <anchorfile>classignition_1_1plugin_1_1EnablePluginFromThis.html</anchorfile>
+      <anchor>aca2736687247cb6b247aabd057b6e241</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>PluginPtr</type>
+      <name>PluginFromThis</name>
+      <anchorfile>classignition_1_1plugin_1_1EnablePluginFromThis.html</anchorfile>
+      <anchor>acd7275c5596f8214ae22f00b7e5a0718</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ConstPluginPtr</type>
+      <name>PluginFromThis</name>
+      <anchorfile>classignition_1_1plugin_1_1EnablePluginFromThis.html</anchorfile>
+      <anchor>a069951e2bc6a0015ce7422b5f17099de</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>std::shared_ptr&lt; void &gt;</type>
+      <name>PluginInstancePtrFromThis</name>
+      <anchorfile>classignition_1_1plugin_1_1EnablePluginFromThis.html</anchorfile>
+      <anchor>a2845e65c3d4860f14b4a78f1a51f27d8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="friend" protection="protected">
+      <type>friend class</type>
+      <name>Loader</name>
+      <anchorfile>classignition_1_1plugin_1_1EnablePluginFromThis.html</anchorfile>
+      <anchor>ac8e5438321e35520c4088ff6ca4116ee</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::plugin::Factory</name>
+    <filename>classignition_1_1plugin_1_1Factory.html</filename>
+    <templarg></templarg>
+    <templarg>Args</templarg>
+    <base>ignition::plugin::EnablePluginFromThis</base>
+    <class kind="class">ignition::plugin::Factory::Producing</class>
+    <member kind="typedef">
+      <type>ProductPtr&lt; Interface &gt;</type>
+      <name>ProductPtrType</name>
+      <anchorfile>classignition_1_1plugin_1_1Factory.html</anchorfile>
+      <anchor>a9c372530e1c27cbb6fc169c88da9a3f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>ProductPtrType</type>
+      <name>Construct</name>
+      <anchorfile>classignition_1_1plugin_1_1Factory.html</anchorfile>
+      <anchor>a83520b8b9b17d2c17b0f189089b94eaa</anchor>
+      <arglist>(Args &amp;&amp;... _args)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ignition::plugin::v1::Info</name>
+    <filename>structignition_1_1plugin_1_1v1_1_1Info.html</filename>
+    <member kind="typedef">
+      <type>std::unordered_map&lt; std::string, std::function&lt; void *(void *)&gt; &gt;</type>
+      <name>InterfaceCastingMap</name>
+      <anchorfile>structignition_1_1plugin_1_1v1_1_1Info.html</anchorfile>
+      <anchor>a9b74599a5f3e785dd444c1302bf0fa57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Clear</name>
+      <anchorfile>structignition_1_1plugin_1_1v1_1_1Info.html</anchorfile>
+      <anchor>aa71d36872f416feaa853788a7a7a7ef8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>IGN_UTILS_WARN_RESUME__DLL_INTERFACE_MISSING IGN_UTILS_WARN_IGNORE__DLL_INTERFACE_MISSING std::set&lt; std::string &gt;</type>
+      <name>aliases</name>
+      <anchorfile>structignition_1_1plugin_1_1v1_1_1Info.html</anchorfile>
+      <anchor>a8dab9857f965ad6037226dc19a301609</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>IGN_UTILS_WARN_RESUME__DLL_INTERFACE_MISSING IGN_UTILS_WARN_IGNORE__DLL_INTERFACE_MISSING std::function&lt; void(void *)&gt;</type>
+      <name>deleter</name>
+      <anchorfile>structignition_1_1plugin_1_1v1_1_1Info.html</anchorfile>
+      <anchor>adf58c78dc0519c7d883dc6c38b6acabe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>IGN_UTILS_WARN_RESUME__DLL_INTERFACE_MISSING IGN_UTILS_WARN_IGNORE__DLL_INTERFACE_MISSING std::set&lt; std::string &gt;</type>
+      <name>demangledInterfaces</name>
+      <anchorfile>structignition_1_1plugin_1_1v1_1_1Info.html</anchorfile>
+      <anchor>a7cefd35ce346f4b5f839eafc0fcece01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>IGN_UTILS_WARN_RESUME__DLL_INTERFACE_MISSING IGN_UTILS_WARN_IGNORE__DLL_INTERFACE_MISSING std::function&lt; void *()&gt;</type>
+      <name>factory</name>
+      <anchorfile>structignition_1_1plugin_1_1v1_1_1Info.html</anchorfile>
+      <anchor>ac838907fad37e48f4fbd6e295ba0d3bd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>InterfaceCastingMap</type>
+      <name>interfaces</name>
+      <anchorfile>structignition_1_1plugin_1_1v1_1_1Info.html</anchorfile>
+      <anchor>a924110f4bb4c1624d50576d91cbe274a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>IGN_UTILS_WARN_IGNORE__DLL_INTERFACE_MISSING std::string</type>
+      <name>name</name>
+      <anchorfile>structignition_1_1plugin_1_1v1_1_1Info.html</anchorfile>
+      <anchor>aec136e35dede259443535e602341a2f4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::plugin::Loader</name>
+    <filename>classignition_1_1plugin_1_1Loader.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Loader</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>ac082256071478316a982894d4191a11a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Loader</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>a8bd25dd3f34914f06852c2de2f9db737</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::set&lt; std::string &gt;</type>
+      <name>AliasesOfPlugin</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>a63adae402936681f12414d0be742dbdf</anchor>
+      <arglist>(const std::string &amp;_pluginName) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::set&lt; std::string &gt;</type>
+      <name>AllPlugins</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>a708b8b69e19c77f104d4cced7c4a350b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; InterfaceType &gt;</type>
+      <name>Factory</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>a28045a51462e60d0955755f550115826</anchor>
+      <arglist>(const std::string &amp;_pluginNameOrAlias) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ForgetLibrary</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>ad1ad4803246db3abd2c41430b6579d8b</anchor>
+      <arglist>(const std::string &amp;_pathToLibrary)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ForgetLibraryOfPlugin</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>a4973a35efe799c9050a0e67a3e79c555</anchor>
+      <arglist>(const std::string &amp;_pluginNameOrAlias)</arglist>
+    </member>
+    <member kind="function">
+      <type>PluginPtr</type>
+      <name>Instantiate</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>a38af38708f58ad09a98603ed08fdb33c</anchor>
+      <arglist>(const std::string &amp;_pluginNameOrAlias) const</arglist>
+    </member>
+    <member kind="function">
+      <type>PluginPtrType</type>
+      <name>Instantiate</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>a834dd923de4f9014d50209eb08a6b66a</anchor>
+      <arglist>(const std::string &amp;_pluginNameOrAlias) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::unordered_set&lt; std::string &gt;</type>
+      <name>InterfacesImplemented</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>a936630b1c6234756e5bd4ab6fd6fc15b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::unordered_set&lt; std::string &gt;</type>
+      <name>LoadLib</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>a78b2ddd492810b5120ad19bc708aa137</anchor>
+      <arglist>(const std::string &amp;_pathToLibrary)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>LookupPlugin</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>accd57a8ad609cfe8f0274a50d5e8de43</anchor>
+      <arglist>(const std::string &amp;_nameOrAlias) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::unordered_set&lt; std::string &gt;</type>
+      <name>PluginsImplementing</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>afa9734aec914a1d8423e8421a64df490</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::unordered_set&lt; std::string &gt;</type>
+      <name>PluginsImplementing</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>a5d2f60954097c6d61a0695e1c533f050</anchor>
+      <arglist>(const std::string &amp;_interface, const bool _demangled=true) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::set&lt; std::string &gt;</type>
+      <name>PluginsWithAlias</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>a69f8f6c42599ba4e57310939b7839052</anchor>
+      <arglist>(const std::string &amp;_alias) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>PrettyStr</name>
+      <anchorfile>classignition_1_1plugin_1_1Loader.html</anchorfile>
+      <anchor>aac8f4723ce0859efe2575bc120ba02dc</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::plugin::Plugin</name>
+    <filename>classignition_1_1plugin_1_1Plugin.html</filename>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, void * &gt;</type>
+      <name>InterfaceMap</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>ad29972cd94d07457a34e116440b6a7fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Plugin</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>a96cbafa7a127c08d0b97e147f129f5a7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>af00a56f400aaf960349d00e50d8effd5</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>a024cf112587cb3f084508c8bc6ea1bc7</anchor>
+      <arglist>(const std::string &amp;_interfaceName, const bool _demangled=true) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string *</type>
+      <name>Name</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>accfc8b23d97121a3b9ecfdacea8befc7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Interface *</type>
+      <name>QueryInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>aa5a5071a558207e3853ee0de5f5bcf66</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Interface *</type>
+      <name>QueryInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>aed5dc9dd27c987508c981e6758901977</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Interface *</type>
+      <name>QueryInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>aab1f8b52a48a8af6d377c75a991b8a85</anchor>
+      <arglist>(const std::string &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Interface *</type>
+      <name>QueryInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>aeaf05e2198902d215ec4413e4dbfaa46</anchor>
+      <arglist>(const std::string &amp;) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; Interface &gt;</type>
+      <name>QueryInterfaceSharedPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>a2d7fa223a00dd4318c553261a71f7667</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; const Interface &gt;</type>
+      <name>QueryInterfaceSharedPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>a8afffd600bbbea21b4cdc35180e0ded3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; Interface &gt;</type>
+      <name>QueryInterfaceSharedPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>a859585701837db811ff96b67c82cf7cc</anchor>
+      <arglist>(const std::string &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; const Interface &gt;</type>
+      <name>QueryInterfaceSharedPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>a6d438d4086c5b693b5383ee28e9a44f7</anchor>
+      <arglist>(const std::string &amp;) const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Plugin</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>ac6f2688af203e5a5aa47ec9cea5fb6f2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>EnablePluginFromThis</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>a841205191ab0fce4ef4df99b89cab795</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>SpecializedPlugin</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>a85f6c84b6b3526967311d418824c1832</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>TemplatePluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>a92179f078c9e83a85d73630f96baa209</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>WeakPluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1Plugin.html</anchorfile>
+      <anchor>abc0288da8e29d32a5395be7cbb2eb344</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::plugin::Factory::Producing</name>
+    <filename>classignition_1_1plugin_1_1Factory_1_1Producing.html</filename>
+    <templarg></templarg>
+  </compound>
+  <compound kind="class">
+    <name>ignition::plugin::ProductDeleter</name>
+    <filename>classignition_1_1plugin_1_1ProductDeleter.html</filename>
+    <templarg></templarg>
+  </compound>
+  <compound kind="class">
+    <name>ignition::plugin::SpecializedPlugin</name>
+    <filename>classignition_1_1plugin_1_1SpecializedPlugin.html</filename>
+    <templarg>OtherSpecInterfaces</templarg>
+  </compound>
+  <compound kind="class">
+    <name>ignition::plugin::SpecializedPlugin&lt; SpecInterface &gt;</name>
+    <filename>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</filename>
+    <templarg></templarg>
+    <base virtualness="virtual">ignition::plugin::Plugin</base>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>af00a56f400aaf960349d00e50d8effd5</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>af00a56f400aaf960349d00e50d8effd5</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>a024cf112587cb3f084508c8bc6ea1bc7</anchor>
+      <arglist>(const std::string &amp;_interfaceName, const bool _demangled=true) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Interface *</type>
+      <name>QueryInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>aa5a5071a558207e3853ee0de5f5bcf66</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Interface *</type>
+      <name>QueryInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>aa5a5071a558207e3853ee0de5f5bcf66</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Interface *</type>
+      <name>QueryInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>aed5dc9dd27c987508c981e6758901977</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const Interface *</type>
+      <name>QueryInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>aed5dc9dd27c987508c981e6758901977</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Interface *</type>
+      <name>QueryInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>aab1f8b52a48a8af6d377c75a991b8a85</anchor>
+      <arglist>(const std::string &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Interface *</type>
+      <name>QueryInterface</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>aeaf05e2198902d215ec4413e4dbfaa46</anchor>
+      <arglist>(const std::string &amp;) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; Interface &gt;</type>
+      <name>QueryInterfaceSharedPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>a2d7fa223a00dd4318c553261a71f7667</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; Interface &gt;</type>
+      <name>QueryInterfaceSharedPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>a2d7fa223a00dd4318c553261a71f7667</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; const Interface &gt;</type>
+      <name>QueryInterfaceSharedPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>a8afffd600bbbea21b4cdc35180e0ded3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; const Interface &gt;</type>
+      <name>QueryInterfaceSharedPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>a8afffd600bbbea21b4cdc35180e0ded3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; Interface &gt;</type>
+      <name>QueryInterfaceSharedPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>a859585701837db811ff96b67c82cf7cc</anchor>
+      <arglist>(const std::string &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::shared_ptr&lt; const Interface &gt;</type>
+      <name>QueryInterfaceSharedPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>a6d438d4086c5b693b5383ee28e9a44f7</anchor>
+      <arglist>(const std::string &amp;) const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>SpecializedPlugin</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>a44da40bda2e7f751c00ad6b92472cb3d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>SpecializedPlugin</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>a85f6c84b6b3526967311d418824c1832</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>TemplatePluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1SpecializedPlugin_3_01SpecInterface_01_4.html</anchorfile>
+      <anchor>a92179f078c9e83a85d73630f96baa209</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::plugin::TemplatePluginPtr</name>
+    <filename>classignition_1_1plugin_1_1TemplatePluginPtr.html</filename>
+    <templarg></templarg>
+    <member kind="function">
+      <type></type>
+      <name>TemplatePluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>adf64ea766da116f9e2015ea777d3777f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TemplatePluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a177e542fc7f8ea178053acdca4535d3f</anchor>
+      <arglist>(const TemplatePluginPtr &amp;_other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TemplatePluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a3319c82bb26375517bf37b8e494373c7</anchor>
+      <arglist>(const TemplatePluginPtr&lt; OtherPluginType &gt; &amp;_other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TemplatePluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a46e587b15679cee8c67cb28fb504d05b</anchor>
+      <arglist>(TemplatePluginPtr &amp;&amp;_other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~TemplatePluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a62f84eba2fc18bbb783f89a02015a4b0</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Clear</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>aa71d36872f416feaa853788a7a7a7ef8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>Hash</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a5bde30d27ec0cc3a297c7e4ff8880c50</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsEmpty</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a8e12342fc420701fbffd97025421575a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a67b76affb3b5d35fa419ac234144038b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a4149e31a1ae6f84f3cc89c42715081ea</anchor>
+      <arglist>(const TemplatePluginPtr &amp;_other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>PluginType &amp;</type>
+      <name>operator*</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>ab4074ea12de60b3214ac5898256a0fa3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>PluginType *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>afc367d7a94d7e7685673ddc985448d60</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator&lt;</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a42a29342a35342331dd69e5e79d55624</anchor>
+      <arglist>(const TemplatePluginPtr &amp;_other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator&lt;=</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>ade18cfc387ab607d49e0c344ab21fb03</anchor>
+      <arglist>(const TemplatePluginPtr &amp;_other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>TemplatePluginPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a7de64465322c3dc32f1a861d471f18ae</anchor>
+      <arglist>(const TemplatePluginPtr &amp;_other)</arglist>
+    </member>
+    <member kind="function">
+      <type>TemplatePluginPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a0d0808cbf74870f7c8aaa1fe57347add</anchor>
+      <arglist>(const TemplatePluginPtr&lt; OtherPluginType &gt; &amp;_other)</arglist>
+    </member>
+    <member kind="function">
+      <type>TemplatePluginPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>ae139a3bb200974b31e589ec9df15a72e</anchor>
+      <arglist>(std::nullptr_t _null)</arglist>
+    </member>
+    <member kind="function">
+      <type>TemplatePluginPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a6535edbf1b67a03c398eecd74158f94e</anchor>
+      <arglist>(TemplatePluginPtr &amp;&amp;_other)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>ad6b3a9f6cd55e41a2409ff49fdf0ea3a</anchor>
+      <arglist>(const TemplatePluginPtr &amp;_other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator&gt;</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a132e709a2e9b9145c8b0aed656711c3a</anchor>
+      <arglist>(const TemplatePluginPtr &amp;_other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator&gt;=</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>af5b0c61075df2ffcc00a475c63c0bdf7</anchor>
+      <arglist>(const TemplatePluginPtr &amp;_other) const</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>TemplatePluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>a92179f078c9e83a85d73630f96baa209</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Loader</name>
+      <anchorfile>classignition_1_1plugin_1_1TemplatePluginPtr.html</anchorfile>
+      <anchor>ac8e5438321e35520c4088ff6ca4116ee</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ignition::plugin::WeakPluginPtr</name>
+    <filename>classignition_1_1plugin_1_1WeakPluginPtr.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>WeakPluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1WeakPluginPtr.html</anchorfile>
+      <anchor>a56553944a1041902d3bd954d6c35c300</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WeakPluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1WeakPluginPtr.html</anchorfile>
+      <anchor>a764c26b2aa316e924a37cc582f772314</anchor>
+      <arglist>(const PluginPtr &amp;_ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WeakPluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1WeakPluginPtr.html</anchorfile>
+      <anchor>a9eaad9a858080c44a83bc6e3ebe5c293</anchor>
+      <arglist>(const WeakPluginPtr &amp;_other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WeakPluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1WeakPluginPtr.html</anchorfile>
+      <anchor>a9572f8d524f5d72230ab5970b7f51d56</anchor>
+      <arglist>(WeakPluginPtr &amp;&amp;_other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~WeakPluginPtr</name>
+      <anchorfile>classignition_1_1plugin_1_1WeakPluginPtr.html</anchorfile>
+      <anchor>a42e967bb80c97a8e7c014eeaad6cb715</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsExpired</name>
+      <anchorfile>classignition_1_1plugin_1_1WeakPluginPtr.html</anchorfile>
+      <anchor>aba2bcf1ee25f12ef7281db6bcea5dd68</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>PluginPtr</type>
+      <name>Lock</name>
+      <anchorfile>classignition_1_1plugin_1_1WeakPluginPtr.html</anchorfile>
+      <anchor>ac2315096f1be6c5ff084141c07860ead</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>WeakPluginPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1plugin_1_1WeakPluginPtr.html</anchorfile>
+      <anchor>a656aff7b9971a89faeee2bc1fc98d105</anchor>
+      <arglist>(const PluginPtr &amp;_ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>WeakPluginPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1plugin_1_1WeakPluginPtr.html</anchorfile>
+      <anchor>a9941ce070693261ace5dc40fa0c1d137</anchor>
+      <arglist>(const WeakPluginPtr &amp;_other)</arglist>
+    </member>
+    <member kind="function">
+      <type>WeakPluginPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classignition_1_1plugin_1_1WeakPluginPtr.html</anchorfile>
+      <anchor>a4a32b70b0fb10084a2eee86bdaeda1be</anchor>
+      <arglist>(WeakPluginPtr &amp;&amp;_other)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ignition</name>
+    <filename>namespaceignition.html</filename>
+    <namespace>ignition::plugin</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>ignition::plugin</name>
+    <filename>namespaceignition_1_1plugin.html</filename>
+    <namespace>ignition::plugin::v1</namespace>
+    <class kind="class">ignition::plugin::EnablePluginFromThis</class>
+    <class kind="class">ignition::plugin::Factory</class>
+    <class kind="struct">ignition::plugin::Info</class>
+    <class kind="class">ignition::plugin::Loader</class>
+    <class kind="class">ignition::plugin::Plugin</class>
+    <class kind="class">ignition::plugin::ProductDeleter</class>
+    <class kind="class">ignition::plugin::SpecializedPlugin</class>
+    <class kind="class">ignition::plugin::SpecializedPlugin&lt; SpecInterface &gt;</class>
+    <class kind="class">ignition::plugin::TemplatePluginPtr</class>
+    <class kind="class">ignition::plugin::WeakPluginPtr</class>
+    <member kind="typedef">
+      <type>detail::ConstCompatible&lt; To, From &gt;</type>
+      <name>ConstCompatible</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a3882c12f75ef6a08376e49eb26677033</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; const Info &gt;</type>
+      <name>ConstInfoPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>ab31a3fb90680b0a2ff48363847f68ac0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TemplatePluginPtr&lt; const Plugin &gt;</type>
+      <name>ConstPluginPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a5c78259418ddd2272e02aeb49811b4d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TemplatePluginPtr&lt; const SpecializedPlugin&lt; SpecInterfaces... &gt; &gt;</type>
+      <name>ConstSpecializedPluginPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>ad99dd9977a712a35a1c3c1e569dacb2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::unordered_map&lt; std::string, Info &gt;</type>
+      <name>InfoMap</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a694e3f7a5775c792604a66742903cc21</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TemplatePluginPtr&lt; Plugin &gt;</type>
+      <name>PluginPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a6bbdc54110be7821705e387b9312816c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::unique_ptr&lt; Interface, ProductDeleter&lt; Interface &gt; &gt;</type>
+      <name>ProductPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>af2953d9d9b79271662f93df151945f52</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TemplatePluginPtr&lt; SpecializedPlugin&lt; SpecInterfaces... &gt; &gt;</type>
+      <name>SpecializedPluginPtr</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a71ecee778dbdcaee4977cedd7341ef55</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CleanupLostProducts</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a3266756c3d3b0938c97c8ec237652378</anchor>
+      <arglist>(const std::chrono::nanoseconds &amp;_safetyWait=std::chrono::nanoseconds(5))</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>DemangleSymbol</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>ab1a05c01f466e2f7e558b8371d4ccbf2</anchor>
+      <arglist>(const std::string &amp;_symbol)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>LostProductCount</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a5ae6fe4fd45f9503b41612cff719b959</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>const int</type>
+      <name>INFO_API_VERSION</name>
+      <anchorfile>namespaceignition_1_1plugin.html</anchorfile>
+      <anchor>a3e73dcc1ed3030650a0bf9a45f2ff442</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ignition::plugin::v1</name>
+    <filename>namespaceignition_1_1plugin_1_1v1.html</filename>
+    <class kind="struct">ignition::plugin::v1::Info</class>
+  </compound>
+  <compound kind="namespace">
+    <name>std</name>
+    <filename>namespacestd.html</filename>
+  </compound>
+</tagfile>
