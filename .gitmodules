@@ -1,15 +1,15 @@
 [submodule "src/pb2025_robot_description"]
 	path = src/simulation/pb2025_robot_description
-	url = https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_robot_description.git
+	url = git@github.com:Charles-Aaron/pb2025_robot_description.git
 [submodule "src/pb2025_sentry_nav"]
 	path = src/navigation/pb2025_sentry_nav
-	url = https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav.git
+	url = git@github.com:Charles-Aaron/pb2025_sentry_nav.git
 [submodule "src/rmoss_core"]
 	path = src/platform/rmoss_core
 	url = https://github.com/SMBU-PolarBear-Robotics-Team/rmoss_core.git
 [submodule "src/rmoss_gazebo"]
 	path = src/simulation/rmoss_gazebo
-	url = https://github.com/SMBU-PolarBear-Robotics-Team/rmoss_gazebo.git
+	url = git@github.com:Charles-Aaron/rmoss_gazebo.git
 [submodule "src/rmoss_gz_resources"]
 	path = src/simulation/rmoss_gz_resources
 	url = https://github.com/SMBU-PolarBear-Robotics-Team/rmoss_gz_resources.git
