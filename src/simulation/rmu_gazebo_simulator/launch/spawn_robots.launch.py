@@ -65,6 +65,8 @@ def generate_launch_description():
             package="ros_gz_sim",
             executable="create",
             arguments=[
+                "-world",
+                "default",
                 "-string",
                 robot_xml,
                 "-name",
