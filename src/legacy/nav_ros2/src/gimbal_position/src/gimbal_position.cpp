@@ -33,6 +33,18 @@ public:
         velocity_publisher_= this->create_publisher<geometry_msgs::msg::TwistStamped>("chassis_yaw", 10);
         timer_ = this->create_wall_timer(20ms, std::bind(&JointStatePublisher::timer_callback, this));
          tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(this);
+        joint_state_msg.name = {
+            "gimbal_pitch_joint",
+            "gimbal_yaw_joint",
+            "gimbal_pitch_odom_joint",
+            "gimbal_yaw_odom_joint",
+        };
+        joint_state_msg.position = {
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+        };
         joint_state_sub_= this->create_subscription<std_msgs::msg::Float32>(
             "/gimbal_controller/gimbal_relative_angle", 10,
             [this](const std_msgs::msg::Float32::SharedPtr msg) {
@@ -43,20 +55,7 @@ public:
                     normalized += static_cast<float>(2.0 * M_PI);
                 }
                 // RCLCPP_INFO(this->get_logger(), "规范后的角度值: %.2f", normalized );
-                joint_state_msg.header.stamp = this->now();
-                joint_state_msg.name = {
-                    "gimbal_pitch_joint",
-                    "gimbal_yaw_joint",
-                    "gimbal_pitch_odom_joint",
-                    "gimbal_yaw_odom_joint",
-                  };
-                  joint_state_msg.position = {
-                    0.0,
-                    normalized,
-                    0.0,
-                    0.0,
-                  };
-                joint_state_pub_->publish(joint_state_msg);
+                joint_state_msg.position[1] = normalized;
             });
     }
 
@@ -88,6 +87,8 @@ private:
     float deviat=0.0;
     float t=0;
     void timer_callback() {
+        joint_state_msg.header.stamp = this->now();
+        joint_state_pub_->publish(joint_state_msg);
 
         geometry_msgs::msg::TransformStamped transform_stamped;
   // `+ 0.1` means transform into future. according to https://robotics.stackexchange.com/a/96615

@@ -31,7 +31,12 @@ import time
 import rclpy
 from rclpy.node import Node
 
-from rm_decision_interfaces.msg import GameStatus
+from rm_decision_interfaces.msg import (
+    AllRobotHP,
+    BulletAllowance,
+    GameStatus,
+    RobotStatus,
+)
 
 # ------- 常量配置 --------
 ROBOT_ID = 7  # 红方哨兵:7  | 蓝方哨兵:107
@@ -58,12 +63,9 @@ class BtTester(Node):
         # 预生成可复用消息对象
         self.game_msg = GameStatus(game_progress=4, stage_remain_time=600)
         self.robot_msg = RobotStatus(
-            robot_id=ROBOT_ID,
             current_hp=0,
-            shooter_heat=0,
+            bullet_allowance_17mm=0,
             team_color=TEAM_COLOR,
-            is_attacked=False,
-            is_detect_enemy=False,
         )
         self.bullet_msg = BulletAllowance(
             bullet_allowance_17mm=0, bullet_allowance_42mm=0
@@ -103,10 +105,8 @@ class BtTester(Node):
         
         # 重置机器人状态
         self.robot_msg.current_hp = 300
-        self.robot_msg.shooter_heat = 0
+        self.robot_msg.bullet_allowance_17mm = 0
         self.robot_msg.team_color = TEAM_COLOR
-        self.robot_msg.is_attacked = False
-        self.robot_msg.is_detect_enemy = False
         
         # 重置子弹状态
         self.bullet_msg.bullet_allowance_17mm = 0
@@ -142,7 +142,7 @@ class BtTester(Node):
         if self.state == 0 and elapsed > 1.0:
             # 1️⃣ attack_outpost 条件
             self.robot_msg.current_hp = 300
-            self.robot_msg.shooter_heat = 50
+            self.robot_msg.bullet_allowance_17mm = 50
             self.bullet_msg.bullet_allowance_17mm = 120
             if TEAM_COLOR:
                 self.hp_msg.red_outpost_hp = 200  # enemy
@@ -166,7 +166,7 @@ class BtTester(Node):
             # 3️⃣ need_supply: time<=150s 且 HP<200 且 弹<200
             self.game_msg.stage_remain_time = 120
             self.robot_msg.current_hp = 150
-            self.robot_msg.shooter_heat = 100
+            self.robot_msg.bullet_allowance_17mm = 100
             self.bullet_msg.bullet_allowance_17mm = 100
             # 敌方已经被破前哨，保持上一步血量
             self.log("--> need_supply 条件发布完毕")
@@ -175,7 +175,7 @@ class BtTester(Node):
         elif self.state == 3 and elapsed > 10.0:
             # 补给完成 -> RecoveredEnough
             self.robot_msg.current_hp = 350
-            self.robot_msg.shooter_heat = 400
+            self.robot_msg.bullet_allowance_17mm = 400
             self.bullet_msg.bullet_allowance_17mm = 400
             self.log("--> RecoveredEnough 条件发布完毕")
             self.next_state()
@@ -184,7 +184,7 @@ class BtTester(Node):
             # 4️⃣ endgame_need_supply
             self.game_msg.stage_remain_time = 140
             self.robot_msg.current_hp = 120
-            self.robot_msg.shooter_heat = 80
+            self.robot_msg.bullet_allowance_17mm = 80
             self.bullet_msg.bullet_allowance_17mm = 80
             self.log("--> EndgameNeedSupply 条件发布完毕")
             self.next_state()
@@ -192,7 +192,7 @@ class BtTester(Node):
         elif self.state == 5 and elapsed > 10.0:
             # 终局补给完成 + ShouldRushBase 成立 (敌我基地差≥500)
             self.robot_msg.current_hp = 350
-            self.robot_msg.shooter_heat = 400
+            self.robot_msg.bullet_allowance_17mm = 400
             self.bullet_msg.bullet_allowance_17mm = 400
             if TEAM_COLOR:
                 self.hp_msg.red_base_hp = 1500  # enemy
@@ -216,7 +216,7 @@ class BtTester(Node):
             # 7️⃣ RushEnemyBuff 条件: 剩余时间180-240s + 我方1/3/4号机器人血量>200
             self.game_msg.stage_remain_time = 200  # 在180-240s范围内
             self.robot_msg.current_hp = 300
-            self.robot_msg.shooter_heat = 200
+            self.robot_msg.bullet_allowance_17mm = 200
             self.bullet_msg.bullet_allowance_17mm = 200
             # 设置我方1/3/4号机器人血量都>200 (通过AllRobotHP消息)
             if TEAM_COLOR:  # 蓝方
@@ -239,7 +239,7 @@ class BtTester(Node):
         elif self.state == 9 and elapsed > 10.0:
             # 8️⃣ HeroProtectAttack 条件测试
             self.robot_msg.current_hp = 300
-            self.robot_msg.shooter_heat = 200
+            self.robot_msg.bullet_allowance_17mm = 200
             self.bullet_msg.bullet_allowance_17mm = 200
             # 设置一些触发英雄保护的条件（这里需要根据HeroProtectAttack的具体逻辑调整）
             self.log("--> HeroProtectAttack 条件发布完毕")
@@ -248,7 +248,7 @@ class BtTester(Node):
         elif self.state == 10 and elapsed > 10.0:
             # 9️⃣ patrol: 确保其他条件 FAIL, RobotStatusSub OK
             self.robot_msg.current_hp = 300
-            self.robot_msg.shooter_heat = 200
+            self.robot_msg.bullet_allowance_17mm = 200
             self.bullet_msg.bullet_allowance_17mm = 200
             # 敌方前哨 & 基地均 0 => attack 分支 FAIL
             if TEAM_COLOR:
@@ -260,7 +260,7 @@ class BtTester(Node):
 
         elif self.state == 11 and elapsed > 10.0:
             # �� fortress_buff -> AlliesDown
-            zero_hp = RobotStatus(current_hp=0)
+            zero_hp = RobotStatus(current_hp=0, team_color=TEAM_COLOR, bullet_allowance_17mm=0)
             self.robot1_pub.publish(zero_hp)
             self.robot3_pub.publish(zero_hp)
             self.robot4_pub.publish(zero_hp)
@@ -270,7 +270,7 @@ class BtTester(Node):
         elif self.state == 12 and elapsed > 10.0:
             # 1️⃣1️⃣ go_home 触发: 让 RobotStatusSub FAIL
             self.robot_msg.current_hp = 50
-            self.robot_msg.shooter_heat = 10
+            self.robot_msg.bullet_allowance_17mm = 10
             self.bullet_msg.bullet_allowance_17mm = 10
             self.log("--> go_home 条件发布完毕, 脚本结束")
             self.next_state()

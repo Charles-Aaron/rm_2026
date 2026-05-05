@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <ReactiveSequence>
+      <SubGameStatus topic_name="game_status"
+                     game_status="{game_status}"/>
+      <SubOwnCampHp topic_name="both_camp_hp"
+                    both_camp_hp="{both_camp_hp}"/>
+      <SubIsDetectEnemy topic_name="detect_enemy_status"
+                        detect_enemy_status="{detect_enemy_status}"/>
+      <WhileDoElse>
+        <ISGameStart message="{game_status}"/>
+        <WhileDoElse>
+          <IfRestoresHealth both_camp_hp="{both_camp_hp}"
+                            sentry_blood_threshold="100"
+                            sentry_full_blood="400"/>
+          <Sequence>
+            <SendGoal name="补给区-&gt;哨兵回血"
+                      goal_pose="1;4;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="1000"/>
+          </Sequence>
+          <WhileDoElse>
+            <Parallel failure_count="-1"
+                      success_count="1">
+              <IfAssistInfantryHealth both_camp_hp="{both_camp_hp}"
+                                      infantry_hp_low_threshold="80"
+                                      infantry_hp_high_threshold="200"/>
+              <IfAssistHeroHealth both_camp_hp="{both_camp_hp}"
+                                  hero_hp_low_threshold="80"
+                                  hero_hp_high_threshold="200"/>
+            </Parallel>
+            <WhileDoElse>
+              <IsDetectEnemy message="{detect_enemy_status}"/>
+              <Sleep msec="5000"/>
+              <AsyncSequence>
+                <SendGoal name="帮助己方机器人回血巡逻点1"
+                          goal_pose="5;0;0; 0;0;0;1"
+                          action_name="navigate_to_pose"/>
+                <Sleep msec="5000"/>
+                <SendGoal name="帮助己方机器人回血巡逻点2"
+                          goal_pose="5;-3;0; 0;0;0;1"
+                          action_name="navigate_to_pose"/>
+                <Sleep msec="5000"/>
+              </AsyncSequence>
+            </WhileDoElse>
+            <WhileDoElse>
+              <CheckOneDie both_camp_hp="{both_camp_hp}"/>
+              <WhileDoElse>
+                <IsDetectEnemy message="{detect_enemy_status}"/>
+                <Sleep msec="5000"/>
+                <AsyncSequence>
+                  <SendGoal name="巡逻点1"
+                            goal_pose="0;0;0; 0;0;0;1"
+                            action_name="navigate_to_pose"/>
+                  <Sleep msec="5000"/>
+                  <SendGoal name="巡逻点2"
+                            goal_pose="3;-0.5;0; 0;0;0;1"
+                            action_name="navigate_to_pose"/>
+                  <Sleep msec="5000"/>
+                </AsyncSequence>
+              </WhileDoElse>
+              <WhileDoElse>
+                <IsDetectEnemy message="{detect_enemy_status}"/>
+                <Sleep msec="5000"/>
+                <AsyncSequence>
+                  <SendGoal name="中心增益巡逻点1"
+                            goal_pose="7;-1;0; 0;0;0;1"
+                            action_name="navigate_to_pose"/>
+                  <Sleep msec="5000"/>
+                  <SendGoal name="中心增益巡逻点1"
+                            goal_pose="7;-6;0; 0;0;0;1"
+                            action_name="navigate_to_pose"/>
+                  <Sleep msec="5000"/>
+                </AsyncSequence>
+              </WhileDoElse>
+            </WhileDoElse>
+          </WhileDoElse>
+        </WhileDoElse>
+        <Sleep msec="2000"/>
+      </WhileDoElse>
+    </ReactiveSequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Condition ID="CheckOneDie"
+               editable="true">
+      <input_port name="both_camp_hp"/>
+    </Condition>
+    <Condition ID="ISGameStart"
+               editable="true">
+      <input_port name="message"/>
+    </Condition>
+    <Condition ID="IfAssistHeroHealth"
+               editable="true">
+      <input_port name="both_camp_hp"/>
+      <input_port name="hero_hp_low_threshold"/>
+      <input_port name="hero_hp_high_threshold"/>
+    </Condition>
+    <Condition ID="IfAssistInfantryHealth"
+               editable="true">
+      <input_port name="both_camp_hp"/>
+      <input_port name="infantry_hp_low_threshold"/>
+      <input_port name="infantry_hp_high_threshold"/>
+    </Condition>
+    <Condition ID="IfRestoresHealth"
+               editable="true">
+      <input_port name="both_camp_hp"/>
+      <input_port name="sentry_blood_threshold"/>
+      <input_port name="sentry_full_blood"/>
+    </Condition>
+    <Condition ID="IsDetectEnemy"
+               editable="true">
+      <input_port name="message"/>
+    </Condition>
+    <Action ID="SendGoal"
+            editable="true">
+      <input_port name="goal_pose"
+                  default="0;0;0; 0;0;0;1"/>
+      <input_port name="action_name"
+                  default="navigate_to_pose"/>
+    </Action>
+    <Action ID="SubGameStatus"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="game_status"/>
+    </Action>
+    <Action ID="SubIsDetectEnemy"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="detect_enemy_status"/>
+    </Action>
+    <Action ID="SubOwnCampHp"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="both_camp_hp"/>
+    </Action>
+  </TreeNodesModel>
+
+</root>

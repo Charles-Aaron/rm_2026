@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <ReactiveSequence>
+      <SubTree ID="获取比赛相关信息"
+               _autoremap="true"/>
+      <WhileDoElse>
+        <ISGameStart message="{game_progress_status}"/>
+        <WhileDoElse>
+          <IfRestoresHpOrPill both_camp_hp="{both_camp_hp}"
+                              sentry_blood_threshold="150"
+                              sentry_full_blood="400"
+                              game_time="{game_time}"
+                              projectile_number="{permitted_pill_number}"/>
+          <Sequence>
+            <SendGoal goal_pose="-3.73;-6.39;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="1000"/>
+          </Sequence>
+          <Sequence>
+            <SendGoal goal_pose="1.5;3.07;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="1000"/>
+          </Sequence>
+        </WhileDoElse>
+        <Sleep msec="1000"/>
+      </WhileDoElse>
+    </ReactiveSequence>
+  </BehaviorTree>
+
+  <BehaviorTree ID="获取比赛相关信息">
+    <Sequence>
+      <SubGameStatus topic_name="game_progress_status"
+                     game_status="{game_progress_status}"/>
+      <SubGameTime topic_name="game_time"
+                   game_time="{game_time}"/>
+      <SubProjectileNumber topic_name="permitted_pill_number"
+                           projectile_number="{permitted_pill_number}"/>
+      <SubBothCampHp topic_name="both_camp_hp"
+                     both_camp_hp="{both_camp_hp}"/>
+    </Sequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Condition ID="ISGameStart"
+               editable="true">
+      <input_port name="message"/>
+    </Condition>
+    <Condition ID="IfRestoresHpOrPill"
+               editable="true">
+      <input_port name="both_camp_hp"/>
+      <input_port name="sentry_blood_threshold"/>
+      <input_port name="sentry_full_blood"/>
+      <input_port name="game_time"/>
+      <input_port name="projectile_number"/>
+    </Condition>
+    <Action ID="SendGoal"
+            editable="true">
+      <input_port name="goal_pose"
+                  default="0;0;0; 0;0;0;1"/>
+      <input_port name="action_name"
+                  default="navigate_to_pose"/>
+    </Action>
+    <Action ID="SubBothCampHp"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="both_camp_hp"/>
+    </Action>
+    <Action ID="SubGameStatus"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="game_status"/>
+    </Action>
+    <Action ID="SubGameTime"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="game_time"/>
+    </Action>
+    <Action ID="SubProjectileNumber"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="projectile_number"/>
+    </Action>
+  </TreeNodesModel>
+
+</root>

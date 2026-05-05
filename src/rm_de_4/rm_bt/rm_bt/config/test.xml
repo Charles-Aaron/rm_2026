@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <ReactiveSequence>
+      <SubTree ID="获取比赛相关信息"
+               _autoremap="true"/>
+      <WhileDoElse>
+        <ISGameStart message="{game_progress_status}"/>
+        <WhileDoElse>
+          <IsTimeBack game_time="{game_time}"
+                      set_minutes="5"/>
+          <Sequence>
+            <SendGoal goal_pose="-2.51;-1.45;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="1000"/>
+          </Sequence>
+          <Sequence>
+            <SendGoal goal_pose="15.81;0;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="1000"/>
+          </Sequence>
+        </WhileDoElse>
+        <Sleep msec="1000"/>
+      </WhileDoElse>
+    </ReactiveSequence>
+  </BehaviorTree>
+
+  <BehaviorTree ID="获取比赛相关信息">
+    <Sequence>
+      <SubGameStatus topic_name="game_progress_status"
+                     game_status="{game_progress_status}"/>
+      <SubGameTime topic_name="game_time"
+                   game_time="{game_time}"/>
+    </Sequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Condition ID="ISGameStart"
+               editable="true">
+      <input_port name="message"/>
+    </Condition>
+    <Condition ID="IsTimeBack"
+               editable="true">
+      <input_port name="game_time"/>
+      <input_port name="set_minutes"/>
+    </Condition>
+    <Action ID="SendGoal"
+            editable="true">
+      <input_port name="goal_pose"
+                  default="0;0;0; 0;0;0;1"/>
+      <input_port name="action_name"
+                  default="navigate_to_pose"/>
+    </Action>
+    <Action ID="SubGameStatus"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="game_status"/>
+    </Action>
+    <Action ID="SubGameTime"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="game_time"/>
+    </Action>
+  </TreeNodesModel>
+
+</root>

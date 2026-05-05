@@ -21,7 +21,6 @@ class StatePublisher(Node):
     def publish_messages(self):
         # Robot status
         robot_msg = RobotStatus()
-        robot_msg.robot_id = 7
         robot_msg.team_color = False  # Red team
         
         # Bullet allowance
@@ -39,6 +38,7 @@ class StatePublisher(Node):
             # Stage 1: Attack outpost
             print("🎯 Stage 1: Attack Outpost")
             robot_msg.current_hp = 300
+            robot_msg.bullet_allowance_17mm = 120
             bullet_msg.bullet_allowance_17mm = 120
             hp_msg.blue_outpost_hp = 200  # Enemy outpost alive
             
@@ -46,6 +46,7 @@ class StatePublisher(Node):
             # Stage 2: Need supply  
             print("🔋 Stage 2: Need Supply")
             robot_msg.current_hp = 150
+            robot_msg.bullet_allowance_17mm = 30
             bullet_msg.bullet_allowance_17mm = 30  # Low ammo
             hp_msg.blue_outpost_hp = 0
             hp_msg.blue_base_hp = 0
@@ -54,6 +55,7 @@ class StatePublisher(Node):
             # Stage 3: Patrol
             print("🚶 Stage 3: Patrol")
             robot_msg.current_hp = 200
+            robot_msg.bullet_allowance_17mm = 100
             bullet_msg.bullet_allowance_17mm = 100
             hp_msg.blue_outpost_hp = 0
             hp_msg.blue_base_hp = 0
@@ -62,6 +64,7 @@ class StatePublisher(Node):
             # Stage 4: Go home (low resources)
             print("🏠 Stage 4: Go Home")
             robot_msg.current_hp = 50
+            robot_msg.bullet_allowance_17mm = 10
             bullet_msg.bullet_allowance_17mm = 10
             hp_msg.blue_outpost_hp = 0
             hp_msg.blue_base_hp = 0

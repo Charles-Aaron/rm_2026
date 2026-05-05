@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <ReactiveSequence>
+      <Sequence>
+        <SubIsDetectEnemy topic_name="gimbal_command"
+                          detect_enemy_status="{detect_enemy_status}"/>
+        <SubGameStatus topic_name="game_progress_status"
+                       game_status="{game_progress_status}"/>
+      </Sequence>
+      <WhileDoElse>
+        <ISGameStart message="{game_progress_status}"/>
+        <WhileDoElse>
+          <IsDetectEnemy message="{detect_enemy_status}"/>
+          <Sequence>
+            <GetCurrentLocation current_location="{current_location}"/>
+            <Repeat num_cycles="10000">
+              <RetryUntilSuccessful num_attempts="10000">
+                <Sequence>
+                  <SendGoal goal_pose="{current_location}"
+                            action_name="navigate_to_pose"/>
+                  <Sleep msec="1000"/>
+                </Sequence>
+              </RetryUntilSuccessful>
+            </Repeat>
+          </Sequence>
+          <Sequence>
+            <SendGoal name="巡逻点1"
+                      goal_pose="-0.36;2.10;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="1000"/>
+            <SendGoal name="巡逻点2"
+                      goal_pose="2.20;0.18;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="1000"/>
+            <SendGoal name="巡逻点3"
+                      goal_pose="-0.36;-1.74;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="1000"/>
+          </Sequence>
+        </WhileDoElse>
+        <Sleep msec="1000"/>
+      </WhileDoElse>
+    </ReactiveSequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Action ID="GetCurrentLocation"
+            editable="true">
+      <output_port name="current_location"/>
+    </Action>
+    <Condition ID="ISGameStart"
+               editable="true">
+      <input_port name="message"/>
+    </Condition>
+    <Condition ID="IsDetectEnemy"
+               editable="true">
+      <input_port name="message"/>
+    </Condition>
+    <Action ID="SendGoal"
+            editable="true">
+      <input_port name="goal_pose"
+                  default="0;0;0; 0;0;0;1"/>
+      <input_port name="action_name"
+                  default="navigate_to_pose"/>
+    </Action>
+    <Action ID="SubGameStatus"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="game_status"/>
+    </Action>
+    <Action ID="SubIsDetectEnemy"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="detect_enemy_status"/>
+    </Action>
+  </TreeNodesModel>
+
+</root>

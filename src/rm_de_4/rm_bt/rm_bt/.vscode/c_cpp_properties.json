@@ -1,0 +1,52 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/adminpc/jl_rm_bt/install/rm_bt/include/**",
+        "/home/adminpc/jl_rm_bt/install/rm_sentry_decision_interfaces/include/**",
+        "/home/adminpc/jl_rm_bt/install/btcpp_ros2_interfaces/include/**",
+        "/home/adminpc/jl_rm_bt/install/behaviortree_ros2/include/**",
+        "/home/adminpc/rm/install/teb_local_planner/include/**",
+        "/home/adminpc/rm/install/teb_msgs/include/**",
+        "/home/adminpc/rm/install/rm_serial_driver/include/**",
+        "/home/adminpc/rm/install/rm_sentry_decision_interfaces/include/**",
+        "/home/adminpc/rm/install/rm_lifecycle_manager/include/**",
+        "/home/adminpc/rm/install/pointcloud_to_laserscan/include/**",
+        "/home/adminpc/rm/install/octomap_server/include/**",
+        "/home/adminpc/rm/install/nav2_xms_bringup/include/**",
+        "/home/adminpc/rm/install/linefit_ground_segmentation/include/**",
+        "/home/adminpc/rm/install/icp_registration/include/**",
+        "/home/adminpc/rm/install/icp_localization_ros2/include/**",
+        "/home/adminpc/rm/install/gimbal_command_publisher/include/**",
+        "/home/adminpc/rm/install/fake_vel_transform/include/**",
+        "/home/adminpc/rm/install/energy_processor/include/**",
+        "/home/adminpc/rm/install/energy_detector/include/**",
+        "/home/adminpc/rm/install/energy_interfaces/include/**",
+        "/home/adminpc/rm/install/costmap_converter/include/**",
+        "/home/adminpc/rm/install/costmap_converter_msgs/include/**",
+        "/home/adminpc/rm/install/armor_processor/include/**",
+        "/home/adminpc/rm/install/armor_detector/include/**",
+        "/home/adminpc/rm/install/auto_aim_interfaces/include/**",
+        "/home/adminpc/rm/install/2d_slam_xms/include/**",
+        "/home/adminpc/ws_livox/install/fast_lio/include/**",
+        "/home/adminpc/ws_livox/install/livox_ros_driver2/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/adminpc/jl_rm_bt/src/BehaviorTree.ROS2/behaviortree_ros2/include/**",
+        "/home/adminpc/jl_rm_bt/src/rm_bt/include/**",
+        "/home/adminpc/jl_rm_bt/src/rm_sentry_decision_interfaces/include/**",
+        "include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

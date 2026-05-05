@@ -1,0 +1,12 @@
+int16 own_sentry_hp
+int16 own_infantry1_hp
+int16 own_infantry2_hp
+int16 own_hero_hp
+int16 own_base_hp
+int16 own_outpost_hp
+int16 enemy_sentry_hp
+int16 enemy_infantry1_hp
+int16 enemy_infantry2_hp
+int16 enemy_hero_hp
+int16 enemy_base_hp
+int16 enemy_outpost_hp

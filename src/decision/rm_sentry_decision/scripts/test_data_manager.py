@@ -57,7 +57,7 @@ class DataManagerTester(Node):
         robot_status = RobotStatus()
         robot_status.current_hp = 800
         robot_status.team_color = True
-        robot_status.shooter_heat = 50
+        robot_status.bullet_allowance_17mm = 500
         
         # 创建AllRobotHP消息
         all_robot_hp = AllRobotHP()

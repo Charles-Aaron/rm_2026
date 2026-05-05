@@ -1,0 +1,34 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/nuc/ros2_ws/install/rm_sentry_decision/include/**",
+        "/home/nuc/ros2_ws/install/rm_decision_interfaces/include/**",
+        "/home/nuc/ros2_ws/install/pcd2pgm/include/**",
+        "/home/nuc/ros2_ws/install/linefit_ground_segmentation/include/**",
+        "/home/nuc/sentry_ws/install/rm_decision_cpp/include/**",
+        "/home/nuc/sentry_ws/install/rm_interfaces/include/**",
+        "/home/nuc/sentry_ws/install/fast_lio/include/**",
+        "/home/nuc/sentry_ws/install/livox_ros_driver2/include/**",
+        "/home/nuc/sentry_ws/install/behaviortree_cpp/include/**",
+        "/home/nuc/sentry_ws/install/behavior_ext_plugins/include/**",
+        "/home/nuc/sentry_ws/install/auto_aim_interfaces/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/nuc/ros2_ws/src/linefit_ground_segementation_ros2/linefit_ground_segmentation/include/**",
+        "/home/nuc/ros2_ws/src/pcd2pgm/include/**",
+        "/home/nuc/ros2_ws/src/rm_de_4/rm_sentry_decision/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

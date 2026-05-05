@@ -1,0 +1,17 @@
+{
+  "game_progress": "4",
+  "stage_remain_time": "150",
+  "team_color": "red",
+  "current_hp": "400",
+  "ammo_17mm": "400",
+  "red_base_hp": "3000",
+  "blue_base_hp": "3000",
+  "red_outpost_hp": "0",
+  "blue_outpost_hp": "0",
+  "red_1_hp": "400",
+  "red_3_hp": "400",
+  "red_4_hp": "400",
+  "blue_1_hp": "400",
+  "blue_3_hp": "400",
+  "blue_4_hp": "400"
+}

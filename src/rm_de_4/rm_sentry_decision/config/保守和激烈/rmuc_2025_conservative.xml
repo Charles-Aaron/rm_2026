@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <ReactiveSequence name="conservative_state_gate">
+      <Action ID="TopicsToBlackboard"/>
+      <Condition ID="GameStatusSub" start_status="4" max_data_age_ms="1000"/>
+
+      <SequenceStar name="conservative_once_then_loop">
+        <ReactiveFallback name="init_once">
+          <SequenceWithMemory name="init_supply_if_needed">
+            <Condition ID="NeedSupply"
+                       enter_hp="150" enter_ammo="40"
+                       exit_hp="400" exit_ammo="50"
+                       require_game_start="true"/>
+            <Action ID="SwitchPoseAction" target_pose="防御姿态"/>
+            <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+            <RetryUntilSuccessful num_attempts="3">
+              <Action ID="SendGoalAction" name="init_goto_supply"
+                     goal_pose="0.0; 0.0; 0; 0; 0; 0; 1"
+                     action_name="navigate_to_pose"
+                     goal_timeout_sec="25"/>
+            </RetryUntilSuccessful>
+            <RetryUntilSuccessful num_attempts="1000000">
+              <Condition ID="RecoveredEnough" min_hp="400" min_ammo="50"/>
+            </RetryUntilSuccessful>
+            <Action ID="SetNavSpeedAction" speed_mps="2.5"/>
+            <RetryUntilSuccessful num_attempts="3">
+              <Action ID="SendGoalAction" name="init_return_to_patrol_1"
+                     goal_pose="4.5; 1.5; 0; 0; 0; 0; 1"
+                     action_name="navigate_to_pose"
+                     goal_timeout_sec="30"/>
+            </RetryUntilSuccessful>
+          </SequenceWithMemory>
+
+          <SequenceWithMemory name="goto_patrol_point_1">
+            <Action ID="SetNavSpeedAction" speed_mps="2.5"/>
+            <RetryUntilSuccessful num_attempts="3">
+              <Action ID="SendGoalAction" name="init_goto_patrol_1"
+                     goal_pose="4.5; 1.5; 0; 0; 0; 0; 1"
+                     action_name="navigate_to_pose"
+                     goal_timeout_sec="30"/>
+            </RetryUntilSuccessful>
+          </SequenceWithMemory>
+        </ReactiveFallback>
+
+        <Repeat num_cycles="1000000">
+          <ReactiveSequence name="conservative_main_tick">
+            <Action ID="TopicsToBlackboard"/>
+            <Condition ID="GameStatusSub" start_status="4" max_data_age_ms="1000"/>
+
+            <ReactiveFallback name="defense_priority_loop">
+              <SequenceWithMemory name="SupplyRecovery">
+                <Condition ID="NeedSupply"
+                           enter_hp="150" enter_ammo="40"
+                           exit_hp="400" exit_ammo="50"
+                           require_game_start="true"/>
+                <Action ID="SwitchPoseAction" target_pose="防御姿态"/>
+                <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+                <RetryUntilSuccessful num_attempts="3">
+                  <Action ID="SendGoalAction" name="goto_supply"
+                         goal_pose="0.0; 0.0; 0; 0; 0; 0; 1"
+                         action_name="navigate_to_pose"
+                         goal_timeout_sec="25"/>
+                </RetryUntilSuccessful>
+                <RetryUntilSuccessful num_attempts="1000000">
+                  <Condition ID="RecoveredEnough" min_hp="400" min_ammo="50"/>
+                </RetryUntilSuccessful>
+                <Action ID="SetNavSpeedAction" speed_mps="2.5"/>
+                <RetryUntilSuccessful num_attempts="3">
+                  <Action ID="SendGoalAction" name="return_to_patrol1_after_supply"
+                         goal_pose="4.5; 1.5; 0; 0; 0; 0; 1"
+                         action_name="navigate_to_pose"
+                         goal_timeout_sec="30"/>
+                </RetryUntilSuccessful>
+              </SequenceWithMemory>
+
+              <SequenceWithMemory name="go_to_buff_point">
+                <Condition ID="AlliesDown"/>
+                <Action ID="SwitchPoseAction" target_pose="防御姿态"/>
+                <Action ID="SetNavSpeedAction" speed_mps="2.5"/>
+                <RetryUntilSuccessful num_attempts="3">
+                  <Action ID="SendGoalAction" name="goto_buff"
+                         goal_pose="1.0; -0.5; 0; 0; 0; 0; 1"
+                         action_name="navigate_to_pose"
+                         goal_timeout_sec="25"/>
+                </RetryUntilSuccessful>
+                <Action ID="GuardFortress"/>
+              </SequenceWithMemory>
+
+              <SequenceWithMemory name="go_to_base_defense">
+                <Condition ID="LateGameDecision"/>
+                <Action ID="SwitchPoseAction" target_pose="防御姿态"/>
+                <Action ID="SetNavSpeedAction" speed_mps="2.0"/>
+                <RetryUntilSuccessful num_attempts="3">
+                  <Action ID="SendGoalAction" name="goto_base"
+                         goal_pose="-1.0; 2.0; 0; 0; 0; 0; 1"
+                         action_name="navigate_to_pose"
+                         goal_timeout_sec="30"/>
+                </RetryUntilSuccessful>
+              </SequenceWithMemory>
+
+              <SequenceWithMemory name="csv_patrol_loop">
+                <Action ID="LoadWaypoints"
+                       waypoint_file="conservative_patrol.csv"
+                       frame_id="map"
+                       waypoints="{patrol_waypoints}"
+                       wait_times="{patrol_wait_times}"
+                       total_waypoints="{patrol_total_wp}"
+                       wp_idx="{patrol_wp_idx}"/>
+                <Repeat num_cycles="1000000">
+                  <SequenceWithMemory name="patrol_one_waypoint">
+                    <Action ID="GetCurrentWaypoint"
+                           waypoints="{patrol_waypoints}"
+                           wait_times="{patrol_wait_times}"
+                           wp_idx="{patrol_wp_idx}"
+                           current_goal="{current_patrol_goal}"
+                           current_goal_pose="{current_patrol_goal_pose}"
+                           current_wait_sec="{current_patrol_wait_sec}"/>
+                    <Action ID="SetNavSpeedAction" speed_mps="2.0"/>
+                    <RetryUntilSuccessful num_attempts="3">
+                      <Action ID="SendGoalAction" name="goto_current_patrol_point"
+                             goal_pose="{current_patrol_goal_pose}"
+                             action_name="navigate_to_pose"
+                             goal_timeout_sec="30"/>
+                    </RetryUntilSuccessful>
+                    <Action ID="WaitUntilReached"
+                           goal_pose="{current_patrol_goal}"
+                           tolerance="0.6"
+                           global_frame="map"
+                           robot_frame="gimbal_yaw_fake"/>
+                    <Action ID="WaitDuration" duration_sec="{current_patrol_wait_sec}"/>
+                    <Action ID="NextWaypoint"
+                           wp_idx="{patrol_wp_idx}"
+                           total_waypoints="{patrol_total_wp}"/>
+                  </SequenceWithMemory>
+                </Repeat>
+              </SequenceWithMemory>
+            </ReactiveFallback>
+          </ReactiveSequence>
+        </Repeat>
+      </SequenceStar>
+    </ReactiveSequence>
+  </BehaviorTree>
+</root>
