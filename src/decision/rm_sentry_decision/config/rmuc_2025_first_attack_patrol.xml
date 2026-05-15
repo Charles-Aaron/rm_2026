@@ -21,7 +21,7 @@
           <Action ID="SwitchPoseAction" name="开局切换为移动姿态" target_pose="移动姿态" />
           <Action ID="SetNavSpeedAction" name="开局速度设为3.0米每秒" speed_mps="3.0" />
           <RetryUntilSuccessful name="最多重试10次导航到低头等待点" num_attempts="10">
-            <Action ID="SendThroughGoalsAction" name="开局经过低头提前触发点到低头等待点" through_pose="2.82; 0.63; 0; 0; 0; 0; 1" final_pose="7.3; 4.85; 0; 0; 0; 0; 1" action_name="navigate_through_poses" goal_timeout_sec="25" gimbal_command_on_final_leg="true" gimbal_command_value="true" gimbal_command_duration_ms="3000" gimbal_command_period_ms="100" gimbal_command_topic="/sentry/gimbal_lower_command" />
+            <Action ID="SendThroughGoalsAction" name="开局经过低头提前触发点到低头等待点" through_pose="1.82; 0.0; 0; 0; 0; 0; 1" final_pose="2.3; 2.85; 0; 0; 0; 0; 1" action_name="navigate_through_poses" goal_timeout_sec="25" gimbal_command_on_final_leg="true" gimbal_command_value="true" gimbal_command_duration_ms="3000" gimbal_command_period_ms="100" gimbal_command_topic="/sentry/gimbal_lower_command" />
           </RetryUntilSuccessful>
           <Action ID="GimbalLowerAction" name="持续发送低头命令并等待电控确认" target_lower="true" wait_state="true" timeout_ms="5000" publish_period_ms="100" continue_on_timeout="true" command_topic="/sentry/gimbal_lower_command" state_topic="/gimbal_controller/gimbal_status" />
           <Action ID="SetNavSpeedAction" name="低头等待点到第一进攻点快速通过速度设为3.5米每秒" speed_mps="3.5" />
