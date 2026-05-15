@@ -1,9 +1,8 @@
-import os
-from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch_ros.actions import Node, PushRosNamespace
-from launch.substitutions import LaunchConfiguration
+from launch_ros.substitutions import FindPackageShare
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 
 def generate_launch_description():
     # 命名空间参数
@@ -19,9 +18,17 @@ def generate_launch_description():
         description='Use simulation (Gazebo) clock if true'
     )
 
-    # 获取配置文件路径
-    bt_config_dir = os.path.join(get_package_share_directory('rm_sentry_decision'), 'config')
-    bt_xml_path = os.path.join(bt_config_dir, 'rmuc_2025_conservative.xml')
+    bt_xml_arg = DeclareLaunchArgument(
+        'bt_xml',
+        default_value='rmuc_2025_first_attack_patrol.xml',
+        description='Behavior tree XML file under rm_sentry_decision/config'
+    )
+
+    bt_xml_path = PathJoinSubstitution([
+        FindPackageShare('rm_sentry_decision'),
+        'config',
+        LaunchConfiguration('bt_xml'),
+    ])
 
     # 参数
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -43,7 +50,7 @@ def generate_launch_description():
     return LaunchDescription([
         namespace_arg,
         use_sim_time_arg,
+        bt_xml_arg,
         PushRosNamespace(LaunchConfiguration('namespace')),
         decision_node
     ])
-

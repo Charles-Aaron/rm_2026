@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <chrono>
+#include <cmath>
 #include <sstream>
 #include <stdexcept>
 #include <string>
@@ -101,6 +102,18 @@ BT::NodeStatus SendThroughGoalsAction::onStart()
     through_pose_2 = through_pose_2_input.value();
   }
 
+  through_pose_as_trigger_only_ = false;
+  getInput("through_pose_as_trigger_only", through_pose_as_trigger_only_);
+  gimbal_trigger_distance_ = 1.0;
+  getInput("gimbal_trigger_distance", gimbal_trigger_distance_);
+  if (gimbal_trigger_distance_ < 0.0) {
+    RCLCPP_WARN(
+      node_->get_logger(),
+      "途经点导航：gimbal_trigger_distance=%.3f 无效，改用 0.0",
+      gimbal_trigger_distance_);
+    gimbal_trigger_distance_ = 0.0;
+  }
+
   release_nav_on_close_ = false;
   getInput("release_nav_on_close", release_nav_on_close_);
   release_distance_ = 0.60;
@@ -136,7 +149,7 @@ BT::NodeStatus SendThroughGoalsAction::onStart()
       return BT::NodeStatus::FAILURE;
     }
     gimbal_command_pub_ =
-      node_->create_publisher<rm_decision_interfaces::msg::GimbalCommand>(
+      node_->create_publisher<rm_decision_interfaces::msg::SentryPoseCommand>(
         gimbal_command_topic_, 10);
   } else {
     gimbal_command_pub_.reset();
@@ -154,9 +167,15 @@ BT::NodeStatus SendThroughGoalsAction::onStart()
 
   nav2_msgs::action::NavigateThroughPoses::Goal goal;
   try {
+    has_gimbal_trigger_pose_ = false;
+    gimbal_trigger_pose_ = parsePose(through_pose.value());
+    has_gimbal_trigger_pose_ = true;
+
     goal.poses.clear();
-    goal.poses.push_back(parsePose(through_pose.value()));
-    if (!through_pose_2.empty()) {
+    if (!through_pose_as_trigger_only_) {
+      goal.poses.push_back(gimbal_trigger_pose_);
+    }
+    if (!through_pose_2.empty() && !through_pose_as_trigger_only_) {
       goal.poses.push_back(parsePose(through_pose_2));
     }
     goal.poses.push_back(parsePose(final_pose.value()));
@@ -164,6 +183,12 @@ BT::NodeStatus SendThroughGoalsAction::onStart()
     const auto stamp = node_->now();
     for (auto &pose : goal.poses) {
       pose.header.stamp = stamp;
+    }
+    if (through_pose_as_trigger_only_) {
+      RCLCPP_INFO(
+        node_->get_logger(),
+        "途经点导航：through_pose 仅作为云台触发点，不加入导航 waypoint，触发距离 %.2f 米",
+        gimbal_trigger_distance_);
     }
   } catch (const std::exception &e) {
     RCLCPP_ERROR(node_->get_logger(), "途经点导航：点位格式错误: %s", e.what());
@@ -200,8 +225,32 @@ BT::NodeStatus SendThroughGoalsAction::onStart()
         release_distance_reached_.store(true);
       }
 
-      if (gimbal_command_on_final_leg_ && feedback->number_of_poses_remaining <= 1) {
+      if (gimbal_command_on_final_leg_ &&
+        !through_pose_as_trigger_only_ &&
+        feedback->number_of_poses_remaining <= 1)
+      {
         gimbal_final_leg_reached_.store(true);
+      }
+
+      if (gimbal_command_on_final_leg_ &&
+        through_pose_as_trigger_only_ &&
+        has_gimbal_trigger_pose_)
+      {
+        const double dx =
+          feedback->current_pose.pose.position.x - gimbal_trigger_pose_.pose.position.x;
+        const double dy =
+          feedback->current_pose.pose.position.y - gimbal_trigger_pose_.pose.position.y;
+        const double distance = std::hypot(dx, dy);
+        if (distance <= gimbal_trigger_distance_) {
+          if (!gimbal_final_leg_reached_.load()) {
+            RCLCPP_INFO(
+              node_->get_logger(),
+              "云台提前命令：进入触发点 %.2f 米范围，开始发布 fold_type=%u",
+              gimbal_trigger_distance_,
+              gimbal_command_value_ ? 1 : 0);
+          }
+          gimbal_final_leg_reached_.store(true);
+        }
       }
     };
   send_goal_options.result_callback =
@@ -380,7 +429,8 @@ void SendThroughGoalsAction::publishGimbalCommand()
     return;
   }
 
-  rm_decision_interfaces::msg::GimbalCommand msg;
+  rm_decision_interfaces::msg::SentryPoseCommand msg;
+  msg.pose_type = 0;
   msg.fold_type = gimbal_command_value_ ? 1 : 0;
   gimbal_command_pub_->publish(msg);
   gimbal_last_publish_time_ = std::chrono::steady_clock::now();

@@ -2,7 +2,7 @@
 #define RM_SENTRY_DECISION__GIMBAL_LOWER_ACTION_HPP_
 
 #include "behaviortree_cpp_v3/action_node.h"
-#include "rm_decision_interfaces/msg/gimbal_command.hpp"
+#include "rm_decision_interfaces/msg/sentry_pose_command.hpp"
 #include "rm_msgs/msg/gimbal_status.hpp"
 #include "rclcpp/rclcpp.hpp"
 
@@ -46,7 +46,7 @@ private:
   bool elapsedMsAtLeast(const std::chrono::steady_clock::time_point &start, int limit_ms) const;
 
   rclcpp::Node::SharedPtr node_;
-  rclcpp::Publisher<rm_decision_interfaces::msg::GimbalCommand>::SharedPtr command_pub_;
+  rclcpp::Publisher<rm_decision_interfaces::msg::SentryPoseCommand>::SharedPtr command_pub_;
   rclcpp::Subscription<rm_msgs::msg::GimbalStatus>::SharedPtr state_sub_;
 
   bool target_lower_{true};

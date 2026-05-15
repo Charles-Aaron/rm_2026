@@ -10,7 +10,6 @@ def generate_launch_description():
         default_value='red_standard_robot1',
         description='Robot namespace'
     )
-
     # 创建 LaunchDescription 对象
     ld = LaunchDescription([
         namespace_arg,

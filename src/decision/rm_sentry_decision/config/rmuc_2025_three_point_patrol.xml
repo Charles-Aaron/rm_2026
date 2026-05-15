@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <!--
+      三点巡逻补给行为树
+
+      位置点:
+      - 补给点: (0.876, -6.51)
+      - 巡逻点1: (7.23, 4.94)
+      - 巡逻点2: (6.46, -3.66)
+      - 巡逻点3: (1.41, -0.17)
+
+      逻辑:
+      - 比赛开始后进入三点巡逻循环
+      - 每个巡逻点停留 15 秒
+      - 低血优先打断巡逻，撤退到补给点，恢复后返回巡逻点1
+    -->
+    <ReactiveSequence name="三点巡逻入口：同步数据并等待比赛开始">
+      <Action ID="TopicsToBlackboard" name="读取裁判和机器人状态到黑板" />
+      <Condition ID="GameStatusSub" name="只在比赛进行阶段运行" start_status="4" max_data_age_ms="1000" />
+      <Repeat name="主循环：低血补给优先，三个巡逻点各停留15秒" num_cycles="1000000">
+        <ReactiveSequence name="每次循环：刷新数据并确认比赛仍在进行">
+          <Action ID="TopicsToBlackboard" name="主循环读取最新状态到黑板" />
+          <Condition ID="GameStatusSub" name="主循环确认比赛仍在进行" start_status="4" max_data_age_ms="1000" />
+          <ReactiveFallback name="优先级选择：低血补给或三点巡逻">
+            <SequenceWithMemory name="优先级1：低血撤退补给">
+              <Condition ID="NeedSupply" name="判断是否低血需要撤退补给" enter_hp="200" enter_ammo="-1" exit_hp="400" exit_ammo="50" require_game_start="true" max_data_age_ms="1000" />
+              <Action ID="LogInfoAction" name="流程日志：三点巡逻低血撤退补给" message="三点巡逻触发低血，打断巡逻并撤退补给" period_ms="1000" />
+              <Action ID="SwitchPoseAction" name="撤退前切换为防御姿态" target_pose="防御姿态" />
+              <Action ID="SetNavSpeedAction" name="回补给速度设为3.0米每秒" speed_mps="3.0" />
+              <RetryUntilSuccessful name="最多重试10次导航到补给点" num_attempts="10">
+                <Action ID="SendGoalAction" name="导航到补给点" goal_pose="-1.03; -6.15; 0; 0; 0; 0; 1" action_name="navigate_to_pose" goal_timeout_sec="25" />
+              </RetryUntilSuccessful>
+              <RetryUntilSuccessful name="持续等待补给恢复完成" num_attempts="1000000">
+                <Condition ID="RecoveredEnough" name="确认补给后血量弹量足够" min_hp="400" min_ammo="50" require_game_start="true" max_data_age_ms="1000" />
+              </RetryUntilSuccessful>
+              <Action ID="SwitchPoseAction" name="补给完成后切移动姿态" target_pose="移动姿态" />
+              <Action ID="SetNavSpeedAction" name="返回巡逻点1速度设为3.0米每秒" speed_mps="3.0" />
+              <RetryUntilSuccessful name="最多重试10次返回巡逻点1" num_attempts="10">
+                <Action ID="SendGoalAction" name="补给后返回巡逻点1" goal_pose="6.9; 4.5; 0; 0; 0; 0; 1" action_name="navigate_to_pose" goal_timeout_sec="35" />
+              </RetryUntilSuccessful>
+              <Action ID="SwitchPoseAction" name="回到巡逻点1后切进攻姿态" target_pose="进攻姿态" />
+            </SequenceWithMemory>
+            <SequenceWithMemory name="优先级2：三点巡逻，每点停留15秒">
+              <Action ID="SwitchPoseAction" name="巡逻前切移动姿态" target_pose="移动姿态" />
+              <Action ID="SetNavSpeedAction" name="巡逻速度设为3.0米每秒" speed_mps="3.0" />
+              <RetryUntilSuccessful name="最多重试10次导航到巡逻点1" num_attempts="10">
+                <Action ID="SendGoalAction" name="导航到巡逻点1" goal_pose="6.9; 4.5; 0; 0; 0; 0; 1" action_name="navigate_to_pose" goal_timeout_sec="35" />
+              </RetryUntilSuccessful>
+              <Action ID="SwitchPoseAction" name="到达巡逻点1后切进攻姿态" target_pose="进攻姿态" />
+              <Action ID="LogInfoAction" name="流程日志：巡逻点1停留15秒" message="已到达巡逻点1，停留15秒；低血会立即打断回补给" period_ms="1000" />
+              <Action ID="WaitDuration" name="巡逻点1停留15秒" duration_sec="15" />
+              <Action ID="SwitchPoseAction" name="第一进攻点前往第二进攻点前切防御姿态" target_pose="防御姿态" />
+              <RetryUntilSuccessful name="最多重试10次导航到巡逻点2" num_attempts="10">
+                <Action ID="SendGoalAction" name="导航到巡逻点2" goal_pose="5.85; -4.1; 0; 0; 0; 0; 1" action_name="navigate_to_pose" goal_timeout_sec="35" />
+              </RetryUntilSuccessful>
+              <Action ID="SwitchPoseAction" name="到达巡逻点2后切进攻姿态" target_pose="进攻姿态" />
+              <Action ID="LogInfoAction" name="流程日志：巡逻点2停留15秒" message="已到达巡逻点2，停留15秒；低血会立即打断回补给" period_ms="1000" />
+              <Action ID="WaitDuration" name="巡逻点2停留15秒" duration_sec="15" />
+              <Action ID="SwitchPoseAction" name="前往巡逻点3前切移动姿态" target_pose="移动姿态" />
+              <RetryUntilSuccessful name="最多重试10次导航到巡逻点3" num_attempts="10">
+                <Action ID="SendGoalAction" name="导航到巡逻点3" goal_pose="5.04; 4.37; 0; 0; 0; 0; 1" action_name="navigate_to_pose" goal_timeout_sec="35" />
+              </RetryUntilSuccessful>
+              <Action ID="SwitchPoseAction" name="到达巡逻点3后切进攻姿态" target_pose="进攻姿态" />
+              <Action ID="LogInfoAction" name="流程日志：巡逻点3停留15秒" message="已到达巡逻点3，停留15秒；低血会立即打断回补给" period_ms="1000" />
+              <Action ID="WaitDuration" name="巡逻点3停留15秒" duration_sec="15" />
+            </SequenceWithMemory>
+          </ReactiveFallback>
+        </ReactiveSequence>
+      </Repeat>
+    </ReactiveSequence>
+  </BehaviorTree>
+</root>

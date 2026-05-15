@@ -25,3 +25,7 @@ float64 enemy_y
 
 float64 operator_x
 float64 operator_y
+
+# Sentry pose and gimbal state mirrored by the electrical control stack.
+uint8 pose_type    # 0=MOVEMENT, 1=ATTACK, 2=DEFENSE
+uint8 gimbal_mode

@@ -6,7 +6,7 @@
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "nav2_msgs/action/navigate_through_poses.hpp"
-#include "rm_decision_interfaces/msg/gimbal_command.hpp"
+#include "rm_decision_interfaces/msg/sentry_pose_command.hpp"
 #include <atomic>
 #include <chrono>
 #include <std_msgs/msg/bool.hpp>
@@ -25,6 +25,14 @@ public:
       BT::InputPort<std::string>("through_pose"),
       BT::InputPort<std::string>("through_pose_2", ""),
       BT::InputPort<std::string>("final_pose"),
+      BT::InputPort<bool>(
+        "through_pose_as_trigger_only",
+        false,
+        "through_pose 只作为触发点，不加入导航目标，避免中间点到点减速"),
+      BT::InputPort<double>(
+        "gimbal_trigger_distance",
+        1.0,
+        "距离触发点多少米内开始发布云台命令"),
       BT::InputPort<bool>(
         "release_nav_on_close",
         false,
@@ -77,12 +85,16 @@ private:
   std::shared_future<rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateThroughPoses>::WrappedResult> result_future_;
   rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr nav_done_pub_;
   bool release_nav_on_close_{false};
+  bool through_pose_as_trigger_only_{false};
+  double gimbal_trigger_distance_{1.0};
+  geometry_msgs::msg::PoseStamped gimbal_trigger_pose_;
+  bool has_gimbal_trigger_pose_{false};
   double release_distance_{0.60};
   std::atomic<bool> release_distance_reached_{false};
   bool cancel_requested_for_release_{false};
   std::chrono::steady_clock::time_point goal_start_time_;
   double goal_timeout_sec_{90.0};
-  rclcpp::Publisher<rm_decision_interfaces::msg::GimbalCommand>::SharedPtr gimbal_command_pub_;
+  rclcpp::Publisher<rm_decision_interfaces::msg::SentryPoseCommand>::SharedPtr gimbal_command_pub_;
   bool gimbal_command_on_final_leg_{false};
   bool gimbal_command_value_{false};
   int gimbal_command_duration_ms_{1500};

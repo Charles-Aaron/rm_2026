@@ -365,7 +365,7 @@ int main(int argc, char** argv) {
       node->declare_parameter("xml_path", "");
       xml_path = node->get_parameter("xml_path").as_string();
       if (xml_path.empty()) {
-        xml_path = ament_index_cpp::get_package_share_directory("rm_sentry_decision") + "/config/rmuc_2025_conservative.xml";
+        xml_path = ament_index_cpp::get_package_share_directory("rm_sentry_decision") + "/config/rmuc_2025_first_attack_patrol.xml";
         std::cout << "[调试] 使用默认行为树 XML: " << xml_path << std::endl;
       } else {
         std::cout << "[调试] 使用参数指定的行为树 XML: " << xml_path << std::endl;

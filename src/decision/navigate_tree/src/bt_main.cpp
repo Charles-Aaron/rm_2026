@@ -19,6 +19,7 @@
 #include "condition_fort.h"
 #include "action_free.h"
 #include "condition_free.h"
+#include "action_tunnel_yaw.h"
 
 int main(int argc, char** argv) {
     rclcpp::init(argc, argv);
@@ -42,6 +43,7 @@ int main(int argc, char** argv) {
     factory.registerNodeType<action_follow>("action_follow");
     factory.registerNodeType<action_free>("action_free");
     factory.registerNodeType<action_fort>("action_fort");
+    factory.registerNodeType<action_tunnel_yaw>("action_tunnel_yaw");
 
 
     auto blackboard = BT::Blackboard::create();

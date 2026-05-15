@@ -94,6 +94,9 @@ configure_navigate_tree_target(condition_free)
 add_library(action_free src/action_free.cpp)
 configure_navigate_tree_target(action_free)
 
+add_library(action_tunnel_yaw src/action_tunnel_yaw.cpp)
+configure_navigate_tree_target(action_tunnel_yaw)
+
 add_executable(bt_main src/bt_main.cpp)
 configure_navigate_tree_target(bt_main)
 ament_target_dependencies(bt_main ament_index_cpp)
@@ -115,6 +118,7 @@ target_link_libraries(bt_main
   action_fort
   condition_free
   action_free
+  action_tunnel_yaw
 )
 
 install(TARGETS bt_main

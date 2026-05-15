@@ -6,7 +6,7 @@ import time
 
 import rclpy
 from builtin_interfaces.msg import Duration
-from geometry_msgs.msg import TransformStamped
+from geometry_msgs.msg import PoseStamped, TransformStamped
 from nav2_msgs.action import NavigateThroughPoses, NavigateToPose
 from rclpy.action import ActionServer
 from rclpy.executors import ExternalShutdownException
@@ -22,6 +22,11 @@ class NavPoseSimulator(Node):
         self.current_y = 0.0
         self.current_z = 0.0
         self.timer = self.create_timer(0.05, self.publish_current_tf)
+        self.set_pose_sub = self.create_subscription(
+            PoseStamped,
+            "/sentry/nav_pose_simulator/set_pose",
+            self.set_pose_cb,
+            10)
         self.to_pose_server = ActionServer(
             self,
             NavigateToPose,
@@ -34,6 +39,12 @@ class NavPoseSimulator(Node):
             self.execute_through_poses)
         self.get_logger().info(
             "导航/位置模拟器已启动：提供 navigate_to_pose、navigate_through_poses，并发布 map->gimbal_yaw_fake/base_link TF")
+
+    def set_pose_cb(self, msg):
+        pose = msg.pose.position
+        self.publish_pose_tf(pose.x, pose.y, pose.z)
+        self.get_logger().info(
+            f"手动设置模拟位置：({pose.x:.2f}, {pose.y:.2f})")
 
     def publish_pose_tf(self, x, y, z=0.0):
         self.current_x = float(x)

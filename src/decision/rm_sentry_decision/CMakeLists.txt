@@ -124,6 +124,7 @@ install(
     scripts/bt_config_ui.py
     scripts/referee_simulator.py
     scripts/nav_pose_simulator.py
+    scripts/electrical_feedback_simulator.py
     scripts/open_bt_config_ui.sh
   DESTINATION lib/${PROJECT_NAME}
 )

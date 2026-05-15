@@ -37,7 +37,7 @@ BT::NodeStatus GimbalLowerAction::onStart()
   current_gimbal_mode_.store(0);
 
   command_pub_ =
-    node_->create_publisher<rm_decision_interfaces::msg::GimbalCommand>(command_topic_, 10);
+    node_->create_publisher<rm_decision_interfaces::msg::SentryPoseCommand>(command_topic_, 10);
   if (wait_state_) {
     state_sub_ = node_->create_subscription<rm_msgs::msg::GimbalStatus>(
       state_topic_, 10,
@@ -112,7 +112,8 @@ void GimbalLowerAction::publishCommand()
     return;
   }
 
-  rm_decision_interfaces::msg::GimbalCommand msg;
+  rm_decision_interfaces::msg::SentryPoseCommand msg;
+  msg.pose_type = 0;
   msg.fold_type = target_lower_ ? kCommandFolded : kCommandRaised;
   command_pub_->publish(msg);
   last_publish_time_ = std::chrono::steady_clock::now();
