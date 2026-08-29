@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <ReactiveSequence name="aggressive_state_gate">
+      <Action ID="TopicsToBlackboard"/>
+      <Condition ID="GameStatusSub" start_status="4" max_data_age_ms="1000"/>
+
+      <SequenceStar name="aggressive_once_then_loop">
+        <ReactiveFallback name="init_once">
+          <SequenceWithMemory name="init_supply_if_needed">
+            <Condition ID="NeedSupply"
+                       enter_hp="150" enter_ammo="40"
+                       exit_hp="400" exit_ammo="50"
+                       require_game_start="true"/>
+            <Action ID="SwitchPoseAction" target_pose="防御姿态"/>
+            <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+            <RetryUntilSuccessful num_attempts="3">
+              <Action ID="SendGoalAction" name="init_goto_supply"
+                     goal_pose="0.0; 0.0; 0; 0; 0; 0; 1"
+                     action_name="navigate_to_pose"
+                     goal_timeout_sec="25"/>
+            </RetryUntilSuccessful>
+            <RetryUntilSuccessful num_attempts="1000000">
+              <Condition ID="RecoveredEnough" min_hp="400" min_ammo="50"/>
+            </RetryUntilSuccessful>
+            <Action ID="SwitchPoseAction" target_pose="移动姿态"/>
+            <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+            <RetryUntilSuccessful num_attempts="3">
+              <Action ID="SendGoalAction" name="init_return_to_attack1"
+                     goal_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                     action_name="navigate_to_pose"
+                     goal_timeout_sec="35"/>
+            </RetryUntilSuccessful>
+            <Action ID="SwitchPoseAction" target_pose="进攻姿态"/>
+          </SequenceWithMemory>
+
+          <SequenceWithMemory name="goto_first_attack_point">
+            <Action ID="SwitchPoseAction" target_pose="移动姿态"/>
+            <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+            <RetryUntilSuccessful num_attempts="3">
+              <Action ID="SendGoalAction" name="init_goto_attack_1"
+                     goal_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                     action_name="navigate_to_pose"
+                     goal_timeout_sec="35"/>
+            </RetryUntilSuccessful>
+            <Action ID="SwitchPoseAction" target_pose="进攻姿态"/>
+          </SequenceWithMemory>
+        </ReactiveFallback>
+
+        <Repeat num_cycles="1000000">
+          <ReactiveSequence name="aggressive_main_tick">
+            <Action ID="TopicsToBlackboard"/>
+            <Condition ID="GameStatusSub" start_status="4" max_data_age_ms="1000"/>
+
+            <ReactiveFallback name="aggressive_priority_loop">
+              <SequenceWithMemory name="SupplyRecovery">
+                <Condition ID="NeedSupply"
+                           enter_hp="150" enter_ammo="40"
+                           exit_hp="400" exit_ammo="50"
+                           require_game_start="true"/>
+                <Action ID="SwitchPoseAction" target_pose="防御姿态"/>
+                <Action ID="SetNavSpeedAction" speed_mps="3.5"/>
+                <Fallback name="supply_route_fallback">
+                  <RetryUntilSuccessful num_attempts="2">
+                    <Action ID="SendThroughGoalsAction" name="retreat_direct_to_supply"
+                           through_pose="6.0; 0.0; 0; 0; 0; 0; 1"
+                           through_pose_2="4.5; -2.0; 0; 0; 0; 0; 1"
+                           final_pose="0.0; 0.0; 0; 0; 0; 0; 1"
+                           action_name="navigate_through_poses"
+                           goal_timeout_sec="35"/>
+                  </RetryUntilSuccessful>
+                  <RetryUntilSuccessful num_attempts="3">
+                    <Action ID="SendGoalAction" name="goto_supply_direct_fallback"
+                           goal_pose="0.0; 0.0; 0; 0; 0; 0; 1"
+                           action_name="navigate_to_pose"
+                           goal_timeout_sec="25"/>
+                  </RetryUntilSuccessful>
+                </Fallback>
+                <RetryUntilSuccessful num_attempts="1000000">
+                  <Condition ID="RecoveredEnough" min_hp="400" min_ammo="50"/>
+                </RetryUntilSuccessful>
+                <Action ID="SwitchPoseAction" target_pose="移动姿态"/>
+                <Action ID="SetNavSpeedAction" speed_mps="3.0"/>
+                <RetryUntilSuccessful num_attempts="3">
+                  <Action ID="SendGoalAction" name="return_to_attack1_after_supply"
+                         goal_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                         action_name="navigate_to_pose"
+                         goal_timeout_sec="35"/>
+                </RetryUntilSuccessful>
+                <Action ID="SwitchPoseAction" target_pose="进攻姿态"/>
+              </SequenceWithMemory>
+
+              <SequenceWithMemory name="guard_buff_point">
+                <Condition ID="AlliesDown"/>
+                <Action ID="SwitchPoseAction" target_pose="防御姿态"/>
+                <Action ID="SetNavSpeedAction" speed_mps="2.5"/>
+                <RetryUntilSuccessful num_attempts="3">
+                  <Action ID="SendGoalAction" name="goto_buff"
+                         goal_pose="1.0; -0.5; 0; 0; 0; 0; 1"
+                         action_name="navigate_to_pose"
+                         goal_timeout_sec="25"/>
+                </RetryUntilSuccessful>
+                <Action ID="GuardFortress"/>
+              </SequenceWithMemory>
+
+              <SequenceWithMemory name="go_to_base_defense">
+                <Condition ID="LateGameDecision"/>
+                <Action ID="SwitchPoseAction" target_pose="防御姿态"/>
+                <Action ID="SetNavSpeedAction" speed_mps="2.0"/>
+                <RetryUntilSuccessful num_attempts="3">
+                  <Action ID="SendGoalAction" name="goto_base"
+                         goal_pose="-1.0; 2.0; 0; 0; 0; 0; 1"
+                         action_name="navigate_to_pose"
+                         goal_timeout_sec="30"/>
+                </RetryUntilSuccessful>
+              </SequenceWithMemory>
+
+              <SequenceWithMemory name="attack_cycle">
+                <Action ID="SwitchPoseAction" target_pose="移动姿态"/>
+                <Action ID="SetNavSpeedAction" speed_mps="3.5"/>
+                <RetryUntilSuccessful num_attempts="3">
+                  <Action ID="SendThroughGoalsAction" name="goto_attack2"
+                         through_pose="6.0; 0.0; 0; 0; 0; 0; 1"
+                         final_pose="8.5; 2.5; 0; 0; 0; 0; 1"
+                         action_name="navigate_through_poses"
+                         goal_timeout_sec="45"/>
+                </RetryUntilSuccessful>
+                <Action ID="SwitchPoseAction" target_pose="进攻姿态"/>
+                <Action ID="SetNavSpeedAction" speed_mps="2.0"/>
+                <Action ID="GuardFortress"/>
+                <Action ID="SwitchPoseAction" target_pose="防御姿态"/>
+                <Action ID="SetNavSpeedAction" speed_mps="3.5"/>
+                <RetryUntilSuccessful num_attempts="3">
+                  <Action ID="SendThroughGoalsAction" name="return_to_attack1"
+                         through_pose="6.0; 0.0; 0; 0; 0; 0; 1"
+                         through_pose_2="4.5; -2.0; 0; 0; 0; 0; 1"
+                         final_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                         action_name="navigate_through_poses"
+                         goal_timeout_sec="45"/>
+                </RetryUntilSuccessful>
+                <Action ID="SwitchPoseAction" target_pose="进攻姿态"/>
+              </SequenceWithMemory>
+            </ReactiveFallback>
+          </ReactiveSequence>
+        </Repeat>
+      </SequenceStar>
+    </ReactiveSequence>
+  </BehaviorTree>
+</root>

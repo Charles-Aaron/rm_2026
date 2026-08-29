@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=哨兵行为树配置
+Comment=打开第一进攻点巡逻补给行为树配置界面
+Exec=/home/nuc/rm_2026/src/decision/rm_sentry_decision/scripts/open_bt_config_ui.sh
+Terminal=true
+Categories=Development;Robotics;

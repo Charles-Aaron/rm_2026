@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <ReactiveSequence>
+      <SubGameStatus topic_name="game_status1"
+                     game_status="{game_status}"/>
+      <SubDecisionStatus topic_name="game_decision_status"
+                         game_decision_status="{game_decision_status}"/>
+      <WhileDoElse>
+        <ISGameStart message="{game_status}"/>
+        <Switch3 case_1="1"
+                 case_2="2"
+                 case_3="3"
+                 variable="{game_decision_status}">
+          <Sequence>
+            <SendGoal name="决策1测试点"
+                      goal_pose="2.0;2.0;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="2000"/>
+          </Sequence>
+          <Sequence>
+            <SendGoal name="决策2测试点"
+                      goal_pose="2.0;-2.0;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="2000"/>
+          </Sequence>
+          <Sequence>
+            <SendGoal name="决策3测试点"
+                      goal_pose="0.0;-2.0;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="2000"/>
+          </Sequence>
+          <Sequence>
+            <SendGoal name="default"
+                      goal_pose="0.0;-2.0;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="2000"/>
+          </Sequence>
+        </Switch3>
+        <Sleep msec="2000"/>
+      </WhileDoElse>
+    </ReactiveSequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Condition ID="ISGameStart"
+               editable="true">
+      <input_port name="message"/>
+    </Condition>
+    <Action ID="SendGoal"
+            editable="true">
+      <input_port name="goal_pose"
+                  default="0;0;0; 0;0;0;1"/>
+      <input_port name="action_name"
+                  default="navigate_to_pose"/>
+    </Action>
+    <Action ID="SubDecisionStatus"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="game_decision_status"/>
+    </Action>
+    <Action ID="SubGameStatus"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="game_status"/>
+    </Action>
+  </TreeNodesModel>
+
+</root>

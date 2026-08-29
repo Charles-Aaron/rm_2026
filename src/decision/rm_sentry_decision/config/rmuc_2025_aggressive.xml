@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <!--
+      激进版行为树 - 跨半场进攻策略 + 姿态转换
+
+      位置点:
+      - 补给点: (0.0, 0.0)
+      - 基地防守点: (-1.0, 2.0)
+      - 增益点: (1.0, -0.5)
+      - 第一进攻点: (5.27, -3.07)
+      - 第二进攻点: (8.5, 2.5)
+      - 低头提前触发点: (3.0, 0.0)
+      - 途经点1: (6.0, 0.0)
+      - 途经点2: (4.5, -2.0)
+    -->
+    <ReactiveSequence name="激进策略入口：同步数据并等待比赛开始">
+      <Action ID="TopicsToBlackboard" name="读取裁判和机器人状态到黑板"/>
+      <Condition ID="GameStatusSub" name="只在比赛进行阶段运行"
+                 start_status="4" max_data_age_ms="1000"/>
+
+      <SequenceStar name="激进策略：开局到第一进攻点后循环压制">
+        <SequenceWithMemory name="开局初始化：低头过点后到第一进攻点">
+          <Action ID="SwitchPoseAction" name="开局切换为移动姿态"
+                  target_pose="移动姿态"/>
+          <Action ID="SetNavSpeedAction" name="开局速度设为3.0米每秒"
+                  speed_mps="3.0"/>
+          <RetryUntilSuccessful name="最多重试3次导航到低头等待点"
+                                num_attempts="3">
+            <Action ID="SendThroughGoalsAction" name="开局经过低头提前触发点到低头等待点"
+                   through_pose="3.0; 0.0; 0; 0; 0; 0; 1"
+                   final_pose="6.0; 0.0; 0; 0; 0; 0; 1"
+                   action_name="navigate_through_poses"
+                   goal_timeout_sec="25"
+                   gimbal_command_on_final_leg="true"
+                   gimbal_command_value="true"
+                   gimbal_command_duration_ms="1500"
+                   gimbal_command_period_ms="100"
+                   gimbal_command_topic="/sentry/gimbal_lower_command"/>
+          </RetryUntilSuccessful>
+          <Action ID="GimbalLowerAction" name="持续发送低头命令并等待电控确认"
+                  target_lower="true"
+                  wait_state="true"
+                  timeout_ms="3000"
+                  publish_period_ms="100"
+                  continue_on_timeout="true"
+                  command_topic="/sentry/gimbal_lower_command"
+                  state_topic="/gimbal_controller/gimbal_status"/>
+          <RetryUntilSuccessful name="最多重试3次经过抬头触发点到第一进攻点"
+                                num_attempts="3">
+            <Action ID="SendThroughGoalsAction" name="经过抬头触发点后到第一进攻点"
+                   through_pose="4.5; -2.0; 0; 0; 0; 0; 1"
+                   final_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                   action_name="navigate_through_poses"
+                   goal_timeout_sec="35"
+                   gimbal_command_on_final_leg="true"
+                   gimbal_command_value="false"
+                   gimbal_command_duration_ms="1500"
+                   gimbal_command_period_ms="100"
+                   gimbal_command_topic="/sentry/gimbal_lower_command"/>
+          </RetryUntilSuccessful>
+          <Action ID="SwitchPoseAction" name="到达第一进攻点后切进攻姿态"
+                  target_pose="进攻姿态"/>
+        </SequenceWithMemory>
+
+        <Repeat name="主循环：补给、增益点、终局、进攻循环"
+                num_cycles="1000000">
+          <ReactiveSequence name="每次循环：刷新数据并确认比赛仍在进行">
+            <Action ID="TopicsToBlackboard" name="主循环读取最新状态到黑板"/>
+            <Condition ID="GameStatusSub" name="主循环确认比赛仍在进行"
+                       start_status="4" max_data_age_ms="1000"/>
+
+            <ReactiveFallback name="激进优先级选择">
+              <SequenceWithMemory name="优先级1：低血低弹撤退补给">
+                <Condition ID="NeedSupply" name="判断是否需要撤退补给"
+                           enter_hp="110" enter_ammo="40"
+                           exit_hp="400" exit_ammo="50"
+                           require_game_start="true"
+                           max_data_age_ms="1000"/>
+                <Action ID="SwitchPoseAction" name="撤退前切换为防御姿态"
+                        target_pose="防御姿态"/>
+                <Action ID="SetNavSpeedAction" name="撤退速度设为3.5米每秒"
+                        speed_mps="3.5"/>
+
+                <Fallback name="撤退路线：优先经第一进攻点回补给，失败则直回补给">
+                  <SequenceWithMemory name="经途经点回第一进攻点再去补给">
+                    <RetryUntilSuccessful name="最多重试2次撤回第一进攻点"
+                                          num_attempts="2">
+                      <Action ID="SendThroughGoalsAction" name="经途经点撤回第一进攻点"
+                             through_pose="6.0; 0.0; 0; 0; 0; 0; 1"
+                             through_pose_2="4.5; -2.0; 0; 0; 0; 0; 1"
+                             final_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                             action_name="navigate_through_poses"
+                             goal_timeout_sec="45"/>
+                    </RetryUntilSuccessful>
+                    <Action ID="SetNavSpeedAction" name="回补给速度设为3.0米每秒"
+                            speed_mps="2.5"/>
+                    <RetryUntilSuccessful name="最多重试3次从第一进攻点回补给"
+                                          num_attempts="3">
+                      <Action ID="SendGoalAction" name="从第一进攻点导航到补给点"
+                             goal_pose="0.0; 0.0; 0; 0; 0; 0; 1"
+                             action_name="navigate_to_pose"
+                             goal_timeout_sec="25"/>
+                    </RetryUntilSuccessful>
+                  </SequenceWithMemory>
+
+                  <RetryUntilSuccessful name="备用路线：最多重试3次直接回补给"
+                                        num_attempts="3">
+                    <Action ID="SendGoalAction" name="直接导航到补给点"
+                           goal_pose="0.0; 0.0; 0; 0; 0; 0; 1"
+                           action_name="navigate_to_pose"
+                           goal_timeout_sec="25"/>
+                  </RetryUntilSuccessful>
+                </Fallback>
+
+                <RetryUntilSuccessful name="持续等待补给恢复完成"
+                                      num_attempts="1000000">
+                  <Condition ID="RecoveredEnough" name="确认补给后血量弹量足够"
+                             min_hp="400" min_ammo="50"
+                             require_game_start="true"
+                             max_data_age_ms="1000"/>
+                </RetryUntilSuccessful>
+                <Action ID="SwitchPoseAction" name="补给完成后切移动姿态"
+                        target_pose="移动姿态"/>
+                <Action ID="SetNavSpeedAction" name="返回第一进攻点速度设为3.0米每秒"
+                        speed_mps="3.0"/>
+                <RetryUntilSuccessful name="最多重试3次返回第一进攻点"
+                                      num_attempts="3">
+                  <Action ID="SendGoalAction" name="补给后返回第一进攻点"
+                         goal_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                         action_name="navigate_to_pose"
+                         goal_timeout_sec="35"/>
+                </RetryUntilSuccessful>
+                <Action ID="SwitchPoseAction" name="回到第一进攻点后切进攻姿态"
+                        target_pose="进攻姿态"/>
+              </SequenceWithMemory>
+
+              <SequenceWithMemory name="优先级2：队友阵亡且非终局时守增益点">
+                <Condition ID="AlliesDown" name="终局前判断1号3号4号队友是否全部阵亡"
+                           max_data_age_ms="1000"
+                           min_stage_remain_time="150"/>
+                <Action ID="SwitchPoseAction" name="守增益点前切换为防御姿态"
+                        target_pose="防御姿态"/>
+                <Action ID="SetNavSpeedAction" name="前往增益点速度设为2.5米每秒"
+                        speed_mps="2.5"/>
+                <RetryUntilSuccessful name="最多重试3次导航到增益点"
+                                      num_attempts="3">
+                  <Action ID="SendGoalAction" name="导航到基地增益点"
+                         goal_pose="1.0; -0.5; 0; 0; 0; 0; 1"
+                         action_name="navigate_to_pose"
+                         goal_timeout_sec="25"/>
+                </RetryUntilSuccessful>
+                <Action ID="GuardFortress" name="到达后守卫增益点60秒"/>
+              </SequenceWithMemory>
+
+              <SequenceWithMemory name="优先级3：终局阶段回基地防守">
+                <Condition ID="LateGameDecision" name="判断是否进入终局回防条件"
+                           critical_time="150"/>
+                <Action ID="SwitchPoseAction" name="回基地前切换为防御姿态"
+                        target_pose="防御姿态"/>
+                <Action ID="SetNavSpeedAction" name="回基地速度设为2.0米每秒"
+                        speed_mps="2.0"/>
+                <RetryUntilSuccessful name="最多重试3次导航到基地防守点"
+                                      num_attempts="3">
+                  <Action ID="SendGoalAction" name="导航到基地防守点"
+                         goal_pose="-1.0; 2.0; 0; 0; 0; 0; 1"
+                         action_name="navigate_to_pose"
+                         goal_timeout_sec="30"/>
+                </RetryUntilSuccessful>
+              </SequenceWithMemory>
+
+              <SequenceWithMemory name="优先级4：第一进攻点和第二进攻点循环压制">
+                <Action ID="SwitchPoseAction" name="前往第二进攻点前切移动姿态"
+                        target_pose="移动姿态"/>
+                <Action ID="SetNavSpeedAction" name="前往第二进攻点速度设为3.5米每秒"
+                        speed_mps="3.5"/>
+                <RetryUntilSuccessful name="最多重试3次导航到第二进攻点"
+                                      num_attempts="3">
+                  <Action ID="SendThroughGoalsAction" name="经中场途经点前往第二进攻点"
+                         through_pose="6.0; 0.0; 0; 0; 0; 0; 1"
+                         final_pose="8.5; 2.5; 0; 0; 0; 0; 1"
+                         action_name="navigate_through_poses"
+                         goal_timeout_sec="45"/>
+                </RetryUntilSuccessful>
+                <Action ID="SwitchPoseAction" name="到达第二进攻点后切进攻姿态"
+                        target_pose="进攻姿态"/>
+                <Action ID="SetNavSpeedAction" name="第二进攻点活动速度设为2.0米每秒"
+                        speed_mps="2.0"/>
+                <Action ID="GuardFortress" name="在第二进攻点活动60秒"/>
+                <Action ID="SwitchPoseAction" name="返回第一进攻点前切防御姿态"
+                        target_pose="防御姿态"/>
+                <Action ID="SetNavSpeedAction" name="返回第一进攻点速度设为3.5米每秒"
+                        speed_mps="3.5"/>
+                <RetryUntilSuccessful name="最多重试3次返回第一进攻点"
+                                      num_attempts="3">
+                  <Action ID="SendThroughGoalsAction" name="经途经点返回第一进攻点"
+                         through_pose="6.0; 0.0; 0; 0; 0; 0; 1"
+                         through_pose_2="4.5; -2.0; 0; 0; 0; 0; 1"
+                         final_pose="5.27; -3.07; 0; 0; 0; 0; 1"
+                         action_name="navigate_through_poses"
+                         goal_timeout_sec="45"/>
+                </RetryUntilSuccessful>
+                <Action ID="SwitchPoseAction" name="回到第一进攻点后恢复进攻姿态"
+                        target_pose="进攻姿态"/>
+              </SequenceWithMemory>
+            </ReactiveFallback>
+          </ReactiveSequence>
+        </Repeat>
+      </SequenceStar>
+    </ReactiveSequence>
+  </BehaviorTree>
+</root>

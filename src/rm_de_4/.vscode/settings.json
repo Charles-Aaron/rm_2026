@@ -1,0 +1,24 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/nuc/ros2_ws/install/rm_decision_interfaces/local/lib/python3.10/dist-packages",
+        "/home/nuc/sentry_ws/install/rm_interfaces/local/lib/python3.10/dist-packages",
+        "/home/nuc/sentry_ws/install/fast_lio/local/lib/python3.10/dist-packages",
+        "/home/nuc/sentry_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages",
+        "/home/nuc/sentry_ws/build/control_panel",
+        "/home/nuc/sentry_ws/install/control_panel/lib/python3.10/site-packages",
+        "/home/nuc/sentry_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/nuc/ros2_ws/install/rm_decision_interfaces/local/lib/python3.10/dist-packages",
+        "/home/nuc/sentry_ws/install/rm_interfaces/local/lib/python3.10/dist-packages",
+        "/home/nuc/sentry_ws/install/fast_lio/local/lib/python3.10/dist-packages",
+        "/home/nuc/sentry_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages",
+        "/home/nuc/sentry_ws/build/control_panel",
+        "/home/nuc/sentry_ws/install/control_panel/lib/python3.10/site-packages",
+        "/home/nuc/sentry_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

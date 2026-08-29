@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <!--
+      第一进攻点巡逻补给行为树
+
+      位置点:
+      - 补给点: (0.0, 0.0)
+      - 第一进攻点: (5.27, -3.07)
+      - 低头提前触发点: (3.0, 0.0)
+      - 低头等待点: (6.0, 0.0)
+      - 抬头触发点/巡逻点: (4.5, -2.0)
+    -->
+    <ReactiveSequence name="第一进攻点巡逻入口：同步数据并等待比赛开始">
+      <Action ID="TopicsToBlackboard" name="读取裁判和机器人状态到黑板" />
+      <Condition ID="GameStatusSub" name="只在比赛进行阶段运行" start_status="4" max_data_age_ms="1000" />
+      <SequenceStar name="开局到第一进攻点后进入巡逻补给循环">
+        <ReactiveFallback name="开局阶段：补给优先，否则上第一进攻点">
+          <SequenceWithMemory name="开局优先级1：低血低弹先补给">
+            <Condition ID="NeedSupply" name="开局判断是否需要先补给" enter_hp="110" enter_ammo="40" exit_hp="400" exit_ammo="50" require_game_start="true" max_data_age_ms="1000" />
+            <Action ID="LogInfoAction" name="流程日志：开局先补给" message="开局阶段触发低血/低弹，先返回补给点" period_ms="1000" />
+            <Action ID="SwitchPoseAction" name="开局补给前切换为防御姿态" target_pose="防御姿态" />
+            <Action ID="SetNavSpeedAction" name="开局回补给速度设为2.0米每秒" speed_mps="2.0" />
+            <RetryUntilSuccessful name="开局最多重试10次导航到补给点" num_attempts="10">
+              <Action ID="SendGoalAction" name="开局导航到补给点" goal_pose="2; 0; 0; 0; 0; 0; 1" action_name="navigate_to_pose" goal_timeout_sec="25" />
+            </RetryUntilSuccessful>
+            <RetryUntilSuccessful name="开局持续等待补给恢复完成" num_attempts="1000000">
+              <Condition ID="RecoveredEnough" name="开局确认补给后血量弹量足够" min_hp="400" min_ammo="50" require_game_start="true" max_data_age_ms="1000" />
+            </RetryUntilSuccessful>
+            <Action ID="SwitchPoseAction" name="开局补给完成后切移动姿态" target_pose="移动姿态" />
+            <Action ID="SetNavSpeedAction" name="开局补给后返回第一进攻点速度设为3.0米每秒" speed_mps="3.0" />
+            <RetryUntilSuccessful name="开局最多重试10次返回第一进攻点" num_attempts="10">
+              <Action ID="SendGoalAction" name="开局补给后返回第一进攻点" goal_pose="5.27; -3.07; 0; 0; 0; 0; 1" action_name="navigate_to_pose" goal_timeout_sec="35" />
+            </RetryUntilSuccessful>
+            <Action ID="SwitchPoseAction" name="开局回到第一进攻点后切进攻姿态" target_pose="进攻姿态" />
+          </SequenceWithMemory>
+          <SequenceWithMemory name="开局初始化：低头过点后到第一进攻点">
+          <Action ID="LogInfoAction" name="流程日志：开局正常上第一进攻点" message="开局阶段无需补给，执行低头流程并前往第一进攻点" period_ms="1000" />
+          <Action ID="SwitchPoseAction" name="开局切换为移动姿态" target_pose="移动姿态" />
+          <Action ID="SetNavSpeedAction" name="开局速度设为3.0米每秒" speed_mps="3.0" />
+          <RetryUntilSuccessful name="最多重试10次导航到低头等待点" num_attempts="10">
+            <Action ID="SendThroughGoalsAction" name="开局经过低头提前触发点到低头等待点" through_pose="3; 0; 0; 0; 0; 0; 1" final_pose="6; 0; 0; 0; 0; 0; 1" action_name="navigate_through_poses" goal_timeout_sec="25" gimbal_command_on_final_leg="true" gimbal_command_value="true" gimbal_command_duration_ms="3000" gimbal_command_period_ms="100" gimbal_command_topic="/sentry/gimbal_lower_command" />
+          </RetryUntilSuccessful>
+          <Action ID="GimbalLowerAction" name="持续发送低头命令并等待电控确认" target_lower="true" wait_state="true" timeout_ms="5000" publish_period_ms="100" continue_on_timeout="true" command_topic="/sentry/gimbal_lower_command" state_topic="/gimbal_controller/gimbal_status" />
+          <RetryUntilSuccessful name="最多重试10次经过抬头触发点到第一进攻点" num_attempts="10">
+            <Action ID="SendThroughGoalsAction" name="经过抬头触发点后到第一进攻点" through_pose="4.5; -2; 0; 0; 0; 0; 1" final_pose="5.27; -3.07; 0; 0; 0; 0; 1" action_name="navigate_through_poses" goal_timeout_sec="35" gimbal_command_on_final_leg="true" gimbal_command_value="false" gimbal_command_duration_ms="3000" gimbal_command_period_ms="100" gimbal_command_topic="/sentry/gimbal_lower_command" />
+          </RetryUntilSuccessful>
+          <Action ID="SwitchPoseAction" name="到达第一进攻点后切进攻姿态" target_pose="进攻姿态" />
+          </SequenceWithMemory>
+        </ReactiveFallback>
+        <Repeat name="主循环：补给优先，第一进攻点附近巡逻" num_cycles="1000000">
+          <ReactiveSequence name="每次循环：刷新数据并确认比赛仍在进行">
+            <Action ID="TopicsToBlackboard" name="主循环读取最新状态到黑板" />
+            <Condition ID="GameStatusSub" name="主循环确认比赛仍在进行" start_status="4" max_data_age_ms="1000" />
+            <ReactiveFallback name="优先级选择：补给或第一进攻点巡逻">
+              <SequenceWithMemory name="优先级1：低血低弹撤退补给">
+                <Condition ID="NeedSupply" name="判断是否需要撤退补给" enter_hp="110" enter_ammo="40" exit_hp="400" exit_ammo="50" require_game_start="true" max_data_age_ms="1000" />
+                <Action ID="LogInfoAction" name="流程日志：主循环撤退补给" message="主循环触发低血/低弹，打断巡逻并撤退补给" period_ms="1000" />
+                <Action ID="SwitchPoseAction" name="撤退前切换为防御姿态" target_pose="防御姿态" />
+                <Action ID="SetNavSpeedAction" name="回补给速度设为3.0米每秒" speed_mps="2.0" />
+                <RetryUntilSuccessful name="最多重试10次导航到补给点" num_attempts="10">
+                  <Action ID="SendGoalAction" name="导航到补给点" goal_pose="2; 0; 0; 0; 0; 0; 1" action_name="navigate_to_pose" goal_timeout_sec="25" />
+                </RetryUntilSuccessful>
+                <RetryUntilSuccessful name="持续等待补给恢复完成" num_attempts="1000000">
+                  <Condition ID="RecoveredEnough" name="确认补给后血量弹量足够" min_hp="400" min_ammo="50" require_game_start="true" max_data_age_ms="1000" />
+                </RetryUntilSuccessful>
+                <Action ID="SwitchPoseAction" name="补给完成后切移动姿态" target_pose="移动姿态" />
+                <Action ID="SetNavSpeedAction" name="返回第一进攻点速度设为3.0米每秒" speed_mps="3.0" />
+                <RetryUntilSuccessful name="最多重试10次返回第一进攻点" num_attempts="10">
+                  <Action ID="SendGoalAction" name="补给后返回第一进攻点" goal_pose="5.27; -3.07; 0; 0; 0; 0; 1" action_name="navigate_to_pose" goal_timeout_sec="35" />
+                </RetryUntilSuccessful>
+                <Action ID="SwitchPoseAction" name="回到第一进攻点后切进攻姿态" target_pose="进攻姿态" />
+              </SequenceWithMemory>
+              <SequenceWithMemory name="优先级2：第一进攻点附近CSV巡逻">
+                <Action ID="LogInfoAction" name="流程日志：主循环巡逻" message="主循环无需补给，执行第一进攻点附近巡逻" period_ms="1000" />
+                <Action ID="LoadWaypoints" name="读取第一进攻点巡逻CSV" waypoint_file="first_attack_patrol.csv" frame_id="map" waypoints="{patrol_waypoints}" wait_times="{patrol_wait_times}" total_waypoints="{patrol_total_wp}" wp_idx="{patrol_wp_idx}" />
+                <Repeat name="巡逻循环：反复执行第一进攻点附近巡逻点" num_cycles="1000000">
+                  <SequenceWithMemory name="执行一个巡逻点">
+                    <Action ID="GetCurrentWaypoint" name="取出当前巡逻目标点" waypoints="{patrol_waypoints}" wait_times="{patrol_wait_times}" wp_idx="{patrol_wp_idx}" current_goal="{current_patrol_goal}" current_goal_pose="{current_patrol_goal_pose}" current_wait_sec="{current_patrol_wait_sec}" />
+                    <Action ID="SetNavSpeedAction" name="巡逻速度设为2.0米每秒" speed_mps="3.5" />
+                    <RetryUntilSuccessful name="最多重试10次导航到当前巡逻点" num_attempts="10">
+                      <Action ID="SendGoalAction" name="导航到当前巡逻点" goal_pose="{current_patrol_goal_pose}" action_name="navigate_to_pose" goal_timeout_sec="30" />
+                    </RetryUntilSuccessful>
+                    <Action ID="WaitUntilReached" name="等待机器人进入目标0.6米范围" goal_pose="{current_patrol_goal}" tolerance="0.6" global_frame="map" robot_frame="gimbal_yaw_fake" />
+                    <Action ID="WaitDuration" name="按CSV配置在巡逻点停留" duration_sec="{current_patrol_wait_sec}" />
+                    <Action ID="NextWaypoint" name="切换到下一个巡逻点" wp_idx="{patrol_wp_idx}" total_waypoints="{patrol_total_wp}" />
+                  </SequenceWithMemory>
+                </Repeat>
+              </SequenceWithMemory>
+            </ReactiveFallback>
+          </ReactiveSequence>
+        </Repeat>
+      </SequenceStar>
+    </ReactiveSequence>
+  </BehaviorTree>
+</root>

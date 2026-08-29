@@ -3,12 +3,15 @@ import os
 import yaml
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
 
 
 def generate_launch_description():
     pkg_simulator = get_package_share_directory("rmu_gazebo_simulator")
+    use_gui = LaunchConfiguration("use_gui")
+    gui_delay = LaunchConfiguration("gui_delay")
 
     gz_world_path = os.path.join(pkg_simulator, "config", "gz_world.yaml")
     with open(gz_world_path) as file:
@@ -27,6 +30,8 @@ def generate_launch_description():
         launch_arguments={
             "world_sdf_path": world_sdf_path,
             "ign_config_path": ign_config_path,
+            "use_gui": use_gui,
+            "gui_delay": gui_delay,
         }.items(),
     )
 
@@ -47,6 +52,20 @@ def generate_launch_description():
     )
 
     ld = LaunchDescription()
+    ld.add_action(
+        DeclareLaunchArgument(
+            "use_gui",
+            default_value="True",
+            description="Whether to start Gazebo GUI window",
+        )
+    )
+    ld.add_action(
+        DeclareLaunchArgument(
+            "gui_delay",
+            default_value="15.0",
+            description="Delay (seconds) before starting Gazebo GUI",
+        )
+    )
 
     ld.add_action(gazebo_launch)
     ld.add_action(spawn_robots_launch)

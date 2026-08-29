@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <ReactiveSequence>
+      <SubGameStatus topic_name="game_status"
+                     game_status="{game_status}"/>
+      <SubBothCampHp topic_name="both_camp_hp"
+                     both_camp_hp="{both_camp_hp}"/>
+      <SubIsDetectEnemy topic_name="detect_enemy_status"
+                        detect_enemy_status="{detect_enemy_status}"/>
+      <WhileDoElse>
+        <ISGameStart message="{game_status}"/>
+        <WhileDoElse>
+          <IfRestoresHealth both_camp_hp="{both_camp_hp}"
+                            sentry_blood_threshold="120"
+                            sentry_full_blood="400"/>
+          <Sequence>
+            <SendGoal name="回家补血"
+                      goal_pose="-2.0;-3.0;0; 0;0;0;1"
+                      action_name="navigate_to_pose"/>
+            <Sleep msec="1000"/>
+          </Sequence>
+          <WhileDoElse>
+            <IsDetectEnemy message="{detect_enemy_status}"/>
+            <Sleep msec="2000"/>
+            <AsyncSequence>
+              <SendGoal name="占领中心增益点(巡逻点1)"
+                        goal_pose="3.0;-1.0;0; 0;0;0;1"
+                        action_name="navigate_to_pose"/>
+              <Sleep msec="3000"/>
+              <SendGoal name="占领中心增益点(巡逻点1)"
+                        goal_pose="3;2;0; 0;0;0;1"
+                        action_name="navigate_to_pose"/>
+              <Sleep msec="3000"/>
+            </AsyncSequence>
+          </WhileDoElse>
+        </WhileDoElse>
+        <Sleep msec="5000"/>
+      </WhileDoElse>
+    </ReactiveSequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Condition ID="ISGameStart"
+               editable="true">
+      <input_port name="message"/>
+    </Condition>
+    <Condition ID="IfRestoresHealth"
+               editable="true">
+      <input_port name="both_camp_hp"/>
+      <input_port name="sentry_blood_threshold"/>
+      <input_port name="sentry_full_blood"/>
+    </Condition>
+    <Condition ID="IsDetectEnemy"
+               editable="true">
+      <input_port name="message"/>
+    </Condition>
+    <Action ID="SendGoal"
+            editable="true">
+      <input_port name="goal_pose"
+                  default="0;0;0; 0;0;0;1"/>
+      <input_port name="action_name"
+                  default="navigate_to_pose"/>
+    </Action>
+    <Action ID="SubBothCampHp"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="both_camp_hp"/>
+    </Action>
+    <Action ID="SubGameStatus"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="game_status"/>
+    </Action>
+    <Action ID="SubIsDetectEnemy"
+            editable="true">
+      <input_port name="topic_name"/>
+      <output_port name="detect_enemy_status"/>
+    </Action>
+  </TreeNodesModel>
+
+</root>
