@@ -1,0 +1,10 @@
+# Absolute yaw in map. When enabled, preserve fresh navigation translation.
+float64 target_yaw
+float64 tolerance
+float64 timeout
+bool allow_translation
+---
+bool success
+string reason
+---
+float64 yaw_error

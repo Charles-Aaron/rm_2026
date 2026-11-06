@@ -1,0 +1,245 @@
+# A* + TDT MinimumSnap + TinyMPC; response constants require identification.
+amcl:
+  ros__parameters:
+    use_sim_time: false
+bt_navigator:
+  ros__parameters:
+    use_sim_time: false
+    global_frame: map
+    robot_base_frame: chassis_link
+    odom_topic: chassis_odom
+    default_nav_through_poses_bt_xml: $(find-pkg-share navigation_bringup)/config/navigate_through_poses_translation.xml
+    default_nav_to_pose_bt_xml: $(find-pkg-share navigation_bringup)/config/navigate_to_pose_translation.xml
+    plugin_lib_names:
+    - nav2_compute_path_to_pose_action_bt_node
+    - nav2_compute_path_through_poses_action_bt_node
+    - nav2_smooth_path_action_bt_node
+    - nav2_follow_path_action_bt_node
+    - nav2_spin_action_bt_node
+    - nav2_wait_action_bt_node
+    - nav2_assisted_teleop_action_bt_node
+    - nav2_back_up_action_bt_node
+    - nav2_drive_on_heading_bt_node
+    - nav2_clear_costmap_service_bt_node
+    - nav2_is_stuck_condition_bt_node
+    - nav2_goal_reached_condition_bt_node
+    - nav2_goal_updated_condition_bt_node
+    - nav2_globally_updated_goal_condition_bt_node
+    - nav2_is_path_valid_condition_bt_node
+    - nav2_initial_pose_received_condition_bt_node
+    - nav2_reinitialize_global_localization_service_bt_node
+    - nav2_rate_controller_bt_node
+    - nav2_distance_controller_bt_node
+    - nav2_speed_controller_bt_node
+    - nav2_truncate_path_action_bt_node
+    - nav2_truncate_path_local_action_bt_node
+    - nav2_goal_updater_node_bt_node
+    - nav2_recovery_node_bt_node
+    - nav2_pipeline_sequence_bt_node
+    - nav2_round_robin_node_bt_node
+    - nav2_transform_available_condition_bt_node
+    - nav2_time_expired_condition_bt_node
+    - nav2_path_expiring_timer_condition
+    - nav2_distance_traveled_condition_bt_node
+    - nav2_single_trigger_bt_node
+    - nav2_goal_updated_controller_bt_node
+    - nav2_is_battery_low_condition_bt_node
+    - nav2_navigate_through_poses_action_bt_node
+    - nav2_navigate_to_pose_action_bt_node
+    - nav2_remove_passed_goals_action_bt_node
+    - nav2_planner_selector_bt_node
+    - nav2_controller_selector_bt_node
+    - nav2_goal_checker_selector_bt_node
+    - nav2_controller_cancel_bt_node
+    - nav2_path_longer_on_approach_bt_node
+    - nav2_wait_cancel_bt_node
+    - nav2_spin_cancel_bt_node
+    - nav2_back_up_cancel_bt_node
+    - nav2_assisted_teleop_cancel_bt_node
+    - nav2_drive_on_heading_cancel_bt_node
+    - nav2_is_battery_charging_condition_bt_node
+    - sentry_ordered_navigation_bt
+controller_server:
+  ros__parameters:
+    use_sim_time: false
+    controller_frequency: 40.0
+    min_x_velocity_threshold: 0.001
+    min_y_velocity_threshold: 0.001
+    min_theta_velocity_threshold: 0.001
+    odom_topic: chassis_odom
+    progress_checker_plugins:
+    - progress_checker
+    goal_checker_plugins:
+    - general_goal_checker
+    - ordered_goal_checker
+    controller_plugins:
+    - FollowPath
+    progress_checker:
+      plugin: nav2_controller::SimpleProgressChecker
+      required_movement_radius: 0.25
+      movement_time_allowance: 8.0
+    general_goal_checker:
+      plugin: sentry_nav::TranslationGoalChecker
+      xy_goal_tolerance: 0.2
+      trans_stopped_velocity: 0.10
+      goal_confirmation_time: 0.2
+    ordered_goal_checker:
+      plugin: sentry_nav::TranslationGoalChecker
+      xy_goal_tolerance: 0.2
+      trans_stopped_velocity: 0.10
+      goal_confirmation_time: 0.2
+      require_waypoint_progress: true
+    FollowPath:
+      plugin: sentry_nav::SnapMpcController
+      max_speed: 2.6
+      max_acceleration: 3.5
+      local_goal_speed_ratio: 0.2  # Transit endpoint speed / active speed limit; final goal stays zero
+      robot_radius: 0.20 # Local A*
+      snap_robot_radius: 0.20  # TDT MinimumSnap only; local A* still uses robot_radius
+      unknown_is_obstacle: true
+      lookahead: 6.0          #3.5
+      waypoint_pass_tolerance: 0.7  # Intermediate XY passage; no stop or yaw requirement
+      replan_period: 0.75  # Routine refresh; urgent replans remain at most 10 Hz
+      urgent_replan_period: 0.1
+      max_candidate_age: 0.3  # Reject stale results; no scheduled future handover
+      astar_timeout: 0.1
+      snap_timeout: 0.2
+      snap_corridor_range: 0.4
+      snap_collision_iterations: 6
+      mpc_timeout: 0.016
+      horizon: 40
+      model_dt: 0.025
+      # Effective response along fixed local planning-frame (odom) axes.
+      response_x: 0.15
+      response_y: 0.15
+      spin_model_gain: 0.25      # 0 disables coupling; 1 uses full measured angular velocity 预测模型角速度=实际角速度*该值
+      spin_yaw_prediction_gain: 1.0  # scales angular advance; 0 disables it yaw的倍率，越大越提前
+      spin_yaw_extra_delay: 0.0  # seconds beyond measured odometry age; tune from recordings 电控执行延迟，越大越提前      odom_timeout: 0.2
+      goal_settle_speed: 0.12  # Start terminal braking only below this measured/command speed
+planner_server:
+  ros__parameters:
+    use_sim_time: false
+    expected_planner_frequency: 10.0
+    planner_plugins:
+    - GridBased
+    GridBased:
+      plugin: sentry_nav::TdtAstarPlanner
+      robot_radius: 0.10
+      unknown_is_obstacle: true
+      timeout: 0.5
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      use_sim_time: false
+      update_frequency: 20.0
+      publish_frequency: 20.0
+      always_send_full_costmap: true
+      global_frame: odom
+      robot_base_frame: chassis_link
+      rolling_window: true
+      width: 10
+      height: 10
+      resolution: 0.05
+      robot_radius: 0.10
+      footprint_padding: 0.02
+      plugins:
+      - static_layer
+      # Temporarily disabled: restore this entry to enable lidar obstacles.
+      - intensity_voxel_layer
+      intensity_voxel_layer:
+        plugin: pb_nav2_costmap_2d::IntensityVoxelLayer
+        enabled: true
+        track_unknown_space: true
+        footprint_clearing_enabled: true
+        publish_voxel_map: false
+        combination_method: 1
+        mark_threshold: 0
+        origin_z: -0.5
+        z_resolution: 0.1
+        z_voxels: 16
+        unknown_threshold: 5
+        min_obstacle_intensity: 0.0
+        max_obstacle_intensity: 255.0
+        min_obstacle_height: 0.05
+        max_obstacle_height: 0.25
+        observation_sources: lidar
+        lidar:
+          topic: /x_sentry/registered_cloud
+          data_type: PointCloud2
+          sensor_frame: imu_link
+          observation_persistence: 0.0
+          expected_update_rate: 0.5
+          marking: true
+          min_obstacle_height: 0.05
+          max_obstacle_height: 2.0
+          obstacle_min_range: 0.3
+          obstacle_max_range: 20.0
+      static_layer:
+        plugin: nav2_costmap_2d::StaticLayer
+        map_subscribe_transient_local: true
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      use_sim_time: false
+      update_frequency: 2.0
+      publish_frequency: 1.0
+      always_send_full_costmap: true
+      global_frame: map
+      robot_base_frame: chassis_link
+      robot_radius: 0.26
+      resolution: 0.05
+      track_unknown_space: true
+      plugins:
+      - static_layer
+      static_layer:
+        plugin: nav2_costmap_2d::StaticLayer
+        map_subscribe_transient_local: true
+behavior_server:
+  ros__parameters:
+    use_sim_time: false
+    global_frame: odom
+    robot_base_frame: chassis_link
+    local_costmap_topic: local_costmap/costmap_raw
+    global_costmap_topic: global_costmap/costmap_raw
+    cycle_frequency: 10.0
+    behavior_plugins:
+    - wait
+    wait:
+      plugin: nav2_behaviors/Wait
+waypoint_follower:
+  ros__parameters:
+    use_sim_time: false
+    loop_rate: 20
+    stop_on_failure: false
+    waypoint_task_executor_bt:
+      plugin: nav2_waypoint_follower::WaitAtWaypoint
+      enabled: false
+velocity_smoother:
+  ros__parameters:
+    use_sim_time: false
+    smoothing_frequency: 40.0
+    scale_velocities: false
+    feedback: OPEN_LOOP
+    max_velocity:
+    - 2.6
+    - 2.6
+    - 0.0
+    min_velocity:
+    - -2.6
+    - -2.6
+    - 0.0
+    max_accel:
+    - 1000.0
+    - 1000.0
+    - 1000.0
+    max_decel:
+    - -1000.0
+    - -1000.0
+    - -1000.0
+    odom_topic: chassis_odom
+    odom_duration: 0.1
+    deadband_velocity:
+    - 0.0
+    - 0.0
+    - 0.0
+    velocity_timeout: 0.1

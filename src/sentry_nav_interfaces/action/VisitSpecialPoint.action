@@ -1,0 +1,7 @@
+# One navigation-then-rotation transaction. Repeated requests are new task instances.
+string point_id
+---
+bool success
+string reason
+---
+string phase

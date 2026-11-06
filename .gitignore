@@ -1,0 +1,10 @@
+/build/
+/install/
+/log/
+/third_party/
+__pycache__/
+*.pyc
+/frames_*.gv
+/frames_*.pdf
+/maps/biai_prior/
+/maps/biai_2d/

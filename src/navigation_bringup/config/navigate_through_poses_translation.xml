@@ -1,0 +1,42 @@
+<!--
+  Progress is measured by the controller at control frequency. Global replans
+  consume its remaining goals; path and waypoint metadata are bound before use.
+-->
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <OrderedNavigation goals="{goals}" task_id="{waypoint_task_id}">
+      <RecoveryNode number_of_retries="6" name="NavigateRecovery">
+        <PipelineSequence name="NavigateWithReplanning">
+          <RateController hz="1.0">
+            <RecoveryNode number_of_retries="1" name="ComputePathThroughPoses">
+              <Sequence>
+                <GetRemainingGoals goals="{goals}" task_id="{waypoint_task_id}"
+                                   remaining_goals="{remaining_goals}" first_index="{waypoint_first_index}"
+                                   service_name="FollowPath/ordered_route" server_timeout="500"/>
+                <ComputePathThroughPoses goals="{remaining_goals}" path="{planned_waypoint_path}" planner_id="GridBased"/>
+                <BindOrderedPath path="{planned_waypoint_path}" output_path="{path}"
+                                 task_id="{waypoint_task_id}" first_index="{waypoint_first_index}"
+                                 service_name="FollowPath/ordered_route" server_timeout="500"/>
+              </Sequence>
+              <ClearEntireCostmap name="ClearGlobalCostmap-Context" service_name="global_costmap/clear_entirely_global_costmap"/>
+            </RecoveryNode>
+          </RateController>
+          <RecoveryNode number_of_retries="1" name="FollowPath">
+            <FollowPath path="{path}" controller_id="FollowPath" goal_checker_id="ordered_goal_checker"/>
+            <ClearEntireCostmap name="ClearLocalCostmap-Context" service_name="local_costmap/clear_entirely_local_costmap"/>
+          </RecoveryNode>
+        </PipelineSequence>
+        <ReactiveFallback name="RecoveryFallback">
+          <GoalUpdated/>
+          <RoundRobin name="RecoveryActions">
+            <Sequence name="ClearingActions">
+              <ClearEntireCostmap name="ClearLocalCostmap-Subtree" service_name="local_costmap/clear_entirely_local_costmap"/>
+              <ClearEntireCostmap name="ClearGlobalCostmap-Subtree" service_name="global_costmap/clear_entirely_global_costmap"/>
+            </Sequence>
+            <Wait wait_duration="5"/>
+          </RoundRobin>
+        </ReactiveFallback>
+      </RecoveryNode>
+    </OrderedNavigation>
+  </BehaviorTree>
+</root>

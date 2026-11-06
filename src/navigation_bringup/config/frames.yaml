@@ -1,0 +1,13 @@
+/**:
+  ros__parameters:
+    imu_frame: imu_link
+    chassis_frame: chassis_link
+    odom_frame: odom
+    imu_odom_frame: imu_odom
+    # Measured T(chassis_link, imu_link), assuming chassis_link coincides with
+    # the supplied ground base_footprint: [0.1250, -0.01696, 0.2256] m, yaw +90 deg.
+    # These parameters are its inverse T(imu_link, chassis_link).
+    # frame_broadcaster inverts them again for odom -> imu_odom, so both static
+    # transforms cancel when the LIO starts at its identity pose.
+    imu_to_chassis_translation: [0.01696, 0.1250, -0.2256]
+    imu_to_chassis_rpy: [0.0, 0.0, -1.5707963267948966]
