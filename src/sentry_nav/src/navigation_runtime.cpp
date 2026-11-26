@@ -1,5 +1,6 @@
 #include "sentry_nav/runtime_controller.hpp"
 #include "sentry_nav/translation_goal_checker.hpp"
+#include "localization_guard.hpp"
 #include <nav2_msgs/action/navigate_to_pose.hpp>
 #include <nav2_msgs/action/navigate_through_poses.hpp>
 #include <nav2_msgs/msg/speed_limit.hpp>
@@ -10,10 +11,14 @@
 #include <std_msgs/msg/string.hpp>
 #include <std_srvs/srv/trigger.hpp>
 #include <lifecycle_msgs/msg/state.hpp>
+#include <sentry_nav_interfaces/srv/prepare_route.hpp>
 #include <future>
+#include <condition_variable>
+#include <mutex>
 #include <chrono>
 #include <atomic>
 #include <cmath>
+#include <limits>
 #include <sstream>
 #include <csignal>
 #include <thread>
@@ -26,6 +31,7 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
   using SingleHandle = rclcpp_action::ServerGoalHandle<Single>;
   using MultiHandle = rclcpp_action::ServerGoalHandle<Multi>;
   using Ordered = sentry_nav_interfaces::srv::OrderedRoute;
+  using Prepare = sentry_nav_interfaces::srv::PrepareRoute;
   using Steady = std::chrono::steady_clock;
   using Return = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
   struct Plan {
@@ -34,6 +40,15 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
     nav_msgs::msg::Path path;
     std::string error;
     Steady::time_point submitted;
+    geometry_msgs::msg::PoseStamped start;
+    bool prepared = false, reused = false;
+  };
+  struct Preparation {
+    rclcpp_action::GoalUUID owner;
+    std::vector<geometry_msgs::msg::PoseStamped> goals;
+    geometry_msgs::msg::PoseStamped start;
+    bool submitted = false;
+    std::optional<Plan> result;
   };
   std::shared_ptr<nav2_costmap_2d::Costmap2DROS> global_, local_;
   std::unique_ptr<nav2_util::NodeThread> global_thread_, local_thread_;
@@ -42,6 +57,7 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
   std::unique_ptr<nav2_core::GlobalPlanner> planner_;
   std::unique_ptr<RuntimeController> controller_;
   TranslationGoalChecker checker_;
+  LocalizationGuard localization_;
   rclcpp_action::Server<Single>::SharedPtr single_server_;
   rclcpp_action::Server<Multi>::SharedPtr multi_server_;
   rclcpp_action::Client<Single>::SharedPtr topic_client_;
@@ -50,6 +66,7 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
   rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr goal_sub_;
   rclcpp::Subscription<nav2_msgs::msg::SpeedLimit>::SharedPtr speed_sub_;
   rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr cancel_service_;
+  rclcpp::Service<Prepare>::SharedPtr prepare_service_;
   rclcpp_lifecycle::LifecyclePublisher<geometry_msgs::msg::Twist>::SharedPtr cmd_;
   rclcpp_lifecycle::LifecyclePublisher<nav_msgs::msg::Path>::SharedPtr path_;
   rclcpp_lifecycle::LifecyclePublisher<std_msgs::msg::String>::SharedPtr status_;
@@ -57,12 +74,24 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
   rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr parameter_guard_;
   std::vector<geometry_msgs::msg::PoseStamped> goals_;
   std::future<Plan> planning_;
+  std::optional<Preparation> preparation_;
+  std::optional<Plan> candidate_;
+  std::optional<rclcpp_action::GoalUUID> completed_;
+  std::atomic<uint64_t> prepare_revision_{0};
+  // 单个常驻线程串行访问规划器；预规划不新增线程，也不调用控制器。
+  std::thread planner_worker_;
+  std::mutex planner_mutex_;
+  std::condition_variable planner_cv_;
+  std::optional<std::packaged_task<Plan()>> planner_job_;
+  bool planner_stopping_ = false;
   std::atomic<uint64_t> generation_{0};
   bool ready_ = false, task_ = false, have_path_ = false, suspended_ = false;
   size_t next_ = 0;
   int failures_ = 0, max_failures_ = 6;
   double frequency_, replan_period_, retry_period_, task_timeout_, state_timeout_;
   double progress_timeout_, progress_radius_, odom_timeout_, plan_max_age_;
+  double prepared_start_tolerance_, planner_radius_;
+  bool planner_unknown_ = true;
   std::string state_ = "inactive", detail_;
   Steady::time_point started_, next_plan_, progress_at_, last_feedback_;
   std::optional<Steady::time_point> invalid_since_;
@@ -91,7 +120,38 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
     return ready_ && tree.empty() && !goals.empty() && goals.size() <= 128 &&
       std::all_of(goals.begin(), goals.end(), valid);
   }
+  void invalidate_preparation() {++prepare_revision_; preparation_.reset(); candidate_.reset();}
+  void stop_planner() {
+    ++generation_; ++prepare_revision_;
+    {std::lock_guard<std::mutex> lock(planner_mutex_); planner_stopping_ = true;}
+    planner_cv_.notify_one();
+    if (planner_worker_.joinable()) {planner_worker_.join();}
+  }
+  void prepare(const Prepare::Request & request, Prepare::Response & response) {
+    if (request.goals.empty()) {
+      if (preparation_ && preparation_->owner == request.predecessor_id) {invalidate_preparation();}
+      if (completed_ == request.predecessor_id) {completed_.reset();}
+      response.success = true; response.reason = "cleared"; return;
+    }
+    const bool owner_active = (single_ && single_->get_goal_id() == request.predecessor_id) ||
+      (multi_ && multi_->get_goal_id() == request.predecessor_id);
+    // 后继点固定在全局系，避免动态 TF 改变目标而误用旧路径。
+    const bool global_goals = std::all_of(request.goals.begin(), request.goals.end(), [this](const auto & goal) {
+      return goal.header.frame_id == global_->getGlobalFrameID();
+    });
+    if (!admissible(request.goals) || !global_goals ||
+      (!owner_active && (task_ || completed_ != request.predecessor_id))) {
+      response.reason = "invalid_preparation_owner_or_goals"; return;
+    }
+    invalidate_preparation();
+    auto start = goals_.back(); start.header.stamp = builtin_interfaces::msg::Time();
+    start = transform(start, global_->getGlobalFrameID());
+    preparation_ = Preparation{request.predecessor_id, request.goals, start, false, {}};
+    response.success = true; response.reason = "queued";
+  }
   void finish(bool success, const std::string & reason) {
+    if (success) {completed_ = single_ ? single_->get_goal_id() : multi_->get_goal_id();}
+    else {completed_.reset(); invalidate_preparation();}
     zero(); ++generation_; task_ = false; have_path_ = false;
     controller_->resetTask(); checker_.reset();
     if (single_) {
@@ -116,6 +176,12 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
     status(success ? "succeeded" : "stopped", reason);
   }
   void begin(std::vector<geometry_msgs::msg::PoseStamped> goals) {
+    // 仅消费紧邻成功任务的完全相同后继；追加点或替换任务自动退回正常规划。
+    collect_plan();
+    std::optional<Plan> prepared;
+    if (preparation_ && completed_ == preparation_->owner && preparation_->result &&
+      preparation_->goals == goals) {prepared = std::move(preparation_->result);}
+    invalidate_preparation(); completed_.reset(); candidate_ = std::move(prepared);
     ++generation_; controller_->resetTask(); checker_.reset(); zero();
     goals_ = std::move(goals); task_ = true; have_path_ = false; suspended_ = false;
     failures_ = 0; next_ = 0; invalid_since_.reset(); progress_initialized_ = false;
@@ -137,6 +203,7 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
     return tf_->transform(pose, frame, tf2::durationFromSec(0.02));
   }
   geometry_msgs::msg::PoseStamped current_pose(nav_msgs::msg::Odometry::ConstSharedPtr & odom) {
+    if (!localization_.ready()) {throw std::runtime_error("localization_unavailable");}
     odom = controller_->odometry();
     if (!odom) {throw std::runtime_error("missing_odometry");}
     const double age = (now() - rclcpp::Time(odom->header.stamp, get_clock()->get_clock_type())).seconds();
@@ -166,19 +233,32 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
       controller_->stopMotion(); suspended_ = true; status("waiting", reason);
     }
   }
-  void start_plan(const geometry_msgs::msg::PoseStamped & start) {
-    auto remaining = goals_;
-    const size_t first = goals_.size() > 1 ? query().first_index : 0;
+  void start_plan(const geometry_msgs::msg::PoseStamped & start, bool preparing = false) {
+    auto remaining = preparing ? preparation_->goals : goals_;
+    const size_t first = !preparing && goals_.size() > 1 ? query().first_index : 0;
     remaining.erase(remaining.begin(), remaining.begin() + first);
-    const auto version = generation_.load();
+    const auto version = preparing ? prepare_revision_.load() : generation_.load();
     const auto submitted = Steady::now();
-    planning_ = std::async(std::launch::async, [this, remaining, first, version, submitted, start]() {
-      Plan result{version, first, nav_msgs::msg::Path{}, "", submitted};
+    auto cached = preparing ? std::optional<Plan>{} : std::move(candidate_);
+    candidate_.reset();
+    std::packaged_task<Plan()> job([this, remaining, first, version, submitted, start, preparing,
+        cached = std::move(cached)]() mutable {
+      Plan result{version, first, nav_msgs::msg::Path{}, "", submitted, start, preparing, false};
       try {
+        if (cached && cached->error.empty() && first == 0 &&
+          std::chrono::duration<double>(submitted - cached->submitted).count() <= plan_max_age_ &&
+          std::hypot(start.pose.position.x - cached->start.pose.position.x,
+                     start.pose.position.y - cached->start.pose.position.y) <= prepared_start_tolerance_ &&
+          prepared_path_safe(global_, cached->path, start, planner_radius_, planner_unknown_) &&
+          std::chrono::duration<double>(Steady::now()-cached->submitted).count() <= plan_max_age_) {
+          result.path = std::move(cached->path); result.reused = true; return result;
+        }
         auto from = start;
         result.path.header.frame_id = global_->getGlobalFrameID(); result.path.header.stamp = now();
         for (auto goal : remaining) {
-          if (version != generation_ || !rclcpp::ok()) {throw std::runtime_error("superseded");}
+          if (version != (preparing ? prepare_revision_.load() : generation_.load()) || !rclcpp::ok()) {
+            throw std::runtime_error("superseded");
+          }
           if (std::chrono::duration<double>(Steady::now() - submitted).count() > plan_max_age_) {
             throw std::runtime_error("global_plan_expired");
           }
@@ -193,10 +273,23 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
       } catch (const std::exception & e) {result.error = e.what();}
       return result;
     });
+    planning_ = job.get_future();
+    {std::lock_guard<std::mutex> lock(planner_mutex_); planner_job_ = std::move(job);}
+    if (preparing) {preparation_->submitted = true;}
+    planner_cv_.notify_one();
   }
-  void accept_plan() {
+  void collect_plan() {
     if (!planning_.valid() || planning_.wait_for(0ms) != std::future_status::ready) {return;}
     auto result = planning_.get();
+    if (result.prepared) {
+      if (preparation_ && result.generation == prepare_revision_) {
+        preparation_->result = std::move(result);
+        RCLCPP_INFO(get_logger(), "Successor preparation: %s",
+          preparation_->result->error.empty() ? "ready" : preparation_->result->error.c_str());
+        status(state_, preparation_->result->error.empty() ? "successor_prepared" : "successor_preparation_failed");
+      }
+      return;
+    }
     if (result.generation != generation_ || !task_) {return;}
     if (goals_.size() > 1 && result.first_index != query().first_index) {next_plan_ = Steady::now(); return;}
     if (std::chrono::duration<double>(Steady::now() - result.submitted).count() > plan_max_age_) {
@@ -204,7 +297,11 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
     }
     if (!result.error.empty()) {
       suspend(result.error); have_path_ = false;
-      if (++failures_ >= max_failures_) {finish(false, "global_planning_failed: " + result.error); return;}
+      if (failures_ < std::numeric_limits<int>::max()) {++failures_;}
+      // 上限为 0 时持续重试，仍保留失败计数和总任务超时。
+      if (max_failures_ > 0 && failures_ >= max_failures_) {
+        finish(false, "global_planning_failed: " + result.error); return;
+      }
       next_plan_ = Steady::now() + std::chrono::duration_cast<Steady::duration>(std::chrono::duration<double>(retry_period_));
       status("retry_wait", result.error); return;
     }
@@ -218,7 +315,12 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
     controller_->setPlan(result.path); path_->publish(result.path);
     have_path_ = true; suspended_ = false; failures_ = 0;
     next_plan_ = Steady::now() + std::chrono::duration_cast<Steady::duration>(std::chrono::duration<double>(replan_period_));
-    status("tracking");
+    status("tracking", result.reused ? "prepared_plan_reused" : "");
+  }
+  void schedule_plan(const geometry_msgs::msg::PoseStamped & pose) {
+    if (planning_.valid()) {return;}
+    if (task_ && Steady::now() >= next_plan_) {start_plan(pose);}
+    else if (preparation_ && !preparation_->submitted) {start_plan(preparation_->start, true);}
   }
   template<class Feedback> void feedback(Feedback & out, const geometry_msgs::msg::PoseStamped & pose) {
     out.current_pose = pose;
@@ -237,7 +339,16 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
   }
   void tick() {
     if (!ready_) {return;}
-    if (!task_) {zero(); return;}
+    if (!task_) {
+      zero(); collect_plan();
+      if (preparation_) {
+        try {
+          nav_msgs::msg::Odometry::ConstSharedPtr odom;
+          schedule_plan(current_pose(odom));
+        } catch (const std::exception &) {completed_.reset(); invalidate_preparation();}
+      }
+      return;
+    }
     if ((single_ && single_->is_canceling()) || (multi_ && multi_->is_canceling())) {
       finish(false, "canceled"); return;
     }
@@ -250,6 +361,7 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
       geometry_msgs::msg::PoseStamped pose;
       try {pose = current_pose(odom);}
       catch (const std::exception & e) {
+        invalidate_preparation();
         suspend(e.what());
         if (!invalid_since_) {invalid_since_ = steady;}
         if (std::chrono::duration<double>(steady - *invalid_since_).count() > state_timeout_) {
@@ -263,9 +375,9 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
         if (planning_.valid()) {planning_.get();}
         invalid_since_.reset(); have_path_ = false; next_plan_ = steady;
       }
-      accept_plan();
+      collect_plan();
       if (!task_) {return;}
-      if (!planning_.valid() && steady >= next_plan_) {start_plan(pose);}
+      schedule_plan(pose);
       if (!have_path_) {zero(); return;}
       suspended_ = false;
       auto command = controller_->computeVelocityCommands(pose, odom->twist.twist, &checker_);
@@ -278,18 +390,21 @@ class NavigationRuntime : public rclcpp_lifecycle::LifecycleNode {
       if (checker_.isGoalReached(pose.pose, goal.pose, odom->twist.twist)) {
         finish(true, "goal_reached"); return;
       }
-      const auto & p = pose.pose.position;
-      if (!progress_initialized_ || std::hypot(p.x - progress_position_.x, p.y - progress_position_.y) >= progress_radius_) {
-        progress_initialized_ = true; progress_position_ = p; progress_at_ = steady;
-      } else if (std::chrono::duration<double>(steady - progress_at_).count() > progress_timeout_) {
-        std::ostringstream reason;
-        reason << "progress_timeout: moved="
-               << std::hypot(p.x - progress_position_.x, p.y - progress_position_.y)
-               << "m required=" << progress_radius_ << "m within=" << progress_timeout_
-               << "s measured_speed=" << std::hypot(odom->twist.twist.linear.x, odom->twist.twist.linear.y)
-               << "m/s requested_speed=" << std::hypot(command.twist.linear.x, command.twist.linear.y)
-               << "m/s; check motion_gate, relay and chassis feedback";
-        finish(false, reason.str()); return;
+      // 超时为 0 时跳过位移进展检查。
+      if (progress_timeout_ > 0) {
+        const auto & p = pose.pose.position;
+        if (!progress_initialized_ || std::hypot(p.x - progress_position_.x, p.y - progress_position_.y) >= progress_radius_) {
+          progress_initialized_ = true; progress_position_ = p; progress_at_ = steady;
+        } else if (std::chrono::duration<double>(steady - progress_at_).count() > progress_timeout_) {
+          std::ostringstream reason;
+          reason << "progress_timeout: moved="
+                 << std::hypot(p.x - progress_position_.x, p.y - progress_position_.y)
+                 << "m required=" << progress_radius_ << "m within=" << progress_timeout_
+                 << "s measured_speed=" << std::hypot(odom->twist.twist.linear.x, odom->twist.twist.linear.y)
+                 << "m/s requested_speed=" << std::hypot(command.twist.linear.x, command.twist.linear.y)
+                 << "m/s; check motion_gate, relay and chassis feedback";
+          finish(false, reason.str()); return;
+        }
       }
       cmd_->publish(command.twist);
       if (steady - last_feedback_ >= 200ms) {
@@ -307,6 +422,7 @@ public:
   NavigationRuntime() : LifecycleNode("sentry_navigation") {}
   Return on_configure(const rclcpp_lifecycle::State &) override {
     try {
+      localization_.configure(*this);
       auto positive = [this](const std::string & name, double value) {
         const auto out = declare_parameter(name, value);
         if (!std::isfinite(out) || out <= 0) {throw std::invalid_argument(name + " must be positive");}
@@ -318,11 +434,15 @@ public:
       task_timeout_ = positive("task_timeout", 180.0);
       state_timeout_ = positive("state_timeout", 2.0);
       plan_max_age_ = positive("global_plan_max_age", 2.0);
-      progress_timeout_ = positive("progress_timeout", 8.0);
+      prepared_start_tolerance_ = positive("prepared_plan_start_tolerance", 0.2);
+      progress_timeout_ = declare_parameter("progress_timeout", 8.0);
+      if (!std::isfinite(progress_timeout_) || progress_timeout_ < 0) {
+        throw std::invalid_argument("progress_timeout must be finite and nonnegative");
+      }
       progress_radius_ = positive("progress_radius", 0.25);
       odom_timeout_ = positive("FollowPath.odom_timeout", 0.2);
       max_failures_ = declare_parameter("max_planning_failures", 6);
-      if (max_failures_ < 1) {throw std::invalid_argument("max_planning_failures must be positive");}
+      if (max_failures_ < 0) {throw std::invalid_argument("max_planning_failures must be nonnegative");}
       declare_parameter("enable_ordered_route_service", false);
       if (get_parameter("enable_ordered_route_service").as_bool()) {
         throw std::invalid_argument("standalone runtime owns waypoint binding; external service must be disabled");
@@ -339,6 +459,20 @@ public:
       }
       planner_ = make_runtime_planner(); controller_ = make_runtime_controller();
       planner_->configure(shared_from_this(), "GridBased", tf_, global_);
+      planner_radius_ = get_parameter("GridBased.robot_radius").as_double();
+      planner_unknown_ = get_parameter("GridBased.unknown_is_obstacle").as_bool();
+      planner_worker_ = std::thread([this]() {
+        while (true) {
+          std::optional<std::packaged_task<Plan()>> job;
+          {
+            std::unique_lock<std::mutex> lock(planner_mutex_);
+            planner_cv_.wait(lock, [this]() {return planner_stopping_ || planner_job_.has_value();});
+            if (planner_stopping_ && !planner_job_) {return;}
+            job = std::move(planner_job_); planner_job_.reset();
+          }
+          (*job)();
+        }
+      });
       controller_->configure(shared_from_this(), "FollowPath", tf_, local_);
       checker_.initialize(shared_from_this(), "general_goal_checker", local_);
       cmd_ = create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 1);
@@ -373,7 +507,13 @@ public:
       cancel_service_ = create_service<std_srvs::srv::Trigger>("cancel_navigation",
         [this](std_srvs::srv::Trigger::Request::SharedPtr, std_srvs::srv::Trigger::Response::SharedPtr response) {
           if (task_) {finish(false, "canceled_by_service");}
+          else {completed_.reset(); invalidate_preparation();}
           response->success = true; response->message = "navigation stopped";
+        });
+      prepare_service_ = create_service<Prepare>("prepare_route",
+        [this](Prepare::Request::SharedPtr request, Prepare::Response::SharedPtr response) {
+          try {prepare(*request, *response);}
+          catch (const std::exception & e) {invalidate_preparation(); response->reason = e.what();}
         });
       speed_sub_ = create_subscription<nav2_msgs::msg::SpeedLimit>("speed_limit", 1,
         [this](nav2_msgs::msg::SpeedLimit::ConstSharedPtr limit) {
@@ -406,6 +546,7 @@ public:
   }
   Return on_deactivate(const rclcpp_lifecycle::State &) override {
     ready_ = false; timer_->cancel();
+    completed_.reset(); invalidate_preparation();
     if (task_) {finish(false, "deactivated");} else {zero(); ++generation_;}
     if (planning_.valid()) {planning_.wait(); planning_.get();}
     controller_->deactivate(); planner_->deactivate();
@@ -428,14 +569,14 @@ public:
     return global_ready && local_ready;
   }
   void release() {
+    stop_planner();
     if (controller_) {controller_->cleanup(); controller_.reset();}
     if (planner_) {planner_->cleanup(); planner_.reset();}
     if (local_) {local_->cleanup();}
     if (global_) {global_->cleanup();}
   }
   ~NavigationRuntime() override {
-    ++generation_;
-    if (planning_.valid()) {planning_.wait();}
+    stop_planner();
     // The controller owns a worker holding node references; clean it explicitly.
     if (controller_) {controller_.reset();}
     planner_.reset(); local_thread_.reset(); global_thread_.reset();

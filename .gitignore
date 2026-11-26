@@ -1,6 +1,9 @@
 /build/
 /install/
 /log/
+/build_1030/
+/install_1030/
+/log_1030/
 /third_party/
 __pycache__/
 *.pyc
@@ -8,3 +11,5 @@ __pycache__/
 /frames_*.pdf
 /maps/biai_prior/
 /maps/biai_2d/
+/maps/biai_prior_chassis/
+/maps/biai_prior_chassis_2d/

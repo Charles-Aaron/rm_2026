@@ -218,7 +218,6 @@ typedef struct {
     TinyWorkspace *work;    // Solver workspace
     // Application projection on the existing state/input consensus copies.
     void (*project)(tinyMatrix &, tinyMatrix &, void *) = nullptr;
-    bool (*stop)(void *) = nullptr;
     void *context = nullptr;
 } TinySolver;
 

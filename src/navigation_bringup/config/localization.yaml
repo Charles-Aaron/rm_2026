@@ -1,0 +1,9 @@
+/**:
+  ros__parameters:
+    # prior_map is supplied by launch; empty means manual initialpose alignment.
+    # 仅首次成功前重试；成功后锁定 map->odom，不再周期重定位。
+    retry_interval: 3.0
+    result_max_age: 3.0
+    input_timeout: 0.3
+    visualization: true
+    visualization_map_voxel: 0.2

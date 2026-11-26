@@ -57,14 +57,14 @@ Polygon physical(double vmax,double amax,const Eigen::Matrix2d &e,const Eigen::M
 }
 void MpcConfig::validate() const {
   if(horizon<5||horizon>60) throw std::invalid_argument("MPC horizon out of range");
-  for(double v:{dt,control_dt,response_x,response_y,max_speed,max_acceleration,timeout,position_weight,velocity_weight,delta_weight})
+  for(double v:{dt,control_dt,response_x,response_y,max_speed,max_acceleration,position_weight,velocity_weight,delta_weight})
     if(!std::isfinite(v)||v<=0) throw std::invalid_argument("MPC parameters must be finite and positive");
   if(!std::isfinite(spin_model_gain)||spin_model_gain<0||spin_model_gain>2)
     throw std::invalid_argument("spin_model_gain must be between 0 and 2");
   if(spin_model_gain>0 && std::abs(response_x-response_y)>1e-9)
     throw std::invalid_argument("spin model requires equal x/y response times");
   // TinyMPC caches a stationary Riccati recursion: every stage uses one dt.
-  if(dt>.2||std::abs(dt-control_dt)>1e-9||timeout>=control_dt) throw std::invalid_argument("TinyMPC model_dt must equal controller period; timeout must be shorter");
+  if(dt>.2||std::abs(dt-control_dt)>1e-9) throw std::invalid_argument("TinyMPC model_dt must equal controller period");
 }
 struct Mpc::Impl {
   MpcConfig c;TinySolver *solver=nullptr;
@@ -72,7 +72,6 @@ struct Mpc::Impl {
   Eigen::Vector2d response;
   Eigen::Matrix2d e = Eigen::Matrix2d::Identity(), f = Eigen::Matrix2d::Zero();
   double cached_omega = 0;
-  Clock::time_point deadline;
   explicit Impl(MpcConfig config):c(config) {
     c.validate();
     // x=[relative position, planning-frame velocity, previous command, acceleration],
@@ -98,9 +97,9 @@ struct Mpc::Impl {
     s.en_state_bound=s.en_input_bound=0;s.adaptive_rho=0;s.relaxation=1.6;
     // ADMM tolerances are numerical; the final rollout reprojects to the exact
     // physical sets and rejects any command correction larger than 2 mm/s.
+    // 仅按收敛条件和迭代上限结束求解，不因计算耗时拒绝有效结果。
     s.abs_pri_tol=5e-3;s.abs_dua_tol=2e-3;s.max_iter=1500;s.check_termination=1;
     solver->context=this;
-    solver->stop=[](void *ctx){return Clock::now()>=static_cast<Impl*>(ctx)->deadline;};
     solver->project=[](tinyMatrix &x,tinyMatrix &u,void *ctx) {
       auto &d=*static_cast<Impl*>(ctx);
       // First-step physical bounds are already in the exact input polygon.
@@ -153,7 +152,7 @@ void Mpc::reset() {
 MpcResult Mpc::solve(const Eigen::Vector2d &position,const Eigen::Vector2d &measured,
   const Eigen::Vector2d &previous,const TimedTrajectory &trajectory,double time,double speed_limit,double angular_velocity) {
   auto &d=*impl_;const auto &c=d.c;auto &w=*d.solver->work;
-  const auto begin=Clock::now();d.deadline=begin+std::chrono::duration_cast<Clock::duration>(std::chrono::duration<double>(c.timeout));
+  const auto begin=Clock::now();
   MpcResult out;
   auto reject=[&](const std::string &reason) {
     std::ostringstream s;s<<" tinympc_status="<<reason<<" iter="<<w.iter<<" primal_residual="<<w.primal_residual_state
@@ -214,7 +213,7 @@ MpcResult Mpc::solve(const Eigen::Vector2d &position,const Eigen::Vector2d &meas
   }
   w.v=w.vnew=w.x;w.z=w.znew=w.u;
   w.Uref.setZero();
-  if(tiny_solve(d.solver)!=0) return reject(Clock::now()>=d.deadline?"solver_timeout":"solver_not_converged");
+  if(tiny_solve(d.solver)!=0) return reject("solver_not_converged");
   // Roll out actual commands, correcting only numerical projection residuals.
   // Returned positions use this dynamically consistent rollout.
   Eigen::Vector2d p=position,v=measured,cmd=previous;
@@ -230,7 +229,6 @@ MpcResult Mpc::solve(const Eigen::Vector2d &position,const Eigen::Vector2d &meas
     if(k==0) out.command=cmd;
     out.predicted_positions.push_back(next_p);p=next_p;
   }
-  if(Clock::now()>=d.deadline) return reject("solver_timeout");
   out.success=true;out.reason="success";return out;
 }
 }

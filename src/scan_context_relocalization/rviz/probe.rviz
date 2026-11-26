@@ -1,0 +1,90 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Preferences:
+  PromptSaveOnExit: false
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 24; 27; 32
+    Fixed Frame: experiment_map
+    Frame Rate: 20
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Metric grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 80
+      Reference Frame: <Fixed Frame>
+      Color: 100; 100; 100
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Prior map (gray)
+      Enabled: true
+      Topic:
+        Value: /scan_context_probe/prior_cloud
+        Depth: 1
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+      Position Transformer: XYZ
+      Color Transformer: FlatColor
+      Color: 170; 180; 195
+      Alpha: 0.6
+      Style: Points
+      Size (Pixels): 2
+      Size (m): 0.03
+      Decay Time: 0
+      Queue Size: 1
+      Use Fixed Frame: true
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Accepted scan (magenta)
+      Enabled: true
+      Topic:
+        Value: /scan_context_probe/aligned_cloud
+        Depth: 1
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+      Position Transformer: XYZ
+      Color Transformer: FlatColor
+      Color: 255; 60; 180
+      Alpha: 1
+      Style: Points
+      Size (Pixels): 3
+      Size (m): 0.04
+      Decay Time: 0
+      Queue Size: 1
+      Use Fixed Frame: true
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Result pose, history and status
+      Enabled: true
+      Topic:
+        Value: /scan_context_probe/visualization
+        Depth: 1
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+      Queue Size: 1
+  Enabled: true
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 35
+      Pitch: 0.8
+      Yaw: 0.8
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Target Frame: <Fixed Frame>
+      Name: Current View
+Window Geometry:
+  Width: 1400
+  Height: 900

@@ -13,7 +13,6 @@ struct MpcConfig {
   // Effective response along fixed planning-frame axes (odom in the plugin).
   double response_x = 0.15, response_y = 0.15;
   double max_speed = 0.6, max_acceleration = 0.8;
-  double timeout = 0.015;
   // Scales measured angular velocity in the rotating body response model.
   double spin_model_gain = 0.0;
   double position_weight = 8, velocity_weight = 2, delta_weight = 0.3;

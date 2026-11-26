@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>sentry_terrain</name><version>0.1.0</version>
+  <description>BIT probability voxel terrain projection for the sentry local costmap.</description>
+  <maintainer email="nuc@example.com">x_sentry</maintainer>
+  <license>LGPL-3.0-or-later</license><license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend><depend>rclcpp_lifecycle</depend>
+  <depend>nav2_costmap_2d</depend><depend>nav2_util</depend><depend>pluginlib</depend>
+  <depend>localization_interfaces</depend><depend>frame_broadcaster</depend>
+  <depend>sensor_msgs</depend><depend>nav_msgs</depend><depend>std_msgs</depend>
+  <depend>pcl_conversions</depend><depend>eigen</depend><depend>libpcl-all-dev</depend>
+  <depend>libfmt-dev</depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>
