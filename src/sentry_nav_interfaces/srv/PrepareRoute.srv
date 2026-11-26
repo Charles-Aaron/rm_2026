@@ -1,0 +1,8 @@
+# Prepare the successor of this navigation goal without executing it.
+# An empty goals array invalidates this owner's preparation.
+# Successor goals must use the global costmap frame (map by default).
+uint8[16] predecessor_id
+geometry_msgs/PoseStamped[] goals
+---
+bool success
+string reason

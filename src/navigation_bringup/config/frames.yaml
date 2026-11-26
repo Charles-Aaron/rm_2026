@@ -1,0 +1,20 @@
+/**:
+  ros__parameters:
+    imu_frame: imu_link
+    chassis_frame: chassis_link
+    odom_frame: odom
+    imu_odom_frame: imu_odom
+    lidar_frame: lidar_link
+    # 同一份机械外参用于前端水平底盘初始化、辅助静态 TF 及导航坐标转换。
+    body_level_initialization: true
+    # User-specified T(chassis_link, lidar_link): [0.1171, 0, 0.2000] m, yaw +90 deg.
+    # IMU in lidar coordinates: [0.011, 0.02329, -0.04412] m, identity rotation.
+    # Therefore T(chassis_link, imu_link): [0.09381, 0.011, 0.15588] m, yaw +90 deg.
+    # The following parameters are its inverse T(imu_link, chassis_link).
+    # odom -> imu_odom also accounts for the calibrated initial IMU tilt.
+    # With the current yaw-only mounting, it is still the inverse transform.
+    imu_to_chassis_translation: [-0.01100, 0.09381, -0.15588]
+    imu_to_chassis_rpy: [-0.0, 0.013, -1.5707963267948966]
+    # T(imu_link, lidar_link), matching zlio.yaml sensor.body_from_lidar.
+    imu_to_lidar_translation: [-0.011, -0.02329, 0.04412]
+    imu_to_lidar_rpy: [0.0, 0.0, 0.0]

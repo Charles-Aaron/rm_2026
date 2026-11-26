@@ -1,0 +1,6 @@
+# Fill in coordinates and absolute yaw from the actual prior map.
+# special_points:
+#   - id: observation_point_1
+#     position: [1.0, 2.0]
+#     target_yaw: 1.57
+special_points: []

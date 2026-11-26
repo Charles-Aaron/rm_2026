@@ -1,0 +1,5 @@
+# Append a normal point or an adjacent BEGIN/END pair atomically.
+sentry_nav_interfaces/RoutePoint[] points
+---
+bool success
+string reason

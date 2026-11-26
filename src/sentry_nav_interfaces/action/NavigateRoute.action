@@ -1,0 +1,10 @@
+# Ordered route; special BEGIN and END points must appear in pairs.
+sentry_nav_interfaces/RoutePoint[] points
+bool continuous
+---
+bool success
+string reason
+---
+uint32 current_index
+uint32 total_points
+string phase

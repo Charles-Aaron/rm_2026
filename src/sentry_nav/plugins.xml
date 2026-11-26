@@ -1,0 +1,11 @@
+<library path="sentry_nav_plugins">
+  <class name="sentry_nav::TranslationGoalChecker" type="sentry_nav::TranslationGoalChecker" base_class_type="nav2_core::GoalChecker">
+    <description>XY arrival and translational stop check, independent of orientation and angular velocity.</description>
+  </class>
+  <class name="sentry_nav::TdtAstarPlanner" type="sentry_nav::TdtAstarPlanner" base_class_type="nav2_core::GlobalPlanner">
+    <description>TDT geometric A* with footprint-safe grid adaptation.</description>
+  </class>
+  <class name="sentry_nav::SnapMpcController" type="sentry_nav::SnapMpcController" base_class_type="nav2_core::Controller">
+    <description>Asynchronous A*/TDT MinimumSnap trajectories and omnidirectional TinyMPC.</description>
+  </class>
+</library>

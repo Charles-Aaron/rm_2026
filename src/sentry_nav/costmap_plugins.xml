@@ -1,0 +1,5 @@
+<library path="sentry_passable_layer">
+  <class type="sentry_nav::PassableLayer" base_class_type="nav2_costmap_2d::Layer">
+    <description>Offline map-frame regions that override obstacle costs.</description>
+  </class>
+</library>

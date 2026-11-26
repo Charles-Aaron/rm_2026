@@ -1,0 +1,171 @@
+# Standalone 导航统一参数：规划、控制、代价地图与特殊段。
+# 特殊段与电控自旋（修改源码文件后，先编译 navigation_bringup，再启动导航）。
+sentry_route_manager:
+  ros__parameters:
+    spin_speed: 2.0                  # 电控持续自旋速度，rad/s
+    special_point_radius: 0.5        # begin/end 触发距离，m
+    special_axis_yaw: 0.0            # map 轴线方向，rad；自动选择正向或反向中较近的一侧
+    special_yaw_tolerance: 0.1       # 转向完成容差，rad，约 5.7 度
+    special_rotation_timeout: 6.0    # 单次转向超时，s
+sentry_motion_gate:
+  ros__parameters:
+    max_wz: 4.0                     # 特殊点转向最大角速度，rad/s
+    max_angular_acceleration: 4.0   # 特殊点转向最大角加速度，rad/s²
+    yaw_gain: 3.0                   # 角度误差比例系数
+
+# 独立导航节点：直接调用全局规划器和局部规划/控制器。
+# GridBased 和 FollowPath 是固定参数前缀，不是可在此处切换的插件类型。
+sentry_navigation:
+  ros__parameters:
+    use_sim_time: false             # 是否使用仿真时钟
+    controller_frequency: 40.0      # 控制循环频率，Hz；须与 model_dt 匹配
+    odom_topic: chassis_odometry    # 底盘里程计话题
+    # 最终目标到达判定：仅检查平移，不检查朝向。
+    general_goal_checker:
+      xy_goal_tolerance: 0.2       # 最终目标位置容差，m
+      trans_stopped_velocity: 0.1  # 判定停车的平移速度上限，m/s
+      goal_confirmation_time: 0.2 # 上述条件需持续满足的时间，s
+    # 局部规划与轨迹跟踪：局部 A* → TDT 轨迹优化 → TinyMPC。
+    FollowPath:
+      # 平移约束及局部目标。
+      max_speed: 2.6               # 最大平移速度，m/s
+      max_acceleration: 3.5        # 最大平移加速度，m/s²
+      local_goal_speed_ratio: 0.2  # 途经局部目标的速度比例
+      robot_radius: 0.17              # 局部 A* 碰撞半径，m
+      snap_robot_radius: 0.17       # 轨迹优化碰撞半径，m
+      unknown_is_obstacle: true    # 未知栅格按障碍物处理
+      collision_map_publish_frequency: 10.0 # 碰撞图显示频率，空闲时也持续发布，Hz
+      collision_map_timeout: 0.2   # 碰撞图后台快照最大允许年龄，s
+      lookahead: 6.0               # 沿全局路线选取局部目标的前视距离，m
+      waypoint_pass_tolerance: 0.7 # 连续导航中间途经点通过距离，m
+      # 局部重规划调度及新轨迹时效。
+      replan_period: 0.33          # 常规重规划间隔，s
+      urgent_replan_period: 0.1    # 紧急重规划最短间隔，s
+      max_candidate_age: 0.3       # 候选轨迹最大允许年龄，s
+      # 局部 A* 和 TDT 轨迹优化。
+      astar_timeout: 0.1           # 局部 A* 计算时间预算，s
+      snap_timeout: 0.2            # 轨迹优化计算时间预算，s
+      snap_corridor_range: 0.4     # 安全走廊范围，m
+      snap_collision_iterations: 6 # 轨迹碰撞处理最大迭代次数
+      # TinyMPC 轨迹跟踪及底盘响应模型。
+      horizon: 40                  # MPC 预测步数
+      model_dt: 0.025              # 模型时间步长，s，须等于 1/controller_frequency
+      response_x: 0.15             # X 方向速度响应时间常数，s
+      response_y: 0.15             # Y 方向速度响应时间常数，s
+      spin_model_gain: 0.25        # 自旋角速度对 MPC 模型的影响系数
+      spin_yaw_prediction_gain: 1.0 # 发布速度时的自旋航向预测系数
+      spin_yaw_extra_delay: 0.0    # 自旋航向预测额外延迟，s
+      goal_settle_speed: 0.12      # 最终目标进入停车保持的速度阈值，m/s
+      odom_timeout: 0.2            # 里程计最大允许年龄，s
+    # 全局规划器：使用全局代价地图执行 A*，生成通往目标的路线。
+    GridBased:
+      robot_radius: 0.1            # 全局 A* 碰撞半径，m
+      unknown_is_obstacle: true    # 未知栅格按障碍物处理
+      timeout: 0.5                 # 全局 A* 计算时间预算，s
+    # 全局规划调度与导航任务状态检查。
+    global_replan_period: 1.0      # 全局路线常规重规划间隔，s
+    global_retry_period: 1.0       # 全局规划失败后的重试间隔，s
+    max_planning_failures: 0       # 连续全局规划失败次数上限；0 表示关闭次数限制，停车重试
+    global_plan_max_age: 2.0       # 后台全局规划结果最大允许年龄，s
+    task_timeout: 180.0            # 单个导航任务最长时间，s
+    state_timeout: 2.0             # 状态持续无效的超时时间，s
+    progress_timeout: 0.0          # 未达到最小位移的超时时间，s；0 表示关闭进展检查
+    progress_radius: 0.25          # 上述时间内所需的最小位移，m
+    enable_ordered_route_service: false # standalone 内部管理途经点，保持关闭
+# 局部代价地图：滚动窗口，供局部规划检查静态和雷达障碍。
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      use_sim_time: false
+      update_frequency: 20.0       # 地图更新频率，Hz
+      publish_frequency: 20.0      # 地图发布频率，Hz
+      always_send_full_costmap: true # 发布完整地图
+      global_frame: odom           # 局部地图坐标系
+      robot_base_frame: chassis_link # 机器人底盘坐标系
+      rolling_window: true         # 窗口跟随机器人移动
+      width: 10                    # 窗口宽度，m
+      height: 10                   # 窗口高度，m
+      resolution: 0.05             # 栅格边长，m
+      robot_radius: 0.1            # 代价地图足迹半径，m
+      footprint_padding: 0.02      # 足迹额外边距，m
+      # BIT 概率体素 → 单柱分类 → 二维补洞/去噪；静态障碍仍由静态层提供。
+      plugins:
+      - static_layer
+      - terrain_layer
+      - passable_layer
+      passable_layer:
+        plugin: sentry_nav::PassableLayer
+        file: ""
+      terrain_layer:
+        plugin: sentry_terrain::TerrainProjectionLayer
+        frame_topic: /x_sentry/frontend/frame
+        session_topic: /x_sentry/frontend/session
+        resolution: 0.05
+        map_size: [10.5, 10.5, 2.2] # 三维存储带滑动余量；二维输出仍为 10×10 m。
+        sliding_threshold: 0.20
+        height_min: -0.20          # 相对底盘原点，沿 odom 固定 Z 轴。
+        height_max: 1.50
+        ray_min: 0.30
+        ray_max: 10.0
+        update_frequency: 20.0
+        input_timeout: 0.30        # 检查源时间和接收后墙钟时间；衰减不刷新此时间。
+        worker_timeout: 0.50
+        self_filter:
+          enabled: true
+          min: [-0.30, -0.18, -0.25]
+          max: [0.30, 0.45, 0.18]
+        probability:
+          hit: 0.90
+          miss: 0.45
+          min: 0.12
+          max: 0.97
+          occupied: 0.85
+          free: 0.499
+        decay:
+          enabled: true
+          keep_time: 0.50
+          clear_time: 1.20          # BIT 原规则：提前进入 UNKNOWN 后不会继续强制清到 FREE。
+          active_list: false
+        projection:
+          min_observed_voxels: 2
+          surface_height_max: 0.10 # 单柱占据体素跨度，不是物体离地高度或坡度。
+          wall_height_min: 0.50
+          wall_ratio_min: 0.80
+          tunnel_enabled: true    # 用户确认采用 BIT 原始穿洞规则。
+          tunnel_height_min: 0.26
+          tunnel_height_max: 0.60
+          tunnel_ratio_max: 0.50
+          obstacle_hold_time: 0.0 # 原始柱不再 OCCUPIED 后开始保持。
+          unknown_as_occupied: false
+          mask_filter: true
+          fill_neighbors: 8
+          denoise_neighbors: 0
+        visualization:
+          prefix: /x_sentry/terrain
+          grid_frequency: 5.0
+          cloud_frequency: 2.0
+      static_layer:                # 静态地图障碍层
+        plugin: nav2_costmap_2d::StaticLayer
+        map_subscribe_transient_local: true
+# 全局代价地图：使用 map 坐标系和静态地图供全局规划。
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      use_sim_time: false
+      update_frequency: 2.0        # 地图更新频率，Hz
+      publish_frequency: 1.0       # 地图发布频率，Hz
+      always_send_full_costmap: true
+      global_frame: map            # 全局地图坐标系
+      robot_base_frame: chassis_link # 机器人底盘坐标系
+      robot_radius: 0.26           # 代价地图足迹半径，m
+      resolution: 0.05             # 栅格边长，m
+      track_unknown_space: true    # 保留未知区域状态
+      plugins:
+      - static_layer
+      - passable_layer
+      passable_layer:
+        plugin: sentry_nav::PassableLayer
+        file: ""
+      static_layer:
+        plugin: nav2_costmap_2d::StaticLayer
+        map_subscribe_transient_local: true

@@ -1,0 +1,5 @@
+<library path="sentry_terrain_layer">
+  <class name="sentry_terrain::TerrainProjectionLayer" type="sentry_terrain::TerrainProjectionLayer" base_class_type="nav2_costmap_2d::Layer">
+    <description>Same-frame ZLIO input, sliding BIT voxels and terrain projection.</description>
+  </class>
+</library>

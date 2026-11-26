@@ -1,0 +1,14 @@
+# QUERY initializes a task or reads actual controller waypoint progress.
+# BIND atomically associates a global path with its ordered waypoint list.
+uint8 QUERY=0
+uint8 BIND=1
+uint8 operation
+string task_id
+geometry_msgs/PoseStamped[] goals
+uint32 first_index
+nav_msgs/Path path
+---
+bool success
+string reason
+geometry_msgs/PoseStamped[] remaining_goals
+uint32 first_index

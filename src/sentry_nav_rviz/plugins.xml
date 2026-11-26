@@ -1,0 +1,5 @@
+<library path="sentry_navigation_panel">
+  <class name="sentry_nav_rviz/NavigationPanel" type="sentry_nav_rviz::NavigationPanel" base_class_type="rviz_common::Panel">
+    <description>Standalone single/multiple goal navigation, cancel and task status.</description>
+  </class>
+</library>
