@@ -98,21 +98,16 @@ PreparedMap prepare_map(GridMap map, const MapOptions & options) {
       any_obstacle |= blocked;
     }
   }
-  if (options.robot_radius == 0) {return result;}
+  if (options.robot_radius == 0 || !any_obstacle) {return result;}
   cv::Mat distances;
-  if (any_obstacle) {
-    cv::distanceTransform(free, distances, cv::DIST_L2, cv::DIST_MASK_PRECISE);
-  }
-  // Conservative cell-based Minkowski inflation: account for occupied and query
-  // cell half-diagonals. The entire query cell is safe for a circular footprint.
+  cv::distanceTransform(free, distances, cv::DIST_L2, cv::DIST_MASK_PRECISE);
+  // Conservative cell-based obstacle inflation: account for occupied and query
+  // cell half-diagonals when keeping the circular footprint clear of mapped obstacles.
+  // 仅膨胀地图内的障碍；不将窗口边缘造成人工障碍，越界仍由 is_blocked 拒绝。
   const double obstacle_clearance = options.robot_radius + std::sqrt(2.0) * m.resolution;
   for (int y = 0; y < m.height; ++y) {
     for (int x = 0; x < m.width; ++x) {
-      const double boundary_clearance = std::min({x * m.resolution, y * m.resolution,
-        (m.width - x - 1) * m.resolution, (m.height - y - 1) * m.resolution});
-      if (boundary_clearance < options.robot_radius ||
-        (any_obstacle && distances.at<float>(y, x) * m.resolution <= obstacle_clearance))
-      {
+      if (distances.at<float>(y, x) * m.resolution <= obstacle_clearance) {
         result.blocked[m.index(x, y)] = 1;
       }
     }

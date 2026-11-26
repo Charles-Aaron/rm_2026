@@ -1,0 +1,17 @@
+pcd2pgm:
+  ros__parameters:
+    pcd_file: /home/nuc/x_sentry_ws/maps/biai_prior_chassis/map.pcd
+    # 与三维重定位地图共用 map 坐标；不额外平移或旋转点云。
+    odom_to_lidar_odom: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    map_resolution: 0.05
+    map_topic_name: /x_sentry/map_conversion/map
+    # false 表示保留区间内的点，true 表示剔除区间内的点。
+    # 新 map 以启动底盘为原点，平地约为 Z=0。
+    # 与旧 IMU 原点地图 [-0.10,1.50] 保持同一物理筛选范围。
+    flag_pass_through: false
+    thre_z_min: 0.07588
+    thre_z_max: 1.67588
+    # 全局 PCD 已按 0.15 m 体素降采样，放宽邻域要求以保留稀疏结构。
+    thre_radius: 0.30
+    thres_point_count: 2
+    use_sim_time: false

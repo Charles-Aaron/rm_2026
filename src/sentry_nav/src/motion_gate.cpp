@@ -16,8 +16,10 @@
 #include <cmath>
 #include <map>
 #include <optional>
+#include "localization_guard.hpp"
 
 class MotionGate : public rclcpp::Node {
+  LocalizationGuard localization_;
   using Rotate = sentry_nav_interfaces::action::RotateToYaw;
   using Visit = sentry_nav_interfaces::action::VisitSpecialPoint;
   using Navigate = nav2_msgs::action::NavigateToPose;
@@ -110,6 +112,11 @@ class MotionGate : public rclcpp::Node {
     return true;
   }
   void tick() {
+    if (!localization_.ready()) {
+      if (visit_ && phase_ == "NAVIGATING") {cancel_navigation();}
+      if (rotate_ || visit_) {finish(false, "localization_unavailable");}
+      latest_ = geometry_msgs::msg::Twist{}; input_time_.reset(); zero(); return;
+    }
     if (cancel_inflight_) {zero(); return;}
     if (visit_ && !get_parameter("enable_special_points").as_bool()) {
       if (phase_ == "NAVIGATING") {cancel_navigation();}
@@ -161,6 +168,7 @@ class MotionGate : public rclcpp::Node {
   }
 public:
   MotionGate() : Node("sentry_motion_gate"), tf_(get_clock()), listener_(tf_, this, false) {
+    localization_.configure(*this);
     map_frame_ = declare_parameter<std::string>("map_frame", "map");
     base_frame_ = declare_parameter<std::string>("base_frame", "chassis_link");
     max_wz_ = declare_parameter<double>("max_wz", 0.5); max_aw_ = declare_parameter<double>("max_angular_acceleration", 0.8);
@@ -190,7 +198,7 @@ public:
         if (!std::isfinite(msg->linear.x) || !std::isfinite(msg->linear.y)) {latest_ = geometry_msgs::msg::Twist{}; input_time_.reset(); return;}
         latest_ = *msg; input_time_ = now();
       });
-    odom_ = create_subscription<nav_msgs::msg::Odometry>("chassis_odom", rclcpp::SensorDataQoS(),
+    odom_ = create_subscription<nav_msgs::msg::Odometry>("chassis_odometry", rclcpp::SensorDataQoS(),
       [this](nav_msgs::msg::Odometry::ConstSharedPtr msg) {
         if (msg->child_frame_id != base_frame_ || !std::isfinite(msg->twist.twist.linear.x) ||
           !std::isfinite(msg->twist.twist.linear.y) || !std::isfinite(msg->twist.twist.angular.z)) {return;}

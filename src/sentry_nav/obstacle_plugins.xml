@@ -1,0 +1,5 @@
+<library path="sentry_obstacle_layer">
+  <class type="sentry_nav::BufferedObstacleLayer" base_class_type="nav2_costmap_2d::Layer">
+    <description>Rebuild 2D obstacles from buffered, height-filtered clouds without an absolute Z limit.</description>
+  </class>
+</library>

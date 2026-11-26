@@ -379,7 +379,6 @@ int solve(TinySolver *solver)
 
     for (int i = 0; i < solver->settings->max_iter; i++)
     {
-        if (solver->stop && solver->stop(solver->context)) {break;}
         // Update linear control cost terms using reference trajectory, duals, and slack variables
         update_linear_cost(solver);
 

@@ -1,4 +1,5 @@
 #include "sentry_nav/mpc.hpp"
+#include "sentry_nav/collision_map_cache.hpp"
 #include "sentry_nav/runtime_controller.hpp"
 #include "sentry_nav/minimum_snap.hpp"
 #include "sentry_nav/trajectory_handover.hpp"
@@ -39,13 +40,23 @@ template<class T> T parameter(const rclcpp_lifecycle::LifecycleNode::SharedPtr &
   if (!node->has_parameter(name)) {node->declare_parameter<T>(name, value);}
   return node->get_parameter(name).get_value<T>();
 }
-core::PreparedMap snapshot(const std::shared_ptr<nav2_costmap_2d::Costmap2DROS> & ros,
-  double radius, bool unknown)
+std::optional<core::GridMap> raw_snapshot(
+  const std::shared_ptr<nav2_costmap_2d::Costmap2DROS> & ros, bool require_current = false)
 {
   core::GridMap map;
   {
     auto * source = ros->getCostmap();
     std::lock_guard<nav2_costmap_2d::Costmap2D::mutex_t> lock(*source->getMutex());
+    if (require_current) {
+      const auto current = [](const auto & layers) {
+        return std::all_of(layers.begin(), layers.end(), [](const auto & layer) {
+          return !layer->isEnabled() || layer->isCurrent();
+        });
+      };
+      auto * layers = ros->getLayeredCostmap();
+      if (!layers->isInitialized() || !current(*layers->getPlugins()) ||
+        !current(*layers->getFilters())) {return std::nullopt;}
+    }
     map.width = source->getSizeInCellsX(); map.height = source->getSizeInCellsY();
     map.resolution = source->getResolution();
     map.origin = {source->getOriginX(), source->getOriginY()}; map.frame = ros->getGlobalFrameID();
@@ -57,13 +68,34 @@ core::PreparedMap snapshot(const std::shared_ptr<nav2_costmap_2d::Costmap2DROS> 
       map.traversal_cost[i] = value == 255 ? 254 : value;
     }
   }
-  return core::prepare_map(std::move(map), {65, unknown, radius});
+  return map;
+}
+core::PreparedMap snapshot(const std::shared_ptr<nav2_costmap_2d::Costmap2DROS> & ros,
+  double radius, bool unknown)
+{
+  return core::prepare_map(std::move(*raw_snapshot(ros)), {65, unknown, radius});
 }
 geometry_msgs::msg::PoseStamped in_frame(const geometry_msgs::msg::PoseStamped & pose,
   const std::string & frame, const std::shared_ptr<tf2_ros::Buffer> & tf)
 {
   if (pose.header.frame_id == frame) {return pose;}
   return tf->transform(pose, frame, tf2::durationFromSec(0.05));
+}
+
+bool prepared_path_safe(const std::shared_ptr<nav2_costmap_2d::Costmap2DROS> & costmap,
+  const nav_msgs::msg::Path & path, const geometry_msgs::msg::PoseStamped & start,
+  double radius, bool unknown)
+{
+  if (path.poses.empty() || path.header.frame_id != costmap->getGlobalFrameID() ||
+    start.header.frame_id != path.header.frame_id) {return false;}
+  const auto map = snapshot(costmap, radius, unknown);
+  Eigen::Vector2d previous(start.pose.position.x, start.pose.position.y);
+  for (const auto & pose : path.poses) {
+    const Eigen::Vector2d point(pose.pose.position.x, pose.pose.position.y);
+    if (!core::line_free(map, previous, point)) {return false;}
+    previous = point;
+  }
+  return true;
 }
 
 class TdtAstarPlanner : public nav2_core::GlobalPlanner {
@@ -110,7 +142,7 @@ public:
 class SnapMpcController : public RuntimeController {
   using Clock = std::chrono::steady_clock;
   struct Job {
-    core::PreparedMap map;
+    std::shared_ptr<const CollisionMapSnapshot> maps;
     core::PlanRequest request;
     uint64_t revision;
     double speed_limit;
@@ -139,6 +171,12 @@ class SnapMpcController : public RuntimeController {
   std::mutex mutex_;
   std::condition_variable cv_;
   std::thread worker_;
+  std::thread map_worker_;
+  std::mutex map_wait_mutex_;
+  std::condition_variable map_cv_;
+  std::atomic<bool> map_stop_{true};
+  std::unique_ptr<CollisionMapCache> maps_;
+  double map_frequency_ = 20, map_publish_frequency_ = 10, map_timeout_ = 0.2;
   std::atomic<bool> stop_{true}, active_{false}, planning_busy_{false};
   std::atomic<uint64_t> revision_{0};
   nav_msgs::msg::Path route_;
@@ -162,7 +200,6 @@ class SnapMpcController : public RuntimeController {
   std::optional<Candidate> candidate_, trajectory_;
   nav_msgs::msg::Odometry::ConstSharedPtr latest_odom_;
   std::optional<rclcpp::Time> last_control_;
-  std::optional<rclcpp::Time> last_map_display_;
   Eigen::Vector2d previous_odom_ = Eigen::Vector2d::Zero();
   core::PlannerConfig limits_;
   SnapConfig snap_;
@@ -314,6 +351,56 @@ class SnapMpcController : public RuntimeController {
     }
     corridor_pub_->publish(debug);
   }
+  void publish_collision_map(const CollisionMapSnapshot & snapshot) {
+    if (collision_pub_->get_subscription_count() == 0) {return;}
+    const auto & map = *snapshot.local;
+    nav_msgs::msg::OccupancyGrid debug;
+    debug.header.frame_id = map.source.frame;
+    debug.header.stamp = rclcpp::Time(snapshot.stamp_ns, node_->get_clock()->get_clock_type());
+    debug.info.width = map.source.width; debug.info.height = map.source.height;
+    debug.info.resolution = map.source.resolution;
+    debug.info.origin.position.x = map.source.origin.x();
+    debug.info.origin.position.y = map.source.origin.y(); debug.info.origin.orientation.w = 1;
+    debug.data.resize(map.blocked.size());
+    for (size_t i = 0; i < map.blocked.size(); ++i) {debug.data[i] = map.blocked[i] ? 100 : 0;}
+    collision_pub_->publish(debug);
+  }
+  void map_work() {
+    const auto period = std::chrono::duration_cast<Clock::duration>(
+      std::chrono::duration<double>(1 / map_frequency_));
+    const auto display_period = std::chrono::duration_cast<Clock::duration>(
+      std::chrono::duration<double>(1 / map_publish_frequency_));
+    auto next = Clock::now(), display_at = next;
+    while (!map_stop_) {
+      const auto captured_at = Clock::now();
+      const auto stamp = node_->now();
+      try {
+        // 地图锁只用于取原始快照；膨胀、显示发布不占用控制器锁。
+        auto raw = raw_snapshot(costmap_, true);
+        if (raw) {maps_->update(std::move(*raw), stamp.nanoseconds(), captured_at);}
+        else {maps_->clear();}
+        if (!map_stop_ && Clock::now() >= display_at) {
+          const auto value = maps_->latest(map_timeout_);
+          if (value) {publish_collision_map(*value);}
+          display_at += display_period;
+          if (display_at < Clock::now()) {display_at = Clock::now() + display_period;}
+        }
+      } catch (const std::exception & e) {
+        maps_->clear();
+        RCLCPP_ERROR_THROTTLE(node_->get_logger(), *node_->get_clock(), 2000,
+          "Collision map update: %s", e.what());
+      }
+      next += period;
+      if (next < Clock::now()) {next = Clock::now() + period;}
+      std::unique_lock<std::mutex> lock(map_wait_mutex_);
+      map_cv_.wait_until(lock, next, [this]() {return map_stop_.load();});
+    }
+  }
+  void stop_map_worker() {
+    map_stop_ = true; map_cv_.notify_all();
+    if (map_worker_.joinable()) {map_worker_.join();}
+    if (maps_) {maps_->clear();}
+  }
   void work() {
     struct TimingStats {
       size_t count = 0;
@@ -343,15 +430,16 @@ class SnapMpcController : public RuntimeController {
       auto limits = limits_;
       limits.max_speed = std::min(limits.max_speed, job->speed_limit);
       limits.max_axis_velocity = limits.max_speed;
+      const auto & map = *job->maps->local;
       try {
-        auto seed = ordered::seed(job->map, job->request, limits, job->via, canceled);
+        auto seed = ordered::seed(map, job->request, limits, job->via, canceled);
         const double astar_ms = std::chrono::duration<double, std::milli>(Clock::now() - started_at).count();
         {
           std::lock_guard<std::mutex> lock(mutex_);
           if (canceled()) {continue;}
           // Publish even when TDT MinimumSnap later fails; an empty path clears a failed seed.
           nav_msgs::msg::Path debug;
-          debug.header.frame_id = job->map.source.frame; debug.header.stamp = node_->now();
+          debug.header.frame_id = map.source.frame; debug.header.stamp = node_->now();
           if (seed.success) {
             for (const auto & point : seed.points) {
               geometry_msgs::msg::PoseStamped pose; pose.header = debug.header;
@@ -360,7 +448,7 @@ class SnapMpcController : public RuntimeController {
             }
           }
           astar_pub_->publish(debug);
-          publish_corridors({}, job->map.source.frame);
+          publish_corridors({}, map.source.frame);
         }
         SnapResult result;
         double snap_ms = -1;
@@ -368,14 +456,8 @@ class SnapMpcController : public RuntimeController {
           auto snap = snap_;
           // Both transit and final endpoints have explicit velocity targets.
           snap.constrain_goal_velocity = true;
-          // Rebuild from the same raw snapshot, never inflate the A* mask again.
-          // Only TDT MinimumSnap sees this radius; A* and target selection keep job->map.
-          if (snap_radius_ == radius_) {
-            result = optimize_snap(job->map, job->request, limits, seed, snap, canceled);
-          } else {
-            const auto snap_map = core::prepare_map(job->map.source, {65, unknown_, snap_radius_});
-            result = optimize_snap(snap_map, job->request, limits, seed, snap, canceled);
-          }
+          // 两套半径由同一原始快照生成；半径相同时共享同一张图。
+          result = optimize_snap(*job->maps->snap, job->request, limits, seed, snap, canceled);
           snap_ms = result.elapsed_ms;
         }
         const bool candidate_ready = result.success && !result.segments.empty();
@@ -384,7 +466,7 @@ class SnapMpcController : public RuntimeController {
         const auto computed_at = Clock::now();
         std::lock_guard<std::mutex> lock(mutex_);
         if (canceled()) {continue;}
-        publish_corridors(result, job->map.source.frame);
+        publish_corridors(result, map.source.frame);
         if (candidate_ready) {
           const bool final_target = job->final_target;
           candidate_ = Candidate{std::move(planned), job->start_time, job->revision, final_target, job->submitted_at, 0, stats};
@@ -424,7 +506,7 @@ class SnapMpcController : public RuntimeController {
       } catch (const std::exception & e) {
         std::lock_guard<std::mutex> lock(mutex_);
         if (canceled()) {continue;}
-        publish_corridors({}, job->map.source.frame);
+        publish_corridors({}, map.source.frame);
         planning_reason_ = e.what();
         RCLCPP_ERROR_THROTTLE(node_->get_logger(), *node_->get_clock(), 2000, "Planning: %s", e.what());
       }
@@ -480,7 +562,10 @@ public:
   nav_msgs::msg::Odometry::ConstSharedPtr odometry() override {
     std::lock_guard<std::mutex> lock(mutex_); return latest_odom_;
   }
-  ~SnapMpcController() override {stop_ = true; cv_.notify_all(); if (worker_.joinable()) {worker_.join();}}
+  ~SnapMpcController() override {
+    stop_map_worker();
+    stop_ = true; cv_.notify_all(); if (worker_.joinable()) {worker_.join();}
+  }
   void configure(const rclcpp_lifecycle::LifecycleNode::WeakPtr & parent, std::string name,
     std::shared_ptr<tf2_ros::Buffer> tf, std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap) override
   {
@@ -517,23 +602,32 @@ public:
     mpc_config_.horizon = parameter(node_, name + ".horizon", 40);
     mpc_config_.dt = param("model_dt", 0.025);
     mpc_config_.control_dt = 1 / parameter(node_, "controller_frequency", 40.0);
-    mpc_config_.timeout = param("mpc_timeout", 0.015);
     limits_.max_speed = limits_.max_axis_velocity = mpc_config_.max_speed;
     limits_.max_acceleration = limits_.max_axis_acceleration = mpc_config_.max_acceleration;
     limits_.timeout_seconds = param("astar_timeout", 0.10);
     snap_.timeout_seconds = param("snap_timeout", 0.20);
     snap_.corridor_range = param("snap_corridor_range", 0.4);
     snap_.collision_iterations = parameter(node_, name + ".snap_collision_iterations", 6);
+    map_frequency_ = costmap_->get_parameter("update_frequency").as_double();
+    map_publish_frequency_ = param("collision_map_publish_frequency", 10.0);
+    map_timeout_ = param("collision_map_timeout", 0.2);
     limits_.validate(); snap_.validate(); mpc_config_.validate();
     for (double v : {lookahead_, replan_period_, max_candidate_age_, odom_timeout_, goal_settle_speed_, waypoint_pass_tolerance_,
       urgent_replan_period_, safety_horizon_, remaining_replan_time_, replan_position_error_,
-      replan_velocity_error_, handover_position_error_, handover_velocity_error_, similar_position_, similar_velocity_}) {
+      replan_velocity_error_, handover_position_error_, handover_velocity_error_, similar_position_, similar_velocity_,
+      map_frequency_, map_publish_frequency_, map_timeout_}) {
       if (!std::isfinite(v) || v <= 0) {throw std::invalid_argument("controller parameters must be positive");}
     }
     if (!std::isfinite(local_goal_speed_ratio_) || local_goal_speed_ratio_ <= 0 || local_goal_speed_ratio_ > 1)
     {throw std::invalid_argument("local_goal_speed_ratio must be in (0, 1]");}
     if (!std::isfinite(radius_) || radius_ < 0 || !std::isfinite(snap_radius_) || snap_radius_ < 0)
     {throw std::invalid_argument("invalid collision radius");}
+    if (map_timeout_ <= 1 / map_frequency_) {
+      throw std::invalid_argument("collision_map_timeout must exceed the costmap update period");
+    }
+    maps_ = std::make_unique<CollisionMapCache>(radius_, snap_radius_, unknown_);
+    RCLCPP_INFO(node_->get_logger(), "Shared collision map: update=%.1fHz publish<=%.1fHz max_age=%.3fs",
+      map_frequency_, map_publish_frequency_, map_timeout_);
     RCLCPP_INFO(node_->get_logger(), "Collision radii: local_astar=%.3fm snap=%.3fm", radius_, snap_radius_);
     speed_limit_ = mpc_config_.max_speed; mpc_ = std::make_unique<Mpc>(mpc_config_);
     if (parameter(node_, "enable_ordered_route_service", true)) {
@@ -542,7 +636,7 @@ public:
           ordered_request(request, response);
         });
     }
-    const auto odom_topic = parameter(node_, "odom_topic", std::string("chassis_odom"));
+    const auto odom_topic = parameter(node_, "odom_topic", std::string("chassis_odometry"));
     odom_sub_ = node_->create_subscription<nav_msgs::msg::Odometry>(odom_topic, rclcpp::SensorDataQoS(),
       [this](nav_msgs::msg::Odometry::ConstSharedPtr msg) {
         std::lock_guard<std::mutex> lock(mutex_);
@@ -558,9 +652,11 @@ public:
   void activate() override {
     std::lock_guard<std::mutex> lock(mutex_);
     stop_ = false; active_ = true; goal_settler_.reset(); previous_odom_.setZero(); last_control_.reset(); last_job_ = {};
-    path_pub_->on_activate(); astar_pub_->on_activate(); collision_pub_->on_activate(); last_map_display_.reset();
+    path_pub_->on_activate(); astar_pub_->on_activate(); collision_pub_->on_activate();
     corridor_pub_->on_activate(); publish_corridors({}, costmap_->getGlobalFrameID());
     timing_pub_->on_activate(); stats_pub_->on_activate();
+    maps_->clear(); map_stop_ = false;
+    map_worker_ = std::thread([this]() {map_work();});
     worker_ = std::thread([this]() {work();});
   }
   void deactivate() override {
@@ -568,10 +664,17 @@ public:
       publish_corridors({}, costmap_->getGlobalFrameID());
       pending_.reset(); candidate_.reset(); clear_trajectory("deactivated"); previous_odom_.setZero();}
     cv_.notify_all(); if (worker_.joinable()) {worker_.join();}
+    stop_map_worker();
     path_pub_->on_deactivate(); astar_pub_->on_deactivate(); collision_pub_->on_deactivate();
     corridor_pub_->on_deactivate(); timing_pub_->on_deactivate(); stats_pub_->on_deactivate();
   }
-  void cleanup() override {latest_odom_.reset(); ordered_service_.reset(); odom_sub_.reset(); path_pub_.reset(); astar_pub_.reset(); collision_pub_.reset(); corridor_pub_.reset(); timing_pub_.reset(); stats_pub_.reset(); mpc_.reset(); costmap_.reset(); tf_.reset(); node_.reset();}
+  void cleanup() override {
+    stop_map_worker(); maps_.reset();
+    latest_odom_.reset(); ordered_service_.reset(); odom_sub_.reset();
+    path_pub_.reset(); astar_pub_.reset(); collision_pub_.reset(); corridor_pub_.reset();
+    timing_pub_.reset(); stats_pub_.reset();
+    mpc_.reset(); costmap_.reset(); tf_.reset(); node_.reset();
+  }
   void setPlan(const nav_msgs::msg::Path & path) override {
     std::lock_guard<std::mutex> lock(mutex_);
     const bool new_goal = route_.poses.empty() || path.poses.empty() ||
@@ -638,16 +741,21 @@ public:
       throw nav2_core::PlannerException("ordered goal checker requires a bound waypoint path");
     }
     const auto now = node_->now();
+    const auto maps = maps_->latest(map_timeout_);
+    const double map_age = maps ? (now.nanoseconds() - maps->stamp_ns) * 1e-9 : -1;
     // One immutable sample supplies pose, body twist and freshness. Nav2's
     // separate pose/Twist inputs need not have the same sample time.
     const auto odom = latest_odom_;
     const std::optional<rclcpp::Time> odom_stamp = odom ?
       std::optional<rclcpp::Time>(rclcpp::Time(odom->header.stamp, node_->get_clock()->get_clock_type())) : std::nullopt;
     if (!active_ || route_.poses.empty() || !odom_stamp || (now - *odom_stamp).seconds() > odom_timeout_ ||
-      (now - *odom_stamp).seconds() < -0.05 || !costmap_->isCurrent())
+      (now - *odom_stamp).seconds() < -0.05 || !costmap_->isCurrent() ||
+      !maps || map_age < -0.05 || map_age > map_timeout_)
     {
       const char * cause = !active_ ? "inactive" : route_.poses.empty() ? "empty_global_route" :
-        !odom_stamp ? "no_odometry" : !costmap_->isCurrent() ? "costmap_not_current" : "odometry_timestamp_invalid";
+        !odom_stamp ? "no_odometry" : !costmap_->isCurrent() ? "costmap_not_current" :
+        !maps ? "collision_map_unavailable_or_stale" :
+        map_age < -0.05 || map_age > map_timeout_ ? "collision_map_timestamp_invalid" : "odometry_timestamp_invalid";
       RCLCPP_WARN_THROTTLE(node_->get_logger(), *node_->get_clock(), 2000,
         "Controlled stop: %s; odom_age=%.3f", cause, odom_stamp ? (now - *odom_stamp).seconds() : -1.0);
       ++revision_; pending_.reset(); clear_trajectory(cause); candidate_.reset(); last_job_ = {};
@@ -673,20 +781,10 @@ public:
     odom_pose.pose.orientation.x /= q_norm; odom_pose.pose.orientation.y /= q_norm;
     odom_pose.pose.orientation.z /= q_norm; odom_pose.pose.orientation.w /= q_norm;
     geometry_msgs::msg::PoseStamped local_pose;
-    core::PreparedMap map;
+    const auto & map = *maps->local;
     // Preserve the odometry stamp when a frame transform is necessary.
-    try {local_pose = in_frame(odom_pose, costmap_->getGlobalFrameID(), tf_); map = snapshot(costmap_, radius_, unknown_);}
+    try {local_pose = in_frame(odom_pose, map.source.frame, tf_);}
     catch (const std::exception & e) {RCLCPP_WARN(node_->get_logger(), "%s", e.what()); return command(Eigen::Vector2d::Zero());}
-    if (!last_map_display_ || (now - *last_map_display_).seconds() >= 0.5 || now < *last_map_display_) {
-      nav_msgs::msg::OccupancyGrid debug; debug.header.frame_id = map.source.frame; debug.header.stamp = now;
-      debug.info.width = map.source.width; debug.info.height = map.source.height;
-      debug.info.resolution = map.source.resolution; debug.info.origin.position.x = map.source.origin.x();
-      debug.info.origin.position.y = map.source.origin.y(); debug.info.origin.orientation.w = 1;
-      debug.data.resize(map.blocked.size());
-      for (size_t i = 0; i < map.blocked.size(); ++i) {debug.data[i] = map.blocked[i] ? 100 : 0;}
-      collision_pub_->publish(debug);
-      last_map_display_ = now;
-    }
     const Eigen::Vector2d p(local_pose.pose.position.x, local_pose.pose.position.y);
     const Eigen::Vector2d body_velocity(odom->twist.twist.linear.x, odom->twist.twist.linear.y);
     const double yaw = tf2::getYaw(local_pose.pose.orientation);
@@ -833,7 +931,7 @@ public:
           request.goal_velocity = local.direction * (speed_limit_ * local_goal_speed_ratio_);
         }
         planning_reason_ = "planning";
-        pending_ = Job{map, request, revision_.load(), speed_limit_, now, local.via, local.final};
+        pending_ = Job{maps, request, revision_.load(), speed_limit_, now, local.via, local.final};
         last_job_ = steady; route_update_pending_ = false; cv_.notify_one();
       }
     }
@@ -853,6 +951,10 @@ public:
       const double omega = odom->twist.twist.angular.z;
       auto result = mpc_->solve(p, v, previous_odom_, trajectory_->trajectory, time, speed_limit_, omega);
       if (result.success) {
+        if (!maps->fresh(map_timeout_)) {
+          reason_ = "collision_map_stale_at_output";
+          return command(Eigen::Vector2d::Zero());
+        }
         const double output_age = (node_->now() - *odom_stamp).seconds();
         if (!std::isfinite(output_age) || output_age > odom_timeout_ || output_age < -0.05) {
           reason_ = "odometry_stale_at_output";

@@ -6,6 +6,7 @@ from launch.actions import DeclareLaunchArgument
 from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 
 
 def generate_launch_description():
@@ -18,7 +19,7 @@ def generate_launch_description():
         get_package_share_directory("livox_ros_driver2"), "config", "MID360_config.json"
     )
     lio_config = os.path.join(
-        get_package_share_directory("small_point_lio"), "config", "mid360.yaml"
+        get_package_share_directory("navigation_bringup"), "config", "zlio.yaml"
     )
     frames_config = os.path.join(
         get_package_share_directory("navigation_bringup"), "config", "frames.yaml"
@@ -26,7 +27,7 @@ def generate_launch_description():
     default_rviz_config = os.path.join(
         get_package_share_directory("navigation_bringup"),
         "rviz",
-        "x_sentry_navigation.rviz",
+        "x_sentry_standalone.rviz",
     )
 
     driver = Node(
@@ -40,11 +41,11 @@ def generate_launch_description():
                 "xfer_format": 4,
                 "multi_topic": 0,
                 "data_src": 0,
-                # Shorter lidar batches reduce the wait for fresh LIO state.
-                # Per-point odometry publishing is configured in mid360.yaml.
+                # ZLIO uses per-point Livox timestamps and IMU-rate predictions.
                 "publish_freq": 30.0,
                 "output_data_type": 0,
-                "frame_id": "imu_link",
+                "frame_id": "lidar_link",
+                "imu_frame_id": "imu_link",
                 "lvx_file_path": "",
                 "user_config_path": driver_config,
                 "cmdline_input_bd_code": device_code,
@@ -53,22 +54,29 @@ def generate_launch_description():
     )
 
     lio = Node(
-        package="small_point_lio",
-        executable="small_point_lio_node",
-        name="small_point_lio",
+        package="frontend",
+        executable="zlio_node",
+        name="zlio",
         namespace=namespace,
         output="screen",
         remappings=[("/tf", "tf"), ("/tf_static", "tf_static")],
         parameters=[
-            lio_config,
+            frames_config,
             {
+                "config_file": LaunchConfiguration("lio_config"),
+                "input_type": "livox",
                 "lidar_topic": "livox/lidar",
                 "imu_topic": "livox/imu",
-                "lidar_frame": "imu_link",
-                "imu_frame": "imu_link",
-                "odom_frame": "imu_odom",
-                "odometry_topic": "imu_odom",
-                "registered_cloud_topic": "cloud_registered",
+                "body_frame": "imu_link",
+                "world_frame": "imu_odom",
+                # Livox driver forwards acceleration in g, as did the old frontend.
+                "imu_acceleration_scale": 9.81,
+                "publish_tf": False,
+                # 与 BIT 地形层的 5 cm 体素一致，仅改变输出云采样。
+                "output_resolution": 0.05,
+                "coordinated_reset": ParameterValue(
+                    LaunchConfiguration("coordinated_reset"), value_type=bool),
+                "use_sim_time": LaunchConfiguration("use_sim_time"),
             },
         ],
     )
@@ -80,39 +88,24 @@ def generate_launch_description():
         namespace=namespace,
         output="screen",
         remappings=[("/tf", "tf"), ("/tf_static", "tf_static")],
-        parameters=[frames_config],
+        parameters=[frames_config, {"use_sim_time": LaunchConfiguration("use_sim_time")}],
+        condition=IfCondition(LaunchConfiguration("static_frames")),
     )
 
-    cloud_frame_adapter = Node(
-        package="cloud_frame_adapter",
-        executable="cloud_frame_adapter",
-        name="cloud_frame_adapter",
+    localization = Node(
+        package="scan_context_relocalization",
+        executable="zlio_navigation",
+        name="zlio_navigation",
         namespace=namespace,
         output="screen",
+        condition=IfCondition(LaunchConfiguration("localization")),
         remappings=[("/tf", "tf"), ("/tf_static", "tf_static")],
         parameters=[
+            frames_config,
+            LaunchConfiguration("localization_config"),
             {
-                "input_topic": "cloud_registered",
-                "output_topic": "registered_cloud",
-                "source_frame": "imu_odom",
-                "target_frame": "odom",
-            }
-        ],
-    )
-
-    initial_pose = Node(
-        package="initial_pose",
-        executable="initial_pose",
-        name="initial_pose",
-        namespace=namespace,
-        output="screen",
-        remappings=[("/tf", "tf"), ("/tf_static", "tf_static")],
-        parameters=[
-            {
-                "map_frame": "map",
-                "odom_frame": "odom",
-                "base_frame": "chassis_link",
-                "pose_topic": "initialpose",
+                "prior_map": LaunchConfiguration("prior_map"),
+                "use_sim_time": LaunchConfiguration("use_sim_time"),
             }
         ],
     )
@@ -124,6 +117,7 @@ def generate_launch_description():
         namespace=namespace,
         output="screen",
         arguments=["-d", rviz_config],
+        parameters=[{"use_sim_time": LaunchConfiguration("use_sim_time")}],
         condition=IfCondition(rviz),
         remappings=[
             ("/tf", "tf"),
@@ -135,16 +129,25 @@ def generate_launch_description():
     return LaunchDescription(
         [
             DeclareLaunchArgument("namespace", default_value="x_sentry"),
+            # 独立建图由完整后端提供地图 TF，不启动导航定位适配和导航静态树。
+            DeclareLaunchArgument("localization", default_value="true", choices=["true", "false"]),
+            DeclareLaunchArgument("static_frames", default_value="true", choices=["true", "false"]),
+            DeclareLaunchArgument("coordinated_reset", default_value="false", choices=["true", "false"]),
             DeclareLaunchArgument(
                 "device_code", default_value="livox0000000001"
             ),
             DeclareLaunchArgument("rviz", default_value="true"),
             DeclareLaunchArgument("rviz_config", default_value=default_rviz_config),
+            DeclareLaunchArgument("use_sim_time", default_value="false", choices=["true", "false"]),
+            DeclareLaunchArgument("lio_config", default_value=lio_config),
+            DeclareLaunchArgument("prior_map", default_value="",
+                                  description="z map bundle; empty selects manual initialpose alignment"),
+            DeclareLaunchArgument("localization_config", default_value=os.path.join(
+                get_package_share_directory("navigation_bringup"), "config", "localization.yaml")),
             driver,
             lio,
             frames,
-            cloud_frame_adapter,
-            initial_pose,
+            localization,
             rviz_node,
         ]
     )

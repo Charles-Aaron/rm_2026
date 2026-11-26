@@ -18,4 +18,8 @@ public:
 };
 std::unique_ptr<RuntimeController> make_runtime_controller();
 std::unique_ptr<nav2_core::GlobalPlanner> make_runtime_planner();
+// 交接预规划路径时，复用全局规划器的膨胀与线段碰撞规则。
+bool prepared_path_safe(const std::shared_ptr<nav2_costmap_2d::Costmap2DROS> & costmap,
+  const nav_msgs::msg::Path & path, const geometry_msgs::msg::PoseStamped & start,
+  double radius, bool unknown);
 }  // namespace sentry_nav

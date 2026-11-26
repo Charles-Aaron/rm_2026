@@ -7,6 +7,6 @@ find_package(nav_msgs REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RoutePoint.msg" "action/NavigateRoute.action" "srv/AppendRoutePoint.srv"
   "action/RotateToYaw.action" "action/VisitSpecialPoint.action"
-  "srv/OrderedRoute.srv" DEPENDENCIES geometry_msgs nav_msgs)
+  "srv/OrderedRoute.srv" "srv/PrepareRoute.srv" DEPENDENCIES geometry_msgs nav_msgs)
 ament_export_dependencies(rosidl_default_runtime)
 ament_package()

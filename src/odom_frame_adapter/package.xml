@@ -3,7 +3,7 @@
 <package format="3">
   <name>odom_frame_adapter</name>
   <version>0.1.0</version>
-  <description>Transform odometry pose and twist into the Nav2 base frame.</description>
+  <description>Convert IMU odometry into odom-frame chassis pose and body-frame velocity.</description>
   <maintainer email="x_sentry@example.com">x_sentry</maintainer>
   <license>MIT</license>
 
@@ -14,6 +14,7 @@
   <depend>tf2</depend>
   <depend>tf2_ros</depend>
   <depend>tf2_geometry_msgs</depend>
+  <depend>eigen</depend>
 
   <export>
     <build_type>ament_cmake</build_type>
